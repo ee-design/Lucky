@@ -902,8 +902,8 @@ ul.edit-tool li a:hover {
 }
 .middle-container .side-menu {
   float: left;
-  width: 220px;
-  padding: 20px 20px;
+  width: 180px;
+  padding: 20px 10px;
   -webkit-position: sticky;
   -moz-position: sticky;
   -ms-position: sticky;
@@ -927,7 +927,7 @@ ul.edit-tool li a:hover {
   text-align: center;
 }
 .middle-container .side-menu ul li {
-  padding: 10px 0;
+  padding: 5px 0;
   display: block;
 }
 .middle-container .side-menu ul li a {
@@ -998,8 +998,8 @@ ul.edit-tool li a:hover {
 }
 .middle-container .main-container {
   float: left;
-  padding: 25px 40px;
-  width: calc(100% - 220px);
+  padding: 25px 30px;
+  width: calc(100% - 180px);
   min-height: calc(100vh - 117px);
 }
 .middle-container .main-container h3.main-title {
@@ -1488,7 +1488,7 @@ ul.edit-tool li a:hover {
   border-bottom: 1px dashed #aeaeae;
   position: relative;
 }
-.middle-container .data-list .card a.go-detail {
+.middle-container .data-list .card .go-detail {
   width: 100%;
   display: block;
   min-height: 70px;
@@ -1979,7 +1979,7 @@ ul.edit-tool li a:hover {
   border: 2px solid #11948a;
 }
 @media all and (max-width: 1000px) {
-  .middle-container .data-list .card a.go-detail {
+  .middle-container .data-list .card .go-detail {
     display: inline-block;
   }
   .middle-container .data-list .card h4.product-name,
@@ -2266,6 +2266,188 @@ ul.edit-tool li a:hover {
   .middle-container .data-list .card .edit-tool {
     opacity: 1;
     background-color: transparent;
+  }
+}
+.middle-container .form-list .has-fl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.middle-container .form-list .has-fl > div {
+  flex: 1;
+  padding: 0 5px;
+}
+.middle-container .form-list .has-fl p {
+  padding: 0;
+  width: initial;
+  line-height: 1.3;
+  word-break: break-all;
+}
+.middle-container .form-list .has-fl .pay-nb {
+  max-width: 95px;
+}
+.middle-container .form-list .has-fl .pay-nb p {
+  color: #11948a;
+  font-weight: bold;
+}
+.middle-container .form-list .has-fl .pay-day {
+  max-width: 90px;
+}
+.middle-container .form-list .has-fl .pay-source,
+.middle-container .form-list .has-fl .pay-association {
+  max-width: 92px;
+}
+.middle-container .form-list .has-fl .pay-amount {
+  max-width: 110px;
+}
+.middle-container .form-list .has-fl .pay-amount p {
+  width: 100%;
+  text-align: right;
+  padding-right: 14px;
+}
+.middle-container .form-list .has-fl .pay-company p {
+  font-size: 0.813rem;
+}
+.middle-container .form-list .has-fl .pay-note p {
+  font-size: 0.813rem;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.middle-container .form-list .has-fl .pay-media, .middle-container .form-list .has-fl .pay-other {
+  max-width: 90px;
+  text-align: center;
+}
+.middle-container .form-list .has-fl .pay-media p, .middle-container .form-list .has-fl .pay-other p {
+  width: 100%;
+}
+.middle-container .form-list .has-fl .pay-amount-a, .middle-container .form-list .has-fl .pay-amount-b {
+  max-width: 110px;
+  text-align: right;
+}
+.middle-container .form-list .has-fl .pay-amount-a p, .middle-container .form-list .has-fl .pay-amount-b p {
+  width: 100%;
+}
+.middle-container .form-list .f-ss {
+  font-size: 0.688rem;
+  display: block;
+}
+.middle-container .form-list .toptitle-style p {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #11948a;
+}
+.middle-container .form-list .toptitle-style .pay-company p, .middle-container .form-list .toptitle-style .pay-note p {
+  font-size: 0.875rem;
+}
+.middle-container .form-list .toptitle-style .pay-amount p {
+  padding-right: 0;
+}
+.middle-container .form-list .toptitle-style .pay-media p, .middle-container .form-list .toptitle-style .pay-other p {
+  font-size: 0.813rem;
+}
+.middle-container .form-list .card .go-detail {
+  min-height: 58px;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 1000px) {
+  .middle-container .form-list .toptitle-style > div {
+    flex: 50%;
+    max-width: initial !important;
+  }
+  .middle-container .form-list .toptitle-style > div.pay-nb, .middle-container .form-list .toptitle-style > div.pay-day {
+    flex: 25%;
+  }
+  .middle-container .form-list .toptitle-style > div.pay-acc-virtua p, .middle-container .form-list .toptitle-style > div.pay-company p, .middle-container .form-list .toptitle-style > div.pay-acc-virtual p, .middle-container .form-list .toptitle-style > div.pay-note p {
+    width: 100%;
+    text-align: right;
+  }
+  .middle-container .form-list .card .go-detail {
+    display: flex;
+    align-items: self-start;
+  }
+  .middle-container .form-list .card .go-detail > div {
+    flex: 50%;
+    max-width: initial;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-nb, .middle-container .form-list .card .go-detail > div.pay-day {
+    flex: 25%;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-acc-virtua p, .middle-container .form-list .card .go-detail > div.pay-company p, .middle-container .form-list .card .go-detail > div.pay-acc-virtual p, .middle-container .form-list .card .go-detail > div.pay-note p {
+    width: 100%;
+    text-align: right;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-amount p {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .middle-container .distribute-list .card .go-detail,
+  .middle-container .distribute-list .toptitle-style {
+    align-items: self-start;
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-nb,
+  .middle-container .distribute-list .toptitle-style > div.pay-nb {
+    max-width: 60px;
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-company,
+  .middle-container .distribute-list .toptitle-style > div.pay-company {
+    max-width: calc(100% - 60px);
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-media, .middle-container .distribute-list .card .go-detail > div.pay-other,
+  .middle-container .distribute-list .toptitle-style > div.pay-media,
+  .middle-container .distribute-list .toptitle-style > div.pay-other {
+    flex: 20%;
+    text-align: left;
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-day,
+  .middle-container .distribute-list .toptitle-style > div.pay-day {
+    flex: 50%;
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-amount-a p,
+  .middle-container .distribute-list .toptitle-style > div.pay-amount-a p {
+    width: 100%;
+    text-align: left;
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-amount-b p,
+  .middle-container .distribute-list .toptitle-style > div.pay-amount-b p {
+    width: 100%;
+    text-align: right;
+  }
+  .middle-container .distribute-list .card .go-detail > div.pay-note,
+  .middle-container .distribute-list .toptitle-style > div.pay-note {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .middle-container .distribute-list .card .go-detail p,
+  .middle-container .distribute-list .toptitle-style p {
+    margin-top: 2px;
+  }
+}
+.middle-container .report-list .has-fl .pay-media,
+.middle-container .report-list .has-fl .pay-other,
+.middle-container .report-list .has-fl .pay-amount-b {
+  max-width: initial;
+  text-align: right;
+}
+.middle-container .report-list .has-fl .pay-media p,
+.middle-container .report-list .has-fl .pay-other p,
+.middle-container .report-list .has-fl .pay-amount-b p {
+  width: 100%;
+}
+.middle-container .report-list .has-fl .pay-amount-b {
+  padding-right: 0;
+}
+@media screen and (max-width: 1000px) {
+  .middle-container .report-list .has-fl .pay-media,
+  .middle-container .report-list .has-fl .pay-amount-b {
+    text-align: right;
+  }
+  .middle-container .report-list .has-fl .pay-other {
+    text-align: right !important;
   }
 }
 .middle-container .dashboard-list {
@@ -3440,10 +3622,36 @@ ul.edit-record-user li p.id span {
   float: left;
   width: calc(100% - 97px);
 }
+.popup-container .fillin-box .field .fillin-info .pay-t-note {
+  width: 100%;
+  padding-top: 0;
+}
+.popup-container .fillin-box .field .fillin-info .pay-t-note .confirm {
+  max-width: initial;
+  margin-left: 18px;
+}
+@media all and (max-width: 650px) {
+  .popup-container .fillin-box .field .fillin-info .pay-t-note .confirm {
+    margin-left: initial;
+  }
+}
+.popup-container .fillin-box .field .pay-note-w {
+  padding-left: 40px;
+}
+.popup-container .fillin-box .field .pay-note-w p.input-value {
+  max-width: 100%;
+}
+@media all and (max-width: 650px) {
+  .popup-container .fillin-box .field .pay-note-w {
+    padding: 10px;
+  }
+}
 .popup-container .fillin-box .field fieldset {
   width: 100%;
   padding: 8px 0;
   position: relative;
+  display: flex;
+  align-items: self-start;
 }
 .popup-container .fillin-box .field fieldset .text-error {
   position: absolute;
@@ -3459,9 +3667,10 @@ ul.edit-record-user li p.id span {
   width: 156px;
   text-align: right;
   padding-right: 18px;
-  line-height: 46px;
+  line-height: 1.5;
   font-size: 0.875rem;
   font-weight: bold;
+  padding-top: 10px;
 }
 .popup-container .fillin-box .field fieldset input.default,
 .popup-container .fillin-box .field fieldset textarea,
@@ -3470,6 +3679,25 @@ ul.edit-record-user li p.id span {
   width: 100%;
   max-width: calc(100% - 156px);
   float: left;
+}
+.popup-container .fillin-box .field fieldset .fillin-pay {
+  position: relative;
+}
+.popup-container .fillin-box .field fieldset .fillin-pay input {
+  width: 100%;
+  max-width: 100%;
+}
+.popup-container .fillin-box .field fieldset .fillin-pay .pay-howmuch {
+  position: absolute;
+  right: 28px;
+  top: 16px;
+  font-size: 0.813rem;
+}
+.popup-container .fillin-box .field fieldset .fillin-pay .pay-howmuch span {
+  padding-left: 5px;
+  font-size: 0.938rem;
+  color: #11948a;
+  font-weight: bold;
 }
 .popup-container .fillin-box .field fieldset .both-for-add {
   position: relative;
@@ -3516,6 +3744,7 @@ ul.edit-record-user li p.id span {
 }
 .popup-container .fillin-box .field fieldset .one-field-date input {
   width: 100%;
+  text-align: left;
 }
 .popup-container .fillin-box .field fieldset .one-field-date::before {
   display: none;
@@ -3617,6 +3846,110 @@ ul.edit-record-user li p.id span {
 .popup-container .fillin-box .field .width-100 fieldset textarea {
   max-width: 100%;
   height: 200px;
+}
+.popup-container .fillin-box .field .form-details {
+  float: left;
+  padding: 15px 0 10px 0;
+  width: 100%;
+}
+.popup-container .fillin-box .field .form-details .item-title {
+  font-size: 0.875rem;
+  padding: 20px 0 10px 12px;
+  color: #11948a;
+  display: block;
+  font-weight: bold;
+}
+.popup-container .fillin-box .field .form-details .a-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: self-start;
+  justify-content: center;
+  border-bottom: 2px solid #F6F6F6;
+}
+.popup-container .fillin-box .field .form-details .a-row p {
+  font-size: 0.813rem;
+  word-break: break-all;
+  line-height: 1.3;
+}
+.popup-container .fillin-box .field .form-details .a-row p a {
+  color: #11948a;
+  text-decoration: underline;
+}
+.popup-container .fillin-box .field .form-details .a-row p a:hover {
+  text-decoration: none;
+}
+.popup-container .fillin-box .field .form-details .a-row > div {
+  flex: 1;
+  padding: 10px;
+}
+.popup-container .fillin-box .field .form-details .a-row .pay-nb,
+.popup-container .fillin-box .field .form-details .a-row .pay-source,
+.popup-container .fillin-box .field .form-details .a-row .pay-day {
+  max-width: 95px;
+}
+.popup-container .fillin-box .field .form-details .a-row .pay-amount {
+  text-align: right;
+}
+.popup-container .fillin-box .field .form-details .a-row .other-tools {
+  max-width: 55px;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 5px 0;
+}
+.popup-container .fillin-box .field .form-details .a-row .other-tools a {
+  padding: 10px;
+  color: #11948a;
+}
+.popup-container .fillin-box .field .form-details .a-row .other-tools a:hover {
+  opacity: 0.5;
+}
+.popup-container .fillin-box .field .form-details .bg-top-title {
+  background-color: #ebf5f4;
+  border-radius: 4px 4px 0 0;
+  border: none;
+}
+.popup-container .fillin-box .field .form-details .bg-top-title p {
+  font-weight: bold;
+}
+@media all and (max-width: 650px) {
+  .popup-container .fillin-box .field .form-details {
+    padding-top: 10px;
+  }
+  .popup-container .fillin-box .field .form-details .item-title {
+    padding-top: 0px;
+  }
+  .popup-container .fillin-box .field .form-details .a-row .pay-amount {
+    min-width: 85px;
+  }
+}
+.popup-container .fillin-box .field .show-all .item-title {
+  border-bottom: 1px solid #11948a;
+  color: #333;
+}
+.popup-container .fillin-box .field .show-all .a-row .pay-nb,
+.popup-container .fillin-box .field .show-all .a-row .pay-source,
+.popup-container .fillin-box .field .show-all .a-row .pay-day {
+  max-width: initial;
+}
+.popup-container .fillin-box .field .show-all .a-row:nth-child(even) {
+  background-color: #f6f6f6;
+}
+.popup-container .fillin-box .field .show-all .bg-top-title, .popup-container .fillin-box .field .show-all .bottom-total {
+  background-color: #ebf5f4 !important;
+}
+.popup-container .fillin-box .field .show-all .bottom-total {
+  border-top: 1px solid #11948a;
+}
+.popup-container .fillin-box .field .show-all .bottom-total p {
+  font-size: 0.813rem;
+}
+.popup-container .fillin-box .field .show-all .bottom-total p span {
+  padding-left: 5px;
+  color: #11948a;
+  font-weight: bold;
+  font-size: 0.938rem;
 }
 .popup-container .fillin-box .field ul.list-terms-single {
   float: left;
@@ -3814,7 +4147,7 @@ ul.edit-record-user li p.id span {
 .popup-container .fillin-box .field ul.show-contact-list li p {
   letter-spacing: 1px;
   font-size: 0.875rem;
-  line-height: 26px;
+  line-height: 1.5;
   padding: 2px 5px;
   word-break: break-all;
 }
@@ -3917,14 +4250,14 @@ ul.edit-record-user li p.id span {
 .popup-container .fillin-box .field .media-details ul li {
   position: relative;
   border-bottom: 1px #cdcdcd dashed;
-  padding: 8px 0;
+  padding: 4px 0;
   display: flex;
   flex-wrap: wrap;
 }
 .popup-container .fillin-box .field .media-details ul li div {
   flex: 1;
   padding: 0 5px;
-  min-height: 40px;
+  min-height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4303,28 +4636,102 @@ ul.edit-record-user li p.id span {
   justify-content: flex-start;
 }
 .popup-container .fillin-box .order-list .option-list label {
-  width: 50%;
+  width: 45%;
   padding-left: 50px;
   display: initial;
   overflow: initial !important;
   -webkit-line-clamp: initial;
+  pointer-events: none;
 }
 .popup-container .fillin-box .order-list .option-list .date {
-  width: 50%;
+  width: 33%;
   font-size: 0.813rem;
-  color: #7C7C7C;
-  padding-left: 30px;
   word-wrap: break-word;
   word-break: break-all;
-  letter-spacing: 1px;
 }
-.popup-container .fillin-box .order-list .option-list:nth-child(even) {
+.popup-container .fillin-box .order-list .option-list .pay-amount {
+  width: 22%;
+  padding-right: 8px;
+  text-align: right;
+  font-size: 0.813rem;
+}
+.popup-container .fillin-box .order-list .option-list:nth-child(odd) {
   background-color: #f6f6f6;
 }
-.popup-container .fillin-box .order-list input[type=checkbox]:not(old) + label::before {
+.popup-container .fillin-box .order-list .bg-top-title {
+  background-color: #ebf5f4 !important;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  border-bottom: 1px solid #11948a;
+  color: #11948a;
+  font-size: 0.875rem;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+.popup-container .fillin-box .order-list .bg-top-title .date,
+.popup-container .fillin-box .order-list .bg-top-title .pay-amount {
+  word-break: break-all;
+  color: #11948a;
+}
+.popup-container .fillin-box .order-list input[type=checkbox]:not(even) + label::before {
   left: 13px;
 }
-.popup-container .fillin-box .order-list input[type=checkbox]:not(old) + label::after {
+.popup-container .fillin-box .order-list input[type=checkbox]:not(even) + label::after {
+  left: 16px;
+}
+.popup-container .fillin-box .pay-list .option-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.popup-container .fillin-box .pay-list .option-list label {
+  width: 25%;
+  max-width: 140px;
+  padding-left: 50px;
+  display: initial;
+  overflow: initial !important;
+  -webkit-line-clamp: initial;
+  pointer-events: none;
+}
+.popup-container .fillin-box .pay-list .option-list span {
+  flex: 1;
+  font-size: 0.813rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.popup-container .fillin-box .pay-list .option-list .date, .popup-container .fillin-box .pay-list .option-list .pay-source {
+  max-width: 85px;
+}
+.popup-container .fillin-box .pay-list .option-list .pay-amount {
+  max-width: 95px;
+  padding-right: 8px;
+  text-align: right;
+  font-size: 0.813rem;
+}
+.popup-container .fillin-box .pay-list .option-list:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+.popup-container .fillin-box .pay-list .bg-top-title {
+  background-color: #ebf5f4 !important;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  border-bottom: 1px solid #11948a;
+  color: #11948a;
+  font-size: 0.875rem;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+.popup-container .fillin-box .pay-list .bg-top-title .date,
+.popup-container .fillin-box .pay-list .bg-top-title .pay-amount {
+  word-break: break-all;
+  color: #11948a;
+}
+.popup-container .fillin-box .pay-list input[type=checkbox]:not(even) + label::before {
+  left: 13px;
+}
+.popup-container .fillin-box .pay-list input[type=checkbox]:not(even) + label::after {
   left: 16px;
 }
 .popup-container .fillin-box .department-list .option-list label {
@@ -4446,8 +4853,6 @@ ul.edit-record-user li p.id span {
   color: #fff;
 }
 .popup-container .bottom-btn-tool .edit-tool li a.change {
-  width: 40px;
-  height: 40px;
   display: block;
   background: url(../images/svg/icon_order_change.svg) 13px center no-repeat #fff;
   background-size: 38%;
@@ -4493,7 +4898,7 @@ ul.edit-record-user li p.id span {
   }
   .popup-container .fillin-box .field .left-sub-title {
     float: none;
-    margin: 0 auto;
+    margin: 0 auto 5px auto;
     min-height: 50px;
     width: 100%;
     padding: 5px;
@@ -4515,12 +4920,13 @@ ul.edit-record-user li p.id span {
     width: 100%;
   }
   .popup-container .fillin-box .field .fillin-info fieldset {
+    display: inline-block;
     padding: 5px 0;
   }
   .popup-container .fillin-box .field .fillin-info fieldset label.item-title {
-    width: 100%;
     text-align: left;
     padding-left: 10px;
+    padding-bottom: 10px;
   }
   .popup-container .fillin-box .field .fillin-info fieldset input.default,
   .popup-container .fillin-box .field .fillin-info fieldset textarea,
@@ -4783,6 +5189,23 @@ ul.edit-record-user li p.id span {
   font-size: 0.813rem;
   text-align: center;
 }
+.popup-finish .fillin-box .fl-w100 .fillin-info {
+  width: 100%;
+}
+.popup-finish .fillin-box .fl-w100 .fillin-info .item-title {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+.popup-finish .fillin-box .fl-w100 .form-details .item-title {
+  color: #333;
+  padding: 0 0 15px 0;
+}
+.popup-finish .fillin-box .fl-w100 .form-details .a-row .other-tools {
+  max-width: 96px;
+}
+.popup-finish .fillin-box .fl-w100 .form-details .a-row .pay-note {
+  flex: 2;
+}
 .popup-finish .history-box {
   padding: 0 20px 20px 20px;
 }
@@ -4791,6 +5214,12 @@ ul.edit-record-user li p.id span {
 }
 .popup-finish .history-box .fillin-box ul.edit-record-user li p.time {
   padding-right: 10px;
+}
+.popup-finish .history-box .fillin-box ul.edit-record-user li p.id {
+  width: 100%;
+  max-width: 120px;
+  float: right;
+  padding-right: 0;
 }
 .popup-finish .history-box .order-record li {
   position: relative;
@@ -4884,8 +5313,8 @@ ul.edit-record-user li p.id span {
   max-width: calc(100% - 156px);
   display: flex;
   align-items: center;
-  min-height: 46px;
   line-height: 1.5;
+  padding-top: 10px;
 }
 .popup-finish .fillin-info p.input-value span {
   color: #11948a;
@@ -4977,6 +5406,7 @@ ul.edit-record-user li p.id span {
 }
 .popup-finish .liaison-info .fillin-box .fillin-info fieldset {
   padding: 2px 0px;
+  align-items: center;
 }
 .popup-finish .liaison-info .fillin-box .fillin-info fieldset label.item-title,
 .popup-finish .liaison-info .fillin-box .fillin-info fieldset p.input-value {
@@ -5020,9 +5450,6 @@ ul.edit-record-user li p.id span {
 @media all and (max-width: 650px) {
   .popup-finish .fillin-box p.product-title {
     font-size: 0.938rem;
-  }
-  .popup-finish .fillin-box .field .fillin-info fieldset {
-    padding: 0px;
   }
   .popup-finish .fillin-box .field .fillin-info fieldset label.item-title {
     width: 120px;

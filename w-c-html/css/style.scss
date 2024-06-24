@@ -781,8 +781,8 @@ ul.edit-tool {
   min-height: calc(100vh - 68px);
   .side-menu {
     float: left;
-    width: 220px;
-    padding: 20px 20px;
+    width: 180px;
+    padding: 20px 10px;
     @include stickyPosition;
     top: 70px;
     &::before {
@@ -800,7 +800,7 @@ ul.edit-tool {
       margin: 0 auto;
       text-align: center;
       li {
-        padding: 10px 0;
+        padding: 5px 0;
         display: block;
         a {
           font-size: $f-size-s;
@@ -875,8 +875,8 @@ ul.edit-tool {
   }
   .main-container {
     float: left;
-    padding: 25px 40px;
-    width: calc(100% - 220px);
+    padding: 25px 30px;
+    width: calc(100% - 180px);
     min-height: calc(100vh - 117px);
     input {
       @extend %input;
@@ -1404,7 +1404,7 @@ ul.edit-tool {
       width: 100%;
       border-bottom: 1px dashed #aeaeae;
       position: relative;
-      a.go-detail {
+      .go-detail {
         width: 100%;
         display: block;
         min-height: 70px;
@@ -1926,7 +1926,7 @@ ul.edit-tool {
     }
     @media all and (max-width: 1000px) {
       .card {
-        a.go-detail {
+        .go-detail {
           display: inline-block;
         }
         h4.product-name,
@@ -2244,6 +2244,240 @@ ul.edit-tool {
       }
     }
   }
+  // 新版列表切版放這
+  // 入帳紀錄
+  .form-list{
+    .has-fl{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      &>div{
+        flex: 1;
+        padding:0 5px;
+      }
+      p{
+        padding: 0;
+        width: initial;
+        line-height: 1.3;
+        word-break: break-all;
+      }
+      .pay-nb {
+        max-width: 95px;
+        p{
+          color: $color-green-grass;
+          font-weight: bold;
+        }
+      }
+      .pay-day{
+        max-width: 90px;
+      }
+      .pay-source, 
+      .pay-association{
+        max-width: 92px;
+      }
+      .pay-amount {
+        max-width: 110px;
+        p{
+          width: 100%;
+          text-align: right;
+          padding-right: 14px;
+        }
+      }
+      .pay-company{
+        p{
+          font-size: $f-size-s;
+        }
+      }
+      .pay-note p{
+        font-size: $f-size-s;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .pay-media, .pay-other{
+        max-width: 90px;
+        text-align: center;
+        p{
+          width: 100%;
+        }
+      }
+      .pay-amount-a, .pay-amount-b{
+        max-width: 110px;
+        text-align: right;
+        p{
+          width: 100%;
+        }
+      }
+    }
+    .f-ss{
+      font-size: $f-size-ss;
+      display: block;
+    }
+    .toptitle-style{
+      p{
+        font-size:$f-size-m;
+        font-weight: bold;
+        color: $color-green-grass;
+      }
+      .pay-company, .pay-note{
+        p{
+          font-size:$f-size-m;
+        }
+      }
+      .pay-amount p{
+        padding-right: 0;
+      }
+      .pay-media, .pay-other{
+        p{
+          font-size: $f-size-s;
+        }
+      }
+    }
+    .card{
+      // padding:5px 10px;
+      .go-detail{
+        min-height: 58px;
+        padding: 10px 20px;
+      }
+    }
+    // @media screen and (max-width: 1000px) {
+    //   width: 100%;
+    //   overflow-x: scroll;
+    //   .card{
+    //     width: 100%;
+    //     min-width: 1000px;
+    //   }
+    //   .toptitle-style{
+
+    //   }
+    // }
+    @media screen and (max-width: 1000px) {
+      .toptitle-style{
+        >div{
+          flex: 50%;
+          max-width: initial !important;
+          &.pay-nb,
+          &.pay-day {
+            flex: 25%;
+          }
+          &.pay-acc-virtua p, 
+          &.pay-company p,
+          &.pay-acc-virtual p,
+          &.pay-note p{
+            width: 100%;
+            text-align: right;
+          }
+        }
+      }
+      .card .go-detail{
+        display: flex;
+        align-items: self-start;
+        >div{
+          flex: 50%;
+          max-width: initial;
+          &.pay-nb, 
+          &.pay-day{
+            flex: 25%;
+          }
+          &.pay-acc-virtua p, 
+          &.pay-company p,
+          &.pay-acc-virtual p,
+          &.pay-note p{
+            width: 100%;
+            text-align: right;
+          }
+          &.pay-amount p{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+  // 預算分配
+  .distribute-list{
+    @media screen and (max-width: 1000px) {
+      .card .go-detail,
+      .toptitle-style {
+        align-items: self-start;
+        &>div{
+          &.pay-nb{
+            max-width: 60px;
+          }
+          &.pay-company{
+            max-width: calc(100% - 60px);
+          }
+          &.pay-media, 
+          &.pay-other{
+            flex: 20%;
+            text-align: left;
+            span{
+              // display: inline;
+            }
+          }
+          &.pay-day{
+            flex: 50%;
+          }
+          &.pay-amount-a p{
+            width: 100%;
+            text-align: left;
+          }
+          &.pay-amount-b p{
+            width: 100%;
+            text-align: right;
+          }
+          &.pay-note{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+    .card .go-detail,
+      .toptitle-style {
+        p{
+          margin-top: 2px;
+        }
+        &>div{
+          &.pay-other{
+            span{
+              // display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .report-list{
+    .has-fl{
+      .pay-media,
+      .pay-other,
+      .pay-amount-b{
+        max-width: initial;
+        text-align: right;
+        p{
+          width: 100%;
+        }
+      }
+      .pay-amount-b{
+        padding-right: 0;
+      }
+    }
+    
+    @media screen and (max-width: 1000px) {
+      .has-fl {
+        .pay-media,
+        .pay-amount-b{
+          text-align: right;
+        }
+        .pay-other{
+         text-align: right !important;
+        }
+      }
+    }
+  }
+
   .dashboard-list {
     margin-bottom: 25px;
     .card {
@@ -3520,11 +3754,32 @@ ul.edit-record-user {
       .fillin-info {
         float: left;
         width: calc(100% - 97px);
+        .pay-t-note{
+          width:100%;
+          padding-top: 0;
+          .confirm{
+            max-width: initial;
+            margin-left: 18px;
+            @media all and (max-width: $phone-media) {
+            margin-left: initial;}
+          }
+        }
+      }
+      .pay-note-w{
+        padding-left: 40px;
+        p.input-value{
+          max-width: 100%;
+        }
+        @media all and (max-width: $phone-media) {
+          padding:10px;
+        }
       }
       fieldset {
         width: 100%;
         padding: 8px 0;
         position: relative;
+        display: flex;
+        align-items: self-start;
         .text-error {
           position: absolute;
           font-size: $f-size-ss;
@@ -3540,9 +3795,11 @@ ul.edit-record-user {
           width: 156px;
           text-align: right;
           padding-right: 18px;
-          line-height: 46px;
+          // line-height: 46px;
+          line-height: 1.5;
           font-size: $f-size-m;
           font-weight: bold;
+          padding-top: 10px;
         }
         input.default,
         textarea,
@@ -3551,6 +3808,25 @@ ul.edit-record-user {
           width: 100%;
           max-width: calc(100% - 156px);
           float: left;
+        }
+        .fillin-pay{
+          position: relative;
+          input{
+            width: 100%;
+            max-width: 100%;
+          }
+          .pay-howmuch{
+            position: absolute;
+            right: 28px;
+            top: 16px;
+            font-size: $f-size-s;
+            span{
+              padding-left: 5px;
+              font-size: $f-size-l;
+              color: $color-green-grass;
+              font-weight: bold;
+            }
+          }
         }
         // 填入地址
         .both-for-add {
@@ -3602,6 +3878,7 @@ ul.edit-record-user {
         .one-field-date{
           input{
             width: 100%;
+            text-align: left;
           }
           &::before {
             display: none;
@@ -3715,6 +3992,112 @@ ul.edit-record-user {
           textarea {
             max-width: 100%;
             height: 200px;
+          }
+        }
+      }
+      .form-details{
+        float:left;
+        padding: 15px 0 10px 0;
+        width: 100%;
+        .item-title{
+          font-size: $f-size-m;
+          padding: 20px 0 10px 12px;  
+          color: $color-green-grass;
+          display: block;
+          font-weight: bold;
+        }
+        .a-row{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: self-start;
+          justify-content: center;
+          border-bottom: 2px solid #F6F6F6;
+          p{
+            font-size: $f-size-s;
+            word-break: break-all;
+            line-height: 1.3;
+            a{
+              color: $color-green-grass;
+              text-decoration: underline;
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+          &>div{
+            flex: 1;
+            padding: 10px;
+          }
+          .pay-nb, 
+          .pay-source, 
+          .pay-day{
+            max-width: 95px;
+          }
+          .pay-amount{
+            text-align: right;
+          }
+          .other-tools{
+            max-width: 55px;
+            margin-left: auto;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 0 5px 0;
+            a{
+              padding: 10px;
+              color: $color-green-grass;
+              &:hover{
+                opacity: .5;
+              }
+            }
+          }
+        }
+        .bg-top-title{
+          background-color: $color-green-light;
+          border-radius:4px 4px 0 0;
+          border: none;
+          p{
+            font-weight: bold;
+          }
+        }
+        @media all and (max-width: $phone-media) {
+          padding-top: 10px;
+          .item-title{
+            padding-top: 0px;
+          }
+          .a-row .pay-amount{
+            min-width: 85px;
+          }
+        }
+      }
+      .show-all{
+        .item-title{
+          border-bottom: 1px solid $color-green-grass;
+          color: #333;
+        }
+        .a-row{
+          .pay-nb, 
+          .pay-source, 
+          .pay-day{
+            max-width:initial;
+          }
+          &:nth-child(even){
+            background-color: $color-gray-light;
+          }
+        }
+        .bg-top-title, .bottom-total{
+          background-color: $color-green-light !important;
+        }
+        .bottom-total{
+          border-top: 1px solid $color-green-grass;
+          p{
+            font-size: $f-size-s;
+            span{
+              padding-left: 5px;
+              color: $color-green-grass;
+              font-weight: bold;
+              font-size: $f-size-l;
+            }
           }
         }
       }
@@ -3919,7 +4302,7 @@ ul.edit-record-user {
           p {
             letter-spacing: 1px;
             font-size: $f-size-m;
-            line-height: 26px;
+            line-height: 1.5;
             padding: 2px 5px;
             word-break: break-all;
             &.name {
@@ -4025,7 +4408,7 @@ ul.edit-record-user {
           li {
             position: relative;
             border-bottom: 1px #cdcdcd dashed;
-            padding: 8px 0;
+            padding: 4px 0;
             display: flex;
             flex-wrap: wrap;
             div {
@@ -4033,7 +4416,7 @@ ul.edit-record-user {
               padding: 0 5px;
               // float: left;
               // width: 20%;
-              min-height: 40px;
+              min-height: 30px;
               display: -webkit-flex;
               display: flex;
               -webkit-align-items: center;
@@ -4454,27 +4837,107 @@ ul.edit-record-user {
         align-items: center;
         justify-content: flex-start;
         label {
-          width: 50%;
+          width: 45%;
           padding-left: 50px;
           display: initial;
           overflow: initial !important;
           -webkit-line-clamp:initial;
+          pointer-events: none;
         }
         .date{
-          width: 50%;
+          width: 33%;
           font-size: $f-size-s;
-          // margin-left: auto;
-          color: #7C7C7C;
-          padding-left: 30px;
+          // color: #7C7C7C;
           word-wrap: break-word;
           word-break: break-all;
-          letter-spacing: 1px;
         }
-        &:nth-child(even) {
+        .pay-amount{
+          width: 22%;
+          padding-right: 8px;
+          text-align: right;
+          font-size: $f-size-s;
+          // color: #7C7C7C;
+        }
+        &:nth-child(odd) {
           background-color: $color-gray-light;
         }
       }
-      input[type="checkbox"]:not(old) + label {
+      .bg-top-title{
+        background-color: $color-green-light !important;
+        border-radius: $radius-s $radius-s 0 0;
+        font-weight: bold;
+        border-bottom: 1px solid $color-green-grass;
+        color: $color-green-grass;
+        font-size: $f-size-m;
+        position: sticky;
+        z-index: 2;
+        top: 0;
+        .date, 
+        .pay-amount{
+          word-break: break-all;
+          color: $color-green-grass;
+        }
+      }
+      input[type="checkbox"]:not(even) + label {
+        &::before {
+          left: 13px;
+        }
+        &::after {
+          left: 16px;
+        }
+      }
+    }
+    .pay-list {
+      .option-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        label {
+          // display: flex;
+          width: 25%;
+          max-width: 140px;
+          padding-left: 50px;
+          display: initial;
+          overflow: initial !important;
+          -webkit-line-clamp:initial;
+          pointer-events: none;
+        }
+        span{
+          flex: 1;
+          font-size: $f-size-s;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+        .date, .pay-source{
+          max-width: 85px;
+        }
+        .pay-amount{
+          max-width:95px;
+          padding-right: 8px;
+          text-align: right;
+          font-size: $f-size-s;
+        }
+        &:nth-child(odd) {
+          background-color: $color-gray-light;
+        }
+      }
+      .bg-top-title{
+        background-color: $color-green-light !important;
+        border-radius: $radius-s $radius-s 0 0;
+        font-weight: bold;
+        border-bottom: 1px solid $color-green-grass;
+        color: $color-green-grass;
+        font-size: $f-size-m;
+        position: sticky;
+        z-index: 2;
+        top: 0;
+        .date, 
+        .pay-amount{
+          word-break: break-all;
+          color: $color-green-grass;
+        }
+      }
+      input[type="checkbox"]:not(even) + label {
         &::before {
           left: 13px;
         }
@@ -4617,8 +5080,8 @@ ul.edit-record-user {
             color: #fff;
           }
           &.change{
-            width: 40px;
-            height: 40px;
+            // width: 40px;
+            // height: 40px;
             display: block;
             background: url(../images/svg/icon_order_change.svg) 13px center no-repeat #fff;
             background-size: 38%;
@@ -4672,7 +5135,7 @@ ul.edit-record-user {
       .field {
         .left-sub-title {
           float: none;
-          margin: 0 auto;
+          margin: 0 auto 5px auto;
           min-height: 50px;
           width: 100%;
           padding: 5px;
@@ -4689,11 +5152,13 @@ ul.edit-record-user {
         .fillin-info {
           width: 100%;
           fieldset {
+          display: inline-block;
             padding: 5px 0;
             label.item-title {
-              width: 100%;
+              // width: 100%;
               text-align: left;
               padding-left: 10px;
+              padding-bottom: 10px;
             }
             input.default,
             textarea,
@@ -4981,13 +5446,46 @@ ul.edit-record-user {
         }
       }
     }
+    .fl-w100{
+      .fillin-info{
+        width: 100%;
+        .item-title{
+          text-align: left !important;
+          padding-left: 0 !important;
+        }
+      }
+      .form-details{
+        .item-title{
+          color: #333;
+          padding:0 0 15px 0;
+        }
+        .a-row {
+          .other-tools{
+            max-width: 96px;
+          }
+          .pay-note{
+            flex: 2;
+          }
+        }
+      }
+      @media all and (max-width: $phone-media) {
+      }
+    }
   }
   .history-box {
     padding: 0 20px 20px 20px;
     .fillin-box {
       max-width: 480px;
-      ul.edit-record-user li p.time{
-        padding-right: 10px;
+      ul.edit-record-user li {
+        p.time{
+          padding-right: 10px;
+        }
+        p.id{
+          width: 100%;
+          max-width: 120px;
+          float: right;
+          padding-right: 0;
+        }
       }
     }
     .order-record {
@@ -5072,6 +5570,7 @@ ul.edit-record-user {
       }
     }
   }
+  
   .changes-info{
     padding: 0 20px 12px 20px;
     .fillin-box{
@@ -5097,8 +5596,9 @@ ul.edit-record-user {
       max-width: calc(100% - 156px);
       display: flex;
       align-items: center;
-      min-height: 46px;
+      // min-height: 46px;
       line-height: 1.5;
+      padding-top: 10px;
       span {
         color: $color-green-grass;
         font-weight: bold;
@@ -5188,6 +5688,7 @@ ul.edit-record-user {
         margin: 0 auto;
         fieldset {
           padding:2px 0px;
+          align-items: center;
           label.item-title,
           p.input-value {
             padding-right: 33px;
@@ -5244,7 +5745,6 @@ ul.edit-record-user {
       .field {
         .fillin-info {
           fieldset {
-            padding: 0px;
             label.item-title {
               width: 120px;
               text-align: right;

@@ -2436,19 +2436,106 @@
                                 <label class="item-title">收款確認</label>
                                 <p class="input-value"><span class="">已收到款項</span></p>
                             </fieldset>
-                            <fieldset>
-                                <label class="item-title">匯款日期</label>
-                                <p class="input-value">
-                                    <span class="calendar">
-                                        <i class="fas fa-calendar-alt"></i>
-                                    </span>
-                                    2023/04/30
-                                </p>
-                            </fieldset>
-                            <fieldset>
-                                <label class="item-title">財務部門備註</label>
-                                <p class="input-value">想講什麼就講什麼吧</p>
-                            </fieldset>
+                            
+                        </div>
+                        <div class="form-details show-all">
+                            <label class="item-title">已關連款項</label>
+                            <div class="a-row bg-top-title">
+                                <div class="pay-nb">
+                                    <p>款項編號</p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>入帳日期</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>入帳金額</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-nb">
+                                    <p><a href="#">123456</a></p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>2024/5/01</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,520,000</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-nb">
+                                    <p><a href="#">123456</a></p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>2024/5/01</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,520,000</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-nb">
+                                    <p><a href="#">123456</a></p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>2024/5/01</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,520,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-details show-all">
+                            <label class="item-title">已花費金額</label>
+                            <div class="a-row bg-top-title">
+                                <div class="pay-media">
+                                    <p>媒體/項目</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>金額</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-media">
+                                    <p>Facebook</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>10,000</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-media">
+                                    <p>Google</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>20,000</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-media">
+                                    <p>短影音</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>30,000</p>
+                                </div>
+                            </div>
+                            <div class="a-row bottom-total">
+                                <div class="pay-amount">
+                                    <p>餘額<span>1,520,000</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="field border_4 clearfix">
@@ -2840,40 +2927,52 @@
                             </fieldset>
                         </div>
                         <div class="confirm order-list clearfix">
+                            <div class="option-list bg-top-title clearfix">
+                                <label for="option">
+                                    合約編號
+                                </label>
+                                <span class="date">廣告走期</span>
+                                <span class="pay-amount">款項總金額</span>
+                            </div>
                             <div class="option-list clearfix">
-                                <input id="" type="radio" name="aaa" value="">
+                                <input id="" type="checkbox" name="aaa" value="">
                                 <label for="option">
                                     202405000000005
                                 </label>
                                 <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">12,520,000</span>
                             </div>
                             <div class="option-list clearfix">
-                                <input id="" type="radio" name="aaa" value="">
+                                <input id="" type="checkbox" name="aaa" value="">
                                 <label for="option">
                                     202405000000004
                                 </label>
                                 <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">10,000</span>
                             </div>
                             <div class="option-list clearfix">
-                                <input id="" type="radio" name="aaa" value="">
+                                <input id="" type="checkbox" name="aaa" value="">
                                 <label for="option">
                                     202405000000006
                                 </label>
                                 <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">40,000</span>
                             </div>
                             <div class="option-list clearfix">
-                                <input id="" type="radio" name="aaa" value="">
+                                <input id="" type="checkbox" name="aaa" value="">
                                 <label for="option">
                                     202405000000007
                                 </label>
                                 <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">30,000</span>
                             </div>
                             <div class="option-list clearfix">
-                                <input id="" type="radio" name="aaa" value="">
+                                <input id="" type="checkbox" name="aaa" value="">
                                 <label for="option">
                                     202405000000008
                                 </label>
                                 <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">10,000</span>
                             </div>
                         </div>
                     </div>

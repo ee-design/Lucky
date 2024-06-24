@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CRM 管理後台 - 款項記錄/分配 - 入帳紀錄</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+            
+    <!-- Pushy -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+   
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+
+</head>
+<body>
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left" data-focus="#first-link">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-submenu">
+                    <button>委刊單管理</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="order.html">委刊單</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="audit.html">委刊單審核</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-link">
+                    <a href="customer.html">客戶管理</a>
+                </li>
+                <li class="pushy-submenu">
+                    <button>服務項目</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="event-project.html">活動專案</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="product.html">產品</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="project.html">促銷專案</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="terms.html">附加條款</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-submenu">
+                    <button>權限控制</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="authority-order.html">委刊單</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="authority-customer.html">客戶</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-submenu">
+                    <button>使用者管理</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="user.html">使用者</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-submenu">
+                    <button>款項記錄/分配</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="payment_history.html">入帳記錄</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="payment_distribute.html">預算分配</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="payment_report.html">花費報表</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+    <div id="container">
+    <header class="header-container clearfix">
+        <button class="menu-btn"><span><i class="fas fa-bars"></i></span></button>
+        <a class="logo" href="dashboard.html"></a>
+        <p class="text-title">CRM 管理後台</p>
+        <div class="user-info clearfix">
+            <div class="profile">
+                <div class="photo-portrait">E</div>
+                <p class="user-name">Eikiy</p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="member.html">帳號資料</a>
+                    </li>
+                    <li>
+                        <a href="login.html">登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="middle-container clearfix">
+        <nav class="side-menu">
+            <ul>
+                <li class="pushy-submenu">
+                    <button>委刊單管理</button>
+                    <ul>
+                        <li>
+                            <a href="order.html">委刊單</a>
+                        </li>
+                        <li>
+                            <a href="audit.html">委刊單審核</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="customer.html">客戶管理</a>
+                </li>
+                <li class="pushy-submenu">
+                    <button>服務項目</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="event-project.html">活動專案</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="product.html">產品</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="project.html">促銷專案</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="terms.html">附加條款</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-submenu">
+                    <button>權限控制</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="authority-order.html">委刊單</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="authority-customer.html">客戶</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-submenu">
+                    <button>使用者管理</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a href="user.html">使用者</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pushy-submenu pushy-submenu-open">
+                    <button class="selected">款項記錄/分配</button>
+                    <ul>
+                        <li class="pushy-link">
+                            <a class="sub-selected" href="payment_history.html">入帳記錄</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="payment_distribute.html">預算分配</a>
+                        </li>
+                        <li class="pushy-link">
+                            <a href="payment_report.html">花費報表</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main class="main-container">
+            <section class="content">
+                <h3 class="main-title">入帳記錄</h3>
+                <div class="tools-bar clearfix">
+                    <div class="search-box">
+                        <input class="default" type="text" placeholder="搜尋款項流水號/客戶名稱">
+                        <p class="btn-text"><a>搜尋</a></p>
+                    </div>
+                    <a href="#popup-add-pay" class="btn-add btn--primary-m popup-link">
+                        <i class="fas fa-plus"></i>
+                        <span>新增款項</span>
+                    </a>
+                </div>
+
+                <!-- 可排序欄位 -->
+                <!-- 外層 + click-sort -->
+                <!-- 內層 + <span class="icon-sort"> -->
+                <div class="data-list form-list">
+                    <div class="card toptitle-style has-fl clearfix">
+                        <div class="pay-nb click-sort">
+                            <p>款項編號<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                        <div class="pay-day click-sort">
+                            <p>入帳日期<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                        <div class="pay-company click-sort">
+                            <p>客戶<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                        <div class="pay-acc">
+                            <p>付款帳號</p>
+                        </div>
+                        <div class="pay-acc-virtual">
+                            <p>虛擬帳號</p>
+                        </div>
+                        <div class="pay-source click-sort">
+                            <p>款項來源<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                        <div class="pay-amount click-sort">
+                            <p>入帳金額<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                        <div class="pay-association click-sort">
+                            <p>款項關聯<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                        <div class="pay-note">
+                            <p>財務備註</p>
+                        </div>
+                    </div>
+                    <div class="card clearfix">
+                        <a class="go-detail has-fl popup-link" href="#popup-pay-info">
+                            <div class="pay-nb click-sort">
+                                <p>123459</p>
+                            </div>
+                            <div class="pay-day click-sort">
+                                <p>2024/12/16</p>
+                            </div>
+                            <div class="pay-company click-sort">
+                                <p>公司名稱會完整呈現會完整呈現</p>
+                            </div>
+                            <div class="pay-acc">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-acc-virtual">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-source click-sort">
+                                <p>虛擬帳號</p>
+                            </div>
+                            <div class="pay-amount click-sort">
+                                <p>20,000</p>
+                            </div>
+                            <div class="pay-association click-sort">
+                                <p>已關連</p>
+                            </div>
+                            <div class="pay-note">
+                                <p>文字備註備註</p>
+                            </div>
+                        </a>
+                        <ul class="edit-tool">
+                            <li>
+                                <a class="edit popup-link" href="#popup-edit-pay">
+                                    <i class="fas fa-pencil-alt" title="編輯"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="delete popup-link" href="#popup-delete">
+                                    <i class="far fa-trash-alt" title="刪除"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card clearfix">
+                        <a class="go-detail has-fl popup-link" href="#popup-pay-info">
+                            <div class="pay-nb click-sort">
+                                <p>123459</p>
+                            </div>
+                            <div class="pay-day click-sort">
+                                <p>2024/12/16</p>
+                            </div>
+                            <div class="pay-company click-sort">
+                                <p>公司BBB</p>
+                            </div>
+                            <div class="pay-acc">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-acc-virtual">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-source click-sort">
+                                <p>自行轉帳</p>
+                            </div>
+                            <div class="pay-amount click-sort">
+                                <p>120,000</p>
+                            </div>
+                            <div class="pay-association click-sort">
+                                <p></p>
+                            </div>
+                            <div class="pay-note">
+                                <p>財務想說什麼就說什麼</p>
+                            </div>
+                        </a>
+                        <ul class="edit-tool">
+                            <li>
+                                <a class="edit popup-link" href="#popup-edit-pay">
+                                    <i class="fas fa-pencil-alt" title="編輯"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="delete popup-link" href="#popup-delete">
+                                    <i class="far fa-trash-alt" title="刪除"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card clearfix">
+                        <a class="go-detail has-fl popup-link" href="#popup-pay-info">
+                            <div class="pay-nb click-sort">
+                                <p>567898</p>
+                            </div>
+                            <div class="pay-day click-sort">
+                                <p>2024/12/16</p>
+                            </div>
+                            <div class="pay-company click-sort">
+                                <p>獵人之夢想股份之有限公司</p>
+                            </div>
+                            <div class="pay-acc">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-acc-virtual">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-source click-sort">
+                                <p>自行轉帳</p>
+                            </div>
+                            <div class="pay-amount click-sort">
+                                <p>2,115,000</p>
+                            </div>
+                            <div class="pay-association click-sort">
+                                <p></p>
+                            </div>
+                            <div class="pay-note">
+                                <p>這邊只會顯示兩行，超過兩行後點點點，而依據寬度影響顯示的字數</p>
+                            </div>
+                        </a>
+                        <ul class="edit-tool">
+                            <li>
+                                <a class="edit popup-link" href="#popup-edit-pay">
+                                    <i class="fas fa-pencil-alt" title="編輯"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="delete popup-link" href="#popup-delete">
+                                    <i class="far fa-trash-alt" title="刪除"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card clearfix">
+                        <a class="go-detail has-fl popup-link" href="#popup-pay-info">
+                            <div class="pay-nb click-sort">
+                                <p>567898</p>
+                            </div>
+                            <div class="pay-day click-sort">
+                                <p>2024/12/16</p>
+                            </div>
+                            <div class="pay-company click-sort">
+                                <p>XXday 酷遊滿天股份有限公司</p>
+                            </div>
+                            <div class="pay-acc">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-acc-virtual">
+                                <p>123456781056</p>
+                            </div>
+                            <div class="pay-source click-sort">
+                                <p>代墊</p>
+                            </div>
+                            <div class="pay-amount click-sort">
+                                <p>128,000</p>
+                            </div>
+                            <div class="pay-association click-sort">
+                                <p>已關連</p>
+                            </div>
+                            <div class="pay-note">
+                                <p>這邊只會顯示兩行後點點點</p>
+                            </div>
+                        </a>
+                        <ul class="edit-tool">
+                            <li>
+                                <a class="edit popup-link" href="#popup-edit-order">
+                                    <i class="fas fa-pencil-alt" title="編輯"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="delete popup-link" href="#popup-delete">
+                                    <i class="far fa-trash-alt" title="刪除"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pages clearfix">
+                    <p>1-50列(共220列 )</p>
+                    <ul class="page-nb">
+                        <li>
+                            <a class="none">上一頁</a>
+                        </li>
+                        <li>
+                            <a class="selected">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            ...
+                        </li>
+                        <li>
+                            <a href="#">8</a>
+                        </li>
+                        <li>
+                            <a href="#">9</a>
+                        </li>
+                        <li>
+                            <a href="#">下一頁</a>
+                        </li>
+                    </ul>
+                </p>
+                </div> 
+            </section>
+        </main>
+        <footer class="footer-inside">
+            <p>Copyright© 2024 <a href="https://www.weblisher.com.tw/" target="_blank">Weblisher Data Tech Co., Ltd.</a> All Rights
+                Reserved.</p>
+        </footer>
+    </section>
+    </div>
+    <!-- pushy JS -->
+    <script src="https://www.holkee.com/scripts/libs/pushyjs/pushy.min.js"></script>
+
+    <!-- popup 新增款項-->
+    <section id="popup-add-pay" class="white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>新增款項</span></h4>
+            </div>
+            <div class="fillin-box">
+                <form>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>款項資訊</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <label class="item-title"><span class="c-red">*</span>客戶名稱</label>
+                                <div class="confirm search-list">
+                                    <!-- <a class="btn-search popup-link" href="#popup-add-projects">
+                                        <i class="fas fa-search"></i>
+                                    </a> -->
+                                    <input class="" type="" name="" value="" placeholder="搜尋名稱">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title"><span class="c-red">*</span>款項來源</label>
+                                <div class="the-select">
+                                    <select class="" name="">
+                                        <option value="0">請選擇來源</option>
+                                        <option value="1">虛擬帳號</option>
+                                        <option value="2">自行轉帳</option>
+                                        <option value="3">代墊</option>
+                                        <option value="4">現金</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title">付款帳號</label>
+                                <input class="default" type="" name="" value="">
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title">虛擬帳號</label>
+                                <input class="default" type="" name="" value="">
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title"><span class="c-red">*</span>入帳金額</label>
+                                <input class="default" type="" name="" value="">
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title"><span class="c-red">*</span>入帳日期</label>
+                                <div class="confirm clearfix">
+                                    <div class="one-field-date clearfix">
+                                        <input type="date" value="2024-07-10">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>關連資訊</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <label class="item-title">關連委刊單</label>
+                                <div class="confirm">
+                                    <a class="btn-add btn--primary-s popup-link" href="#popup-choose-order">
+                                        <i class="fas fa-plus"></i>
+                                        <span>新增關連委刊單</span>
+                                    </a>
+                                </div>
+                            </fieldset>
+                            
+                        </div>
+                        <div class="form-details">
+                            <div class="a-row bg-top-title">
+                                <div class="order-nb">
+                                    <p>合約編號</p>
+                                </div>
+                                <div class="order-date">
+                                    <p>廣告走期</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>委刊單總金額</p>
+                                </div>
+                                <div class="other-tools"></div>
+                            </div>
+                            <div class="a-row">
+                                <div class="order-nb">
+                                    <p><a href="#">202405000000004</a></p>
+                                </div>
+                                <div class="order-date">
+                                    <p>2024/5/01 - 2024/5/31</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,125,520,000</p>
+                                </div>
+                                <div class="other-tools">
+                                    <a class="delete" href="#">
+                                        <i class="far fa-trash-alt" title="刪除"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fillin-info" style="float: right;">
+                            <fieldset class="clearfix">
+                                <label class="item-title">關連款項</label>
+                                <div class="confirm">
+                                    <a class="btn-add btn--primary-s popup-link" href="#popup-choose-pay">
+                                        <i class="fas fa-plus"></i>
+                                        <span>新增關連款項</span>
+                                    </a>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-details">
+                            <div class="a-row bg-top-title">
+                                <div class="pay-nb">
+                                    <p>款項編號</p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>入帳日期</p>
+                                </div>
+                                <div class="pay-acc-virtual">
+                                    <p>付款帳號</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>入帳金額</p>
+                                </div>
+                                <div class="other-tools">
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-nb">
+                                    <p><a href="#">123456</a></p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>2024/5/01</p>
+                                </div>
+                                <div class="pay-acc-virtual">
+                                    <p>2020206251514616</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,520,000</p>
+                                </div>
+                                <div class="other-tools">
+                                    <a class="delete" href="#">
+                                        <i class="far fa-trash-alt" title="刪除"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>財務部門<br>備註</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset class="pay-t-note">
+                                <div class="confirm clearfix">
+                                    <textarea class="width100" placeholder="填寫備註"></textarea>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-btn-tool both-btn">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="儲存">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 編輯款項-->
+    <section id="popup-edit-pay" class="white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>編輯款項</span></h4>
+            </div>
+            <div class="fillin-box">
+                <form>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>款項資訊</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <label class="item-title"><span class="c-red">*</span>客戶名稱</label>
+                                <div class="confirm search-list">
+                                    <input class="" type="" name="" value="公司名稱會完整呈現會完整呈現" placeholder="搜尋名稱">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title"><span class="c-red">*</span>款項來源</label>
+                                <div class="the-select">
+                                    <select class="" name="">
+                                        <option value="0">請選擇來源</option>
+                                        <option value="1" selected>虛擬帳號</option>
+                                        <option value="2">自行轉帳</option>
+                                        <option value="3">代墊</option>
+                                        <option value="4">現金</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title">付款帳號</label>
+                                <input class="default" type="" name="" value="123456789123458">
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title">虛擬帳號</label>
+                                <input class="default" type="" name="" value="123456789123458">
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title"><span class="c-red">*</span>入帳金額</label>
+                                <input class="default" type="" name="" value="125,000">
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title"><span class="c-red">*</span>入帳日期</label>
+                                <div class="confirm clearfix">
+                                    <div class="one-field-date clearfix">
+                                        <input type="date" value="2024-07-10">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>關連資訊</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <label class="item-title">關連委刊單</label>
+                                <div class="confirm">
+                                    <a class="btn-add btn--primary-s popup-link" href="#popup-choose-order">
+                                        <i class="fas fa-plus"></i>
+                                        <span>新增關連委刊單</span>
+                                    </a>
+                                </div>
+                            </fieldset>
+    
+                        </div>
+                        <div class="form-details">
+                            <div class="a-row bg-top-title">
+                                <div class="order-nb">
+                                    <p>合約編號</p>
+                                </div>
+                                <div class="order-date">
+                                    <p>廣告走期</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>委刊單總金額</p>
+                                </div>
+                                <div class="other-tools"></div>
+                            </div>
+                            <div class="a-row">
+                                <div class="order-nb">
+                                    <p><a href="#">202405000000004</a></p>
+                                </div>
+                                <div class="order-date">
+                                    <p>2024/5/01 - 2024/5/31</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,125,520,000</p>
+                                </div>
+                                <div class="other-tools">
+                                    <a class="delete" href="#">
+                                        <i class="far fa-trash-alt" title="刪除"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fillin-info" style="float: right;">
+                            <fieldset class="clearfix">
+                                <label class="item-title">關連款項</label>
+                                <div class="confirm">
+                                    <a class="btn-add btn--primary-s popup-link" href="#popup-choose-pay">
+                                        <i class="fas fa-plus"></i>
+                                        <span>新增關連款項</span>
+                                    </a>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-details">
+                            <div class="a-row bg-top-title">
+                                <div class="pay-nb">
+                                    <p>款項編號</p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>入帳日期</p>
+                                </div>
+                                <div class="pay-acc-virtual">
+                                    <p>付款帳號</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>入帳金額</p>
+                                </div>
+                                <div class="other-tools">
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-nb">
+                                    <p><a href="#">123456</a></p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>2024/5/01</p>
+                                </div>
+                                <div class="pay-acc-virtual">
+                                    <p>2020206251514616</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,520,000</p>
+                                </div>
+                                <div class="other-tools">
+                                    <a class="delete" href="#">
+                                        <i class="far fa-trash-alt" title="刪除"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>財務部門<br>備註</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset class="pay-t-note">
+                                <div class="confirm clearfix">
+                                    <textarea class="width100" placeholder="填寫備註">財務想說什麼就說什麼財務想說什麼就說什麼</textarea>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-btn-tool both-btn">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="儲存">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    
+    <!-- popup 款項-->
+    <section id="popup-pay-info" class="popup-finish white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>款項</span></h4>
+            </div>
+            <div class="fillin-box">
+                <form>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>款項資訊</p>
+                        </div>
+                        <div class="fillin-info">
+                            <fieldset>
+                                <label class="item-title">客戶名稱</label>
+                                <p class="input-value"><span class="">公司AAA</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">款項來源</label>
+                                <p class="input-value"><span class="">虛擬帳號</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">付款帳號</label>
+                                <p class="input-value"><span class="">123459484964962</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">虛擬帳號</label>
+                                <p class="input-value"><span class="">848949564164651</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">入帳金額</label>
+                                <p class="input-value"><span class="">20,000</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">入帳日期</label>
+                                <p class="input-value"><span class="">2024-04-30</span></p>
+                            </fieldset>
+                        </div>
+                    </div>
+                    
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>關連資訊</p>
+                        </div>
+                        <div class="form-details">
+                            <label class="item-title">關連委刊單</label>
+                            <div class="a-row bg-top-title">
+                                <div class="order-nb">
+                                    <p>合約編號</p>
+                                </div>
+                                <div class="order-date">
+                                    <p>廣告走期</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>委刊單總金額</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="order-nb">
+                                    <p><a href="#">202405000000004</a></p>
+                                </div>
+                                <div class="order-date">
+                                    <p>2024/5/01 - 2024/5/31</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,125,520,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-details">
+                            <label class="item-title">關連款項</label>
+                            <div class="a-row bg-top-title">
+                                <div class="pay-nb">
+                                    <p>款項編號</p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>入帳日期</p>
+                                </div>
+                                <div class="pay-acc-virtual">
+                                    <p>付款帳號</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>入帳金額</p>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="pay-nb">
+                                    <p><a href="#">123456</a></p>
+                                </div>
+                                <div class="pay-day">
+                                    <p>2024/5/01</p>
+                                </div>
+                                <div class="pay-acc-virtual">
+                                    <p>2020206251514616</p>
+                                </div>
+                                <div class="pay-source">
+                                    <p>款項來源</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,520,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field clearfix">
+                        <div class="left-sub-title">
+                            <p>財務部門<br>備註</p>
+                        </div>
+                        <div class="fillin-info pay-note-w">
+                            <fieldset class="pay-t-note">
+                                <p class="input-value">
+                                    委刊媒體的備註說明欄位在此，有什麼想要備註的就在這裡說~
+                                </p>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <ul class="edit-record-user">
+                        <li class="clearfix">
+                            <p class="time">更新：2024/02/29 14:59:00 </p>
+                            <p class="id"><span class="bg-c-1">E</span>Eikiy Chang</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="time">建立：2024/05/24 15:30:15 </p>
+                            <p class="id"><span class="bg-c-2">S</span>sana</p>
+                        </li>
+                    </ul>
+                    <ul class="edit-tool">
+                        <li>
+                            <a class="edit popup-link" href="#popup-edit-pay" title="編輯">
+                                <i class="fas fa-pencil-alt" title="編輯"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="delete popup-link" href="#popup-delete">
+                                <i class="far fa-trash-alt" title="刪除"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 新增關連款項-->
+    <section id="popup-choose-pay" class="popup-choose white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>新增關連款項</span></h4>
+            </div>
+            <div class="fillin-box">
+                <form>
+                    <div class="field clearfix">
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <div class="confirm search-list">
+                                    <input type="" name="" value="" placeholder="搜尋款項流水號/付款帳號">
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="confirm pay-list clearfix">
+                            <div class="option-list bg-top-title clearfix">
+                                <label for="option">
+                                    款項編號
+                                </label>
+                                <span class="date">入帳日期</span>
+                                <span class="pay-acc">付款帳號</span>
+                                <span class="pay-source">款項來源</span>
+                                <span class="pay-amount">款項總金額</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    000001
+                                </label>
+                                <span class="date">2024/5/01</span>
+                                <span class="pay-acc">0156148948923423</span>
+                                <span class="pay-source">代墊</span>
+                                <span class="pay-amount">123,020,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    000002
+                                </label>
+                                <span class="date">2024/5/02</span>
+                                <span class="pay-acc">0156148948923423</span>
+                                <span class="pay-source">自行轉帳</span>
+                                <span class="pay-amount">10,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    000003
+                                </label>
+                                <span class="date">2024/5/15</span>
+                                <span class="pay-acc">0156148948923423</span>
+                                <span class="pay-source">虛擬帳號</span>
+                                <span class="pay-amount">10,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    000004
+                                </label>
+                                <span class="date">2024/5/15</span>
+                                <span class="pay-acc">0156148948923423</span>
+                                <span class="pay-source">虛擬帳號</span>
+                                <span class="pay-amount">30,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    000005
+                                </label>
+                                <span class="date">2024/5/15</span>
+                                <span class="pay-acc">0156148948923423</span>
+                                <span class="pay-source">虛擬帳號</span>
+                                <span class="pay-amount">30,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="儲存">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <!-- popup 新增關連委刊單-->
+    <section id="popup-choose-order" class="popup-choose white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>新增關連委刊單</span></h4>
+            </div>
+            <div class="fillin-box">
+                <form>
+                    <div class="field clearfix">
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <div class="confirm search-list">
+                                    <input type="" name="" value="" placeholder="搜尋委刊單合約編號">
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="confirm order-list clearfix">
+                            <div class="option-list bg-top-title clearfix">
+                                <label for="option">
+                                    合約編號
+                                </label>
+                                <span class="date">廣告走期</span>
+                                <span class="pay-amount">款項總金額</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    202405000000005
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">12,520,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    202405000000004
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">10,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    202405000000006
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">40,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    202405000000007
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">30,000</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="checkbox" name="aaa" value="">
+                                <label for="option">
+                                    202405000000008
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                                <span class="pay-amount">10,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="儲存">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 刪除確認-->
+    <section id="popup-delete" class="white-popup mfp-hide popup-width-m">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>刪除確認</span></h4>
+            </div>
+            <div class="fillin-box text-center">
+                <p>確定要刪除此「款項」嗎？</p>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="確認刪除">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
