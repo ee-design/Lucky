@@ -171,25 +171,25 @@
                             <ul>
                                 <li>
                                     <div class="option-list">
-                                        <input type="checkbox" name="filter-show" value="內含" checked>
+                                        <input type="radio" name="filter-show" value="內含" checked>
                                         <label for="option">全部顯示</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="option-list step-one">
-                                        <input type="checkbox" name="filter-show" value="已建立">
+                                        <input type="radio" name="filter-show" value="已建立">
                                         <label for="option">已建立</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="option-list step-two">
-                                        <input type="checkbox" name="filter-show" value="已成立">
+                                        <input type="radio" name="filter-show" value="已成立">
                                         <label for="option">已成立</label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="option-list step-three">
-                                        <input type="checkbox" name="filter-show" value="已簽回">
+                                        <input type="radio" name="filter-show" value="已簽回">
                                         <label for="option">已簽回</label>
                                     </div>
                                 </li>
@@ -1990,22 +1990,36 @@
                     <div class="field clearfix">
                         <div class="left-sub-title">
                             <p>委刊媒體</p>
+                            <p class="change-btn">
+                                <a class="change popup-link" href="#popup-order-mode" target="_blank">
+                                    <span>媒體變更</span>
+                                </a>
+                            </p>
                         </div>
                         <div class="fillin-info">
-                            <fieldset>
-                                <label class="item-title">活動名稱</label>
-                                <p class="input-value"><span class="">品牌Q4冬季活動推廣看客戶想填啥就填啥</span></p>
-                            </fieldset>
                             <fieldset>
                                 <label class="item-title">起迄日期</label>
                                 <p class="input-value">
                                     <span class="calendar">
                                         <i class="fas fa-calendar-alt"></i>
+                                        
                                     </span>
-                                    2021/04/30 - 2021/06/30
+                                    <span>2021/04/30 - 2021/06/30</span>
                                 </p>
                             </fieldset>
-                            <fieldset class="clearfix">
+                            <fieldset>
+                                <label class="item-title">走期</label>
+                                <p class="input-value">
+                                    <span class="">3.5</span>
+                                </p>
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title">新舊單</label>
+                                <p class="input-value">
+                                    <span class="">舊單</span>
+                                </p>
+                            </fieldset>
+                            <!-- <fieldset class="clearfix">
                                 <label class="item-title">產品選項</label>
                                 <div class="confirm">
                                     <ul class="list-project-single clearfix">
@@ -2017,7 +2031,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </fieldset>
+                            </fieldset> -->
                             <fieldset class="clearfix">
                                 <div class="media-details">
                                     <ul>
@@ -2437,6 +2451,48 @@
                             </fieldset>
                         </div>
                     </div>
+                    <div class="field border_4 clearfix">
+                        <div class="left-sub-title">
+                            <p>委刊單<br>
+                            變更</p>
+                        </div>
+                        <div class="fillin-info order-change">
+                            <ul class="order-step-list">
+                                <li>
+                                    <div class="icon icon-c">
+                                        <p>責任主管<br>審核</p>
+                                    </div>
+                                </li>
+                                <li class="no">
+                                    <div class="icon icon-g">
+                                        <p>BD<br>拒絕</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon icon-e">
+                                        <p>VP<br>審核</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon icon-f">
+                                        <p>審核<br>完成</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="change-btn">
+                                <li>
+                                    <a class="change popup-link" href="#popup-order-changes-info" target="_blank">
+                                        <p>變更紀錄</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="history popup-link" href="#popup-order-history-info" target="_blank">
+                                        <p>審核紀錄</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="bottom-btn-tool">
@@ -2453,7 +2509,11 @@
                     </ul>
                     <ul class="edit-tool">
                         <li>
-                            <a class="edit" href="order_print.html">
+                            <a class="change popup-link" href="#popup-order-change" title="委刊單變更">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="print" href="order_print.html">
                                 <i class="fas fa-print" title="列印"></i>
                             </a>
                         </li>
@@ -2763,6 +2823,70 @@
         </div>
     </section>
 
+    <!-- popup 委刊單變更-->
+    <section id="popup-order-change" class="popup-choose white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>委刊單變更</span></h4>
+            </div>
+            <div class="fillin-box">
+                <form>
+                    <div class="field clearfix">
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <div class="confirm search-list">
+                                    <input type="" name="" value="" placeholder="搜尋委刊單合約編號">
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="confirm order-list clearfix">
+                            <div class="option-list clearfix">
+                                <input id="" type="radio" name="aaa" value="">
+                                <label for="option">
+                                    202405000000005
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="radio" name="aaa" value="">
+                                <label for="option">
+                                    202405000000004
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="radio" name="aaa" value="">
+                                <label for="option">
+                                    202405000000006
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="radio" name="aaa" value="">
+                                <label for="option">
+                                    202405000000007
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                            </div>
+                            <div class="option-list clearfix">
+                                <input id="" type="radio" name="aaa" value="">
+                                <label for="option">
+                                    202405000000008
+                                </label>
+                                <span class="date">2024/5/01 - 2024/5/31</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="套用關聯">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
     <!-- popup 審核備註 - 內容-->
     <section id="popup-order-review-note" class="popup-finish popup-width-s white-popup mfp-hide">
         <div class="popup-container">
@@ -2839,11 +2963,52 @@
         </div>
     </section>
 
-    <!-- popup 變更紀錄 - 內容-->
+    <!-- popup 變更記錄 - 內容-->
+    <section id="popup-order-changes-info" class="popup-finish popup-width-s white-popup mfp-hide">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>變更記錄</span></h4>
+            </div>
+            <div class="liaison-info changes-info">
+                <div class="fillin-box">
+                    <div class="field clearfix">
+                        <p class="product-title">關連委刊單</p>
+                        <div class="fillin-info">
+                            <fieldset class="clearfix">
+                                <label class="item-title">合約編號</label>
+                                <p class="input-value">202405000000004</p>
+                            </fieldset>
+                            <fieldset>
+                                <label class="item-title">廣告走期</label>
+                                <p class="input-value">2024/5/01 - 2024/5/31</p>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-btn-tool">
+                    <fieldset class="field">
+                        <ul class="edit-tool">
+                            <li>
+                                <a class="change popup-link" href="#popup-order-change" title="委刊單變更">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="change-cancel popup-link" href="#popup-delete-orderchange" title="取消變更">
+                                    取消<br>變更
+                                </a>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 審核紀錄 - 內容-->
     <section id="popup-history-info" class="popup-finish popup-width-s white-popup mfp-hide">
         <div class="popup-container">
             <div class="top-title">
-                <h4><span>變更紀錄</span></h4>
+                <h4><span>審核紀錄</span></h4>
             </div>
             <div class="liaison-info history-box">
                 <div class="fillin-box">
@@ -2971,6 +3136,25 @@
             <div class="bottom-btn-tool">
                 <fieldset class="field">
                     <input class="btn--primary-xl " type="submit" value="確認刪除">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <!-- popup 刪除委刊單變更-->
+    <section id="popup-delete-orderchange" class="white-popup mfp-hide popup-width-m">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>取消確認</span></h4>
+            </div>
+            <div class="fillin-box text-center">
+                <!-- 委刊單變更 顯示這句  -->
+                <p>確定要取消此「變更」嗎？</p>
+                <!-- 委刊媒體變更 顯示這句 -->
+                <!-- <p>取消此變更將會「刪除」委刊單，確定取消？</p> -->
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="確認取消">
                 </fieldset>
             </div>
         </div>
