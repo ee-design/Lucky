@@ -362,7 +362,10 @@ button * {
 }
 .header a i,
 .header a svg {
-  color: white;
+  color: #c49658;
+}
+.header img {
+  max-width: 250px;
 }
 .header .header__left {
   width: 100%;
@@ -877,9 +880,12 @@ button * {
 .categories {
   background-color: #26423b;
 }
+.categories .header img {
+  max-width: 250px;
+}
 .categories .main {
   max-width: 1024px;
-  padding: 60px 20px 100px;
+  padding: 75px 20px 20px;
   margin: 0 auto;
   gap: 20px;
   display: flex;

@@ -5,6 +5,7 @@
 /******************************
 1. Variables */
 /* Font Family */
+@import url(animate.css);
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -893,20 +894,46 @@ button * {
 }
 .welcome .main {
   max-width: 100vw;
-  height: calc(100vh - 80px);
-  padding: 100px 20px 140px;
+  min-height: 100vh;
+  padding: 100px 20px 100px;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  overflow-x: auto;
+  /*overflow-y: auto;*/
 }
 .welcome .main a {
-  max-width: 100vw;
+  max-width: 90vw;
   max-height: 100%;
   margin: 0 auto;
+  position: relative;
 }
 .welcome .main img {
   max-width: 100%;
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+}
+.welcome .scroll {
+  position: absolute;
+  left: calc(50% - 25px);
+  bottom: 10%;
+  z-index: 4;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: all 0.5s ease-out;
+}
+.welcome .scroll span {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 15px;
+  display: block;
+}
+.welcome .scroll span.btn-scroll {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  border: #fff 1.5px solid;
+  margin: 0 auto;
+  background: url(../img/scroll-arr.svg) center center no-repeat;
+  background-size: 36%;
 }

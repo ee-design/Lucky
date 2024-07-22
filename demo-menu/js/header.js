@@ -28,3 +28,8 @@ function popClose(e) {
 function popLanguages() {
     document.getElementById("pop__languages").style.display = "flex";
     document.body.style.overflow = "hidden"; }
+
+// 服務鈴popup
+function popPervicebell() {
+    document.getElementById("pop__servicebell").style.display = "flex";
+    document.body.style.overflow = "hidden"; }

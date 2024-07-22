@@ -123,7 +123,7 @@ input:focus {
   outline: none;
 }
 input:-webkit-autofill {
-  color: #877650 !important;
+  color: #26423b !important;
   background-color: transparent !important;
   box-shadow: 0 0 0px 1000px white inset !important;
   background-clip: content-box !important;
@@ -250,8 +250,8 @@ iframe {
   display: none;
 }
 .check .check__default:checked ~ .check__mark {
-  background-color: #877650;
-  border: 2px solid #877650;
+  background-color: #26423b;
+  border: 2px solid #26423b;
 }
 .check .check__default:checked ~ .check__mark:after {
   display: block;
@@ -305,7 +305,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  background-color: #877650;
+  background-color: #26423b;
 }
 button * {
   color: white !important;
@@ -358,11 +358,14 @@ button * {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #877650;
+  background-color: #26423b;
 }
 .header a i,
 .header a svg {
-  color: white;
+  color: #c49658;
+}
+.header img {
+  max-width: 250px;
 }
 .header .header__left {
   width: 100%;
@@ -389,7 +392,7 @@ button * {
   width: 22px;
   height: 22px;
   padding-bottom: 3px;
-  border: 2px solid #877650;
+  border: 2px solid #26423b;
   border-radius: 99px;
   top: -10px;
   right: -10px;
@@ -508,7 +511,7 @@ button * {
 .pop .pop__body .pop__icons .pop__icon {
   width: 80px;
   height: 80px;
-  border: 6px solid #877650;
+  border: 6px solid #26423b;
   border-radius: 99px;
   display: flex;
   align-items: center;
@@ -518,7 +521,7 @@ button * {
 }
 .pop .pop__body .pop__icons .pop__icon i,
 .pop .pop__body .pop__icons .pop__icon svg {
-  color: #877650;
+  color: #26423b;
 }
 .pop .pop__body .pop__icons .pop__icon--green {
   border: 6px solid #27AE60;
@@ -554,7 +557,7 @@ button * {
   background-color: #F2F1F6;
 }
 .pop .pop__body .pop__action--minor > * {
-  color: #877650 !important;
+  color: #26423b !important;
 }
 @keyframes popup {
   0% {
@@ -583,7 +586,7 @@ button * {
   }
 }
 .pop__languages .pop__body {
-  background-color: #877650;
+  background-color: #26423b;
 }
 .pop__languages .pop__body .pop__close {
   background-color: transparent;
@@ -627,7 +630,7 @@ button * {
   font-weight: bold;
   white-space: nowrap;
   text-align: center;
-  color: #877650;
+  color: #26423b;
 }
 .suggest .suggest-item {
   width: 120px;
@@ -721,7 +724,7 @@ button * {
 .receipt .receipt__no {
   font-size: 1rem;
   font-weight: bold;
-  color: #877650;
+  color: #26423b;
 }
 .receipt .receipt__date {
   font-size: 1rem;
@@ -766,7 +769,7 @@ button * {
   align-items: center;
   justify-content: center;
   background-color: #F2F1F6;
-  color: #877650;
+  color: #26423b;
   font-size: 1.2rem;
 }
 .receipt .receipt-item .receipt-item__dropdown {
@@ -778,7 +781,7 @@ button * {
 }
 .receipt .receipt-item .receipt-item__dropdown i,
 .receipt .receipt-item .receipt-item__dropdown svg {
-  color: #877650;
+  color: #26423b;
   transform: rotate(0deg);
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -833,7 +836,7 @@ button * {
   font-size: 1.2rem;
 }
 .receipt .receipt-total .receipt-total__name .receipt-total__name--strong {
-  color: #877650;
+  color: #26423b;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -875,7 +878,7 @@ button * {
   }
 }
 .order {
-  background-color: #877650;
+  background-color: #26423b;
 }
 .order .header__back,
 .order .header__order {
@@ -888,7 +891,7 @@ button * {
 }
 .order .footer button {
   gap: 10px;
-  border: 1.5px solid #877650;
+  border: 1.5px solid #26423b;
   background-color: white;
   box-shadow: 0px 5px 10px rgba(55, 84, 170, 0.2);
 }
@@ -906,7 +909,7 @@ button * {
 }
 .order .footer button i,
 .order .footer button svg {
-  color: #877650 !important;
+  color: #26423b !important;
 }
 .order .footer button span {
   color: #333333 !important;

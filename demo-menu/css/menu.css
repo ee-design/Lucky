@@ -362,7 +362,10 @@ button * {
 }
 .header a i,
 .header a svg {
-  color: white;
+  color: #c49658;
+}
+.header img {
+  max-width: 250px;
 }
 .header .header__left {
   width: 100%;

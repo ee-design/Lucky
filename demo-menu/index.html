@@ -7,7 +7,7 @@
 <html>
     <head>
         <title>電子菜單</title>
-        <link rel="icon" type="image/svg" href="./img/icon/favicon.svg"/> 
+        <link rel="icon" type="image/svg" href="./img/icon/favicon.jpg"/> 
         <meta charset="UTF-8">
         <meta name="keywords" content="電子菜單">
         <meta name="description" content="電子菜單">
@@ -17,8 +17,21 @@
         <meta name="google" content="notranslate">
         <!-- CSS -->
         <link href="css/welcome.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pop-cart.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pop-item.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pop-suggest.css" rel="stylesheet" type="text/css"/>
         <link href="css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <!-- animate -->
+        <script src="js/wow.js"></script>
+        <script>
+            $(function () {
+                new WOW().init();
+            });
+        </script>
     </head>
+
     <body class="welcome">
         <!-- Loading -->
         <!-- <div class="loading"><div>
@@ -27,9 +40,9 @@
 
         <!--------------- 1. Header --------------->
         <section class="header">
-            <div class="header__left">
+            <!-- <div class="header__left">
                 <a class="header__back" onclick="javascript:history.back()"><i class="fa-solid fa-chevron-left fa-xl"></i></a>
-            </div>
+            </div> -->
             <img src="img/logo.png" onclick="window.location.href='index.html'">
             <div class="header__info"> <!-- 出現時不顯示Logo -->
                 <span class="header__info-name">內用桌號</span>
@@ -58,6 +71,45 @@
             </div>
         </section>
 
+        <!-- 服務鈴popup -->
+        <!-- <section id="pop__servicebell" class="pop pop--full pop__languages" onclick="popClose(this)">
+            <div class="pop__body">
+                <a onclick="popClose(this)" class="pop__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
+                <a onclick="popClose(this)">加水</a>
+                <a onclick="popClose(this)" class="language--active">我要衛生紙</a>
+                <a onclick="popClose(this)">呼叫店員</a>
+            </div>
+        </section> -->
+        <!-- 服務鈴popup 複選-->
+        <section id="pop__servicebell" class="pop__item pop pop--full" onclick="popClose(this)">
+            <div class="pop__body">
+                <div class="item-settings">
+                    <span class="item-settings__name">服務項目</span>
+                    <span class="item-settings__detail">可複選</span>
+                    <div class="item-setting item-setting__boxes item-setting__boxes--4">
+                        <!-- 3.1 多選 (未選取) -->
+                        <a class="item-setting__box">
+                            <span class="item-setting__name">加水</span>
+                        </a>
+                        <a class="item-setting__box">
+                            <span class="item-setting__name">衛生紙</span>
+                        </a>
+                        <a class="item-setting__box">
+                            <span class="item-setting__name">呼叫店員</span>
+                        </a>
+                        <!-- 3.2 多選 (已選取) -->
+                        <a class="item-setting__box item-setting__box--active">
+                            <span class="item-setting__name">開瓶</span>
+                            <span class="item-setting__price">+$500</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="important" onclick="popPervicebell()">
+                    <span>送出</span>
+                </button>
+            </div>
+        </section>
+
         <!--------------- 2. Footer --------------->
         <!-- <section class="footer">
             <button onclick="window.location.href='categories.html'">
@@ -65,23 +117,27 @@
             </button>
         </section> -->
         <section class="footer">
-                <button class="important" onclick="window.location.href=''">
-                    <i class="fa-solid fa-bell-concierge fa-lg"></i>
-                    <span>服務鈴</span>
-                </button>
-                <!-- <button onclick="window.location.href='menu.html'">
-                    <i class="fa-solid fa-utensils fa-lg"></i>
-                    <span>繼續加點</span>
-                </button> -->
-            </section>
+            <button class="important" onclick="popPervicebell()">
+                <i class="fa-solid fa-bell-concierge fa-lg"></i>
+                <span>服務鈴</span>
+            </button>
+        </section>
 
         <!--------------- 3. Main --------------->
         <section class="main">
-            <a href="menu.html">
+            <a href="categories.html">
                 <img src="img/menu_01.jpg">
+                <p class="scroll wow bounce" data-wow-duration="3s" data-wow-iteration="infinite">
+                    <span>CLICK</span>
+                    <span class="btn-scroll"></span>
+                </p>
             </a>
-            <a href="menu.html">
+            <a href="categories2.html">
                 <img src="img/menu_02.jpg">
+                <p class="scroll wow bounce" data-wow-duration="3s" data-wow-iteration="infinite">
+                    <span>CLICK</span>
+                    <span class="btn-scroll"></span>
+                </p>
             </a>
         </section>
 

@@ -1,9 +1,13 @@
 @import "style.less";
+@import url(animate.css);
 .welcome { background-color: @c1;
     // .header__back, .header__info { display: none; }
     .footer button { max-width: 512px; background-color: #c49658;
         i{ padding-right: 10px;}
         span { color: white !important; font-size: @fL; }}
-    .main { max-width: 100vw; height: calc(100vh - 80px); padding: 100px 20px 140px; gap: 10px; display: flex;  flex-wrap: wrap; align-items: center; overflow-x: auto;
-        a{ max-width: 100vw; max-height: 100%;  margin: 0 auto;}
-        img { max-width: 100%; filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2)); }}}
+    .main { max-width: 100vw; min-height: 100vh; padding: 100px 20px 100px; gap: 10px; display: flex;  flex-wrap: wrap; align-items: center; /*overflow-y: auto;*/
+        a{ max-width: 90vw; max-height: 100%;  margin: 0 auto; position: relative;}
+        img { max-width: 100%; filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2)); }}
+        .scroll{ position: absolute;left: calc(50% - 25px); bottom: 10%;z-index: 4; cursor: pointer; transform: scale(1, 1); transition: all .5s ease-out;
+            span{ color: #fff; text-align: center; padding-bottom: 15px; display: block;
+            &.btn-scroll{width: 50px; height: 50px; display: block; border-radius: 50%;  border: #fff 1.5px solid; margin: 0 auto; background: url(../img/scroll-arr.svg) center center no-repeat; background-size: 36%;}}}}

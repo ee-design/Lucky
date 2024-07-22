@@ -1,6 +1,8 @@
 @import "style.less";
 .categories { background-color: @c1;
-    .main { max-width: 1024px; padding: 60px 20px 100px; margin: 0 auto; gap: 20px; display: flex; flex-wrap: wrap;
+    .header{ 
+        img{ max-width: 250px;}}
+    .main { max-width: 1024px; padding: 75px 20px 20px; margin: 0 auto; gap: 20px; display: flex; flex-wrap: wrap;
         .category { width: 100%; aspect-ratio: 16/9; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: black;
             @media @sD, @sT { width: calc(50% - 10px); }
             &.category--half { width: calc(50% - 10px); aspect-ratio: 1/1;
