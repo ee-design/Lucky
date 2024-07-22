@@ -1,0 +1,18 @@
+@import "./style.less";
+.pop__suggest {
+    .pop__body { gap: 15px; align-items: flex-start; flex-direction: row; flex-wrap: wrap; background-color: @cBg; overflow-x: hidden;
+        > *:nth-last-child(2) { margin-bottom: 100px; }
+        .suggest__title { width: 100%; text-align: center; font-size: @fL; font-weight: bold; color: @c1; }
+        .item { width: calc(50% - 7.5px); position: relative; display: flex; flex-direction: column;
+            @media @sD, @sT { width: calc(25% - 11.25px); }
+            &.item--sold-out {
+                span { color: @cG4; }}
+            .item__img { width: 100%; aspect-ratio: 1/1; border-radius: 20px; }
+            .item__img--none { width: 100%; aspect-ratio: 1/1; border: 1.5px solid @c1; border-radius: 20px; display: flex; align-items: center; justify-content: center;
+                i, svg { color: @c1; transform: rotate(-45deg); font-size: 4rem; }}
+            .item__img--sold-out { width: 100%; aspect-ratio: 1/1; border-radius: 20px; top: 0; left: 0; position: absolute; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.5); color: white; backdrop-filter: blur(2px); font-size: @fL; font-weight: bold; }
+            .item__name { margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .item__price { font-weight: bold; }
+            .item__tag { height: 30px; max-width: calc(100% - 30px); padding: 0 5px; border-radius: 7.5px; border: 1.5px solid @c1; top: -5px; left: -5px; position: absolute; display: flex; align-items: center; background-color: white; color: @c1; font-size: @fM; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+            .item__count { min-width: 30px; height: 30px; padding: 0 5px 2.5px; border-radius: 99px; border: 1.5px solid white; top: -5px; right: -5px; position: absolute; display: flex; align-items: center; justify-content: center; background-color: @c1; color: white; font-size: @fL; }}
+        .suggest__button { min-height: 50px; bottom: 0; position: sticky; }}}

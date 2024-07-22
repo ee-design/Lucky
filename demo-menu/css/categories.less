@@ -1,0 +1,9 @@
+@import "./style.less";
+.categories { background-color: @c1;
+    .main { max-width: 1024px; padding: 60px 20px 100px; margin: 0 auto; gap: 20px; display: flex; flex-wrap: wrap;
+        .category { width: 100%; aspect-ratio: 16/9; border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: black;
+            @media @sD, @sT { width: calc(50% - 10px); }
+            &.category--half { width: calc(50% - 10px); aspect-ratio: 1/1;
+                @media @sD, @sT { width: calc(25% - 15px); }}
+            .category__title { position: absolute; font-size: @fXXL; font-weight: bold; color: white; z-index: 1; }
+            img { width: 100%; height: 100%; opacity: 0.4; }}}}

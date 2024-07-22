@@ -1,0 +1,66 @@
+@import "./style.less";
+.pop__item {
+    .pop__body { background-color: @cBg !important; overflow-x: hidden;
+        > *:nth-last-child(2) { margin-bottom: 100px; }
+        .item-img { width: calc(100% + 40px); min-height: 200px; height: fit-content; aspect-ratio: 1/1; padding: 0 20px; gap: 10px; display: flex; overflow-x: scroll; -ms-overflow-style: none; scrollbar-width: none;
+            &::-webkit-scrollbar { display: none; }
+            img { width: 100%; height: fit-content; max-width: 400px; max-height: 400px; aspect-ratio: 1/1; border-radius: 15px; }}
+        .item-info { width: 100%; gap: 2px; display: flex; flex-direction: column;
+            .item-info__tags { gap: 5px; display: flex; flex-wrap: wrap;
+                div { width: fit-content; height: 30px; padding: 0 5px; border-radius: 7.5px; border: 1.5px solid @c1; display: flex; align-items: center; color: @c1; }}
+            .item-info__name { font-size: @fXL;}
+            .item-info__detail { font-size: @fL; color: @cG3;}
+            .item-info__price { font-size: @fXL; font-weight: bold;
+                s { margin-right: 5px; color: @cG4; }}}
+        .item-sets { width: 100%; padding: 3px; border-radius: 15px; gap: 6px; display: flex; background-color: white;
+            .item-set { width: 100%; min-height: 60px; padding: 5px; border-radius: 13.5px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+                &.item-set--active { background-color: @c1;
+                    span { color: white; }}
+                .item-set__name { font-size: @fL; font-weight: bold; }}}
+        .item-settings { width: 100%; padding: 15px; border-radius: 15px; position: relative; display: flex; flex-direction: column; align-items: center; background-color: white;
+            &.item-settings--error { border: 1.5px solid @cRed; }
+            &.item-settings--qc { background-color: @cBg;
+                .item-settings__sub { background-color: white; }
+                .item-setting {
+                    &.item-setting__boxes .item-setting__box.item-setting__box--active { background-color: @cQ1; }
+                    .item-setting__right .item-setting__minus, .item-setting__plus { background-color: @cQ2 !important;
+                        i, svg { color: @cQ1 !important; }}}
+                .check .check__default:checked ~ .check__mark { background-color: @cQ1; border: 2px solid @cQ1; }}
+            .item-settings__name { font-size: @fL; font-weight: bold; 
+                &.item-settings__name--error { color: @cRed; }}
+            .item-settings__detail { color: @cG3; }
+            .item-settings__notice { padding: 5px 10px; border-radius: 15px 0 15px 0; top: 0; left: 0; position: absolute; font-size: @fS; color: @cRed; background: rgba(235, 87, 87, 0.2); }
+            .item-settings__remark { width: 100%; height: 23px; min-height: 23px; margin-top: 5px; overflow: hidden; text-align: center; }
+            .item-settings__sub { padding: 0 10px 10px; margin-top: 10px; border-radius: 10px; background-color: @cBg;
+                > * { margin-top: 10px; }
+                .item-settings__name { font-size: @fM; }
+                .item-settings__detail { font-size: @fS; margin-top: 0; }}
+            .item-setting { width: 100%; margin-top: 5px; display: flex;
+                &.item-setting__boxes { margin-top: 10px; gap: 10px; flex-wrap: wrap;
+                    &.item-setting__boxes--2 .item-setting__box { width: calc(50% - 5px); }
+                    &.item-setting__boxes--3 .item-setting__box { width: calc(33% - 6.66px); }
+                    &.item-setting__boxes--4 .item-setting__box { width: calc(25% - 7.5px); }
+                    &.item-setting__boxes--5 .item-setting__box { width: calc(20% - 8px); }
+                    .item-setting__box { width: 100%; padding: 5px; border: 1px solid @cG5; border-radius: 10px; display: flex; flex-direction: column; align-items: center;
+                        &.item-setting__box--active { border: 0; background-color: @c1;
+                            span { color: white; }}
+                        &.item-setting__box--full span { color: @cG4; }
+                        span { color: @cG1; }
+                        .item-setting__name { font-size: @fM; text-align: center; }
+                        .item-setting__price { font-size: @fS; }}}
+                .item-setting__left { width: 100%; display: flex; flex-direction: column;
+                    .item-setting__name { font-size: @fL; }
+                    .item-setting__price { color: @cG3; }}
+                .item-setting__right { margin-left: 10px; display: flex; align-items: center;
+                    .item-setting__minus, .item-setting__plus { width: 30px; height: 30px; border-radius: 5px; display: flex; align-items: center; justify-content: center; background-color: @c1;
+                        &.item-setting__plus--max { background-color: transparent !important;
+                            i, svg { color: @cG4 !important; }}
+                        i, svg { color: white; }}
+                    .item-setting__count { width: 40px; font-size: @fL; text-align: center; }}}}
+        .item-count { width: 100%; padding: 20px 0 50px; position: relative; display: flex; align-items: center; justify-content: center;
+            .item-count__plus, .item-count__minus { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; background-color: @c1;
+                &.item-count__max { background-color: @cG5; pointer-events: none; }
+                i, svg { color: white; }}
+            .item-count__number { width: 60px; font-size: @fXXL; text-align: center; }
+            .item-count__notice { top: 70px; position: absolute; color: @cRed; }}
+        .item-bottom { width: 100%; bottom: 0; position: sticky; display: flex; flex-direction: column; align-items: center; }}}

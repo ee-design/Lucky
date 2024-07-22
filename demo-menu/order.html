@@ -1,0 +1,215 @@
+<!-- HTML Table of Contents
+    1. Header
+    2. Footer
+    3. Main -->
+
+    <!DOCTYPE html>
+    <html translate="no">
+        <head>
+            <title>電子菜單</title>
+            <link rel="icon" type="image/svg" href="./img/icon/favicon.svg"/> 
+            <meta charset="UTF-8">
+            <meta name="keywords" content="電子菜單">
+            <meta name="description" content="電子菜單">
+            <meta name="author" content="DotDot">
+            <meta name="format-detection" content="telephone=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Screen Ratio -->
+            <meta name="google" content="notranslate">
+        <!-- CSS -->
+            <link href="./css/order.less" rel="stylesheet/less" type="text/css"/>
+            <link href="./css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
+        </head>
+        <body class="order">
+            <!-- Loading -->
+            <!-- <div class="loading"><div>
+                <img src="img/brand.png">
+            <div></div></div></div> -->
+    
+            <!--------------- 1. Header --------------->
+            <section id ="header"></section>
+
+            <!--------------- 2. Footer --------------->
+            <section class="footer">
+                <button class="important" onclick="window.location.href=''">
+                    <i class="fa-solid fa-bell-concierge fa-lg"></i>
+                    <span>服務鈴</span>
+                </button>
+                <button onclick="window.location.href='menu.html'">
+                    <i class="fa-solid fa-utensils fa-lg"></i>
+                    <span>繼續加點</span>
+                </button>
+            </section>
+    
+            <!--------------- 3. Main --------------->
+            <section class="main">
+                <div class="result">
+                    <i class="result__icon fa-solid fa-circle-check fa-5x"></i>
+                    <span class="result__title">訂單已送出</span>
+                    <span class="result__content">正在為您準備餐點</span>
+                </div>
+                <!----- 訂單 #1 ----->
+                <div class="receipt">
+                    <!-- 小標題 -->
+                    <div class="receipt__sub-header">
+                        <span class="receipt__no">#2</span>
+                        <span class="receipt__date">2022/12/25 12:45</span>
+                    </div>
+                    <!-- 品項 -->
+                    <div class="receipt-item">
+                        <div class="receipt-item__left">
+                            <div class="receipt-item__count">2</div>
+                            <a class="receipt-item__dropdown" onclick="receiptMin(this)">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                        </div>
+                        <div class="receipt-item__center">
+                            <span class="receipt-item__name">金色三麥經典大拼盤</span>
+                            <span class="receipt-item__detail" onclick="receiptMin(this)">
+                                香腸大拼盤 x2・三麥經典洋蔥圈<br>
+                                千島醬・番茄醬<br>
+                                奶茶・少糖・少冰<br>
+                                備注：飲料一起上</span>
+                        </div>
+                        <div class="receipt-item__right">
+                            <span class="receipt-item__price">$999</span>
+                            <span class="receipt-item__price--discount">$1998</span>
+                        </div>
+                    </div>
+                    <!-- 品項 (收合-預設收起) -->
+                    <div class="receipt-item receipt-item--min">
+                        <div class="receipt-item__left">
+                            <div class="receipt-item__count">2</div>
+                            <a class="receipt-item__dropdown" onclick="receiptMin(this)">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                        </div>
+                        <div class="receipt-item__center">
+                            <span class="receipt-item__name">墨魚醉嗆烏魚子</span>
+                            <span class="receipt-item__detail" onclick="receiptMin(this)">
+                                奶茶・少糖・少冰<br>
+                                備注：飲料一起上</span>
+                        </div>
+                        <div class="receipt-item__right">
+                            <span class="receipt-item__price">$999</span>
+                        </div>
+                    </div>
+                    <!-- 品項 -->
+                    <div class="receipt-item">
+                        <div class="receipt-item__left">
+                            <div class="receipt-item__count">1</div>
+                        </div>
+                        <div class="receipt-item__center">
+                            <span class="receipt-item__name">蜜香滿天飛</span>
+                            <span class="receipt-item__detail">備注：餐後上</span>
+                        </div>
+                        <div class="receipt-item__right">
+                            <span class="receipt-item__price">$999</span>
+                        </div>
+                    </div>
+                    <!-- 整單備註 -->
+                    <span class="receipt__remark">備注：全部飲料先上</span>
+                    <!-- 虛線 -->
+                    <div class="receipt__dash"></div>
+                    <!-- 總計 -->
+                    <div class="receipt-total">
+                        <div class="receipt-total__item">
+                            <span class="receipt-total__name">小計</span>
+                            <span class="receipt-total__price">$3996</span>
+                        </div>
+                    </div>
+                </div>
+                <!----- 訂單 #2 ----->
+                <div class="receipt">
+                    <!-- 小標題 -->
+                    <div class="receipt__sub-header">
+                        <span class="receipt__no">#1</span>
+                        <span class="receipt__date">2022/12/25 12:30</span>
+                    </div>
+                    <!-- 品項 (收合) -->
+                    <div class="receipt-item receipt-item--min">
+                        <div class="receipt-item__left">
+                            <div class="receipt-item__count">2</div>
+                            <a class="receipt-item__dropdown" onclick="receiptMin(this)">
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                        </div>
+                        <div class="receipt-item__center">
+                            <span class="receipt-item__name">墨魚醉嗆烏魚子</span>
+                            <span class="receipt-item__detail" onclick="receiptMin(this)">
+                                香腸大拼盤 x2・三麥經典洋蔥圈<br>
+                                千島醬・番茄醬<br>
+                                奶茶・少糖・少冰<br>
+                                備注：飲料一起上</span>
+                        </div>
+                        <div class="receipt-item__right">
+                            <span class="receipt-item__price">$999</span>
+                        </div>
+                    </div>
+                    <!-- 品項 -->
+                    <div class="receipt-item">
+                        <div class="receipt-item__left">
+                            <div class="receipt-item__count">1</div>
+                        </div>
+                        <div class="receipt-item__center">
+                            <span class="receipt-item__name">蜜香滿天飛</span>
+                        </div>
+                        <div class="receipt-item__right">
+                            <span class="receipt-item__price">$999</span>
+                        </div>
+                    </div>
+                    <!-- 虛線 -->
+                    <div class="receipt__dash"></div>
+                    <!-- 總計 -->
+                    <div class="receipt-total">
+                        <div class="receipt-total__item">
+                            <span class="receipt-total__name">小計</span>
+                            <span class="receipt-total__price">$1998</span>
+                        </div>
+                    </div>
+                </div>
+                <!----- 總單 ----->
+                <div class="receipt">
+                    <!-- 大標題 -->
+                    <div class="receipt__header">
+                        <span class="receipt__title">總單</span>
+                    </div>
+                    <!-- 總計 -->
+                    <div class="receipt-total">
+                        <div class="receipt-total__item">
+                            <span class="receipt-total__name">訂單 <span class="receipt-total__name--strong">#1</span></span>
+                            <span class="receipt-total__price">$1998</span>
+                        </div>
+                        <div class="receipt-total__item">
+                            <span class="receipt-total__name">訂單 <span class="receipt-total__name--strong">#2</span></span>
+                            <span class="receipt-total__price">$3996</span>
+                        </div>
+                        <div class="receipt-total__item">
+                            <span class="receipt-total__name">服務費 10%</span>
+                            <span class="receipt-total__price">$599</span>
+                        </div>
+                        <div class="receipt-total__item receipt-total__item--discount">
+                            <span class="receipt-total__name">新春九折優惠</span>
+                            <span class="receipt-total__price">-$599</span>
+                        </div>
+                    </div>
+                    <!-- 虛線 -->
+                    <div class="receipt__dash"></div>
+                    <!-- 總計 -->
+                    <div class="receipt-total">
+                        <div class="receipt-total__item">
+                            <span class="receipt-total__name">總計</span>
+                            <span class="receipt-total__price">$5994</span>
+                        </div>
+                    </div>
+                </div>
+                <!----- 說明 ----->
+                <span class="order__remark">以上價格為餐點小計，餐廳或會就帳單收取服務費或附加費<br>
+                    如對帳單計算有任何疑問，請向職員查詢，謝謝</span>
+            </section>
+    
+            <!-- Script -->
+            <script src="./js/less.js" ></script> <!-- Less -->
+            <script src="./js/header.js"></script>
+            <script src="./js/order.js"></script>
+        </body>
+    </html>
