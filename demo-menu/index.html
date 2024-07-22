@@ -4,7 +4,7 @@
     3. Main -->
 
 <!DOCTYPE html>
-<html translate="no">
+<html>
     <head>
         <title>電子菜單</title>
         <link rel="icon" type="image/svg" href="./img/icon/favicon.svg"/> 
@@ -16,8 +16,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Screen Ratio -->
         <meta name="google" content="notranslate">
         <!-- CSS -->
-        <link href="./css/welcome.less" rel="stylesheet/less" type="text/css"/>
-        <link href="./css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
+        <link href="css/welcome.css" rel="stylesheet" type="text/css"/>
+        <link href="css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
     </head>
     <body class="welcome">
         <!-- Loading -->
@@ -26,23 +26,67 @@
         <div></div></div></div> -->
 
         <!--------------- 1. Header --------------->
-        <section id ="header"></section>
+        <section class="header">
+            <div class="header__left">
+                <a class="header__back" onclick="javascript:history.back()"><i class="fa-solid fa-chevron-left fa-xl"></i></a>
+            </div>
+            <img src="img/logo.png" onclick="window.location.href='index.html'">
+            <div class="header__info"> <!-- 出現時不顯示Logo -->
+                <span class="header__info-name">內用桌號</span>
+                <span class="header__info-content">25</span>
+            </div>
+            <!-- <div class="header__info">
+                <span class="header__info-name">截單時間</span>
+                <span class="header__info-content">1:29</span>
+            </div> -->
+            <div class="header__right">
+                <!-- <a class="header__order" onclick="window.location.href='order.html'">
+                    <img src="img/icon/order.svg">
+                    <div class="header__order-count">2</div>
+                </a> -->
+                <a class="header__languages" onclick="popLanguages()"><img src="img/icon/language.svg"></a>
+            </div>
+        </section>
+
+        <!-- 多國語popup -->
+        <section id="pop__languages" class="pop pop--full pop__languages" onclick="popClose(this)">
+            <div class="pop__body">
+                <a onclick="popClose(this)" class="pop__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
+                <a onclick="popClose(this)">English</a>
+                <a onclick="popClose(this)" class="language--active">中文</a>
+                <a onclick="popClose(this)">日本語</a>
+            </div>
+        </section>
 
         <!--------------- 2. Footer --------------->
-        <section class="footer">
+        <!-- <section class="footer">
             <button onclick="window.location.href='categories.html'">
-                <span>開始點餐</span>
+                <span>菜單</span>
             </button>
-        </section>
+        </section> -->
+        <section class="footer">
+                <button class="important" onclick="window.location.href=''">
+                    <i class="fa-solid fa-bell-concierge fa-lg"></i>
+                    <span>服務鈴</span>
+                </button>
+                <!-- <button onclick="window.location.href='menu.html'">
+                    <i class="fa-solid fa-utensils fa-lg"></i>
+                    <span>繼續加點</span>
+                </button> -->
+            </section>
 
         <!--------------- 3. Main --------------->
         <section class="main">
-            <img src="img/discount.png">
-            <img src="img/discount1.png">
+            <a href="menu.html">
+                <img src="img/menu_01.jpg">
+            </a>
+            <a href="menu.html">
+                <img src="img/menu_02.jpg">
+            </a>
         </section>
 
         <!-- Script -->
-        <script src="./js/less.js" ></script> <!-- Less -->
-        <script src="./js/header.js"></script>
+        <script src="js/less.js" ></script> <!-- Less -->
+        <script src="js/header.js"></script>
     </body>
 </html>

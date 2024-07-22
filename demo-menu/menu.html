@@ -5,7 +5,7 @@
     4. Popup -->
 
 <!DOCTYPE html>
-<html translate="no">
+<html>
     <head>
         <title>電子菜單</title>
         <link rel="icon" type="image/svg" href="./img/icon/favicon.svg"/> 
@@ -17,11 +17,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Screen Ratio -->
         <meta name="google" content="notranslate">
         <!-- CSS -->
-        <link href="./css/menu.less" rel="stylesheet/less" type="text/css"/>
-        <link href="./css/pop-cart.less" rel="stylesheet/less" type="text/css"/>
-        <link href="./css/pop-item.less" rel="stylesheet/less" type="text/css"/>
-        <link href="./css/pop-suggest.less" rel="stylesheet/less" type="text/css"/>
-        <link href="./css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pop-cart.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pop-item.css" rel="stylesheet" type="text/css"/>
+        <link href="css/pop-suggest.css" rel="stylesheet" type="text/css"/>
+        <link href="css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
     </head>
     <body class="menu"> <!-- Dark theme class: menu--dark -->
         <!-- Loading -->
@@ -30,7 +30,27 @@
         <div></div></div></div> -->
 
         <!--------------- 1. Header --------------->
-        <section id ="header"></section>
+        <section class="header">
+            <div class="header__left">
+                <a class="header__back" onclick="javascript:history.back()"><i class="fa-solid fa-chevron-left fa-xl"></i></a>
+            </div>
+            <img src="img/logo.png" onclick="window.location.href='index.html'">
+            <div class="header__info"> <!-- 出現時不顯示Logo -->
+                <span class="header__info-name">內用桌號</span>
+                <span class="header__info-content">25</span>
+            </div>
+            <!-- <div class="header__info">
+                <span class="header__info-name">截單時間</span>
+                <span class="header__info-content">1:29</span>
+            </div> -->
+            <div class="header__right">
+                <!-- <a class="header__order" onclick="window.location.href='order.html'">
+                    <img src="img/icon/order.svg">
+                    <div class="header__order-count">2</div>
+                </a> -->
+                <a class="header__languages" onclick="popLanguages()"><img src="img/icon/language.svg"></a>
+            </div>
+        </section>
         <section class="menu__categories">
             <a class="category--active">為您推薦</a>
             <a>專屬推薦</a>
@@ -48,7 +68,7 @@
         </section>
 
         <!--------------- 2. Footer --------------->
-        <section class="footer">
+        <!-- <section class="footer">
             <button class="action" onclick="popCart()">
                 <i class="action__icon fa-solid fa-cart-shopping fa-lg"></i>
                 <div class="action__info">
@@ -57,7 +77,7 @@
                 </div>
                 <div class="action__name">購物車</div>
             </button>
-        </section>
+        </section> -->
 
         <!--------------- 3. Main --------------->
         <section class="main">
@@ -149,6 +169,17 @@
                     <span class="suggest-item__price">$999</span>
                 </a>
             </div>
+        </section>
+
+        <section class="footer">
+            <button class="important" onclick="window.location.href=''">
+                <i class="fa-solid fa-bell-concierge fa-lg"></i>
+                <span>服務鈴</span>
+            </button>
+            <!-- <button onclick="window.location.href='menu.html'">
+                <i class="fa-solid fa-utensils fa-lg"></i>
+                <span>繼續加點</span>
+            </button> -->
         </section>
 
         <!--------------- 4. Popup --------------->
@@ -513,7 +544,7 @@
                     </a>
                 </div>
                 <!-- 按鈕 -->
-                <div class="item-bottom">
+                <!-- <div class="item-bottom">
                     <button class="action" onclick="popClose(this)">
                         <i class="action__icon fa-solid fa-cart-plus fa-lg"></i>
                         <div class="action__info">
@@ -522,7 +553,7 @@
                         </div>
                         <div class="action__name">加入購物車</div>
                     </button>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -583,8 +614,8 @@
         </section>
 
         <!-- Script -->
-        <script src="./js/less.js" ></script> <!-- Less -->
-        <script src="./js/header.js"></script>
-        <script src="./js/menu.js"></script>
+        <script src="js/less.js" ></script> <!-- Less -->
+        <script src="js/header.js"></script>
+        <script src="js/menu.js"></script>
     </body>
 </html>
