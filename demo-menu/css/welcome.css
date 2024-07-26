@@ -895,8 +895,8 @@ button * {
 .welcome .main {
   max-width: 100vw;
   min-height: 100vh;
-  padding: 100px 20px 100px;
-  gap: 10px;
+  padding: 75px 20px 100px;
+  gap: 15px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -907,19 +907,35 @@ button * {
   max-height: 100%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.welcome .main .menu__title {
+  position: absolute;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
 }
 .welcome .main img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1000px;
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+  border-radius: 20px;
 }
 .welcome .scroll {
   position: absolute;
   left: calc(50% - 25px);
-  bottom: 10%;
+  bottom: 6%;
   z-index: 4;
   cursor: pointer;
   transform: scale(1, 1);
   transition: all 0.5s ease-out;
+  opacity: 0.9;
 }
 .welcome .scroll span {
   color: #fff;
