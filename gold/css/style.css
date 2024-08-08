@@ -289,44 +289,55 @@ body {
 }
 .TPUF-stamp-container .m-one {
   position: relative;
-  min-height: calc(100vh - 320px);
+  min-height: calc(100vh - 283px);
 }
 
 .login-bg {
   background: url(../images/bg_login_00.png) center top no-repeat;
   background-size: contain;
 }
-
-@media all and (max-width: 790px) {
-  .login-bg min-height {
-    min-height: calc(100vh - 406px);
-  }
-  .event-content-top {
+.login-bg .m-one::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  background: url(../images/blue-top.png) bottom center no-repeat;
+  background-size: cover;
+  height: 375px;
+}
+@media all and (max-width: 600px) {
+  .login-bg .m-one::after {
     background-size: contain;
   }
-  .event-content-top .right_icon {
+}
+@media all and (max-width: 790px) {
+  .login-bg .login-bg min-height {
+    min-height: calc(100vh - 406px);
+  }
+  .login-bg .event-content-top {
+    background-size: contain;
+  }
+  .login-bg .event-content-top .right_icon {
     top: -40px;
     width: 120px;
     right: 50px;
   }
-  .event-content-top .inputBox input {
+  .login-bg .event-content-top .inputBox input {
     font-size: 20px;
     padding: 15px 20px;
     max-width: calc(100% - 85px);
   }
-  .event-content-top .inputBox button {
+  .login-bg .event-content-top .inputBox button {
     font-size: 16px;
     padding: 10px;
     min-width: 80px;
   }
-  .event-content-top .inputBox .text {
+  .login-bg .event-content-top .inputBox .text {
     padding: 6px 15px;
     font-size: 13px;
     left: 25px;
   }
-}
-.bg_blue_img {
-  background: url(../images/blue-bg.png) center top no-repeat;
 }
 
 .bg_color_blue {
@@ -339,7 +350,6 @@ body {
 
 .login_box {
   padding: 20px;
-  padding-top: 80px;
   text-align: center;
 }
 .login_box .top-title {
@@ -348,16 +358,6 @@ body {
   color: #fff;
   font-weight: bold;
   padding: 10px 0;
-}
-.login_box .top-title span {
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: url(../images/blue-bg.png) center bottom;
-}
-@media all and (max-width: 450px) {
-  .login_box .top-title span {
-    background: none;
-  }
 }
 .login_box .fillin {
   width: 100%;
