@@ -298,10 +298,6 @@ body {
 }
 
 @media all and (max-width: 790px) {
-  .login-bg {
-    background: url(../images/bg_login_s.png) center top no-repeat;
-    background-size: contain;
-  }
   .login-bg min-height {
     min-height: calc(100vh - 406px);
   }
