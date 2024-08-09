@@ -1,0 +1,319 @@
+@charset "UTF-8";
+@import url(animate.css);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+*:link,
+*:visited,
+*:hover,
+*:active,
+*:focus,
+* {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Noto Sans TC", Arial, "微軟正黑體", "新細明體", sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+p {
+  font-size: 0.9375em;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-size: 100%;
+  border-color: #9e9e9e;
+}
+
+.TPUF-ipad-container {
+  width: 100%;
+  background: url(../images/bg.png) center center no-repeat;
+  background-size: cover;
+}
+.TPUF-ipad-container img {
+  width: 100%;
+}
+.TPUF-ipad-container .an-repeat {
+  animation-iteration-count: infinite;
+}
+.TPUF-ipad-container .top-title-content {
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+}
+.TPUF-ipad-container .top-title-content .left_logo {
+  position: absolute;
+  top: 25px;
+  left: 24px;
+  max-width: 150px;
+}
+.TPUF-ipad-container .top-title-content .right_logo {
+  width: 20vw;
+  max-width: 170px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+}
+.TPUF-ipad-container .top-title-content .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.TPUF-ipad-container .top-title-content .main .img {
+  max-width: 130px;
+  margin-right: 15px;
+}
+.TPUF-ipad-container .top-title-content .main h1 {
+  font-weight: 800;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 60px;
+  padding: 20px 30px;
+  color: #0084CC;
+  background-color: #FFE01B;
+  border-radius: 50px;
+  box-shadow: 4px 3px 9px rgba(0, 0, 0, 0.23);
+}
+.TPUF-ipad-container .top-title-content .main .nb {
+  font-weight: 600;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #0084CC;
+  font-size: 47px;
+  padding: 0 20px;
+}
+.TPUF-ipad-container .info-content {
+  height: 70vh;
+  width: 100%;
+  background: url(../images/blue-bg.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+  padding-top: 8vh;
+  text-align: center;
+}
+.TPUF-ipad-container .info-content .btn {
+  cursor: pointer;
+  width: 35vw;
+  height: 35vw;
+  margin: 0 auto;
+  text-indent: -9999px;
+  background: url(../images/touch.png);
+  background-size: contain;
+}
+.TPUF-ipad-container .info-content .logos {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+.TPUF-ipad-container .info-content ul.a-card {
+  width: 100%;
+  margin: 4vh auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.TPUF-ipad-container .info-content ul.a-card li {
+  flex: 1;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 3px solid #fff;
+  overflow: hidden;
+}
+.TPUF-ipad-container .info-content ul.a-card li h3 {
+  background-color: #005CA1;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 800;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.TPUF-ipad-container .info-content ul.a-card li p {
+  color: #005CA1;
+  font-size: 23px;
+  text-align: center;
+  padding: 20px 10px;
+  font-weight: 800;
+  font-family: "Noto Sans TC", sans-serif;
+}/*# sourceMappingURL=style.css.map */

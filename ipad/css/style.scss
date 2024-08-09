@@ -1,0 +1,121 @@
+@import "../css/reset.scss";
+@import url(animate.css);
+
+.TPUF-ipad-container{
+  width: 100%;
+  // max-width: 1216px;
+  // height: 352px;
+  background: url(../images/bg.png) center center no-repeat;
+  background-size: cover;
+  img{
+    width: 100%;
+  }
+  .an-repeat{
+    animation-iteration-count: infinite;
+  }
+  .top-title-content{
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    text-align: center;
+    padding-top: 100px;
+    position: relative;
+    .left_logo{
+      position: absolute;
+      top: 25px;
+      left: 24px;
+      max-width: 150px;
+    }
+    .right_logo {
+      width: 20vw;
+      max-width: 170px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1;
+    }
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .img{
+        max-width: 130px;
+        margin-right: 15px;
+      }
+      h1{
+        font-weight: 800;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 60px;
+        padding:20px 30px;
+        color: #0084CC;
+        background-color: #FFE01B;
+        border-radius: 50px;
+        box-shadow: 4px 3px 9px rgb(0 0 0 / 23%);
+      }
+      .nb{
+        font-weight: 600;
+        font-family: 'Noto Sans TC', sans-serif;
+        color:#0084CC;
+        font-size: 47px;
+        padding: 0 20px;
+      }  
+    }
+  }
+  .info-content{
+    height: 70vh;
+    width: 100%;
+    background: url(../images/blue-bg.png) center bottom no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+    padding-top: 8vh;
+    text-align: center;
+    .btn{
+      cursor: pointer;
+      width: 35vw;
+      height: 35vw;
+      margin: 0 auto;
+      text-indent: -9999px;
+      background: url(../images/touch.png);
+      background-size: contain;
+    }
+    .logos{
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+    }
+    ul.a-card{
+      width: 100%;
+      margin: 4vh auto 0 auto;
+      display: flex;
+      flex-wrap:wrap ;
+      li{
+        flex: 1;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 3px solid #fff;
+        overflow: hidden;
+        h3{
+          background-color: #005CA1;
+          text-align: center;
+          color: #fff;
+          padding: 10px;
+          font-size: 21px;
+          line-height: 1.2;
+          font-weight: 800;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        p{
+          color: #005CA1;
+          font-size: 23px;
+          text-align: center;
+          padding:20px 10px;
+          font-weight: 800;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+      }
+    }
+  }
+}
