@@ -203,8 +203,11 @@ body {
 
 .TPUF-ipad-container {
   width: 100%;
+  height: 100vh;
   background: url(../images/bg.png) center center no-repeat;
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
 }
 .TPUF-ipad-container img {
   width: 100%;
@@ -217,8 +220,9 @@ body {
   height: 30vh;
   background-size: cover;
   text-align: center;
-  padding-top: 100px;
+  padding-bottom: 20px;
   position: relative;
+  display: flex;
 }
 .TPUF-ipad-container .top-title-content .left_logo {
   position: absolute;
@@ -239,6 +243,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-top: auto;
 }
 .TPUF-ipad-container .top-title-content .main .img {
   max-width: 130px;
@@ -277,7 +283,7 @@ body {
   height: 35vw;
   margin: 0 auto;
   text-indent: -9999px;
-  background: url(../images/touch.png);
+  background: url(../images/touch.png) center center no-repeat;
   background-size: contain;
 }
 .TPUF-ipad-container .info-content .logos {
