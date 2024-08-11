@@ -385,7 +385,7 @@ body {
 .TPUF-car-container .top-title-content .main h1.title_blue {
   background-color: transparent;
   box-shadow: none;
-  font-size: 3.6rem;
+  font-size: 3.5rem;
 }
 .TPUF-car-container .top-title-content .main .nb {
   font-weight: 600;
@@ -428,9 +428,47 @@ body {
 .TPUF-car-container .info-content .all-nb .a-row {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .TPUF-car-container .info-content .all-nb .a-row .w1 {
-  flex: 1;
+  flex: 13%;
+  padding: 0 5px;
+}
+.TPUF-car-container .info-content .all-nb .a-row .w2 {
+  flex: 28%;
+  padding: 0 5px;
+}
+.TPUF-car-container .info-content .all-nb .a-row .w3 {
+  flex: 24%;
+  padding: 0 5px;
+}
+.TPUF-car-container .info-content .all-nb .a-row ul.a-card li h3 {
+  padding: 7px 3px;
+}
+.TPUF-car-container .info-content .all-nb .a-row .bg-yello {
+  border-radius: 10px;
+}
+.TPUF-car-container .info-content .all-nb .a-row .bg-yello ul.a-card {
+  border-color: #FFE01B;
+}
+.TPUF-car-container .info-content .all-nb .a-row .bg-yello ul.a-card li {
+  border-color: #FFE01B;
+}
+.TPUF-car-container .info-content .all-nb .a-row .bg-yello ul.a-card h3 {
+  background-color: #FFE01B;
+  color: #0084CB;
+}
+.TPUF-car-container .info-content .all-nb .a-row .two-card ul.a-card h3 {
+  font-size: 13px;
+  padding: 5px 0;
+}
+.TPUF-car-container .info-content .all-nb .a-row .two-card ul.a-card:first-child {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0px;
+}
+.TPUF-car-container .info-content .all-nb .a-row .two-card ul.a-card:last-child {
+  border-radius: 0 0 10px 10px;
+  border-top: 0px;
 }
 .TPUF-car-container .info-content .nb-card {
   width: 100%;
@@ -439,54 +477,66 @@ body {
   justify-content: center;
   align-items: center;
 }
-.TPUF-car-container .info-content .nb-card ul {
-  text-align: left;
-}
 .TPUF-car-container .info-content .nb-card ul li {
   display: inline-block;
-  padding: 5px 7px;
   color: #fff;
   font-size: 24px;
 }
-.TPUF-car-container .info-content .nb-card ul.nb_20 li {
-  font-size: 28px;
+.TPUF-car-container .info-content .nb-card ul.nb_5 li {
+  padding: 15px 25px;
+  font-size: 45px;
 }
-.TPUF-car-container .info-content .nb-card ul.nb_200 li {
-  font-size: 15px;
+.TPUF-car-container .info-content .nb-card ul.nb_50 li {
+  padding: 10px 5.5px;
+  font-size: 18.5px;
 }
-.TPUF-car-container .info-content .nb-card ul.nb_400 li {
-  padding: 3px 5px;
-  font-size: 12px;
+.TPUF-car-container .info-content .nb-card ul.nb_100 {
+  text-align: left;
+}
+.TPUF-car-container .info-content .nb-card ul.nb_100 li {
+  padding: 3px 4px;
+  font-size: 16px;
 }
 .TPUF-car-container .info-content ul.a-card {
   width: 100%;
-  margin: 4vh auto 0 auto;
   display: flex;
   flex-wrap: wrap;
+  border-radius: 10px;
+  border: 3px solid #F2A7C8;
+  overflow: hidden;
 }
 .TPUF-car-container .info-content ul.a-card li {
   flex: 1;
-  margin: 5px;
-  border-radius: 10px;
   background-color: #fff;
-  border: 3px solid #fff;
-  overflow: hidden;
+  border: 2px solid #F2A7C8;
 }
 .TPUF-car-container .info-content ul.a-card li h3 {
-  background-color: #005CA1;
+  background-color: #F2A7C8;
   text-align: center;
   color: #fff;
-  padding: 10px;
-  font-size: 21px;
+  padding: 5px 3px;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 800;
   font-family: "Noto Sans TC", sans-serif;
 }
 .TPUF-car-container .info-content ul.a-card li p {
-  color: #005CA1;
-  font-size: 23px;
+  color: #0084CB;
+  font-size: 20px;
   text-align: center;
-  padding: 20px 10px;
-  font-weight: 800;
+  padding: 7px 5px;
+  font-weight: 600;
   font-family: "Noto Sans TC", sans-serif;
+}
+
+.bg-car-all {
+  background: url(../images/bg_all.png) top center no-repeat;
+  background-size: cover;
+}
+.bg-car-all .top-title-content .main {
+  margin-top: initial;
+}
+.bg-car-all .info-content {
+  background: none;
+  padding-top: 2vh;
 }/*# sourceMappingURL=style.css.map */
