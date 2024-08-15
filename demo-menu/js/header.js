@@ -33,3 +33,9 @@ function popLanguages() {
 function popPervicebell() {
     document.getElementById("pop__servicebell").style.display = "flex";
     document.body.style.overflow = "hidden"; }
+
+    
+// 店家訊息popup
+function popStoreinfo() {
+    document.getElementById("pop__storeinfo").style.display = "block";
+    document.body.style.overflow = "hidden"; }

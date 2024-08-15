@@ -365,7 +365,7 @@ button * {
   color: #c49658;
 }
 .header img {
-  max-width: 250px;
+  max-width: 210px;
 }
 .header .header__left {
   width: 100%;
@@ -475,6 +475,7 @@ button * {
   animation-name: popup;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
+  margin: 0 auto;
 }
 .pop .pop__body .pop__close {
   width: 30px;
@@ -877,11 +878,14 @@ button * {
     max-height: 200px;
   }
 }
+.pop__storeinfo {
+  margin: 0 auto;
+}
 .categories {
   background-color: #26423b;
 }
 .categories .header img {
-  max-width: 250px;
+  max-width: 210px;
 }
 .categories .main {
   max-width: 1024px;
@@ -921,6 +925,7 @@ button * {
   font-weight: bold;
   color: white;
   z-index: 1;
+  text-align: center;
 }
 .categories .main .category img {
   width: 100%;
