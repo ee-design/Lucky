@@ -441,6 +441,7 @@ ul.nbsss li {
   display: inline-block;
   max-width: 30%;
   text-align: center;
+  border-radius: 10px;
 }
 ul.nbsss li p {
   padding: 5px;
@@ -451,6 +452,24 @@ ul.nbsss li p {
 }
 ul.nbsss li.c_gray p {
   font-weight: bold;
+}
+ul.nbsss li.bg_red {
+  background-color: #ff404d;
+}
+ul.nbsss li.bg_red p {
+  color: #fff;
+}
+ul.nbsss li.bg_orange {
+  background-color: #ff8716;
+}
+ul.nbsss li.bg_orange p {
+  color: #fff;
+}
+ul.nbsss li.bg_green {
+  background-color: #64cf4c;
+}
+ul.nbsss li.bg_green p {
+  color: #fff;
 }
 @media all and (max-width: 600px) {
   ul.nbsss {
