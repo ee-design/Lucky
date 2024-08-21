@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>電子菜單</title>
+        <title>早午餐菜單</title>
         <link rel="icon" type="image/svg" href="./img/icon/favicon.jpg"/> 
         <meta charset="UTF-8">
         <meta name="keywords" content="電子菜單">
@@ -48,23 +48,24 @@
                     <img src="img/icon/order.svg">
                     <div class="header__order-count">2</div>
                 </a> -->
+                <a class="header__languages" onclick="popStoreinfo()"><img src="img/icon/info.svg"></a>
                 <a class="header__languages" onclick="popLanguages()"><img src="img/icon/language.svg"></a>
             </div>
         </section>
         <section class="menu__categories">
-            <a class="category--active">為您推薦</a>
-            <a>專屬推薦</a>
-            <a>熱門商品</a>
-            <a>主餐</a>
-            <a>副餐</a>
-            <a>前菜</a>
-            <a>沙拉</a>
-            <a>義大利麵</a>
-            <a>披撒</a>
-            <a>盤餐</a>
+            <a class="category--active">主廚推薦</a>
+            <a>自選早午餐搭配</a>
+            <a>兒童餐點</a>
+            <a>開放式三明治系列</a>
+            <a>班尼迪克蛋系列</a>
+            <a>嘗試一點晚間菜單</a>
+            <a>午間就開喝搭配</a>
             <a>甜點</a>
-            <a>湯品</a>
-            <a>飲料</a>
+            <a>雞尾酒</a>
+            <a>咖啡</a>
+            <a>歐蕾系列</a>
+            <a>冰沙</a>
+            <a>茶</a>
         </section>
 
         <!--------------- 2. Footer --------------->
@@ -87,38 +88,60 @@
                 <!-- 有輸入文字才出現 -->
                 <a class="search__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
             </div>
-            <span class="title">為您推薦</span>
+
+            <span class="title">主廚推薦</span>
             <a class="item" onclick="popItem()">
                 <img class="item__img" src="img/food5.jpg">
                 <div class="item__tag">網紅口碑</div>
-                <span class="item__name">鮮美3A級野生軟絲佐</span>
-                <span class="item__price">$450</span>
+                <span class="item__name">今日湯品與酸種麵包</span>
+                <span class="item__price">$180</span>
                 <!-- <div class="item__count">2</div> -->
             </a>
             <a class="item" onclick="popItem()">
                 <img class="item__img" src="img/food6.jpg">
-                <span class="item__name">油封雞胗 & 心蒜苗 leeks 鮮美3A級野生軟絲佐</span>
-                <span class="item__price">$320</span>
-                <!-- <div class="item__count">2</div> -->
+                <span class="item__name">Joiny 優格水果碗</span>
+                <span class="item__price">$300</span>
             </a>
             <a class="item" onclick="popItem()">
                 <img class="item__img" src="img/food7.jpg">
-                <span class="item__name">胭脂蝦/鳳梨莎莎/檸檬泡泡</span>
-                <span class="item__price">$380</span>
+                <span class="item__name">土耳其蛋</span>
+                <span class="item__price">$290</span>
             </a>
             <a class="item item--sold-out" onclick="popItem()">
                 <div class="item__tag">售完</div>
                 <img class="item__img" src="img/food8.jpg">
                 <!-- <div class="item__img--sold-out">售完</div> -->
-                <span class="item__name">凱薩沙拉/舒肥香料雞胸/水波蛋(半熟蛋/全熟蛋)</span>
-                <span class="item__price">$999</span>
+                <span class="item__name">炸中東蔬菜球與胡慕斯</span>
+                <span class="item__price">$300</span>
             </a>
+            <!-- 若沒照片 a 要 + item--no-img，然後沒有 img -->
             <a class="item item--no-img" onclick="popItem()">
-                <!-- <img class="item__img" src="img/food2.png"> -->
-                <span class="item__name">蜜香滿天飛</span>
-                <span class="item__price">$999</span>
+                <img class="item__img" src="img/food2.png">
+                <span class="item__name">北非香辣手撕烤蛋</span>
+                <span class="item__price">$320</span>
             </a>
-            <span class="title">主餐</span>
+            <a class="item" onclick="popItem()">
+                <img class="item__img" src="img/food5.jpg">
+                <span class="item__name">英式大早餐(附贈優格)</span>
+                <span class="item__price">$400</span>
+            </a>
+            <a class="item" onclick="popItem()">
+                <img class="item__img" src="img/food6.jpg">
+                <span class="item__name">青醬起司雞腿堡</span>
+                <span class="item__price">$330</span>
+            </a>
+            <a class="item" onclick="popItem()">
+                <img class="item__img" src="img/food3.png">
+                <span class="item__name">澳洲和牛漢堡</span>
+                <span class="item__price">$480</span>
+            </a>
+            <a class="item" onclick="popItem()">
+                <img class="item__img" src="img/food5.jpg">
+                <span class="item__name">Joiny 雙人大早餐</span>
+                <span class="item__price">$880</span>
+            </a>
+
+            <span class="title">自選早午餐搭配</span>
             <a class="item item--no-img" onclick="popItem()">
                 <!-- <div class="item__img--none">
                     <i class="fa-solid fa-utensils"></i>
@@ -133,11 +156,12 @@
             </a>
             <a class="item item--single" onclick="popItem()">
                 <img class="item__img" src="img/food8.jpg">
-                <div class="item__tag">95%相似</div>
                 <span class="item__name">JOINY Taipei 經典大拼盤</span>
                 <span class="item__price">$999</span>
                 <!-- <div class="item__count">2</div> -->
             </a>
+
+            <span class="title">兒童餐點</span>
             <a class="item item--single" onclick="popItem()">
                 <img class="item__img" src="img/food9.jpg">
                 <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
@@ -153,6 +177,124 @@
                 <span class="item__name">大拼盤</span>
                 <span class="item__price">$999</span>
             </a>
+
+            <span class="title">開放式三明治系列</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--sold-out" onclick="popItem()">
+                <div class="item__tag">售完</div>
+                <img class="item__img" src="img/food5.jpg">
+                <span class="item__name">大拼盤</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">班尼迪克蛋系列</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">嘗試一點晚間菜單</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">午間就開喝搭配</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">甜點</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">雞尾酒</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">咖啡</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">歐蕾系列</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">冰沙</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+            <span class="title">茶</span>
+            <a class="item item--single" onclick="popItem()">
+                <img class="item__img" src="img/food9.jpg">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+            <a class="item item--single item--no-img" onclick="popItem()">
+                <span class="item__name">墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子墨魚醉嗆烏魚子</span>
+                <span class="item__price">$999</span>
+            </a>
+
+
             <!-- 搜尋最底 -->
             <div class="search__bottom">
                 <span class="search__bottom-content">沒有更多「拼盤」相關商品</span>
@@ -216,6 +358,53 @@
                 <button class="important" onclick="popPervicebell()">
                     <span>送出</span>
                 </button>
+            </div>
+        </section>
+        <!-- 多國語popup -->
+        <section id="pop__languages" class="pop pop--full pop__languages" onclick="popClose(this)">
+            <div class="pop__body">
+                <a onclick="popClose(this)" class="pop__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
+                <a onclick="popClose(this)">English</a>
+                <a onclick="popClose(this)" class="language--active">中文</a>
+                <a onclick="popClose(this)">日本語</a>
+            </div>
+        </section>
+        <!-- Popup (info) -->
+        <section id="pop__storeinfo" class="pop pop__storeinfo"  onclick="popClose(this)">
+            <div class="pop__body">
+                <a onclick="popClose(this)" class="pop__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
+                <div class="item-storeinfo">
+                    <span class="item-storeinfo__title">用餐須知</span>
+                </div>
+                <div class="storeinfo__detail">
+                    <p>
+                        咖啡飲品供應時：10:00 - 17:00<br>
+                        早午餐供應時間：10:00 - 16:00<br>
+                        <br>
+                        內用低銷每人一杯飲品或一份餐點<br>
+                        收 10% 服務費，用餐時間為 3 小時<br>
+                        店內禁帶外食（生日蛋糕除外）<br>
+                        <br>
+                        WIFI 密碼：27710915
+                    </p>
+                </div>
+                <div class="item-storeinfo">
+                    <span class="item-storeinfo__title">更多選擇</span>
+                </div>
+                <div class="storeinfo__detail">
+                    <p>
+                        套餐A：點任一主餐加購飲品 折扣 $20<br>
+<br>
+套餐B：點任一主餐 加 $200<br>
+可任選 $150 飲品一杯（超額補差價）<br> & 今日主廚甜點<br>
+<br>
+套餐C：點任一飲品  加 $150<br>
+可選 酥炸薯條 or 今日主廚點甜點（擇一）<br>
+<br>
+咖啡飲品續杯 折扣 $20 <br>
+換燕麥奶 加 $20
+                    </p>
+                </div>
             </div>
         </section>
 

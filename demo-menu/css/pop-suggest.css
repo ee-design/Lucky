@@ -880,6 +880,28 @@ button * {
 }
 .pop__storeinfo {
   margin: 0 auto;
+  align-content: center;
+}
+.pop__storeinfo .pop__body {
+  background-color: #f3f3f3;
+}
+.pop__storeinfo .item-storeinfo {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #c49658;
+}
+.pop__storeinfo .item-storeinfo .item-storeinfo__title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.pop__storeinfo .storeinfo__detail {
+  padding-bottom: 15px;
+}
+.pop__storeinfo .storeinfo__detail p {
+  text-align: center;
 }
 .pop__suggest .pop__body {
   gap: 15px;

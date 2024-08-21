@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html translate="no">
     <head>
-        <title>電子菜單</title>
+        <title>早午餐電子菜單</title>
         <link rel="icon" type="image/svg" href="./img/icon/favicon.jpg"/> 
         <meta charset="UTF-8">
         <meta name="keywords" content="電子菜單">
@@ -15,6 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Screen Ratio -->
         <meta name="google" content="notranslate">
         <!-- CSS -->
+        <link href="css/pop-suggest.css" rel="stylesheet" type="text/css"/>
         <link href="css/categories.css" rel="stylesheet" type="text/css"/>
         <link href="css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
     </head>
@@ -43,6 +44,7 @@
                     <img src="img/icon/order.svg">
                     <div class="header__order-count">2</div>
                 </a> -->
+                <a class="header__languages" onclick="popStoreinfo()"><img src="img/icon/info.svg"></a>
                 <a class="header__languages" onclick="popLanguages()"><img src="img/icon/language.svg"></a>
             </div>
         </section>
@@ -60,61 +62,96 @@
         <!--------------- 2. Main --------------->
         <section class="main">
             <a href="menu.html" class="category">
-                <span class="category__title">早午餐菜單</span>
+                <span class="category__title">主廚推薦</span>
                 <img src="img/food5.jpg">
             </a>
             <a href="menu.html" class="category category--half">
-                <span class="category__title">午餐晚一點<br>菜單</span>
+                <span class="category__title">自選<br>早午餐搭配</span>
                 <img src="img/category4.png">
             </a>
             <a href="menu.html" class="category category--half">
-                <span class="category__title">午間<br>就開喝</span>
-                <img src="img/food10.jpg">
+                <span class="category__title">兒童<br>餐點</span>
+                <img src="img/food7.jpg">
+            </a>
+            <a href="menu.html" class="category category--half">   
+                <span class="category__title">開放式<br>三明治系列</span>
+                <img src="img/food8.jpg">
+            </a>
+            <a href="menu.html" class="category category--half">
+                <span class="category__title">班尼迪克蛋<br>系列</span>
+                <img src="img/egg1.jpg">
             </a>
             <a href="menu.html" class="category">
-                <span class="category__title">晚間<br>菜單</span>
-                <img src="img/wine01.jpg">
+                <span class="category__title">嘗試一點晚間菜單</span>
+                <img src="img/food12.jpg">
             </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">大型<br>菜單</span>
-                <img src="img/food.png">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">宵夜<br>菜單</span>
-                <img src="img/food6.jpg">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">兒童<br>餐點</span>
-                <img src="img/food.png">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">全素<br>餐點</span>
-                <img src="img/food6.jpg">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">酒類</span>
-                <img src="img/food.png">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">冰沙</span>
-                <img src="img/food6.jpg">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">咖啡</span>
-                <img src="img/food.png">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">歐蕾</span>
-                <img src="img/food6.jpg">
-            </a>
-            <a href="menu.html" class="category category--half">
-                <span class="category__title">茶</span>
-                <img src="img/food.png">
+            <a href="menu.html" class="category">
+                <span class="category__title">午間就開喝搭配</span>
+                <img src="img/wine07.jpg">
             </a>
             <a href="menu.html" class="category category--half">
                 <span class="category__title">甜點</span>
-                <img src="img/food6.jpg">
+                <img src="img/cake1.jpg">
             </a>
+            <a href="menu.html" class="category category--half">
+                <span class="category__title">雞尾酒</span>
+                <img src="img/wine04.jpg">
+            </a>
+            <a href="menu.html" class="category category--half">
+                <span class="category__title">咖啡</span>
+                <img src="img/coffee.jpg">
+            </a>
+            <a href="menu.html" class="category category--half">
+                <span class="category__title">歐蕾<br>系列</span>
+                <img src="img/latte.jpg">
+            </a>
+            <a href="menu.html" class="category category--half">
+                <span class="category__title">冰沙</span>
+                <img src="img/wine01.jpg">
+            </a>
+            <a href="menu.html" class="category category--half">
+                <span class="category__title">茶</span>
+                <img src="img/tea.jpg">
+            </a>
+        </section>
+
+        <!-- Popup (info) -->
+        <section id="pop__storeinfo" class="pop pop__storeinfo" onclick="popClose(this)">
+            <div class="pop__body">
+                <a onclick="popClose(this)" class="pop__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
+                <div class="item-storeinfo">
+                    <span class="item-storeinfo__title">用餐須知</span>
+                </div>
+                <div class="storeinfo__detail">
+                    <p>
+                        咖啡飲品供應時：10:00 - 17:00<br>
+                        早午餐供應時間：10:00 - 16:00<br>
+                        <br>
+                        內用低銷每人一杯飲品或一份餐點<br>
+                        收 10% 服務費，用餐時間為 3 小時<br>
+                        店內禁帶外食（生日蛋糕除外）<br>
+                        <br>
+                        WIFI 密碼：27710915
+                    </p>
+                </div>
+                <div class="item-storeinfo">
+                    <span class="item-storeinfo__title">更多選擇</span>
+                </div>
+                <div class="storeinfo__detail">
+                    <p>
+                        套餐A：點任一主餐加購飲品 折扣 $20<br>
+<br>
+套餐B：點任一主餐 加 $200<br>
+可任選 $150 飲品一杯（超額補差價）<br> & 今日主廚甜點<br>
+<br>
+套餐C：點任一飲品  加 $150<br>
+可選 酥炸薯條 or 今日主廚點甜點（擇一）<br>
+<br>
+咖啡飲品續杯 折扣 $20 <br>
+換燕麥奶 加 $20
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Script -->
