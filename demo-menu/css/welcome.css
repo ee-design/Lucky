@@ -929,7 +929,7 @@ button * {
 }
 .welcome .main a {
   max-width: 90vw;
-  max-height: calc(100vh - 100px);
+  max-height: calc(100vh - 160px);
   margin: 0 auto;
   position: relative;
   display: flex;
