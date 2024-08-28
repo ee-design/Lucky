@@ -425,7 +425,7 @@ input.has-error:hover, input.has-error:focus {
   position: absolute;
   content: "";
   left: 1px;
-  top: calc(50% - 10px);
+  top: 10px;
   background-color: #ebf5f4;
   width: 20px;
   height: 20px;
@@ -438,7 +438,7 @@ input.has-error:hover, input.has-error:focus {
   position: absolute;
   content: "";
   left: 4px;
-  top: calc(50% - 9px);
+  top: 11px;
   width: 23px;
   height: 18px;
   display: none;
@@ -3650,8 +3650,6 @@ ul.edit-record-user li p.id span {
   width: 100%;
   padding: 8px 0;
   position: relative;
-  display: flex;
-  align-items: self-start;
 }
 .popup-container .fillin-box .field fieldset .text-error {
   position: absolute;
@@ -3896,7 +3894,7 @@ ul.edit-record-user li p.id span {
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
-  padding: 0 0 5px 0;
+  padding: 0;
 }
 .popup-container .fillin-box .field .form-details .a-row .other-tools a {
   padding: 10px;
@@ -4355,7 +4353,7 @@ ul.edit-record-user li p.id span {
 }
 .popup-container .fillin-box .field .media-details .discount-title .other-tools {
   position: absolute;
-  top: 0;
+  top: -8px;
   right: 5px;
   display: flex;
 }
@@ -4391,7 +4389,10 @@ ul.edit-record-user li p.id span {
 .popup-container .fillin-box .field .media-details .confirm {
   max-width: 100%;
   float: none;
-  padding-bottom: 10px;
+  padding: 0 0 10px 15px;
+}
+.popup-container .fillin-box .field .media-details .confirm h4 {
+  padding-top: 0;
 }
 .popup-container .fillin-box .field .media-details .confirm .input-value {
   max-width: 100%;
@@ -4400,31 +4401,50 @@ ul.edit-record-user li p.id span {
   position: relative;
 }
 .popup-container .fillin-box .field .media-details .check-item .w-80 {
-  width: calc(100% - 80px) !important;
+  max-width: calc(100% - 120px);
 }
 .popup-container .fillin-box .field .media-details .check-item label {
-  padding-right: 80px;
+  max-width: calc(100% - 150px);
+  line-height: 1.5;
 }
 .popup-container .fillin-box .field .media-details .check-item .ad-nb {
   position: absolute;
-  width: 65px;
-  top: calc(50% - 18px);
+  width: 140px;
+  top: 10px;
   right: 0;
+  display: flex;
+  gap: 5px;
 }
 .popup-container .fillin-box .field .media-details .check-item .ad-nb input {
   width: 100%;
+  flex: 1;
   height: 36px;
   color: #11948a;
   font-weight: bold;
   padding: 0 5px;
   text-align: center;
 }
+.popup-container .fillin-box .field .media-details .check-item .ad-nb input.amount {
+  flex: 2;
+}
 .popup-container .fillin-box .field .media-details .check-item .discount-nb {
   position: absolute;
-  width: 50px;
+  width: 160px;
   right: 0;
   top: 0;
-  padding: 0 10px;
+  padding: 0 15px 0 0;
+}
+.popup-container .fillin-box .field .media-details .check-item .discount-nb .input-value {
+  display: flex;
+  width: 100%;
+}
+.popup-container .fillin-box .field .media-details .check-item .discount-nb .input-value span {
+  flex: 1;
+  width: 100%;
+  text-align: right;
+}
+.popup-container .fillin-box .field .media-details .check-item .discount-nb .input-value span.amount {
+  flex: 4;
 }
 .popup-container .fillin-box .field .order-total {
   float: left;
