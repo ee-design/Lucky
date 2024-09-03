@@ -365,7 +365,7 @@ button * {
   color: #c49658;
 }
 .header img {
-  max-width: 250px;
+  max-width: 210px;
 }
 .header .header__left {
   width: 100%;
@@ -475,6 +475,7 @@ button * {
   animation-name: popup;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
+  margin: 0 auto;
 }
 .pop .pop__body .pop__close {
   width: 30px;
@@ -877,6 +878,59 @@ button * {
     max-height: 200px;
   }
 }
+.pop__storeinfo {
+  margin: 0 auto;
+  align-content: center;
+}
+.pop__storeinfo .pop__body {
+  background-color: #f3f3f3;
+}
+.pop__storeinfo .item-storeinfo {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #c49658;
+}
+.pop__storeinfo .item-storeinfo .item-storeinfo__title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.pop__storeinfo .storeinfo__detail {
+  padding-bottom: 10px;
+}
+.pop__storeinfo .storeinfo__detail p {
+  text-align: center;
+}
+@font-face {
+  font-family: 'Corinthia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/corinthia/v11/wEO_EBrAnchaJyPMHE0FUQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Corinthia';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/corinthia/v11/wEO6EBrAnchaJyPMHE097d8v1A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/tangerine/v17/IurY6Y5j_oScZZow4VOBDg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/tangerine/v17/Iurd6Y5j_oScZZow4VO5srNpjA.ttf) format('truetype');
+}
 .menu.menu--dark {
   background-color: #333333;
 }
@@ -967,6 +1021,14 @@ button * {
   font-weight: bold;
   text-align: center;
 }
+.menu .main .t-en {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
+  padding-top: 5px;
+  display: inline-block;
+}
 .menu .main .item {
   width: calc(50% - 7.5px);
   border: 1.5px solid #F2F1F6;
@@ -1001,6 +1063,11 @@ button * {
 .menu .main .item.item--single .item__price {
   padding: 0;
   margin: 0;
+}
+.menu .main .item.item--single .item__info {
+  font-size: 12px;
+  padding: 5px 0;
+  color: #888;
 }
 .menu .main .item.item--single .item__img {
   width: 100px;
@@ -1073,11 +1140,7 @@ button * {
 .menu .main .item .item__name {
   padding: 0 5px;
   margin-top: 2px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /*display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;*/
 }
 .menu .main .item .item__price {
   padding: 0 5px 5px;
