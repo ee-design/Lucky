@@ -1036,6 +1036,7 @@ button * {
   position: relative;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 @media (min-width: 1024px), (max-width: 1023px) and (min-width: 768px) {
   .menu .main .item {
@@ -1065,7 +1066,7 @@ button * {
   margin: 0;
 }
 .menu .main .item.item--single .item__info {
-  font-size: 12px;
+  font-size: 13px;
   padding: 5px 0;
   color: #888;
 }
@@ -1093,7 +1094,7 @@ button * {
   filter: grayscale(100%);
 }
 .menu .main .item.item--no-img {
-  padding-top: 25px;
+  padding-top: 8px;
 }
 .menu .main .item.item--no-img .item__name {
   margin-top: auto;
