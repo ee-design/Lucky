@@ -22,6 +22,25 @@
         <link href="css/pop-item.css" rel="stylesheet" type="text/css"/>
         <link href="css/pop-suggest.css" rel="stylesheet" type="text/css"/>
         <link href="css/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet"> <!-- Awesome Icon -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+        <script>
+            $(function(){
+                $('.goto-01').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-01').offset().top - 120}, 800); });
+                $('.goto-02').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-02').offset().top - 120}, 800); });
+                $('.goto-03').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-03').offset().top - 120}, 800); });
+                $('.goto-04').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-04').offset().top - 120}, 800); });
+                $('.goto-05').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-05').offset().top - 120}, 800); });
+                $('.goto-06').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-06').offset().top - 120}, 800); });
+                $('.goto-07').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-07').offset().top - 120}, 800); });
+                $('.goto-08').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-08').offset().top - 120}, 800); });
+                $('.goto-09').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-09').offset().top - 120}, 800); });
+                $('.goto-10').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-10').offset().top - 120}, 800); });
+                $('.goto-11').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-11').offset().top - 120}, 800); });
+                $('.goto-12').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-12').offset().top - 120}, 800); });
+                $('.goto-13').click(function(){ $('html,body').animate({scrollTop:$('#gotothe-13').offset().top - 120}, 800); });
+            });
+        </script>
     </head>
     <body class="menu"> <!-- Dark theme class: menu--dark -->
         <!-- Loading -->
@@ -53,19 +72,19 @@
             </div>
         </section>
         <section class="menu__categories">
-            <a class="category--active">主廚推薦</a>
-            <a>自選早午餐搭配</a>
-            <a>兒童餐點</a>
-            <a>開放式三明治系列</a>
-            <a>班尼迪克蛋系列</a>
-            <a>嘗試一點晚間菜單</a>
-            <a>午間就開喝搭配</a>
-            <a>甜點</a>
-            <a>雞尾酒</a>
-            <a>咖啡</a>
-            <a>歐蕾系列</a>
-            <a>冰沙</a>
-            <a>茶</a>
+            <a class="category--active goto-01">主廚推薦</a>
+            <a class="goto-02">自選早午餐搭配</a>
+            <a class="goto-03">兒童餐點</a>
+            <a class="goto-04">開放式三明治系列</a>
+            <a class="goto-05">班尼迪克蛋系列</a>
+            <a class="goto-06">嘗試一點晚間菜單</a>
+            <a class="goto-07">午間就開喝搭配</a>
+            <a class="goto-08">甜點</a>
+            <a class="goto-09">雞尾酒</a>
+            <a class="goto-10">咖啡</a>
+            <a class="goto-11">歐蕾系列</a>
+            <a class="goto-12">冰沙</a>
+            <a class="goto-13">茶</a>
         </section>
 
         <!--------------- 2. Footer --------------->
@@ -89,7 +108,7 @@
                 <a class="search__close"><i class="fa-solid fa-xmark fa-lg"></i></a>
             </div>
 
-            <span class="title">主廚推薦<br>
+            <span class="title" id="gotothe-01">主廚推薦<br>
                 <span class="t-en">Chef's special</span>
             </span>
             <a class="item item--single item--no-img">
@@ -152,7 +171,7 @@
                 <span class="item__price">$880</span>
             </a>
 
-            <span class="title">自選早午餐搭配<br>
+            <span class="title" id="gotothe-02">自選早午餐搭配<br>
                 <span class="t-en">Make your own breakfast</span>
             </span>
             <a class="item item--no-img">
@@ -223,7 +242,7 @@
                 <span class="item__price">$60/片</span>
             </a>
 
-            <span class="title">兒童餐點<br>
+            <span class="title" id="gotothe-03">兒童餐點<br>
                 <span class="t-en">Kid's meal(light)</span>
             </span>
             <a class="item item--single item--no-img">
@@ -238,7 +257,7 @@
                 <span class="item__price">$280</span>
             </a>
 
-            <span class="title">開放式三明治系列<br>
+            <span class="title" id="gotothe-04">開放式三明治系列<br>
                 <span class="t-en">Open sandwich</span><br>
                 <span class="" style="font-size: 0.85rem;">(附贈海鹽薯條 或 橙香沙拉)</span>
                 <span class="t-en">(select sea - salt chips OR simple salad)</span>
@@ -259,7 +278,7 @@
                 <span class="item__price">$350</span>
             </a>
 
-            <span class="title">班尼迪克蛋系列<br>
+            <span class="title" id="gotothe-05">班尼迪克蛋系列<br>
                 <span class="t-en">Egg benedicts</span><br>
                 <span class="" style="font-size: 0.85rem;">(均附贈迷你水果碗 + 橙香沙拉)</span>
             </span>
@@ -279,7 +298,7 @@
                 <span class="item__price">$350</span>
             </a>
 
-            <span class="title">嘗試一點晚間菜單<br>
+            <span class="title" id="gotothe-06">嘗試一點晚間菜單<br>
                 <span class="t-en">Food from diner</span><br>
                 <span class="" style="font-size: 0.85rem;">(from 10:00-16:00)</span>
             </span>
@@ -315,7 +334,7 @@
             </a>
 
 
-            <span class="title">午間就開喝搭配<br>
+            <span class="title" id="gotothe-07">午間就開喝搭配<br>
                 <span class="t-en">Snacks for drinks</span><br>
                 <span class="" style="font-size: 0.85rem;">(from 10:00-17:00)</span>
             </span>
@@ -341,7 +360,7 @@
             </a>
 
 
-            <span class="title">甜點<br>
+            <span class="title" id="gotothe-08">甜點<br>
                 <span class="t-en">Desserts</span><br>
                 <span class="" style="font-size: 0.85rem;">(from 10:00-17:00)</span>
             </span>
@@ -366,7 +385,7 @@
                 <span class="item__price">$200</span>
             </a>
 
-            <span class="title">雞尾酒<br>
+            <span class="title" id="gotothe-09">雞尾酒<br>
                 <span class="t-en">Cocktail</span>
             </span>
             <a class="item item--single item--no-img">
@@ -386,7 +405,7 @@
                 <span class="item__price">$300</span>
             </a>
 
-            <span class="title">咖啡<br>
+            <span class="title" id="gotothe-10">咖啡<br>
                 <span class="t-en">Coffee</span>
             </span>
             <a class="item item--single item--no-img">
@@ -443,7 +462,7 @@
 
 
 
-            <span class="title">歐蕾系列<br>
+            <span class="title" id="gotothe-11">歐蕾系列<br>
                 <span class="t-en">Au Lait</span>
             </span>
             <a class="item item--single item--no-img">
@@ -455,7 +474,7 @@
                 <span class="item__price">$170</span>
             </a>
 
-            <span class="title">冰沙<br>
+            <span class="title" id="gotothe-12">冰沙<br>
                 <span class="t-en">Smoothie</span>
             </span>
             <a class="item item--single item--no-img">
@@ -475,7 +494,7 @@
                 <span class="item__price">$200</span>
             </a>
 
-            <span class="title">茶<br>
+            <span class="title" id="gotothe-13">茶<br>
                 <span class="t-en">Tea</span>
             </span>
             <a class="item item--single item--no-img">

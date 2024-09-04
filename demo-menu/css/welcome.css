@@ -906,6 +906,7 @@ button * {
 }
 .welcome {
   background-color: #26423b;
+  overflow: hidden;
 }
 .welcome .footer button {
   max-width: 512px;
@@ -954,9 +955,9 @@ button * {
   height: -webkit-fill-available;
 }
 .welcome .scroll {
-  position: absolute;
+  position: fixed;
   left: calc(50% - 25px);
-  bottom: 12%;
+  bottom: 120px;
   z-index: 4;
   cursor: pointer;
   transform: scale(1, 1);
