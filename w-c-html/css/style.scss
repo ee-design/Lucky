@@ -653,25 +653,28 @@ p.text-remind {
 
 // inside header ========
 .header-container {
-  padding: 9px 20px;
+  padding: 9px 15px;
   width: 100%;
   min-width: 320px;
   background-color: #fff;
   @include stickyPosition;
   top: 0;
-  z-index: 4;
+  z-index: 100;
+  display: flex;
   @include has-box-shadow;
   .logo {
     width: 140px;
-    float: left;
+    margin-left: 10px;
+    // float: left;
     background-position: center 12px;
     @media all and (max-width: $pc-media) {
-      margin-left: 45px;
+    //  padding: 9px 15px;
     }
     @media all and (max-width: $pad-media) {
       width: 100px;
-      height: 40px;
-      background-position: center 6px;
+      height: 36px;
+      background-position: center center;
+      // margin-left: 0;
     }
   }
   p {
@@ -680,14 +683,14 @@ p.text-remind {
     line-height: 50px;
     letter-spacing: 5px;
     color: $color-gray-dark;
-    float: left;
+    // float: left;
     @media all and (max-width: $pad-media) {
       &.text-title {
         line-height: inherit;
         letter-spacing: 2px;
         position: absolute;
-        top: 40px;
-        left: 48px;
+        top: 42px;
+        left: 58px;
         font-size: $f-size-ss;
         color: #a7a7a7;
         transform-origin: 0;
@@ -696,8 +699,9 @@ p.text-remind {
     }
   }
   .user-info {
+    margin-left: auto;
     padding-top: 3px;
-    float: right;
+    // float: right;
     position: relative;
     .profile {
       cursor: pointer;
@@ -779,105 +783,217 @@ ul.edit-tool {
 .middle-container {
   min-width: 320px;
   min-height: calc(100vh - 68px);
+  display: flex;
+  flex-grow: inherit;
   .side-menu {
-    float: left;
-    width: 180px;
-    padding: 20px 10px;
+    width: 190px;
+    min-width: 190px;
     @include stickyPosition;
-    top: 70px;
-    &::before {
-      content: "";
-      width: 1px;
-      min-height: 100vh;
-      right: 0;
-      top: 0;
-      display: block;
-      border-right: 1px #dddddd solid;
-      position: absolute;
-    }
+    top: 68px;
+    height: calc(100vh - 68px);
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     ul {
-      max-width: 147px;
-      margin: 0 auto;
-      text-align: center;
+      width: 190px;
+      padding-bottom: 20px;
       li {
-        padding: 5px 0;
-        display: block;
         a {
-          font-size: $f-size-s;
-          display: block;
-          line-height: 50px;
           color: #333;
-          border-radius: $radius-m;
-          transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+          
           &:hover {
-            opacity: 0.9;
-            background-color: #fff;
-            @include has-box-shadow;
+            color: $color-green-grass;
           }
         }
-        .selected {
-          background-color: $color-green-grass;
-          color: #fff;
-          &:hover {
-            background-color: $color-green-grass;
-          }
-        }
-        a.sub-selected {
-          color: $color-green-grass;
-        }
-        ul {
-          padding: 0;
-          padding-top: 10px;
-          li {
-            a {
-              line-height: 30px;
-              padding: 0;
-              &:hover {
-                box-shadow: none;
-                background-color: transparent;
-                color: $color-green-grass;
-              }
-            }
-          }
-        }
+        // &:hover {
+        //   h4{
+        //     color: $color-green-grass;
+        //     background-color: $color-green-light;
+        //     a{
+        //       color: $color-green-grass;
+        //     }
+        //   }
+        // }
       }
-      .pushy-submenu button {
-        text-align: center;
-        padding: 0;
+    }
+
+    h4{
+      color: #333;
+      font-size: 0.813rem;
+      padding-left: 68px;
+      position: relative;
+      line-height: 50px;
+      font-weight: bold;
+      // cursor: pointer;
+      a{
         color: #333;
-        line-height: 50px;
-        font-size: 0.813rem;
-        border-radius: $radius-m;
-        cursor: pointer;
-        &:hover {
-          background-color: #fff;
-          @include has-box-shadow;
-        }
-        &::after {
-          background: url(../images/svg/arr-menu-green.svg) center center
-            no-repeat;
-          background-size: contain;
+        display: block;
+      }
+      
+      &::before{
+        position: absolute;
+        content: "";
+      }
+      &.icon-order{
+        &::before{
+          top: calc(50% - 14.5px);
+          left: 19px;
+          width: 23px;
+          height: 28px;
+          background-image: url(../images/svg/icon_menu_order.svg);
+          @include img-default;
         }
       }
-      .pushy-submenu button.selected {
+      &.icon-customer{
+        &::before{
+          top: calc(50% - 14px);
+          left: 15px;
+          width: 36px;
+          height: 28px;
+          background-image: url(../images/svg/icon_menu_customer.svg);
+          @include img-default;
+        }
+      }
+      &.icon-product{
+        &::before{
+          top: calc(50% - 12px);
+          left: 15px;
+          width: 30px;
+          height: 24px;
+          background-image: url(../images/svg/icon_menu_product.svg);
+          @include img-default;
+        }
+      }
+      &.icon-permission{
+        &::before{
+          top: calc(50% - 15.5px);
+          left: 15px;
+          width: 31px;
+          height: 31px;
+          background-image: url(../images/svg/icon_menu_permission.svg);
+          @include img-default;
+        }
+      }
+      &.icon-user{
+        &::before{
+          top: calc(50% - 17px);
+          left: 15px;
+          width: 33px;
+          height: 34px;
+          background-image: url(../images/svg/icon_menu_user.svg);
+          @include img-default;
+        }
+      }
+      &.icon-payment{
+        &::before{
+          top: calc(50% - 17.5px);
+          left: 14px;
+          width: 30px;
+          height: 35px;
+          background-image: url(../images/svg/icon_menu_payment.svg);
+          @include img-default;
+        }
+      }
+    }
+    p {
+      padding-left: 68px;
+      line-height: 24px;
+      margin: 5px 0;
+      font-size: $f-size-s;
+      color: #333;
+      &:first{
+        margin-top: 10px;
+      }
+    }
+    
+    .hide-subtitle{
+      width: 60px;
+      ul{
+        width: 190px;
+      }
+      p{
+        display: none;
+      }
+    }
+    .selected-2 h4{
+      background-color: $color-green-light;
+    }
+    .selected {
+      h4{
         background-color: $color-green-grass;
         color: #fff;
-        &::after {
-          background: url(../images/svg/arr-menu-mob.svg) center center
-            no-repeat;
-          background-size: contain;
+        a{
+          color: #fff;
+        }
+        &:hover{
+          background-color: $color-green-grass;
+        }
+        &.icon-order{
+          &::before{
+            background-image: url(../images/svg/icon_menu_order_w.svg);
+          }
+        }
+        &.icon-customer{
+          &::before{
+            background-image: url(../images/svg/icon_menu_customer_w.svg);
+          }
+        }
+        &.icon-product{
+          &::before{
+            background-image: url(../images/svg/icon_menu_product_w.svg);
+          }
+        }
+        &.icon-permission{
+          &::before{
+            background-image: url(../images/svg/icon_menu_permission_w.svg);
+          }
+        }
+        &.icon-user{
+          &::before{
+            background-image: url(../images/svg/icon_menu_user_w.svg);
+          }
+        }
+        &.icon-payment{
+          &::before{
+            background-image: url(../images/svg/icon_menu_payment_w.svg);
+          }
         }
       }
     }
-    @media all and (max-width: 1200px) {
+    
+    .sub-selected {
+      color: $color-green-grass;
+    }
+    @media all and (max-width: $phone-media) {
+      position: fixed;
+      z-index: 5;
+      background-color: #fff;
+      @include has-box-shadow;
+    }
+  }
+  .menu-show-off{
+    width: 60px;
+    min-width: 60px;
+    p{
       display: none;
+    }
+    h4:hover{
+      background-color: $color-green-light;
+      cursor: pointer;
+    }
+    @media all and (max-width: $phone-media) {
+      width: 0;
+      min-width: 0;
     }
   }
   .main-container {
-    float: left;
+    border-left: 1px #dddddd solid;
     padding: 25px 30px;
-    width: calc(100% - 180px);
-    min-height: calc(100vh - 117px);
+    // width: calc(100% - 190px);
+    min-height: calc(100vh - 68px);
+    // margin-left: auto;
+    flex: auto;
     input {
       @extend %input;
     }
@@ -1365,7 +1481,7 @@ ul.edit-tool {
       }
     }
     @media all and (max-width: $pc-media) {
-      width: 100%;
+      // width: 100%;
     }
     @media all and (max-width: $phone-m-media) {
       padding: 20px;
@@ -3412,17 +3528,37 @@ ul.edit-record-user {
     float: none;
   }
 }
+.sidemenu-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(../images/svg/icon_menu_hamburger.svg);
+  background-repeat: no-repeat;
+  background-position:  center center;
+  background-color: transparent;
+  background-size: 40%;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  cursor: pointer;
+  &:hover{
+    background-color: #EBF5F4;
+     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  }
+  
+}
+.bg-c-circle{
+  background-color: #EBF5F4;
+}
 .menu-btn {
-  position: absolute;
-  left: 10px;
-  top: 11px;
+  // position: absolute;
+  // left: 10px;
+  // top: 11px;
   margin: 0;
   padding: 0;
   background: none;
-  display: none;
-  @media all and (max-width: $pc-media) {
-    display: block;
-  }
+  // display: none;
+  // @media all and (max-width: $pc-media) {
+  //   display: block;
+  // }
 }
 .menu-btn span {
   position: relative;
