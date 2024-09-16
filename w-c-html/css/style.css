@@ -771,7 +771,7 @@ p.text-remind {
 }
 
 .header-container {
-  padding: 9px 15px;
+  padding: 9px 10px;
   width: 100%;
   min-width: 320px;
   background-color: #fff;
@@ -810,7 +810,7 @@ p.text-remind {
     letter-spacing: 2px;
     position: absolute;
     top: 42px;
-    left: 58px;
+    left: 55px;
     font-size: 0.688rem;
     color: #a7a7a7;
     transform-origin: 0;
@@ -898,8 +898,8 @@ ul.edit-tool li a:hover {
   flex-grow: inherit;
 }
 .middle-container .side-menu {
-  width: 190px;
-  min-width: 190px;
+  width: 180px;
+  min-width: 180px;
   -webkit-position: sticky;
   -moz-position: sticky;
   -ms-position: sticky;
@@ -925,7 +925,7 @@ ul.edit-tool li a:hover {
 .middle-container .side-menu h4 {
   color: #333;
   font-size: 0.813rem;
-  padding-left: 68px;
+  padding-left: 64px;
   position: relative;
   line-height: 50px;
   font-weight: bold;
@@ -979,7 +979,7 @@ ul.edit-tool li a:hover {
   background-size: contain;
 }
 .middle-container .side-menu h4.icon-user::before {
-  top: calc(50% - 17px);
+  top: calc(50% - 15.5px);
   left: 15px;
   width: 33px;
   height: 34px;
@@ -999,7 +999,7 @@ ul.edit-tool li a:hover {
   background-size: contain;
 }
 .middle-container .side-menu p {
-  padding-left: 68px;
+  padding-left: 64px;
   line-height: 24px;
   margin: 5px 0;
   font-size: 0.813rem;
@@ -1029,6 +1029,9 @@ ul.edit-tool li a:hover {
 }
 .middle-container .side-menu .selected h4:hover {
   background-color: #11948a;
+}
+.middle-container .side-menu .selected h4:hover a {
+  color: #fff;
 }
 .middle-container .side-menu .selected h4.icon-order::before {
   background-image: url(../images/svg/icon_menu_order_w.svg);

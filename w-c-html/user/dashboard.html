@@ -15,27 +15,6 @@
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="../magnific-popup/magnific-popup.css">
     <script src="../magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script>
-        $(function(){
-            $("#sidemenu-btn").click(function(){
-                $(this).toggleClass("bg-c-circle");
-                $("#side-menu").toggleClass( "menu-show-off" );
-                $("#side-menu").find("li").removeClass("selected-2");
-                // $(this).parent().parent().next(".menu").fadeToggle(0);
-            return false;
-            });
-        });
-
-        $(function(){
-            $(".menu-show-off ul li").click(function(){
-                $(this).parent().find("li").removeClass("selected-2");
-                $(this).addClass("selected-2");
-                $("#sidemenu-btn").addClass("bg-c-circle");
-                $("#side-menu").removeClass("menu-show-off");
-            return false;
-            });
-        });
-    </script>
 </head>
 <body>
     <header class="header-container">
@@ -63,12 +42,14 @@
     <section class="middle-container">
          
         <!-- 收合 + menu-show-off  -->
-             <!-- 底下的 menu-show-off +了會變窄60px -->
+        <!-- 底下的 menu-show-off +了會變窄60px -->
         <nav class="side-menu  menu-show-off" id="side-menu">
             <ul>
-                <li class="selected">
+                <!-- 選擇該項目 li + class="selected" -->
+                <li>
                     <h4 class="icon-order">委刊單管理</h4>
-                    <p><a class="sub-selected" href="../order/order.html">委刊單</a></p>
+                     <!--選擇該項目 p class="sub-selected" -->
+                    <p><a href="../order/order.html">委刊單</a></p>
                     <p><a href="../order/audit.html">委刊單審核</a></p>
                 </li>
                 <li>
@@ -93,8 +74,8 @@
                 <li>
                     <h4 class="icon-payment">款項紀錄/分配</h4>
                     <p><a href="../payment/payment_history.html">入帳紀錄</a></p>
-                    <p><a href="../paymeny/payment_distribute.html">預算分配</a></p>
-                    <p><a href="../paymeny/payment_report.html">花費報表</a></p>
+                    <p><a href="../payment/payment_distribute.html">預算分配</a></p>
+                    <p><a href="../payment/payment_report.html">花費報表</a></p>
                 </li>
             </ul>
         </nav>

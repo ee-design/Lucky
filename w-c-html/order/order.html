@@ -18,68 +18,10 @@
 
 </head>
 <body>
-    <!-- Pushy Menu -->
-    <nav class="pushy pushy-left" data-focus="#first-link">
-        <div class="pushy-content">
-            <ul>
-                <li class="pushy-submenu">
-                    <button>委刊單管理</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="order.html">委刊單</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="audit.html">委刊單審核</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="pushy-link">
-                    <a href="customer.html">客戶管理</a>
-                </li>
-                <li class="pushy-submenu">
-                    <button>服務項目</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="event-project.html">活動專案</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="product.html">產品</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="project.html">促銷專案</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="terms.html">附加條款</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="pushy-submenu">
-                    <button>權限控制</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="authority-order.html">委刊單</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="authority-customer.html">客戶</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="pushy-submenu">
-                    <button>使用者管理</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="user.html">使用者</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Site Overlay -->
-    <div class="site-overlay"></div>
+    
     <div id="container">
     <header class="header-container clearfix">
-        <button class="menu-btn"><span><i class="fas fa-bars"></i></span></button>
+        <button class="sidemenu-btn" id="sidemenu-btn"></button>
         <a class="logo" href="dashboard.html"></a>
         <p class="text-title">CRM 管理後台</p>
         <div class="user-info clearfix">
@@ -100,57 +42,39 @@
         </div>
     </header>
     <section class="middle-container clearfix">
-        <nav class="side-menu">
+        <!-- 收合 + menu-show-off  -->
+        <!-- 底下的 menu-show-off +了會變窄60px -->
+        <nav class="side-menu  menu-show-off" id="side-menu">
             <ul>
-                <li class="pushy-submenu pushy-submenu-open">
-                    <button class="selected">委刊單管理</button>
-                    <ul>
-                        <li>
-                            <a class="sub-selected" href="order.html">委刊單</a>
-                        </li>
-                        <li>
-                            <a href="audit.html">委刊單審核</a>
-                        </li>
-                    </ul>
+                <li class="selected">
+                    <h4 class="icon-order">委刊單管理</h4>
+                    <p><a class="sub-selected" href="../order/order.html">委刊單</a></p>
+                    <p><a href="../order/audit.html">委刊單審核</a></p>
                 </li>
                 <li>
-                    <a href="customer.html">客戶管理</a>
+                    <h4 class="icon-customer"><a href="../customer/customer.html">客戶管理</a></h4>
                 </li>
-                <li class="pushy-submenu">
-                    <button>服務項目</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="event-project.html">活動專案</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="product.html">產品</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="project.html">促銷專案</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="terms.html">附加條款</a>
-                        </li>
-                    </ul>
+                <li>
+                    <h4 class="icon-product">服務項目</h4>
+                    <p><a href="../product/product.html">產品</a></p>
+                    <p><a href="../product/promotion.html">促銷專案</a></p>
+                    <p><a href="../product/media-note.html">附加條款</a></p>
+                    <p><a href="../product/event.html">活動專案</a></p>
                 </li>
-                <li class="pushy-submenu">
-                    <button>權限控制</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="authority-order.html">委刊單</a>
-                        </li>
-                        <li class="pushy-link">
-                            <a href="authority-customer.html">客戶</a>
-                        </li>
-                    </ul>
+                <li>
+                    <h4 class="icon-permission">權限控制</h4>
+                    <p><a href="../order/order-user.html">委刊單</a></p>
+                    <p><a href="../customer/customer-user.html">客戶</a></p>
                 </li>
-                <li class="pushy-submenu">
-                    <button>使用者管理</button>
-                    <ul>
-                        <li class="pushy-link">
-                            <a href="user.html">使用者</a>
-                        </li>
-                    </ul>
+                <li>
+                    <h4 class="icon-user">使用者管理</h4>
+                    <p><a href="../user/user.html">使用者</a></p>
+                </li>
+                <li>
+                    <h4 class="icon-payment">款項紀錄/分配</h4>
+                    <p><a href="../payment/payment_history.html">入帳紀錄</a></p>
+                    <p><a href="../payment/payment_distribute.html">預算分配</a></p>
+                    <p><a href="../payment/payment_report.html">花費報表</a></p>
                 </li>
             </ul>
         </nav>
@@ -232,11 +156,11 @@
                             <!-- 審核拒絕 + audit-reject -->
                             <!-- img 只會有 b ~ e (f 是審核完成) -->
                             <p class="label-audit audit-reject">
-                                <!-- <img src="images/svg/icon_order_step_b_w.svg">
-                                <img src="images/svg/icon_order_step_c_w.svg">
-                                <img src="images/svg/icon_order_step_d_w.svg">
-                                <img src="images/svg/icon_order_step_e_w.svg"> -->
-                                <img src="images/svg/icon_order_step_b_w.svg">
+                                <!-- <img src="../images/svg/icon_order_step_b_w.svg">
+                                <img src="../images/svg/icon_order_step_c_w.svg">
+                                <img src="../images/svg/icon_order_step_d_w.svg">
+                                <img src="../images/svg/icon_order_step_e_w.svg"> -->
+                                <img src="../images/svg/icon_order_step_b_w.svg">
                             </p>
                             
                             <!-- old 文字 -->
@@ -298,11 +222,11 @@
                             <!-- 審核通過 + audit-agree -->
                             <!-- img 有 b ~ f -->
                             <p class="label-audit audit-agree">
-                                <!-- <img src="images/svg/icon_order_step_b_w.svg">
-                                <img src="images/svg/icon_order_step_c_w.svg">
-                                <img src="images/svg/icon_order_step_d_w.svg">
-                                <img src="images/svg/icon_order_step_e_w.svg"> -->
-                                <img src="images/svg/icon_order_step_e_w.svg">
+                                <!-- <img src="../images/svg/icon_order_step_b_w.svg">
+                                <img src="../images/svg/icon_order_step_c_w.svg">
+                                <img src="../images/svg/icon_order_step_d_w.svg">
+                                <img src="../images/svg/icon_order_step_e_w.svg"> -->
+                                <img src="../images/svg/icon_order_step_e_w.svg">
                             </p>
                             <h4 class="order-name step-three">高筱蘋 - 高筱蘋</h4>
                             <p class="product-valid-period order-time">
@@ -361,11 +285,11 @@
                             <!-- 審核通過 + audit-agree -->
                             <!-- img 有 b ~ f -->
                             <p class="label-audit audit-agree">
-                                <!-- <img src="images/svg/icon_order_step_b_w.svg">
-                                <img src="images/svg/icon_order_step_c_w.svg">
-                                <img src="images/svg/icon_order_step_d_w.svg">
-                                <img src="images/svg/icon_order_step_e_w.svg"> -->
-                                <img src="images/svg/icon_order_step_f_w.svg">
+                                <!-- <img src="../images/svg/icon_order_step_b_w.svg">
+                                <img src="../images/svg/icon_order_step_c_w.svg">
+                                <img src="../images/svg/icon_order_step_d_w.svg">
+                                <img src="../images/svg/icon_order_step_e_w.svg"> -->
+                                <img src="../images/svg/icon_order_step_f_w.svg">
                             </p>
 
                             <h4 class="order-name step-two">菁品創意事業有限公司意事業有限公司 - 黃素菁</h4>
@@ -417,7 +341,7 @@
                     <div class="card clearfix">
                         <a class="go-detail popup-link">
                             <p class="label-audit audit-agree">
-                                <img src="images/svg/icon_order_step_f_w.svg">
+                                <img src="../images/svg/icon_order_step_f_w.svg">
                             </p>
                             <h4 class="order-name step-three">巴黎萊雅L'Oréal Paris</h4>
                             <p class="product-valid-period order-time">
@@ -551,10 +475,6 @@
                 </div> 
             </section>
         </main>
-        <footer class="footer-inside">
-            <p>Copyright© 2023 <a href="https://www.weblisher.com.tw/" target="_blank">Weblisher Data Tech Co., Ltd.</a> All Rights
-                Reserved.</p>
-        </footer>
     </section>
     </div>
     <!-- pushy JS -->

@@ -1,28 +1,30 @@
 .pushy {
   position: fixed;
-  width: 230px;
+  width: 290px;
   height: 100%;
   top: 0;
-  z-index: 9999;
-  background: #3c3c3c;
+  z-index: 1;
+  background: #fff;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  border-right: 1px solid #dcdcdc;
   /* enables momentum scrolling in iOS overflow elements */
 }
 .pushy a {
   display: block;
-  color: #b3b3b1;
+  color: #333;
   padding: 15px 30px;
   text-decoration: none;
   text-align: left;
   font-size: 14px;
   line-height: 26px;
+  
 }
 .pushy a:hover {
-  color: #fff;
+  color: #11948A;
 }
 .pushy ul:first-child {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .pushy ul li a {
   padding-left: 20px;
@@ -36,6 +38,7 @@
 
 .pushy-content {
   visibility: hidden;
+  padding-top: 100px;
 }
 
 /* Menu Movement */
@@ -45,6 +48,9 @@
   transform: translate3d(-230px, 0, 0);
 }
 
+.pushy-open-left .middle-container .main-container{
+  width: calc(100% - 289px);
+}
 .pushy-open-left #container,
 .pushy-open-left .push {
   -webkit-transform: translate3d(230px, 0, 0);
@@ -94,6 +100,7 @@
 
 .pushy-open-left {
   overflow: hidden;
+
 }
 .pushy-open-left .site-overlay,
 .pushy-open-right .site-overlay {
@@ -108,7 +115,7 @@
   -webkit-animation: fade 500ms;
   animation: fade 500ms;
 }
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
   .pushy.pushy-left {
     -webkit-transform: translate3d(-230px, 0, 0);
     -ms-transform: translate3d(-230px, 0, 0);
@@ -123,7 +130,7 @@
   .pushy-open-left .site-overlay {
     display: none;
   }
-}
+} */
 
 @keyframes fade {
   0% {
@@ -156,10 +163,10 @@
 }
 .pushy-submenu button {
   width: 100%;
-  color: #b3b3b1;
+  color: #333;
   padding: 15px 30px;
   text-align: left;
-  background: transparent;
+  /* background: transparent; */
   border: 0;
   padding-left: 20px;
   font-size: 14px;

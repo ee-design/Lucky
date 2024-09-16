@@ -653,7 +653,7 @@ p.text-remind {
 
 // inside header ========
 .header-container {
-  padding: 9px 15px;
+  padding: 9px 10px;
   width: 100%;
   min-width: 320px;
   background-color: #fff;
@@ -690,7 +690,7 @@ p.text-remind {
         letter-spacing: 2px;
         position: absolute;
         top: 42px;
-        left: 58px;
+        left: 55px;
         font-size: $f-size-ss;
         color: #a7a7a7;
         transform-origin: 0;
@@ -786,8 +786,8 @@ ul.edit-tool {
   display: flex;
   flex-grow: inherit;
   .side-menu {
-    width: 190px;
-    min-width: 190px;
+    width: 180px;
+    min-width: 180px;
     @include stickyPosition;
     top: 68px;
     height: calc(100vh - 68px);
@@ -821,7 +821,7 @@ ul.edit-tool {
     h4{
       color: #333;
       font-size: 0.813rem;
-      padding-left: 68px;
+      padding-left: 64px;
       position: relative;
       line-height: 50px;
       font-weight: bold;
@@ -877,7 +877,7 @@ ul.edit-tool {
       }
       &.icon-user{
         &::before{
-          top: calc(50% - 17px);
+          top: calc(50% - 15.5px);
           left: 15px;
           width: 33px;
           height: 34px;
@@ -897,7 +897,7 @@ ul.edit-tool {
       }
     }
     p {
-      padding-left: 68px;
+      padding-left: 64px;
       line-height: 24px;
       margin: 5px 0;
       font-size: $f-size-s;
@@ -928,6 +928,9 @@ ul.edit-tool {
         }
         &:hover{
           background-color: $color-green-grass;
+          a{
+            color: #fff;
+          }
         }
         &.icon-order{
           &::before{

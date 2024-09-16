@@ -27,3 +27,24 @@ $(function(){
     mainClass: 'mfp-fade'
   });
 })
+
+
+// side menu
+$(function(){
+    $("#sidemenu-btn").click(function(){
+        $(this).toggleClass("bg-c-circle");
+        $("#side-menu").toggleClass( "menu-show-off" );
+        $("#side-menu").find("li").removeClass("selected-2");
+        return false;
+    });
+});
+
+$(function(){
+    $(".menu-show-off ul li h4").click(function(){
+        $(this).parent().parent().find("li").removeClass("selected-2");
+        $(this).parent().addClass("selected-2");
+        $("#sidemenu-btn").addClass("bg-c-circle");
+        $("#side-menu").removeClass("menu-show-off");
+        return false;
+    });
+});

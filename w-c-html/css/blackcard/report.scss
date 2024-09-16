@@ -37,7 +37,6 @@ $phone-s-media: 479px;
     padding: 15px 0;
   }
   .tools-bar{
-    max-width: 1000px;
     padding: 18px 25px;
     background-color: #fff;
     border-radius:$radius-m ;
@@ -187,6 +186,10 @@ $phone-s-media: 479px;
     text-align: left;
     max-width: calc(100% - 115px);
     vertical-align: text-top;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-content: center;
     .a-condition {
       cursor: pointer;
       display: inline-block;
@@ -262,7 +265,6 @@ $phone-s-media: 479px;
 
   ul.top_tab {
     width: 100%;
-    max-width: 1000px;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -325,7 +327,6 @@ $phone-s-media: 479px;
   // 報表 標頭
   .blackcard_report {
     width: 100%;
-    max-width: 1000px;
     background-color: #fff;
     padding: 25px;
     border-radius: $radius-m ;
