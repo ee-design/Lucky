@@ -1383,6 +1383,146 @@ ul.edit-tool li a:hover {
     text-align: center;
   }
 }
+.middle-container .main-container .tools-date {
+  padding: 18px 25px;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  margin: 0 0 25px 0;
+}
+.middle-container .main-container .tools-date form {
+  position: relative;
+}
+.middle-container .main-container .tools-date form fieldset {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.middle-container .main-container .tools-date form fieldset.dotted-text {
+  padding: 8px 5px;
+  border-bottom: 1px dashed #AEAEAE;
+  margin-bottom: 10px;
+}
+.middle-container .main-container .tools-date label.item-title {
+  width: 92px;
+  padding: 0 5px;
+  color: #11948a;
+  line-height: 42px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.middle-container .main-container .tools-date p.btn-text {
+  width: 105px;
+  text-align: center;
+  line-height: 42px;
+  color: #11948a;
+  font-weight: bold;
+  font-size: 0.813rem;
+}
+.middle-container .main-container .tools-date p.btn-text a {
+  display: block;
+  background-color: #ebf5f4;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  border-radius: 50px 50px;
+}
+.middle-container .main-container .tools-date p.btn-text a:hover {
+  background-color: #dfedeb;
+}
+.middle-container .main-container .tools-date .confirm {
+  width: calc(100% - 92px);
+}
+.middle-container .main-container .tools-date .confirm .w_50 {
+  max-width: 348px;
+}
+.middle-container .main-container .tools-date .confirm .the-select select {
+  height: 42px;
+  line-height: 42px;
+  font-size: 0.813rem;
+}
+.middle-container .main-container .tools-date .confirm .both-for-date {
+  width: 100%;
+  max-width: 330px;
+  background-color: #F8F8F8;
+  border-radius: 50px 0 0 50px;
+  position: relative;
+  float: left;
+}
+.middle-container .main-container .tools-date .confirm .both-for-date::before {
+  content: "～";
+  line-height: 42px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 8px);
+  color: #11948a;
+  font-weight: bold;
+}
+.middle-container .main-container .tools-date .confirm .both-for-date input {
+  float: left;
+  width: 50%;
+  background: transparent;
+  height: 42px;
+  line-height: 42px;
+}
+.middle-container .main-container .tools-date .confirm .has-error {
+  background-color: #ffe9e9;
+}
+.middle-container .main-container .tools-date .confirm p.text-error {
+  color: #f44336;
+  position: absolute;
+  left: 20px;
+  bottom: -13px;
+  font-size: 0.688rem;
+}
+.middle-container .main-container .tools-date .confirm p.btn-text {
+  float: left;
+}
+.middle-container .main-container .tools-date .confirm p.btn-text a {
+  border-radius: 0 50px 50px 0;
+}
+.middle-container .main-container .tools-date .bottom-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.middle-container .main-container .tools-date .bottom-btn p.btn-text {
+  margin: 0 auto;
+}
+.middle-container .main-container .tools-date .bottom-btn p.btn-text a {
+  background-color: #11948a;
+  color: #fff;
+}
+.middle-container .main-container .tools-date .bottom-btn p.btn-text a:hover {
+  opacity: 0.9;
+}
+@media all and (max-width: 760px) {
+  .middle-container .main-container .tools-date {
+    padding: 15px 20px;
+  }
+  .middle-container .main-container .tools-date .confirm {
+    width: 100%;
+  }
+  .middle-container .main-container .tools-date .confirm .both-for-date {
+    float: none;
+    max-width: 100%;
+    border-radius: 50px;
+  }
+  .middle-container .main-container .tools-date .confirm p.btn-text {
+    float: none;
+    padding-top: 15px;
+    margin: 0 auto;
+  }
+  .middle-container .main-container .tools-date .confirm p.btn-text a {
+    border-radius: 50px;
+  }
+  .middle-container .main-container .tools-date .confirm .filter-tools {
+    max-width: 100%;
+  }
+  .middle-container .main-container .tools-date .bottom-btn {
+    padding-top: 10px;
+    position: initial;
+  }
+}
 .middle-container .main-container .pages {
   width: 100%;
   padding: 30px 0 15px 0;
@@ -2381,7 +2521,14 @@ ul.edit-tool li a:hover {
 .middle-container .form-list .has-fl .pay-amount p {
   width: 100%;
   text-align: right;
-  padding-right: 14px;
+  padding-right: 10px;
+}
+.middle-container .form-list .has-fl .pay-available {
+  max-width: 125px;
+  display: flex;
+}
+.middle-container .form-list .has-fl .pay-available p {
+  margin-left: auto;
 }
 .middle-container .form-list .has-fl .pay-company p {
   font-size: 0.813rem;
@@ -2426,6 +2573,14 @@ ul.edit-tool li a:hover {
 .middle-container .form-list .toptitle-style .pay-media p, .middle-container .form-list .toptitle-style .pay-other p {
   font-size: 0.813rem;
 }
+.middle-container .form-list .search-bottom {
+  border-radius: 0 0 18px 18px;
+  margin-top: -1px;
+  border-top: 1px solid #11948a !important;
+}
+.middle-container .form-list .search-bottom p {
+  padding-right: 5px !important;
+}
 .middle-container .form-list .card .go-detail {
   min-height: 58px;
   padding: 10px 20px;
@@ -2441,6 +2596,19 @@ ul.edit-tool li a:hover {
   .middle-container .form-list .toptitle-style > div.pay-acc-virtua p, .middle-container .form-list .toptitle-style > div.pay-company p, .middle-container .form-list .toptitle-style > div.pay-acc-virtual p, .middle-container .form-list .toptitle-style > div.pay-note p {
     width: 100%;
     text-align: right;
+  }
+  .middle-container .form-list .toptitle-style > div.pay-amount, .middle-container .form-list .toptitle-style > div.pay-source {
+    flex: 33.33%;
+  }
+  .middle-container .form-list .toptitle-style > div.pay-association {
+    flex: 33.33%;
+    text-align: right;
+  }
+  .middle-container .form-list .toptitle-style > div.pay-association p {
+    float: initial;
+  }
+  .middle-container .form-list .toptitle-style > div.pay-available {
+    flex: 66.66%;
   }
   .middle-container .form-list .card .go-detail {
     display: flex;
@@ -2459,6 +2627,35 @@ ul.edit-tool li a:hover {
   }
   .middle-container .form-list .card .go-detail > div.pay-amount p {
     padding-right: 0;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-amount, .middle-container .form-list .card .go-detail > div.pay-source {
+    flex: 33.33%;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-association {
+    flex: 33.33%;
+    text-align: right;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-association p {
+    float: initial;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-available {
+    flex: 66%;
+  }
+  .middle-container .form-list .card .go-detail > div.pay-available span {
+    margin-top: 8px;
+  }
+  .middle-container .form-list .has-fl .pay-amount p {
+    padding-right: initial;
+  }
+  .middle-container .form-list .search-bottom {
+    padding: 5px 20px;
+  }
+  .middle-container .form-list .search-bottom .pay-nb,
+  .middle-container .form-list .search-bottom .pay-day,
+  .middle-container .form-list .search-bottom .pay-company,
+  .middle-container .form-list .search-bottom .pay-acc,
+  .middle-container .form-list .search-bottom .pay-acc-virtual {
+    display: none;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -3971,6 +4168,9 @@ ul.edit-record-user li p.id span {
   flex: 1;
   padding: 10px;
 }
+.popup-container .fillin-box .field .form-details .a-row .pay-acc-virtual {
+  flex: 2;
+}
 .popup-container .fillin-box .field .form-details .a-row .pay-nb,
 .popup-container .fillin-box .field .form-details .a-row .pay-source,
 .popup-container .fillin-box .field .form-details .a-row .pay-day {
@@ -5444,6 +5644,10 @@ ul.edit-record-user li p.id span {
   font-weight: bold;
   font-size: 0.813rem;
   margin-left: 15px;
+}
+.popup-finish .fillin-info .pay-available span:first-child {
+  padding-top: 2px;
+  padding-right: 7px;
 }
 .popup-finish .terms-info {
   border-bottom: 3px solid #ebf5f4;

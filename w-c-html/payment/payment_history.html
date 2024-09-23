@@ -91,6 +91,29 @@
                     </a>
                 </div>
 
+                <div class="tools-date clearfix">
+                    <!-- <div class="search-box">
+                        <input class="default" type="text" placeholder="搜尋客戶名稱/統一編號/網址/類型">
+                        <p class="btn-text"><a>搜尋</a></p>
+                    </div> -->
+                    <form>
+                        <fieldset>
+                            <label class="item-title">選擇區間</label>
+                            <div class="confirm clearfix">
+                                <!-- 如果有錯誤 + has-error -->
+                                <div class="both-for-date has-error clearfix">
+                                    <input type="date" value="2024-11-06">
+                                    <input type="date" value="2025-05-06">
+                                    <!-- 錯誤訊息文字 -->
+                                    <p class="text-error c-red">錯誤訊息：error</p>
+                                </div>
+                                <p class="btn-text"><a>查詢</a></p>
+                            </div>
+                        </fieldset>
+                    </form>
+                    
+                </div>
+
                 <!-- 可排序欄位 -->
                 <!-- 外層 + click-sort -->
                 <!-- 內層 + <span class="icon-sort"> -->
@@ -120,19 +143,25 @@
                         <div class="pay-association click-sort">
                             <p>款項關聯<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
                         </div>
+                         <div class="pay-amount pay-available click-sort">
+                            <p>可分配金額<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
+                         <div class="pay-amount click-sort">
+                            <p>可分配餘額<span class="icon-sort"><i class="fas fa-sort"></i></span></p>
+                        </div>
                         <div class="pay-note">
                             <p>財務備註</p>
                         </div>
                     </div>
                     <div class="card clearfix">
                         <a class="go-detail has-fl popup-link" href="#popup-pay-info">
-                            <div class="pay-nb click-sort">
+                            <div class="pay-nb">
                                 <p>123459</p>
                             </div>
-                            <div class="pay-day click-sort">
+                            <div class="pay-day">
                                 <p>2024/12/16</p>
                             </div>
-                            <div class="pay-company click-sort">
+                            <div class="pay-company">
                                 <p>公司名稱會完整呈現會完整呈現</p>
                             </div>
                             <div class="pay-acc">
@@ -141,14 +170,20 @@
                             <div class="pay-acc-virtual">
                                 <p>123456781056</p>
                             </div>
-                            <div class="pay-source click-sort">
+                            <div class="pay-source">
                                 <p>虛擬帳號</p>
                             </div>
-                            <div class="pay-amount click-sort">
+                            <div class="pay-amount">
                                 <p>20,000</p>
                             </div>
-                            <div class="pay-association click-sort">
+                            <div class="pay-association">
                                 <p>已關連</p>
+                            </div>
+                            <div class="pay-amount pay-available">
+                                <p>20,000</p>
+                            </div>
+                            <div class="pay-amount">
+                                <p>10,000</p>
                             </div>
                             <div class="pay-note">
                                 <p>文字備註備註</p>
@@ -169,13 +204,13 @@
                     </div>
                     <div class="card clearfix">
                         <a class="go-detail has-fl popup-link" href="#popup-pay-info">
-                            <div class="pay-nb click-sort">
+                            <div class="pay-nb">
                                 <p>123459</p>
                             </div>
-                            <div class="pay-day click-sort">
+                            <div class="pay-day">
                                 <p>2024/12/16</p>
                             </div>
-                            <div class="pay-company click-sort">
+                            <div class="pay-company">
                                 <p>公司BBB</p>
                             </div>
                             <div class="pay-acc">
@@ -184,14 +219,23 @@
                             <div class="pay-acc-virtual">
                                 <p>123456781056</p>
                             </div>
-                            <div class="pay-source click-sort">
+                            <div class="pay-source">
                                 <p>自行轉帳</p>
                             </div>
-                            <div class="pay-amount click-sort">
+                            <div class="pay-amount">
                                 <p>120,000</p>
                             </div>
-                            <div class="pay-association click-sort">
+                            <div class="pay-association">
                                 <p></p>
+                            </div>
+                            <div class="pay-amount pay-available">
+                                <span>
+                                    <img src="../images/svg/icon_check_circle.svg">
+                                </span>
+                                <p>20,000</p>
+                            </div>
+                            <div class="pay-amount">
+                                <p>10,000</p>
                             </div>
                             <div class="pay-note">
                                 <p>財務想說什麼就說什麼</p>
@@ -236,6 +280,16 @@
                             <div class="pay-association click-sort">
                                 <p></p>
                             </div>
+                            <div class="pay-amount pay-available">
+                                <span>
+                                    <img src="../images/svg/icon_check_circle.svg">
+                                </span>
+                                <p>
+                                    200,120,000</p>
+                            </div>
+                            <div class="pay-amount">
+                                <p>20,000</p>
+                            </div>
                             <div class="pay-note">
                                 <p>這邊只會顯示兩行，超過兩行後點點點，而依據寬度影響顯示的字數</p>
                             </div>
@@ -255,13 +309,13 @@
                     </div>
                     <div class="card clearfix">
                         <a class="go-detail has-fl popup-link" href="#popup-pay-info">
-                            <div class="pay-nb click-sort">
+                            <div class="pay-nb">
                                 <p>567898</p>
                             </div>
-                            <div class="pay-day click-sort">
+                            <div class="pay-day">
                                 <p>2024/12/16</p>
                             </div>
-                            <div class="pay-company click-sort">
+                            <div class="pay-company">
                                 <p>XXday 酷遊滿天股份有限公司</p>
                             </div>
                             <div class="pay-acc">
@@ -270,14 +324,20 @@
                             <div class="pay-acc-virtual">
                                 <p>123456781056</p>
                             </div>
-                            <div class="pay-source click-sort">
+                            <div class="pay-source">
                                 <p>代墊</p>
                             </div>
-                            <div class="pay-amount click-sort">
+                            <div class="pay-amount">
                                 <p>128,000</p>
                             </div>
-                            <div class="pay-association click-sort">
+                            <div class="pay-association">
                                 <p>已關連</p>
+                            </div>
+                            <div class="pay-amount pay-available">
+                                <p>50,000</p>
+                            </div>
+                            <div class="pay-amount">
+                                <p>8,000</p>
                             </div>
                             <div class="pay-note">
                                 <p>這邊只會顯示兩行後點點點</p>
@@ -295,6 +355,41 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="card toptitle-style search-bottom has-fl clearfix">
+                        <div class="pay-nb">
+                            <p></p>
+                        </div>
+                        <div class="pay-day">
+                            <p></p>
+                        </div>
+                        <div class="pay-company">
+                            <p></p>
+                        </div>
+                        <div class="pay-acc">
+                            <p></p>
+                        </div>
+                        <div class="pay-acc-virtual">
+                            <p></p>
+                        </div>
+                        <div class="pay-source">
+                            <p></p>
+                        </div>
+                        <div class="pay-amount">
+                             <p>105,210,000</p>
+                        </div>
+                        <div class="pay-association">
+                            <p></p>
+                        </div>
+                         <div class="pay-amount pay-available">
+                            <p>2,105,000</p>
+                        </div>
+                         <div class="pay-amount">
+                            <p>4,005,123</p>
+                        </div>
+                        <div class="pay-note">
+                            <p></p>
+                        </div>
                     </div>
                 </div>
                 <div class="pages clearfix">
@@ -385,13 +480,22 @@
                                     </div>
                                 </div>
                             </fieldset>
+                            <fieldset>
+                                <label class="item-title">確認可分配</label>
+                                <div class="confirm clearfix">
+                                    <div class="option-list">
+                                        <input type="checkbox" name="order-type" value="確認">
+                                        <label for="option">確認</label>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                     <div class="field clearfix">
                         <div class="left-sub-title">
                             <p>關連資訊</p>
                         </div>
-                        <div class="fillin-info">
+                        <!-- <div class="fillin-info">
                             <fieldset class="clearfix">
                                 <label class="item-title">關連委刊單</label>
                                 <div class="confirm">
@@ -401,7 +505,6 @@
                                     </a>
                                 </div>
                             </fieldset>
-                            
                         </div>
                         <div class="form-details">
                             <div class="a-row bg-top-title">
@@ -432,7 +535,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="fillin-info" style="float: right;">
                             <fieldset class="clearfix">
                                 <label class="item-title">關連款項</label>
@@ -461,6 +564,9 @@
                                 <div class="pay-amount">
                                     <p>入帳金額</p>
                                 </div>
+                                <div class="pay-amount">
+                                    <p>金額</p>
+                                </div>
                                 <div class="other-tools">
                                 </div>
                             </div>
@@ -479,6 +585,9 @@
                                 </div>
                                 <div class="pay-amount">
                                     <p>1,520,000</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>10,000</p>
                                 </div>
                                 <div class="other-tools">
                                     <a class="delete" href="#">
@@ -567,7 +676,7 @@
                         <div class="left-sub-title">
                             <p>關連資訊</p>
                         </div>
-                        <div class="fillin-info">
+                        <!-- <div class="fillin-info">
                             <fieldset class="clearfix">
                                 <label class="item-title">關連委刊單</label>
                                 <div class="confirm">
@@ -578,8 +687,8 @@
                                 </div>
                             </fieldset>
     
-                        </div>
-                        <div class="form-details">
+                        </div> -->
+                        <!-- <div class="form-details">
                             <div class="a-row bg-top-title">
                                 <div class="order-nb">
                                     <p>合約編號</p>
@@ -608,7 +717,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="fillin-info" style="float: right;">
                             <fieldset class="clearfix">
                                 <label class="item-title">關連款項</label>
@@ -637,6 +746,9 @@
                                 <div class="pay-amount">
                                     <p>入帳金額</p>
                                 </div>
+                                <div class="pay-amount">
+                                    <p>金額</p>
+                                </div>
                                 <div class="other-tools">
                                 </div>
                             </div>
@@ -655,6 +767,9 @@
                                 </div>
                                 <div class="pay-amount">
                                     <p>1,520,000</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>1,000</p>
                                 </div>
                                 <div class="other-tools">
                                     <a class="delete" href="#">
@@ -723,6 +838,22 @@
                                 <label class="item-title">入帳日期</label>
                                 <p class="input-value"><span class="">2024-04-30</span></p>
                             </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">確認可分配</label>
+                                <p class="input-value pay-available"><span class="">
+                                    <img src="../images/svg/icon_check_circle.svg">
+                                    </span>
+                                    <span>
+                                     可分配</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">可分配金額</label>
+                                <p class="input-value"><span class="">20,000</span></p>
+                            </fieldset>
+                            <fieldset class="clearfix">
+                                <label class="item-title">可分配餘額</label>
+                                <p class="input-value"><span class="">20,000</span></p>
+                            </fieldset>
                         </div>
                     </div>
                     
@@ -730,7 +861,7 @@
                         <div class="left-sub-title">
                             <p>關連資訊</p>
                         </div>
-                        <div class="form-details">
+                        <!-- <div class="form-details">
                             <label class="item-title">關連委刊單</label>
                             <div class="a-row bg-top-title">
                                 <div class="order-nb">
@@ -754,7 +885,7 @@
                                     <p>1,125,520,000</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-details">
                             <label class="item-title">關連款項</label>
                             <div class="a-row bg-top-title">
@@ -773,6 +904,9 @@
                                 <div class="pay-amount">
                                     <p>入帳金額</p>
                                 </div>
+                                <div class="pay-amount">
+                                    <p>金額</p>
+                                </div>
                             </div>
                             <div class="a-row">
                                 <div class="pay-nb">
@@ -785,10 +919,13 @@
                                     <p>2020206251514616</p>
                                 </div>
                                 <div class="pay-source">
-                                    <p>款項來源</p>
+                                    <p>代墊</p>
                                 </div>
                                 <div class="pay-amount">
                                     <p>1,520,000</p>
+                                </div>
+                                <div class="pay-amount">
+                                    <p>10,000</p>
                                 </div>
                             </div>
                         </div>
