@@ -4148,7 +4148,7 @@ ul.edit-record-user li p.id span {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: self-start;
+  align-items: center;
   justify-content: center;
   border-bottom: 2px solid #F6F6F6;
 }
@@ -4178,6 +4178,17 @@ ul.edit-record-user li p.id span {
 }
 .popup-container .fillin-box .field .form-details .a-row .pay-amount {
   text-align: right;
+}
+.popup-container .fillin-box .field .form-details .a-row .pay-edit {
+  flex: 1.5;
+  text-align: center;
+}
+.popup-container .fillin-box .field .form-details .a-row .pay-edit input {
+  text-align: center;
+  font-weight: bold;
+  color: #11948a;
+  height: initial;
+  line-height: 40px;
 }
 .popup-container .fillin-box .field .form-details .a-row .other-tools {
   max-width: 55px;
