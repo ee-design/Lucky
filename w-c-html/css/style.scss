@@ -679,9 +679,9 @@ p.text-remind {
   }
   p {
     padding: 0 20px;
-    font-size: $f-size-s;
+    font-size: $f-size-ss;
     line-height: 50px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     color: $color-gray-dark;
     // float: left;
     @media all and (max-width: $pad-media) {
@@ -1769,13 +1769,13 @@ ul.edit-tool {
         font-size: $f-size-l;
         line-height: 1.2rem;
         width: calc(68% - 476px);
-        padding-left: 55px;
+        padding-left: 75px;
         position: relative;
         letter-spacing: 1px;
         &::before {
           position: absolute;
           top: calc(50% - 2.5px);
-          left: 2px;
+          left: 25px;
           content: "";
           width: 35px;
           height: 5px;
@@ -1856,6 +1856,22 @@ ul.edit-tool {
       .step-three {
         &::before {
           background-image: url(../images/svg/percentage-03.svg);
+        }
+      }
+      .level-tag{
+        .level {
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          border-radius: 50%;
+          background-color: #FFAD0A;
+          color: #fff;
+          font-size: $f-size-s;
+          text-align: center;
+          line-height: 25px;
+          z-index: 1;
+          font-weight: bold;
+          left: 10px;
         }
       }
       p {
@@ -2207,6 +2223,8 @@ ul.edit-tool {
           padding-left: 35px;
           &::before {
             width: 26px;
+            left: 0px;
+            top: 6px;
             background-size: contain;
           }
         }
@@ -2218,6 +2236,17 @@ ul.edit-tool {
         }
         h4.audit-name {
           width: calc(70% - 205px);
+        }
+        .level-tag {
+          .level{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            left: 0px;
+            top: 0px;
+            border-radius: 0 0 8px 0;
+            font-size: $f-size-ss;
+          }
         }
         p {
           padding-left: 35px;

@@ -799,9 +799,9 @@ p.text-remind {
 }
 .header-container p {
   padding: 0 20px;
-  font-size: 0.813rem;
+  font-size: 0.688rem;
   line-height: 50px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: #5e5e5e;
 }
 @media all and (max-width: 760px) {
@@ -1790,14 +1790,14 @@ ul.edit-tool li a:hover {
   font-size: 0.938rem;
   line-height: 1.2rem;
   width: calc(68% - 476px);
-  padding-left: 55px;
+  padding-left: 75px;
   position: relative;
   letter-spacing: 1px;
 }
 .middle-container .data-list .card .order-name::before {
   position: absolute;
   top: calc(50% - 2.5px);
-  left: 2px;
+  left: 25px;
   content: "";
   width: 35px;
   height: 5px;
@@ -1874,6 +1874,20 @@ ul.edit-tool li a:hover {
 }
 .middle-container .data-list .card .step-three::before {
   background-image: url(../images/svg/percentage-03.svg);
+}
+.middle-container .data-list .card .level-tag .level {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #FFAD0A;
+  color: #fff;
+  font-size: 0.813rem;
+  text-align: center;
+  line-height: 25px;
+  z-index: 1;
+  font-weight: bold;
+  left: 10px;
 }
 .middle-container .data-list .card p {
   float: left;
@@ -2213,6 +2227,8 @@ ul.edit-tool li a:hover {
   }
   .middle-container .data-list .card h4.order-name::before {
     width: 26px;
+    left: 0px;
+    top: 6px;
     background-size: contain;
   }
   .middle-container .data-list .card h4.customer-name {
@@ -2221,6 +2237,15 @@ ul.edit-tool li a:hover {
   }
   .middle-container .data-list .card h4.audit-name {
     width: calc(70% - 205px);
+  }
+  .middle-container .data-list .card .level-tag .level {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0 0 8px 0;
+    font-size: 0.688rem;
   }
   .middle-container .data-list .card p {
     padding-left: 35px;

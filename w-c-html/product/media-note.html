@@ -106,6 +106,12 @@
                                 </li>
                                 <li>
                                     <div class="option-list circle-gray">
+                                        <input type="radio" name="filter-show" value="已隱藏">
+                                        <label for="option">已隱藏</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="option-list circle-gray">
                                         <input type="radio" name="filter-show" value="已下架">
                                         <label for="option">已下架</label>
                                     </div>
@@ -210,6 +216,16 @@
                                     <i class="far fa-copy" title="複製"></i>
                                 </a>
                             </li>
+                            <li>
+                                <a class="eyes popup-link" href="#popup-eyes-hide">
+                                    <i class="fa fa-eye-slash" aria-hidden="true" title="隱藏"></i>
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a class="eyes popup-link" href="#popup-eyes-show">
+                                    <i class="fa fa-eye" aria-hidden="true" title="顯示"></i>
+                                </a>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="card clearfix">
@@ -1012,6 +1028,38 @@ holkee 提供連結的外部網站，holkee 不保證其內容之合適性、即
             <div class="bottom-btn-tool">
                 <fieldset class="field">
                     <input class="btn--primary-xl " type="submit" value="建立">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <!-- popup 隱藏確認-->
+    <section id="popup-eyes-hide" class="white-popup mfp-hide popup-width-m">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span>隱藏確認</span></h4>
+            </div>
+            <div class="fillin-box text-center">
+                <p>確定要隱藏此「產品」嗎？</p>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="確認隱藏">
+                </fieldset>
+            </div>
+        </div>
+    </section>
+    <!-- popup 顯示確認-->
+    <section id="popup-eyes-show" class="white-popup mfp-hide popup-width-m">
+        <div class="popup-container">
+            <div class="top-title">
+                <h4><span> 顯示確認</span></h4>
+            </div>
+            <div class="fillin-box text-center">
+                <p>確定要顯示此「產品」嗎？</p>
+            </div>
+            <div class="bottom-btn-tool">
+                <fieldset class="field">
+                    <input class="btn--primary-xl " type="submit" value="確認顯示">
                 </fieldset>
             </div>
         </div>
