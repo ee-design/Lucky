@@ -1332,6 +1332,7 @@ ul.edit-tool {
       @media all and (max-width: $phone-m-media) {
         h4.main-title {
           text-align: center;
+          padding-right: 0;
         }
       }
     }
@@ -1655,6 +1656,9 @@ ul.edit-tool {
           }
         }
       }
+    }
+    @media all and (max-width: $phone-s-media) {
+      padding:20px 15px;
     }
   }
   .data-list {
@@ -3252,6 +3256,18 @@ ul.edit-tool {
           }
         }
       }
+      ul.blackcard-info{
+        li{
+          flex: initial;
+          min-width:220px;
+          @media all and (max-width: $pc-media) {
+            min-width: 33%;
+            &.flex-2{
+                flex-basis: 100%;
+            }
+          }
+        }
+      }
     }
   }
   .company-content,
@@ -3595,9 +3611,9 @@ ul.edit-tool {
             p {
               font-size: $f-size-ss;
             }
-            &:nth-child(4) {
-              width: 64%;
-            }
+            // &:nth-child(4) {
+            //   width: 64%;
+            // }
           }
         }
       }
