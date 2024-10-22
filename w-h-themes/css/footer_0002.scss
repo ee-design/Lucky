@@ -1,0 +1,52 @@
+.holkee-footer-wrap {
+  .h-mid-cont {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .logo{
+    display: none;
+  }
+  p.copyrights {
+    text-align: center;
+  }
+  ul.info {
+    flex:36%;
+    max-width: 36%;
+    padding-right: 15px;
+    
+  }
+  @media all and (max-width: 992px) {
+    ul.info {
+      flex:42%;
+      max-width: 42%;
+    }
+    ul.follow-us{
+      text-align: left;
+    }
+    p.copyrights {
+      padding-top: 10px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    ul.info{
+      flex:calc(100% - 90px);
+      max-width:calc(100% - 90px);
+    }
+    ul.follow-us {
+      flex: 100%;
+      padding-top: 20px;
+    }
+    p.copyrights {
+      text-align: left;
+    }
+  }
+  @media all and (max-width: 576px) {
+    ul.link {
+      flex: initial;
+    }
+    ul.follow-us, 
+    p.copyrights {
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.edm--layout--wrapper {
+  background-color: #009EE1;
+}
+
+.email-box {
+  background-color: #fff;
+}
+table.order--list tr th,
+table.order--list tr td,
+h4,
+p {
+  color: #777;
+}
+table.order--list tr th,
+table.order--list tr td {
+  border:1px solid #f1f1f1;
+}
+table.order--list tr th.header {
+  color:#333;
+  background:#f1f1f1;
+}
+.t-red {
+  color: #E84931;
+}
+
+.t-blue {
+  color: #009EE1;
+}
+
+.bg-line {
+  background-color: #E84931;
+}
+
+.edm--title, table.order--list tr th {
+  color: #333;
+}
+
+.edm--text a {
+  color: #009EE1;
+}
+span.edm--title {
+  color:#E84931;
+}
+
+.t-system .edm--text {
+  color: #fff;
+}
+
+.t-system .edm--text a {
+  color: #fff;
+}
+
+.edm--btn a {
+  color: #fff;
+  background-color: #E84931;
+}
+
+.edm--btn-line a {
+  color: #E84931;
+  border: 1px solid #E84931;
+}
+
+.edm--line {
+  border-bottom: 1px solid #f1f1f1;
+}

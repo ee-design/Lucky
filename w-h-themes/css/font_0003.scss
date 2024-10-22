@@ -1,0 +1,27 @@
+// 圓體
+@font-face {
+    font-family: 'openhuninn';
+    src: url('../css/font/openhuninn.woff') format("woff"),
+        url('../css/font/openhuninn.ttf') format("truetype"),
+        url('../css/font/openhuninn.eot') format("embedded-opentype");
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+select,
+input,
+textarea {
+    font-family: "openhuninn", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+p{
+  font-size: 1rem;
+}

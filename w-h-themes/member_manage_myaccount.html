@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>holkee 會員管理後台 - 帳戶基本設定</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" type="text/css" />
+
+    <!-- CSS main 為固定，style 為主題風格-->
+    <link rel="stylesheet" href="css/holkee_website_main.css" type="text/css" />
+    
+    <!-- header -->
+    <link rel="stylesheet" href="css/header_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/header_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0004.css" type="text/css" /> -->
+    
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/footer_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0004.css" type="text/css" /> -->
+    
+    <!-- 主題 layout -->
+    <link rel="stylesheet" href="css/layout_000003.css" type="text/css" />
+    
+    <!-- 配色 color -->
+    <link rel="stylesheet" href="css/color_0004.css" type="text/css" />
+
+    <!-- font family -->
+    <!-- 字型要放後面，因為有的自行預設行高跟別人不同，有調整間距 -->
+    <!-- <link rel="stylesheet" href="css/font_0001.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/font_0002.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/font_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0004.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0005.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0006.css" type="text/css" /> -->
+
+    <!-- Pushy CSS -->
+    <!-- shop_style_one -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $(".dropdown-menu>a").click(function () {
+                $(this).next(".sub-list").stop(true, true).fadeToggle(0);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-right" data-focus="#first-link">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link">
+                    <a href="website_home.html">Home</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_shop.html">Shop</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_about.html">About Us</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_services.html">Services</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_news.html">News</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <!-- container 往左推-->
+    <div id="container">
+
+        <!-- header -->
+        <header class="holkee-header-wrap">
+            <div class="h-mid-cont">
+                <div class="logo">
+                    <img src="images/logo_test.png" alt="alt 這需自動幫帶入網站標題 + logo">
+                </div>
+                <ul class="menu">
+                    <li>
+                        <p><a href="website_home.html">Home</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_shop.html">Shop</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_about.html">About Us</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_services.html">Services</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_news.html">News</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_contact.html">Contact Us</a></p>
+                    </li>
+                </ul>
+                <ul class="h-header-tools">
+                    <li class="dropdown-menu">
+                        <a><i class="fas fa-user"></i></a>
+                        <div class="sub-list">
+                            <ul>
+                                <!-- 登入後顯示 -->
+                                <li>
+                                    <a href="#">我的帳戶</a>
+                                </li>
+                                <li>
+                                    <a href="#">查看訂單</a>
+                                </li>
+                                <li>
+                                    <a href="#">登出</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="shop_website_shop_ShoppingCart.html" class="btn-car" title="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nb">5</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="menu-btn">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+            </div>
+        </header>
+
+        <div class="manage-breadcrumb">
+            <div class="h-mid-cont">
+                <a class="home" href="#">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <div class="the-select">
+                    <select name="">
+                        <option value="0" selected>帳戶基本設定</option>
+                        <option value="1">訂單總覽</option>
+                        <option value="2">常用收件資訊</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="h-text-wrap h-mm-width">
+            <h3 class="main-title">帳戶基本設定</h3>
+            <p class="text">檢視並編輯您的帳戶基本資料</p>
+        </div>
+
+        <div class="h-mid-content member-cont form-style">
+            <form class="account">
+                <!-- 註冊來源 -->
+                <h4 class="sub-title">註冊來源</h4>
+                <div class="a-row">
+                    <p class="source"><i class="fa-solid fa-envelope"></i> 電子郵件註冊</p>
+                    <!-- other -->
+                    <!-- <p class="source"><i class="fa-brands fa-google"></i> Gmail 註冊</p>
+                    <p class="source"><i class="fa-brands fa-facebook"></i> Facebook 註冊</p>
+                    <p class="source"><i class="fa-solid fa-mobile-screen-button"></i> 手機號碼註冊</p> -->
+                </div>
+
+                <!-- 基本資料 -->
+                <h4 class="sub-title">基本資料</h4>
+                <div class="a-row">
+                    <input class="default user" type="text" placeholder="" value="eikiychang@gmail.com" disabled>
+                </div>
+                <div class="a-row">
+                    <!-- 錯誤 input + has-error -->
+                    <input class="default has-error" type="text" placeholder="手機號碼" value="@%15">
+                    <!-- 出現錯誤訊息 -->
+                    <!-- <p class="h-text-reminder h-c-red">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        暱稱有重複耶！
+                    </p> -->
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="姓名" value="">
+                </div>
+
+                <!-- 密碼 -->
+                <h4 class="sub-title">密碼</h4>
+                <div class="a-row">
+                    <input class="default" type="password" value="**********" disabled>
+                    <p class="fl-r text-pw">
+                        <a href="member_manage_change_password.html">變更密碼</a>
+                    </p>
+                </div>
+
+                <div class="h-btn">
+                    <!-- 未填寫不給點選按鈕 a + h-btn-disabled -->
+                    <a class="h-btn-primary-xl" href="#">
+                        <span class="">儲存</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <!-- footer -->
+        <footer class="holkee-footer-wrap">
+            <div class="h-mid-cont">
+                <div class="logo">
+                    <img src="images/logo_test.png" alt="品牌官網 | logo">
+                </div>
+                <ul class="link">
+                    <li>
+                        <a href="#">服務條款</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="single_page_PrivacyPolicy.html">隱私權條款</a>
+                    </li>
+                    <!-- <li>
+                    <a href="">退換貨及退款須知</a>
+                </li>
+                <li>
+                    <a href="">付款及運送方式</a>
+                </li> -->
+                </ul>
+                <ul class="follow-us">
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-line"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyrights">Copyright© 2024 網站名稱 All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+    <!-- container END-->
+
+    <!-- Pushy JS -->
+    <script src="mobilemenu/pushy.js"></script>
+</body>
+
+</html>

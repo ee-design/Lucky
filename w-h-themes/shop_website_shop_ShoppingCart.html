@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>holkee 購物網站 - 多頁式 - Shop - 我的購物車</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" type="text/css" />
+
+    <!-- CSS main 為固定，style 為主題風格-->
+    <link rel="stylesheet" href="css/holkee_website_main.css" type="text/css" />
+    
+    <!-- header -->
+    <link rel="stylesheet" href="css/header_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/header_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0004.css" type="text/css" /> -->
+    
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/footer_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0004.css" type="text/css" /> -->
+    
+    <!-- 主題 layout -->
+    <link rel="stylesheet" href="css/layout_000001.css" type="text/css" />
+    
+    <!-- 配色 color -->
+    <link rel="stylesheet" href="css/color_0001.css" type="text/css" />
+
+    <!-- font family -->
+    <!-- 字型要放後面，因為有的自行預設行高跟別人不同，有調整間距 -->
+    <link rel="stylesheet" href="css/font_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/font_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0004.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0005.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0006.css" type="text/css" /> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Pushy CSS -->
+    <!-- shop_style_one -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+    <script type="text/javascript">
+        
+        $(function () {
+            // popup
+            $('.popup-link').magnificPopup({
+                removalDelay: 300,
+                mainClass: 'mfp-fade'
+            });
+
+            // 自刻的分類選單
+            $(".shop-menu .item-main i.the-arr").click(function () {
+                $(this).parent().next(".item-subtitle").stop(true, true).fadeToggle(0);
+                $(this).parent().toggleClass("arr-up");
+                $(this).parent().toggleClass("hide-more");
+                return false;
+            });
+
+            $(".dropdown-menu>a").click(function () {
+                $(this).next(".sub-list").stop(true, true).fadeToggle(0);
+                return false;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- container 往左推-->
+    <div id="container">
+
+        <!-- header -->
+        <header class="holkee-header-wrap">
+            <div class="h-mid-cont">
+                <div class="logo">
+                    <img src="images/logo_test.png" alt="alt 這需自動幫帶入網站標題 + logo">
+                </div>
+            </div>
+        </header>
+
+        <!-- shop -->
+        <div class="holkee-s-wrap holkee-shoppingcart">
+            <div class="h-text-wrap">
+                <h3 class="main-title">我的購物車</h3>
+                <p class="text">目前有 <span class="h-c-red">2</span> 項購物商品！</p>
+            </div>
+            <div class="h-mid-cont">
+                
+                <form class="form-table product-list">
+                    <h5 class="sub-title">商品資訊</h5>
+                    <div class="a-row bg-title">
+                        <div class="w4 order-photo">
+                            <div class="txn-checkbox">
+                                <label class="h-control h-control--checkbox">
+                                    <input type="checkbox">
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                            <p>商品名稱</p>
+                        </div>
+                        <div class="w1">
+                            <p>商品供應</p>
+                        </div>
+                        <div class="w1 nb">
+                            <p>數量</p>
+                        </div>
+                        <div class="w1 s-price">
+                            <p>小計</p>
+                        </div>
+                        <div class="w1 tools">
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <div class="w4 order-photo">
+                            <div class="txn-checkbox">
+                                <label class="h-control h-control--checkbox">
+                                    <input type="checkbox">
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                            <div class="photo">
+                                <img src="images/img_0003.png" alt="">
+                            </div>
+                            <p class="product-name">
+                                <a href="#" target="_blank">Product aaa | GILOBABY Robot Toys for Girls, Rechargeable Remote Control Robot Toy for Kids, Programmable RC Robots with
+                                LED Eyes, Flexible Head & Arms, Dance Moves, Music, Birthday Gifts for Girls Ages 3+ Years
+                                </a>
+                                <span class="price">
+                                    <span class="h-price h-p-eur"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                        <div class="w1">
+                            <p>現貨</p>
+                        </div>
+                        <div class="w1 nb">
+                            <div class="quantity-cont">
+                                <div class="select-quantity" data-radium="true">
+                                    <input name="quantity" type="number" class="qty-input" value="1">
+                                    <div class="qty-adjust" data-radium="true">
+                                        <span id="plus-one" class="plus">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                        <span id="minus-one" class="minus minus-none">
+                                            <i class="fa fa-minus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1 s-price">
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-twd"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                        <div class="w1 tools">
+                            <a class="popup-link icon icon-delete" href="#popup-delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 無法買 + off-out -->
+                    <div class="a-row off-out">
+                        <div class="w4 order-photo">
+                            <div class="txn-checkbox">
+                                <label class="h-control h-control--checkbox">
+                                    <input type="checkbox" disabled>
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                            <div class="photo">
+                                <img src="images/img_0002.png" alt="">
+                            </div>
+                            <p class="product-name">
+                                <a href="#" target="_blank">【日系商品】【北農嚴選】日本青森蘋果汁</a>
+                                <span class="price">
+                                    <span class="h-price h-p-twd"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                        <div class="w1">
+                            <p>In stock</p>
+                        </div>
+                        <div class="w1 nb">
+                            <div class="quantity-cont">
+                                <div class="select-quantity" data-radium="true">
+                                    <input name="quantity" type="number" class="qty-input" value="2" disabled>
+                                    <div class="qty-adjust" data-radium="true">
+                                        <span id="plus-one" class="plus minus-none">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                        <span id="minus-one" class="minus minus-none">
+                                            <i class="fa fa-minus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1 s-price">
+                            <p class="price">
+                                <span class="h-price h-p-krw"></span>
+                                160-220
+                            </p>
+                        </div>
+                        <div class="w1 tools">
+                            <a class="popup-link icon icon-delete" href="#popup-delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                        </div>
+                        <!-- 這個標籤一定要放最後 -->
+                        <p class="off-text">未上架</p>
+                    </div>
+                    <div class="a-row off-out">
+                        
+                        <div class="w4 order-photo">
+                            <div class="txn-checkbox">
+                                <label class="h-control h-control--checkbox">
+                                    <input type="checkbox" disabled>
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                            <div class="photo">
+                                <img src="images/img_0002.png" alt="">
+                            </div>
+                            <p class="product-name">
+                                <a href="#" target="_blank">【日系商品】【北農嚴選】日本青森蘋果汁</a>
+                                <span class="h-price h-p-krw"></span>
+                                160-220
+                            </p>
+                        </div>
+                        <div class="w1">
+                            <p>In stock</p>
+                        </div>
+                        <div class="w1 nb">
+                            <div class="quantity-cont">
+                                <div class="select-quantity" data-radium="true">
+                                    <input name="quantity" type="number" class="qty-input" value="2" disabled>
+                                    <div class="qty-adjust" data-radium="true">
+                                        <span id="plus-one" class="plus minus-none">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                        <span id="minus-one" class="minus minus-none">
+                                            <i class="fa fa-minus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1 s-price">
+                            <p class="price">
+                                <span class="h-price h-p-inr"></span>
+                                44,000
+                            </p>
+                        </div>
+                        <div class="w1 tools">
+                            <a class="popup-link icon icon-delete" href="#popup-delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                        </div>
+                        <!-- 這個標籤一定要放最後 -->
+                        <p class="off-text">已上架</p>
+                    </div>
+                    <div class="a-row off-out">
+                        <div class="w4 order-photo">
+                            <div class="txn-checkbox">
+                                <label class="h-control h-control--checkbox">
+                                    <input type="checkbox" disabled>
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                            <div class="photo">
+                                <img src="images/img_0002.png" alt="">
+                            </div>
+                            <p class="product-name">
+                                <a href="#" target="_blank">【日系商品】【北農嚴選】日本青森蘋果汁</a>
+                                <span class="h-price h-p-jpy"></span>
+                                160-220
+                            </p>
+                        </div>
+                        <div class="w1">
+                            <p>In stock</p>
+                        </div>
+                        <div class="w1 nb">
+                            <div class="quantity-cont">
+                                <div class="select-quantity" data-radium="true">
+                                    <input name="quantity" type="number" class="qty-input" value="2" disabled>
+                                    <div class="qty-adjust" data-radium="true">
+                                        <span id="plus-one" class="plus minus-none">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                        <span id="minus-one" class="minus minus-none">
+                                            <i class="fa fa-minus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1 s-price">
+                            <p class="price">
+                                <span class="h-price h-p-php"></span>
+                                44,000
+                            </p>
+                        </div>
+                        <div class="w1 tools">
+                            <a class="popup-link icon icon-delete" href="#popup-delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                        </div>
+                        <!-- 這個標籤一定要放最後 -->
+                        <p class="off-text">已售完</p>
+                    </div>
+                    <div class="a-row">
+                        <div class="w4 order-photo">
+                            <div class="txn-checkbox">
+                                <label class="h-control h-control--checkbox">
+                                    <input type="checkbox">
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                            <div class="photo">
+                                <img src="images/img_0005.png" alt="">
+                            </div>
+                            <p class="product-name">
+                                <a href="#" target="_blank">MIT 日常圓領側開岔短版上衣 | MIT 台灣製造</a>
+                                <span class="price">
+                                    <span class="h-price h-p-inr"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                        <div class="w1">
+                            <p>現貨+預購</p>
+                        </div>
+                        <div class="w1 nb">
+                            <div class="quantity-cont">
+                                <div class="select-quantity" data-radium="true">
+                                    <input name="quantity" type="number" class="qty-input" value="15000">
+                                    <div class="qty-adjust" data-radium="true">
+                                        <span id="plus-one" class="plus">
+                                            <i class="fa fa-plus"></i>
+                                        </span>
+                                        <span id="minus-one" class="minus minus-none">
+                                            <i class="fa fa-minus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="f-ss h-c-red">還剩 2 件</p>
+                            </div>
+                        </div>
+                        <div class="w1 s-price">
+                            <p class="price">
+                                <span class="h-price h-p-gbp"></span>
+                                120,000,000
+                            </p>
+                        </div>
+                        <div class="w1 tools">
+                            <a class="popup-link icon icon-delete" href="#popup-delete">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="text-note">
+                    <p>※ 您如果<span class="h-c-red">同時購買預購以及現貨商品</span>，將會以預購預計出貨日期為訂單出貨日，如您希望先寄出現貨商品，請分開下單。</p>
+                </div>
+
+                <form class="form-style orderinfo-form">
+                    <div class="a-row fl line-dashed">
+                        <label class="label-title" for=""><i class="fa-regular fa-circle-right"></i>小計</label>
+                        <div class="text-info">
+                            <p class=" h-c-red">
+                                <span class="h-price h-p-gbp"></span>
+                                120,000,000
+                            </p>
+                        </div>
+                    </div>
+                    <div class="a-row fl line-dashed">
+                        <label class="label-title" for=""><i class="fa-regular fa-circle-right"></i>全館活動</label>
+                        <div class="text-info">
+                            <!-- <p>-NT$50</p> -->
+                            <p>- 
+                                <span class="h-price h-p-twd"></span>
+                                50
+                            </p>
+                            <p class="f-ss">全館滿 500 金額，折抵 50 元</p>
+                        </div>
+                    </div>
+                    <div class="a-row fl line-dashed">
+                        <div class="coupon">
+                            <label class="label-title" for=""><i class="fa-regular fa-circle-right"></i>優惠券</label>
+                            <!-- 錯誤 input + has-error -->
+                            <input class="default w300 has-error" type="text" placeholder="優惠代碼" value="HA">
+                            <p class="h-text-reminder text-copy">
+                                <a href="#">推薦優惠代碼 HAPPY <i class="fa-solid fa-copy"></i></a></p>
+                            <!-- 出現錯誤訊息 -->
+                            <p class="h-text-reminder h-c-red">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                金額未達使用門檻
+                            </p>
+                        </div>
+                        <div class="text-info">
+                            <p>-
+                                <span class="h-price h-p-twd"></span>
+                                220
+                            </p>
+                            <p class="f-ss">周年慶滿500打九折</p>
+                        </div>
+                    </div>
+                    <div class="a-row line-dashed">
+                        <label class="label-title" for=""><i class="fa-regular fa-circle-right"></i>運送方式</label>
+                        <div class="shippingway-select">
+                            <label class="selected">
+                                <input id="001" type="radio" value="1" name="shipping-select" checked>
+                                <img src="images/svg/7-eleven.svg">
+                                取貨付款
+                                <span class="shippingcost">運費</span>
+                            </label>
+                            <label>
+                                    <input type="radio" value="2" name="shipping-select">
+
+                                <img src="images/svg/7-eleven.svg">
+                                純取貨
+                                <span class="shippingcost">運費</span>
+                            </label>
+                            <label>
+
+                                    <input type="radio" value="3" name="shipping-select">
+
+                                <img src="images/svg/familymart.svg">
+                                純取貨
+                                <span class="shippingcost">運費</span>
+                            </label>
+                            <label>
+
+                                    <input type="radio" value="4" name="shipping-select">
+
+                                <img src="images/svg/hi-life.svg">
+                                取貨付款
+                                <span class="shippingcost">運費</span>
+                            </label>
+                            <label>
+
+                                    <input type="radio" value="5" name="shipping-select">
+
+                                <img src="images/svg/hi-life.svg">
+                                純取貨
+                                <span class="shippingcost">運費</span>
+                            </label>
+                            <label>
+
+                                    <input type="radio" value="6" name="shipping-select">
+
+                                <img src="images/svg/kuroma.svg">
+                                黑貓
+                                <span class="shippingcost">運費</span>
+                            </label>
+                            <label>
+
+                                    <input type="radio" value="7" name="shipping-select">
+
+                                自訂運送方式
+                                <span class="shippingcost">運費</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="a-row">
+                        <label class="label-title" for=""><i class="fa-regular fa-circle-right"></i>備註</label>
+                        <textarea class="default" rows="2" type="text" placeholder="管理員可代收 / 方便聯絡時間" value=""></textarea>
+                    </div>
+
+                    <div class="a-row fl total-amount">
+                        <label class="label-title" for=""><i class="fa-regular fa-circle-right"></i>總金額</label>
+                        <div class="text-info">
+                            <p class="h-c-red">
+                                <span class="h-price h-p-twd"></span>
+                                1342
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 送出按鈕上方顯示「防詐騙提醒文字」 -->
+                    <div class="text-note">
+                        <p>提醒您，凡遇不明電話及疑似詐騙，請您務必提高警覺。</p>
+                    </div>
+                    <div class="h-btn h-both-btn">
+                        <!-- 拋資料後的訊息 -->
+                        <!-- <div class="text-note bg-note-red">
+                            <p><span class="h-c-red">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </span>系統連線失敗，請稍後再試
+                            </p>
+                        </div> -->
+                        <!-- <div class="text-note bg-note-green">
+                            <p><i class="fa-solid fa-circle-check"></i>
+                                </span>OKKKK!!!
+                            </p>
+                        </div> -->
+                        <a class="h-btn-primary-xl" href="shop_website_shop_purchase.html">
+                            <span class="">我要結帳</span>
+                        </a>
+                        <a class="h-btn-primary-line-xl" href="shop_website_shop.html">
+                            <i class="fa-solid fa-store"></i>
+                        </a>
+                    </div>
+                </form>
+
+                
+            </div>
+        </div>
+
+    </div>
+    <!-- container END-->
+
+</body>
+
+</html>

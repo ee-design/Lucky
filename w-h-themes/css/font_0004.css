@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "ChenYuluoyan";
+  src: url("../css/font/ChenYuluoyan.woff") format("woff"), url("../css/font/ChenYuluoyan.ttf") format("truetype"), url("../css/font/ChenYuluoyan.eot") format("embedded-opentype");
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+select,
+input,
+textarea {
+  font-family: "ChenYuluoyan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  font-size: 26px;
+}
+
+html * {
+  font-size: 1rem;
+}
+
+i {
+  font-size: 0.85rem;
+}
+
+.h-price::before {
+  font-family: cursive;
+  font-size: 0.52rem;
+  line-height: initial;
+}
+
+.h-text-wrap h3.main-title {
+  line-height: 1;
+}
+
+.holkee-news h4.sub-title {
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.holkee-news .text {
+  line-height: 1.2;
+  -webkit-line-clamp: 3;
+}
+
+.holkee-contactus .company-info ul.list li i {
+  font-size: 0.7rem;
+  top: 11px;
+}
+
+.shop-menu ul li {
+  padding: 0 15px 0 0;
+}/*# sourceMappingURL=font_0004.css.map */

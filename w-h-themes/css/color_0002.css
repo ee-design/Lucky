@@ -1,0 +1,693 @@
+body {
+  background-color: #ececec;
+}
+
+.h-btn-primary-xl {
+  background-color: #323b6b;
+  color: #fff;
+  border: 1px #323b6b solid;
+}
+
+.h-btn-primary-line-xl {
+  border: 1px #323b6b solid;
+  color: #323b6b;
+  border: 1px #323b6b solid;
+}
+.h-btn-primary-line-xl:hover {
+  background-color: #eaeaea;
+}
+
+.h-btn-primary-l {
+  background-color: #323b6b;
+  color: #fff;
+  border: 1px #323b6b solid;
+}
+
+.h-btn-primary-m {
+  background-color: #323b6b;
+  color: #fff;
+  border: 1px #323b6b solid;
+}
+
+.h-btn-bg-red {
+  background-color: #FF5539;
+  border-color: #FF5539;
+}
+
+.h-btn-bg-darkblue {
+  background-color: #2965ba;
+  border-color: #2965ba;
+}
+
+.h-btn-bg-white {
+  background-color: white;
+  border-color: white;
+  color: #323b6b;
+}
+
+.h-h-btn-line-white:hover {
+  color: #323b6b;
+}
+
+.h-btn-primary-line-m {
+  border: 1px #323b6b solid;
+  color: #323b6b;
+  border: 1px #323b6b solid;
+}
+.h-btn-primary-line-m:hover {
+  background-color: #eaeaea;
+}
+
+.h-btn-disabled {
+  cursor: initial;
+  color: #fff;
+  background-color: #B1B1B1;
+  border-color: #B1B1B1;
+}
+.h-btn-disabled:hover {
+  background-color: #B1B1B1;
+  opacity: 1;
+}
+
+.holkee-swiper .swiper-pagination-bullet {
+  background-color: #323b6b;
+}
+
+input.default,
+textarea.default {
+  border: #DCDCDC 1px solid;
+  color: #333;
+}
+input.default:focus,
+textarea.default:focus {
+  border-color: #888;
+  background-color: #fcfcfc;
+}
+
+input.has-error,
+textarea.has-error {
+  border: 1px #FF5539 solid;
+}
+input.has-error:hover, input.has-error:focus,
+textarea.has-error:hover,
+textarea.has-error:focus {
+  border: 1px #FF5539 solid;
+}
+
+.switch-type .switchbutton {
+  background-color: #eee;
+}
+.switch-type .switchbutton:before {
+  background-color: #fff;
+  border: 2px solid #eee;
+}
+.switch-type .switchbutton:after {
+  background-color: #fff;
+  box-shadow: 0px 1px 3px #bbb;
+}
+.switch-type input:checked ~ .switchbutton:before {
+  background-color: #FFBC00;
+  border: 1px solid #FFBC00;
+}
+.switch-type input:checked ~ .switchbutton:before {
+  background-color: #FFBC00;
+  border: 1px solid #FFBC00;
+}
+.switch-type input:disabled ~ .switchbutton:before {
+  background-color: #B1B1B1;
+  border: 1px solid #B1B1B1;
+}
+
+.h-control {
+  color: #333;
+}
+.h-control input:checked ~ .h-control__indicator {
+  background: #333;
+  border-color: #333;
+}
+
+.h-control__indicator {
+  border: 2px solid #cfcfcf;
+  background-color: #fff;
+}
+
+.h-control--checkbox .h-control__indicator:after {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+}
+
+.h-control--radio input:checked ~ .h-control__indicator:after {
+  background: #fff;
+}
+.h-control--radio input:disabled ~ .h-control__indicator:after {
+  background-color: #333;
+}
+.h-control--radio input:disabled:checked ~ .h-control__indicator:after {
+  background-color: #333;
+}
+
+.h-mid-content {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+.menu-btn span {
+  color: #fff;
+}
+
+.pushy {
+  background: #21253b;
+}
+.pushy a {
+  color: #fff;
+}
+.pushy a:hover {
+  color: #FFF;
+}
+
+.pushy-submenu button {
+  color: #fff;
+}
+.pushy-submenu button:hover {
+  color: #FFF;
+}
+
+.holkee-header-wrap {
+  background-color: #21253b;
+}
+.holkee-header-wrap .menu li p {
+  color: #fff;
+}
+.holkee-header-wrap .menu li p a {
+  color: #fff;
+}
+.holkee-header-wrap .h-header-tools li a {
+  color: #fff;
+}
+.holkee-header-wrap .h-header-tools li a.btn-car span.nb {
+  background-color: #FF5539;
+  color: #fff;
+}
+.holkee-header-wrap .h-header-tools li a:hover i {
+  opacity: 0.9;
+}
+.holkee-header-wrap .h-header-tools .dropdown-menu .sub-list {
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+.holkee-header-wrap .h-header-tools .dropdown-menu .sub-list ul li {
+  border-top: 1px solid #dfdfdf;
+}
+.holkee-header-wrap .h-header-tools .dropdown-menu .sub-list ul li a {
+  color: #222;
+}
+.holkee-header-wrap .h-header-tools .dropdown-menu .sub-list ul li a:hover {
+  background-color: #eaeaea;
+}
+
+.holkee-footer-wrap {
+  background-color: #21253b;
+}
+.holkee-footer-wrap .logo {
+  color: white;
+}
+.holkee-footer-wrap ul.link li a,
+.holkee-footer-wrap ul.info li a {
+  color: #fff;
+}
+.holkee-footer-wrap ul.follow-us li a {
+  color: #fff;
+}
+.holkee-footer-wrap p.copyrights {
+  color: #909090;
+}
+
+.h-text-wrap h3.main-title::after {
+  background-color: #FFBC00;
+}
+.h-text-wrap .text a {
+  color: #21253b;
+}
+.h-text-wrap .order-type {
+  background-color: #fff;
+  border: 1px solid #DFDFDF;
+}
+.h-text-wrap .h-btn .h-btn-primary-xl {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+.form-style label.label-title {
+  color: #222;
+}
+.form-style form.account .a-row p.fl-r a {
+  color: #222;
+}
+.form-style form.account input.user:disabled {
+  color: #222;
+}
+.form-style form.orderinfo-form .top-title {
+  background-color: #F9F9F9;
+  border-bottom: 1px solid #E1E1E1;
+}
+.form-style form.orderinfo-form .top-title .type-tools .the-select select {
+  background-color: #fff;
+}
+.form-style form.orderinfo-form .top-title .type-tools .h-btn-primary-line-m {
+  background-color: #fff;
+  border-color: #DCDCDC;
+}
+.form-style form.orderinfo-form .top-title .type-tools .h-btn-primary-line-m:hover {
+  border-color: #222;
+}
+.form-style form.orderinfo-form ul.a-row li .result-products li {
+  border-bottom: 1px solid #E1E1E1;
+}
+.form-style form.orderinfo-form ul.a-row li.total-amount {
+  border: 1px solid #E1E1E1;
+  border-width: 1px 0 1px 0;
+}
+
+.submit-text {
+  border: #DCDCDC 1px solid;
+  background-color: #fff;
+}
+.submit-text p {
+  color: #555;
+}
+
+.text-note {
+  background-color: #FFFEE7;
+  border: 1px solid #E2E3C1;
+}
+
+.bg-note-red {
+  border-color: #FFA0B0;
+  background-color: #FFF5F5;
+}
+
+.bg-note-green {
+  border-color: #72CA3F;
+  background-color: #f5ffef;
+}
+.bg-note-green i {
+  color: #72CA3F;
+}
+
+.alcohol-warning-banner {
+  color: #fff;
+  background-color: #594842;
+}
+
+.holkee-aboutus {
+  background-color: #fff;
+}
+
+.holkee-aboutus-single .h-mid-cont {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+.holkee-contactus .privacy-policy {
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.holkee-contactus .txn-checkbox a {
+  color: #334fe3;
+}
+.holkee-contactus .company-info ul.list li i {
+  color: #323b6b;
+}
+.holkee-contactus .company-info ul.list li p a {
+  color: #222;
+}
+
+.holkee-policy .h-mid-cont {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+.holkee-news .h-mid-cont .a-row {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+.holkee-news .h-mid-cont .text-info .date {
+  color: #888;
+}
+
+.holkee-services .h-mid-cont .a-row {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+.holkee-fb-post,
+.holkee-ig-post {
+  background-color: #fff;
+}
+
+.holkee-fb-gallery,
+.holkee-ig-gallery {
+  background-color: #fff;
+}
+
+.holkee-yt-video {
+  background-color: #ece2e2;
+}
+
+.shop-menu ul li:hover {
+  color: #0048A7;
+}
+.shop-menu ul.item-subtitle {
+  border-top: 1px solid #c0c0c0;
+}
+@media all and (max-width: 700px) {
+  .shop-menu {
+    background-color: #fff;
+  }
+  .shop-menu ul.item-subtitle {
+    border-color: #DCDCDC;
+  }
+}
+
+.top-breadcrumb {
+  color: #888;
+}
+.top-breadcrumb a {
+  color: #888;
+}
+
+.manage-breadcrumb {
+  background-color: #fff;
+  box-shadow: rgba(226, 218, 218, 0.35) 5px 5px 10px;
+}
+.manage-breadcrumb .h-mid-cont a.home {
+  color: #323b6b;
+  border: 1px solid #DCDCDC;
+}
+.manage-breadcrumb .h-mid-cont a.home:hover {
+  background-color: #f8f8f8;
+}
+.manage-breadcrumb .h-mid-cont .the-select select:disabled {
+  background-color: #F2F2F2;
+}
+.manage-breadcrumb .h-mid-cont .the-select select:disabled:hover {
+  border-color: #DCDCDC;
+}
+
+ul.dropdown-list {
+  background-color: #fff;
+}
+ul.dropdown-list li {
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+}
+ul.dropdown-list a {
+  color: #333;
+}
+ul.dropdown-list a:hover {
+  background-color: #eaeaea;
+}
+
+.country-item {
+  border: #DCDCDC 1px solid;
+}
+.country-item:hover {
+  border-color: #888;
+}
+.country-item p {
+  color: #333;
+}
+
+.holkee-shop .shop-tools .search .icon {
+  color: #222;
+}
+.holkee-shop .text-info .sub-title {
+  color: #555;
+}
+.holkee-shop .price .discount {
+  color: #FF5539;
+}
+.holkee-shop .price .original {
+  color: #888;
+}
+
+.holkee-swiper .swiper-button-next:after,
+.holkee-swiper .swiper-button-prev:after {
+  color: #fff;
+  background-color: #323b6b;
+}
+.holkee-swiper :root {
+  --swiper-theme-color: $h-color-blue;
+}
+
+.holkee-products-swiper .swiper-button-next:after,
+.holkee-products-swiper .swiper-button-prev:after {
+  color: #fff;
+  background-color: #323b6b;
+}
+.holkee-products-swiper .swiper-products-cont .text {
+  color: #222;
+}
+.holkee-products-swiper .price .discount {
+  color: #FF5539;
+}
+.holkee-products-swiper .price .original {
+  color: #888;
+}
+
+.holkee-products-main-swiper .coverSwiperLarge a.btn-magnifier {
+  border: 1px solid #DCDCDC;
+  background-color: #FFF;
+  color: #222;
+}
+.holkee-products-main-swiper .coverSwiperLarge a.btn-magnifier:hover {
+  border-color: #222;
+}
+.holkee-products-main-swiper .swiper-slide-thumb-active img {
+  border: 2px solid #222;
+}
+.holkee-products-main-swiper .swiper-button-next:hover:after {
+  background-color: #333;
+}
+.holkee-products-main-swiper .swiper-button-prev:hover:after {
+  background-color: #333;
+}
+.holkee-products-main-swiper .swiper-button-next:after,
+.holkee-products-main-swiper .swiper-button-prev:after {
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.5176470588);
+}
+
+.holkee-product-info .h-product-cont {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+.quantity-cont .select-quantity {
+  border: 2px solid #dadada;
+}
+.quantity-cont .select-quantity input.qty-input[type=number] {
+  -moz-appearance: textfield;
+}
+.quantity-cont .select-quantity span {
+  background-color: #fff;
+}
+.quantity-cont .select-quantity span.plus {
+  border-left: 1px solid #dedede;
+}
+.quantity-cont .select-quantity span.minus {
+  border-right: 1px solid #dedede;
+}
+.quantity-cont .select-quantity span.plus:hover, .quantity-cont .select-quantity span.minus:hover {
+  background-color: #f3f3f3;
+}
+.quantity-cont .select-quantity span.minus-none {
+  color: #dadada;
+}
+.quantity-cont .select-quantity span.minus-none:hover {
+  background-color: #fff;
+}
+
+.h-product-cont .shop-label {
+  color: #222;
+}
+.h-product-cont .shop-spec a {
+  color: #222;
+  border-color: #DCDCDC;
+  background-color: #fff;
+}
+.h-product-cont .shop-spec a.selected {
+  color: #323b6b;
+  border-color: #323b6b;
+}
+.h-product-cont .shop-spec a:hover {
+  color: #323b6b;
+  border-color: #323b6b;
+}
+.h-product-cont .shop-status tr,
+.h-product-cont .shop-status td {
+  color: #222;
+}
+.h-product-cont .price .discount {
+  color: #FF5539;
+}
+.h-product-cont .price .original {
+  color: #888;
+}
+.h-product-cont .discount-contents {
+  border-left: 3px solid #dadada;
+}
+.h-product-cont .discount-contents li {
+  color: #888;
+}
+.h-product-cont .discount-contents li .l-label {
+  border: 2px solid #dadada;
+}
+.h-product-cont .discount-contents li.more a {
+  background-color: #f4f4f4;
+  color: #6e6e6e;
+}
+.h-product-cont .discount-contents li.more span {
+  color: #323b6b;
+}
+.h-product-cont .stock {
+  color: #888;
+}
+.h-product-cont a.btn-car {
+  color: #222;
+}
+.h-product-cont a.btn-car span.nb {
+  color: #fff;
+  background-color: #FF5539;
+}
+.h-product-cont .privacy-policy {
+  border: 1px solid #ddd;
+}
+.h-product-cont .txn-checkbox a {
+  color: #21253b;
+}
+
+.h-magnifier-info .h-products-info .selected img {
+  border: 2px solid #323b6b;
+}
+
+.form-table .a-row {
+  border-bottom: 1px solid #eaeaea;
+}
+.form-table .a-row:hover {
+  background-color: #f7f7f7;
+}
+.form-table .a-row .quantity-cont .select-quantity {
+  border: 2px solid #dadada;
+}
+.form-table .bg-title {
+  color: #fff;
+  background-color: #323b6b;
+}
+.form-table .bg-title p {
+  color: #fff;
+}
+.form-table .bg-title:hover {
+  background-color: #323b6b;
+}
+
+.holkee-shoppingcart .h-mid-cont {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+.holkee-shoppingcart h5.sub-title a.f-ss {
+  color: #21253b;
+}
+.holkee-shoppingcart .show-more {
+  border: 1px solid #eaeaea;
+  color: #555;
+}
+.holkee-shoppingcart .show-more:hover {
+  background-color: #f7f7f7;
+}
+.holkee-shoppingcart .product-list .a-row .tools a.icon-delete {
+  background-color: #fff;
+  border: 1px solid #DCDCDC;
+  color: #323b6b;
+}
+.holkee-shoppingcart .product-list .a-row .tools a.icon-delete:hover {
+  border-color: #323b6b;
+}
+.holkee-shoppingcart .product-list .a-row .product-name .price {
+  color: #9E9E9E;
+}
+.holkee-shoppingcart .product-list .a-row .product-name a {
+  color: #555;
+}
+.holkee-shoppingcart .product-list .bg-title .order-photo .h-control input:checked ~ .h-control__indicator {
+  border-color: #fff;
+  background-color: #fff;
+}
+.holkee-shoppingcart .product-list .bg-title .order-photo .h-control input:checked ~ .h-control__indicator::after {
+  border-color: #333;
+}
+.holkee-shoppingcart .product-list .off-out .off-text {
+  background-color: #888;
+  color: #fff;
+}
+.holkee-shoppingcart .orderinfo-form .txn-checkbox a {
+  color: #21253b;
+}
+.holkee-shoppingcart .orderinfo-form .line-dashed {
+  border-bottom: 1px dashed #C3C3C3;
+}
+.holkee-shoppingcart .orderinfo-form .fl .text-copy a {
+  color: #555;
+}
+.holkee-shoppingcart .orderinfo-form .total-amount {
+  border-top: 1px solid #dcdcdc;
+  background-color: #F2F2F2;
+}
+.holkee-shoppingcart .orderinfo-result .top-title {
+  background-color: #F9F9F9;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.tools a.icon {
+  border: 1px solid #DCDCDC;
+  color: #222;
+}
+.tools a.icon:hover {
+  background-color: #fff;
+}
+
+.orders-list .a-row .order-nb a {
+  color: #334fe3;
+}
+.orders-list .bg-title .order-nb .h-control input:checked ~ .h-control__indicator {
+  border-color: #fff;
+  background-color: #fff;
+}
+.orders-list .bg-title .order-nb .h-control input:checked ~ .h-control__indicator::after {
+  border-color: #333;
+}
+
+.top-tab {
+  border: 1px solid #DCDCDC;
+}
+.top-tab li {
+  border-right: 1px solid #DCDCDC;
+}
+.top-tab li a {
+  border-bottom: 3px solid #DCDCDC;
+  background-color: #fff;
+  color: #555;
+  background-color: #F7F7F7;
+}
+.top-tab li a:hover {
+  color: #323b6b;
+}
+.top-tab li.selected a {
+  background-color: #fff;
+  color: #323b6b;
+  border-color: #323b6b;
+}
+
+.login-cont .text a {
+  color: #323b6b;
+}/*# sourceMappingURL=color_0002.css.map */

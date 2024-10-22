@@ -1,0 +1,3104 @@
+// radius
+$radius-s: 6px;
+
+// color
+$h-color-main: #222;
+$h-color-gray: #888;
+$h-color-darkgray: #333;
+$h-color-red: #eb614b;
+$h-color-green: #72CA3F;
+$h-color-lightblue: #334fe3;
+$h-color-blue: #323b6b;
+$h-color-darkblue: #21253b;
+$h-color-yello: #FFBC00;
+
+// font size
+$h-f-size-xxl: 1.625rem; //26px
+$h-f-size-xl: 1.25rem; //20px
+$h-f-size-x: 1.125rem; //18px
+$h-f-size-l: 0.938rem; //15px
+$h-f-size-m: 0.875rem; //14px
+$h-f-size-s: 0.813rem; //13px
+$h-f-size-xs: 0.75rem; //12px
+$h-f-size-ss: 0.688rem; //11px
+
+$min-w:320px;
+
+body {
+  background-color: #f2f2f2; /* 背景顏色 */
+}
+
+// img
+@mixin img-default-cover {
+  background-position: center center; /* 背景圖定位，依序為水平，重直 */
+  background-repeat: no-repeat; /* 背景圖片不重覆 */
+  background-size: cover; /* 背景圖片符合外框不留白 */
+}
+
+//btn style 實心
+@mixin h-btn-solid {
+  font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+  border-radius: $radius-s; /* 按鈕圓角，如不需要圓角請設0 */
+  background-color: #7f1d1d; /* 背景顏色 */
+  color: #fff; /* 字體顏色 */
+}
+
+//btn style 框線
+@mixin h-btn-line {
+  font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+  border-radius: $radius-s; /* 按鈕圓角，如不需要圓角請設0 */
+  border: 1px $h-color-main solid; /* 邊框顏色與樣式 */
+  color: $h-color-main; /* 字體顏色 */
+}
+
+.h-btn {
+  display: flex; /* 顯示方式 */
+  justify-content: center; /* 水平置中 */
+  padding: 10px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+}
+
+/* 標題下方的敍述文字 */
+.h-text-description{
+  font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  line-height: 1.5; /* 行高1.5倍 */
+  @media all and (max-width: 576px) {
+    /* 標題下方的敍述文字 - 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+}
+/* 提醒文字 */
+.h-text-reminder{
+  font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  line-height: 1.5;
+  @media all and (max-width: 576px) {
+    /* 提醒文字 - 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+  @media all and (max-width: 450px) {
+    /* 提醒文字 - 其他小螢幕 */
+    font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+  }
+}
+
+
+/* 按鈕-XL */
+.h-btn-primary-xl {
+  @include h-btn-solid;
+  font-weight: bold;
+  height: 50px; /* 按鈕高度 */
+  border-radius: 6px; /* 物件圓角，如不需要圓角請設0 */
+  border: 1px #7f1d1d solid; /* 邊框顏色與樣式 */
+  @media all and (max-width: 576px) {
+    /* 按鈕-XL - 手機螢幕 */
+    height:45px; /* 按鈕高度 */
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  }
+  @media all and (max-width: 450px) {
+    /* 按鈕-XL - 其他小螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+  .plus-add{
+    padding-left: 35px; /* 物件與左邊邊界間距 */
+    &::before{
+      content: "+"; /* 虛物件內容 */
+      width: 25px; /* 物件寬度 */
+      font-size:22px; /* 字體大小，1rem = 16pt */
+      background-image: none; /* 背景圖片：無 */
+      color: #EAE1F5; /* 文字顏色 */
+    }
+  }
+}
+/* 外框按鈕-XL */
+.h-btn-primary-line-xl {
+  @include h-btn-line;
+  font-weight: bold;
+  height: 50px; /* 按鈕高度 */
+  cursor: pointer; /* 改變滑鼠標示 */
+  border: 1px $h-color-main solid; /* 邊框顏色與樣式 */
+  &:hover {
+    background-color: #eaeaea; /* 背景顏色 */
+  }
+  @media all and (max-width: 576px) {
+    /* 外框按鈕 - 手機螢幕 */
+    height:45px; /* 按鈕高度 */
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  }
+  @media all and (max-width: 450px) {
+    /* 外框按鈕 - 其他小螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+}
+
+/* 按鈕-L */
+.h-btn-primary-l {
+  @include h-btn-solid;
+  font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  font-weight: bold; /* 粗體字 */
+  height: 46px; /* 物件高度 */
+  border-radius: 50px; /* 物件圓角，如不需要圓角請設0 */
+  border: 1px $h-color-blue solid; /* 物件圓角，如不需要圓角請設0 */
+  @media all and (max-width: 576px) {
+    /* 按鈕-L - 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+
+  @media all and (max-width: 450px) {
+    /* 按鈕-L - 其他小螢幕 */
+    font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+  }
+}
+/* 按鈕-M */
+.h-btn-primary-m {
+  @include h-btn-solid;
+  font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  font-weight: bold; /* 粗體字 */
+  height: 35px; /* 物件高度 */
+  border-radius: 50px; /* 物件圓角，如不需要圓角請設0 */
+  border: 1px $h-color-blue solid; /* 物件邊框的樣式與顏色 */
+  @media all and (max-width: 576px) {
+    /* 按鈕-M - 手機螢幕 */
+    font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+  }
+}
+/* 外框按鈕-M */
+.h-btn-primary-line-m {
+  @include h-btn-line;
+  font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  font-weight: bold; /* 粗體字 */
+  height: 35px; /* 物件高度 */
+  border-radius: 50px; /* 物件圓角，如不需要圓角請設0 */
+  border: 1px $h-color-blue solid; /* 邊框的顏色與樣式 */
+  &:hover {
+    /* 外框按鈕-M - 滑入效果 */
+    background-color: #eaeaea; /* 背景顏色 */
+  }
+  @media all and (max-width: 576px) {
+    /* 外框按鈕-M - 手機螢幕 */
+    font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+  }
+}
+/* 紅色按鈕 */
+.h-btn-bg-red {
+  background-color: $h-color-red; /* 背景顏色 */
+  border-color: $h-color-red; /* 邊框顏色 */
+}
+/* 藍色按鈕 */
+.h-btn-bg-darkblue {
+  background-color: #3e5a81; /* 背景顏色 */
+  border-color: #3e5a81; /* 邊框顏色 */
+}
+/* 白色按鈕 */
+.h-btn-bg-white {
+  background-color: white; /* 背景顏色 */
+  border-color: white; /* 邊框顏色 */
+  color: $h-color-blue; /* 字體顏色 */
+}
+/* 白色外框按鈕 */
+.h-h-btn-line-white {
+  &:hover {
+    /* 白色外框按鈕 - 滑入效果 */
+    color: $h-color-blue; /* 字體顏色 */
+  }
+}
+/* 停用按鈕 */
+.h-btn-disabled {
+  cursor: initial;
+  color: #fff; /* 字體顏色 */
+  background-color: #B1B1B1; /* 背景顏色 */
+  border-color: #B1B1B1; /* 邊框顏色 */
+  &:hover {
+    /* 停用按鈕 - 滑入效果 */
+    background-color: #B1B1B1; /* 背景顏色 */
+    opacity: 1; /* 改變物件透明度，0為完全透明 */
+  }
+}
+
+article.text-terms {
+  @media all and (max-width: 576px) {
+    /* 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+}
+/* 下拉選單 */
+.h-the-select {
+  border-radius: $radius-s; /* 字體大小，1rem = 16pt */
+  &::after {
+    content: ""; /* 虛物件內容 */
+    position: absolute; /* 定位方式 */
+    top: calc(50% - 3px); /* 上方定位 */
+    right: 15px; /* 右邊定位 */
+    display: inline-block; /* 顯示方式 */
+    width: 12px; /* 物件寬度 */
+    height: 6px; /* 物件高度 */
+    /* 背景圖 - 依序為：圖片位置，背景圖位置，水平位置，垂直位置，背景重覆設定 */
+    background: url(../images/svg/arr_down_k.svg) center center no-repeat;
+    background-size: contain; /* 背景圖縮放方式 */
+    font-weight: 900; /* 粗體字 */
+    pointer-events: none; /*物件觸碰 = 無*/
+  }
+
+  select {
+    /* 下拉選單 - 選項 */
+    width: 100%; /* 物件寬度 */
+    height: 46px; /* 物件高度 */
+    font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+    border: #DCDCDC 1px solid;
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    line-height: 46px; /* 行高 */
+    @media all and (max-width: 576px) {
+      /* 下拉選單 - 選項 - 手機螢幕 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      line-height: 40px; /* 行高 */
+      height: 40px;
+    }
+  }
+}
+/* 輸入框 */
+input.default{
+  line-height: 44px; /* 行高 */
+  @media all and (max-width: 576px) {
+    line-height: 40px; /* 行高 */
+  }
+}
+/* 輸入框與文字區域 */
+input.default, 
+textarea.default {
+  height: 46px; /* 物件高度 */
+  font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  border: #DCDCDC 1px solid; /* 邊框顏色與樣式 */
+  color: #333; /* 字體顏色 */
+  &:focus {
+    /* 輸入框與文字區域 - 輸入時效果 */
+    border-color: $h-color-gray; /* 邊框顏色 */
+    background-color: #fcfcfc; /* 背景顏色 */
+  }
+  @media all and (max-width: 576px) {
+    /* 輸入框與文字區域 - 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+    height: 40px; /* 物件高度 */
+  }
+}
+
+/* 輸入框與文字區域 - 輸入錯誤 */
+input.has-error,
+textarea.has-error {
+  border: 1px $h-color-red solid; /* 邊框顏色與樣式 */
+  &:hover,
+  &:focus {
+    /* 輸入框與文字區域 - 輸入錯誤 - 滑入與作用時效果 */
+    border: 1px $h-color-red solid; /* 邊框顏色與樣式 */
+  }
+}
+/* 文字區域 */
+textarea.default {
+  line-height: 1.5; /* 行高1.5倍 */
+}
+/* 並排按鈕 */
+.h-both-btn {
+  align-items: center; /* 垂直置中 */
+  padding:25px 0 15px 0; /* 物件與邊界的間距，數值依序為上右下左 */
+  a{
+    margin:2.5px 10px 2.5px 0; /* 物件與其他物件的距離，數值依序為上右下左 */
+  }
+}
+
+/* 開關 */
+.switch-type {
+  .switchbutton {
+    height: 22px; /* 物件高度 */
+    border-radius: 22px; /* 物件圓角，如不需要圓角請設0 */
+    background-color: #eee; /* 背景顏色 */
+    &:before {
+      content: ""; /* 虛物件內容 */
+      width: 42px; /* 物件寬度 */
+      height: 22px; /* 物件高度 */
+      border-radius: 22px; /* 物件圓角，如不需要圓角請設0 */
+      background-color: #fff; /* 背景顏色 */
+      border: 2px solid #eee; /* 邊框顏色與樣式 */
+    }
+    &:after {
+      left: 2px; /* 左邊定位 */
+      top: 2px; /* 上方定位 */
+      width: 18px; /* 物件寬度 */
+      height: 18px; /* 物件高度 */
+      border-radius: 18px; /* 物件圓角，如不需要圓角請設0 */
+      background-color: #fff; /* 背景顏色 */
+      /* 陰影 - 數值依序為：水平位置，垂直位置，模糊尺寸，顏色 */
+      box-shadow: 0px 1px 3px #bbb; 
+    }
+  }
+  input {
+    &:checked~.switchbutton:before {
+      background-color: $h-color-yello; /* 背景顏色 */
+      border: 1px solid $h-color-yello; /* 邊框顏色與樣式 */
+    }
+    &:checked~.switchbutton:before {
+      background-color: $h-color-yello; /* 背景顏色 */
+      border: 1px solid $h-color-yello; /* 邊框顏色與樣式 */
+    }
+    &:disabled~.switchbutton:before{
+      background-color: #B1B1B1; /* 背景顏色 */
+      border: 1px solid #B1B1B1; /* 邊框顏色與樣式 */
+    }
+  }
+}
+
+// 內容最大寬度
+@mixin max-box-width {
+  width: calc(100% - 40px); /* 物件寬度 */
+  max-width: 1090px; /* 定義物件最大寬度 */
+  min-width:$min-w; /* 物件最小寬度 */
+  @media all and (max-width: 576px) {
+    /* 手機螢幕 */
+    margin: 25px auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+}
+// 陰影 shadow
+@mixin has-box-shadow {
+  /* 陰影 - 數值依序為：R色碼0~255，G色碼0~255，B色碼0~255，透明度，1為完全不透明，x位移，y位移，模糊尺寸 */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 12px;
+}
+
+@mixin has-box-shadow-light {
+  /* 陰影 - 數值依序為：R色碼0~255，G色碼0~255，B色碼0~255，透明度，1為完全不透明，x位移，y位移，模糊尺寸 */
+  box-shadow: rgba(226, 218, 218, 0.35) 5px 5px 10px;
+}
+
+// 固定白底圓角
+@mixin bg-box-w{
+  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  background-color: #fff; /* 背景顏色 */
+  /* 陰影 - 數值依序為：R色碼0~255，G色碼0~255，B色碼0~255，透明度，1為完全不透明，x位移，y位移，模糊尺寸 */
+  box-shadow: rgba(rgba(0, 0, 0, 0.3), 0.16) 0px 3px 12px;
+}
+
+
+// list
+.note-list{
+  font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+  line-height: 1.5; /* 行高 */
+}
+
+/* 多選與單選選單 */
+.h-control {
+  min-width: 70px; /* 物件最小寬度 */
+  font-size:$h-f-size-m; /* 字體大小，1rem = 16pt */
+  color: #333; /* 字體顏色 */
+  input {
+    &:checked~.h-control__indicator {
+      background: #333; /* 背景顏色 */
+      border-color: #333; /* 邊框顏色 */
+    }
+  }
+  @media all and (max-width: 576px) {
+    /* 多選與單選選單 - 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+  }
+}
+.h-control__indicator {
+  height: 15px; /* 物件高度 */
+  width: 15px; /* 物件寬度 */
+  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  border: 2px solid #cfcfcf; /* 邊框顏色與樣式 */
+  background-color: #fff; /* 字體顏色 */
+}
+.h-control--checkbox .h-control__indicator:after {
+  border: solid #fff; /* 邊框顏色與樣式 */
+  border-width: 0 3px 3px 0; /* 邊框寬度，數據依序為上右下左 */
+}
+.h-control--radio {
+    .h-control__indicator {
+    &:after {
+      left: calc(50% - 2.5px); /* 左邊定位 */
+      top: calc(50% - 2.5px); /* 上方定位 */
+      height: 5px; /* 物件高度 */
+      width: 5px; /* 物件寬度 */
+      border-radius: 50%; /* 物件圓角，如不需要圓角請設0 */
+    }
+  }
+  input {
+    &:checked~.h-control__indicator {
+      // background-color: #fff;
+    }
+    &:checked~.h-control__indicator:after {
+      background: #fff; /* 背景顏色 */
+    }
+    &:disabled~.h-control__indicator:after {
+      background-color: #333; /* 背景顏色 */
+    }
+    &:disabled:checked~.h-control__indicator:after {
+      background-color: #333; /* 背景顏色 */
+    }
+  }
+}
+/* 定義物件最大寬度 */
+.h-mid-content{
+  @include bg-box-w;
+  max-width: 1320px; /* 物件最大寬度 */
+  width: calc(100% - 60px); /* 物件寬度 */
+  @media all and (max-width: 768px) {
+    /* 定義物件最大寬度 - iPad螢幕 - 小 */
+    width: calc(100% - 48px); /* 物件寬度 */
+    margin: 30px auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+}
+/* 折疉選單 */
+.menu-btn {
+  span {
+    font-size: 20px; /* 字體大小 */
+    width: 45px; /* 物件寬度 */
+    height: 45px; /* 物件高度 */
+    line-height: 45px; /* 行高 */
+    color: $h-color-darkgray; /* 字體顏色 */
+    &::after {
+      width: 45px; /* 物件寬度 */
+      line-height: 45px; /* 行高 */
+    }
+  }
+}
+/* 外推選單 */
+.pushy {
+  background:#f1f1f1; /* 背景顏色 */
+  a {
+    font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+    color: #7f1d1d; /* 字體顏色 */
+    &:hover {
+      color: #333; /* 字體顏色 */
+    }
+  }
+  ul{
+    &:first-child {
+      margin-top: 30px; /* 物件與上方物件的距離 */
+    }
+    li a {
+      text-align: center; /* 文字對齊方式 */
+    }
+  }
+}
+
+/* 外推選單 - 第二層選單 */
+.pushy-submenu>ul {
+  font-size:$h-f-size-s; /* 字體大小，1rem = 16pt */
+  .pushy-link {
+    font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+  }
+}
+/* 外推選單 - 第二層選單 - 按鈕 */
+.pushy-submenu button {
+  color: #fff; /* 字體顏色 */
+  &:hover {
+    color: #FFF; /* 字體顏色 */
+  }
+}
+.pushy-sublayout_0002button {
+  font-size: 1rem; /* 字體大小，1rem = 16pt */
+}
+
+/* 頁首選單 */
+.holkee-header-wrap{
+  width:calc(100% - 30px); /* 物件寬度 */
+  position: sticky; /* 定位方式 */
+  left: 15px; /* 左邊定位 */
+  top: 20px; /* 上方定位 */
+  z-index: 3; /* 顯示順序，數值愈大愈上層 */
+  background-color: #fff; /* 背景顏色 */
+  @include has-box-shadow-light;
+  .logo {
+    color:#333; /* 字體顏色 */
+  }
+  .menu{
+    li{
+      p{
+        font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+        color: #fff; /* 字體顏色 */
+        a {
+          color: $h-color-darkgray; /* 字體顏色 */
+          &:hover{
+            /* 滑入效果 */
+            text-decoration: underline; /* 文字裝飾 */
+          }
+        }
+      }
+    }
+  }
+  .h-header-tools {
+    li{
+      a{
+        width: 40px; /* 物件寬度 */
+        height: 40px; /* 物件高度 */
+        align-content: center; /* 內容垂直置中 */
+        color: $h-color-darkgray; /* 字體顏色 */
+        &.btn-car {
+          span.nb {
+            background-color: $h-color-red; /* 背景顏色 */
+            color: #fff; /* 字體顏色 */
+          }
+        }
+        &:hover i {
+          /* 頁首選單 - 滑入效果 */
+          opacity: .9; /* 改變物件透明度，0為完全透明 */
+        }
+      }
+    }
+    .dropdown-layout_0002{
+      .sub-list {
+        border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      }
+    }
+    .dropdown-menu {
+      .sub-list {
+        /* 頁首選單 - 下拉選單 */
+        border: 1px solid #dfdfdf; /* 邊框顏色與樣式 */
+        background-color: #fff; /* 背景顏色 */
+        @include has-box-shadow;
+        ul li {
+          /* 頁首選單 - 下拉選單 - 選項 */
+          border-top: 1px solid #dfdfdf; /* 上方邊框顏色與樣式 */
+          a {
+            color: $h-color-main; /* 字體顏色 */
+
+            &:hover {
+              /* 頁首選單 - 下拉選單 - 選項 - 滑入效果 */
+              background-color: #eaeaea; /* 背景顏色 */
+            }
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    p{
+      /* 頁首選單 - 手機螢幕 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+    }
+  }
+}
+/* 首腳 */
+.holkee-footer-wrap {
+  padding:0 30px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  background-color: #432e2e; /* 背景顏色 */
+  .h-mid-cont {
+    width:100%; /* 物件寬度 */
+    max-width: 1320px; /* 定義物件最大寬度 */
+    padding: 65px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  }
+
+  .logo {
+    width: 110px; /* 物件寬度 */
+    color: white;/* 字體顏色 */
+  }
+
+  ul.link,
+  ul.info {
+    li {
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      a {
+        color: #fff;/* 字體顏色 */
+      }
+    }
+  }
+
+  ul.follow-us {
+    li {
+      a {
+        font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+        color: #fff;/* 字體顏色 */
+        &:hover{
+          color: #c7c7c7;/* 字體顏色 */
+        }
+      }
+    }
+  }
+
+  .styled-select select {
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  }
+
+  p.copyrights {
+    font-size: $h-f-size-ss; /* 字體大小，1rem = 16pt */
+    color: #c7c7c7; /* 字體顏色 */
+  }
+
+  @media all and (max-width: 768px) {
+    /* 首腳 - iPad螢幕 - 小 */
+    .logo {
+      width: 80px; /* 物件寬度 */
+    }
+
+    ul.link, 
+    ul.info {
+      li {
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      }
+    }
+
+    ul.follow-us {
+      text-align: left; /* 文字對齊方式 */
+
+      li {
+        font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+        a {
+          font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+        }
+      }
+    }
+
+    .styled-select select {
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    ul.link {
+      /* 首腳 - 手機螢幕 */
+      padding-bottom: 0; /* 物件與下方邊界間距 */
+    }
+
+    ul.follow-us {
+      li {
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        a {
+          font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        }
+      }
+    }
+
+    p.copyrights {
+      padding-top: 15px; /* 物件與上方邊界間距 */
+      text-align: left; /* 文字對齊方式 */
+    }
+  }
+}
+
+/* 文字與圖片 */
+.h-text-wrap{
+  h3.main-title{
+    margin:20px auto 0 auto; /* 物件與其他物件的距離，數值為上下左右 */
+    text-align:center; /* 文字對齊方式 */
+    padding:30px 0;  /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    color: #7f1d1d; /* 文字顏色 */
+  }
+  .text{
+    line-height: 1.5; /* 行高 */
+    text-align: center; /* 文字對齊方式 */
+    a{
+      text-decoration: underline; /* 文字裝飾 */
+      color: $h-color-darkblue; /* 字體顏色 */
+      &:hover{
+        text-decoration: none; /* 文字裝飾 */
+      }
+    }
+  }
+  .order-type{
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    padding: 5px 10px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+    font-weight: initial; /* 取消粗體字 */
+    margin:2px 10px; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    background-color: #fff; /* 背景顏色 */
+    border: 1px solid #DFDFDF; /* 邊框顏色與樣式 */
+  }
+  .h-btn {
+    .h-btn-primary-xl {
+      @include has-box-shadow;
+    }
+  }
+  
+  @media all and (max-width: 1200px) {
+    h3.main-title {
+      /* 文字與圖片 - PC小螢幕 */
+      font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-btn{
+      /* 文字與圖片 - iPad螢幕 */
+      margin-top: 20px; /* 物件與上方物件的距離 */
+      position: initial; /* 定位方式 */
+    }
+  }
+  @media all and (max-width: 768px) {
+    h3.main-title {
+      /* 文字與圖片 - iPad螢幕 - 小 */
+      font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+    }
+    .text, .note-list{
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    }
+  }
+  @media all and (max-width: 576px) {
+    h3.main-title {
+      /* 文字與圖片 - 手機螢幕 */
+      font-size: 1rem; /* 字體大小，1rem = 16pt */
+    }
+  }
+}
+
+/* 表單 */
+.form-style{
+  label.label-title{
+    font-weight: bold; /* 粗體字 */
+    color: $h-color-main; /* 字體顏色 */
+  }
+  form{
+    h4.sub-title {
+      font-size: 1.5rem;
+      font-weight: bold; /* 粗體字 */
+      padding: 45px 0 20px 0;
+    
+      &:first-child {
+        padding-top: 0;
+      }
+    
+      @media all and (max-width: 576px) {
+        /* 表單 - 手機螢幕 */
+        font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+        padding-bottom: 10px; /* 物件與下方邊界間距 */
+      }
+    }
+    &.account{
+      .a-row{
+        p.fl-r{
+          /* 帳號表單 */
+          font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+          a{
+            padding: 10px; /* 物件與邊界間距 */
+            color: $h-color-main; /* 字體顏色 */
+          }
+          &.text-pw{
+            font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+          }
+        }
+        p.source{
+          i{
+            padding-right: 18px; /* 物件與右邊邊界間距 */
+            font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+          }
+        }
+      }
+      input.user:disabled {
+        // background-color: #fff;
+        color: $h-color-main; /* 字體顏色 */
+      }
+      .h-btn{
+        padding-top: 30px; /* 物件與上方邊界間距 */
+      }
+      @media all and (max-width: 576px) {
+        .a-row p.fl-r{
+          /* 帳號表單 - 手機螢幕 */
+          font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+        }
+      }
+    }
+    &.cancel-form{
+      max-width: 640px; /* 定義物件最大寬度 */
+      .default{
+        /* 取消訂單表單 */
+        margin-bottom: 10px; /* 物件與下方物件的距離 */
+      }
+      .h-both-btn{
+        padding: 0; /* 物件與邊界間距 */
+      }
+    }
+    &.orderinfo-form{
+      /* 訂單表單 */
+      padding: 30px; /* 物件與邊界的間距 */
+      .top-title{
+        border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+        padding:10px 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+        min-height: 55px; /* 定義最小高度 */
+        background-color: #F9F9F9; /* 背景顏色 */
+        border-bottom: 1px solid #E1E1E1; /* 下方邊框顏色與樣式 */
+        h4{
+          font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+          font-weight: bold; /* 粗體字 */
+        }
+        .type-tools{
+          p{
+            padding-right: 10px; /* 物件與右邊邊界間距 */
+            font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+          }
+          .the-select{
+            select{
+              // min-width: 125px;
+              font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+              height: 35px; /* 物件高度 */
+              line-height: 35px; /* 行高 */
+              padding-left: 15px; /* 物件與左邊邊界間距 */
+              background-color: #fff; /* 背景顏色 */
+            }
+          }
+          .h-btn-primary-line-m{
+            min-width: initial; /* 取消物件最小寬度 */
+            padding: 0 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+            font-weight: initial; /* 取消粗體字 */
+            background-color: #fff; /* 背景顏色 */
+            border-color: #DCDCDC; /* 邊框顏色 */
+            &:hover {
+              border-color: $h-color-main; /* 邊框顏色 */
+            }
+            i{
+              padding-left: 5px; /* 物件與左邊邊界間距 */
+            }
+          }
+        }
+      }
+      ul.a-row{
+        padding:15px 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+        li{
+          .label-title{
+            font-weight: initial; /* 取消粗體字 */
+            font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+          }
+          p.text{
+            padding: 15px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+            font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+          }
+          .result-text{
+            .h-c-blue{
+              font-weight: bold; /* 粗體字 */
+            }
+            input{
+              height: 35px; /* 物件高度 */
+              line-height: 35px; /* 行高 */
+              max-width: 200px; /* 定義物件最大寬度 */
+            }
+          }
+          .result-products, .result-price{
+            flex: 75%; /* 物件寬度 */
+            li{
+              padding: 8px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+              .photo{
+                width: 76px; /* 物件寬度 */
+                margin-right: 15px; /* 物件與右邊物件的距離 */
+                img{
+                  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+                }
+              }
+              p{
+                font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+                line-height: 1.5; /* 行高1.5倍 */
+                &.info{
+                  max-width: calc(100% - 200px); /* 定義物件最大寬度 */
+                }
+                &.price{
+                  margin-left: auto; /* 物件與左邊物件的距離 */
+                  text-align: right; /* 文字對齊方式 */
+                }
+                .h-c-blue{
+                  font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+                }
+              }
+            }
+          }
+          .result-products{
+            li{
+              border-bottom: 1px solid #E1E1E1; /* 下方邊框顏色與樣式 */
+              &:last-child{
+                border: none; /* 不顯示物件邊框 */
+              }
+            }
+          }
+          .result-price{
+            div{
+              padding: 8px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+              display: flex; /* 顯示方式 */
+            }
+          }
+          &.total-amount{
+            padding: 10px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+            border: 1px solid #E1E1E1; /* 邊框顏色與樣式 */
+            border-width: 1px 0 1px 0; /* 物件邊框寬度，數值依序為上右下左 */
+            p{
+              text-align: right; /* 文字對齊方式 */
+              font-weight: bold; /* 粗體字 */
+            }
+          }
+        }
+      }
+      .both-btn{
+        padding-top: 0; /* 物件與上方邊界間距 */
+      }
+      @media all and (max-width: 768px) {
+        .h-both-btn{
+          /* 訂單表單 - iPad螢幕 - 小 */
+          padding: 0 15px 25px 15px; /* 物件與邊界的間距，數值依序為上右下左 */
+        }
+      }
+      @media all and (max-width: 576px) {
+        .top-title{
+          /* 訂單表單 - 手機螢幕 */
+          h4{
+            font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+          }
+          .type-tools{
+            p, .the-select select{
+              font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+            }
+            
+          }
+        }
+        ul.a-row li{
+          .label-title{
+            font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+            padding: 12px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+          }
+          p.text{
+            padding: 12px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+            font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+          }
+          .result-products li{
+            align-items: self-start; /* 垂直靠上 */
+            .info, .price{
+              font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+            }
+          }
+        }
+      }
+      @media all and (max-width: 576px) {
+        .top-title{
+          /* 訂單表單 - 手機螢幕 */
+          min-height: 50px; /* 物件最小高度 */
+          padding: 5px 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+        }
+        ul.a-row {
+          padding: 10px 15px 20px 15px; /* 物件與邊界的間距，數值依序為上右下左 */
+          li {
+            .result-products li {
+              .photo{
+                width: 50px; /* 物件寬度 */
+                margin-right: 10px; /* 物件與右邊物件的距離 */
+              }
+              p.info{
+                max-width: calc(100% - 160px);
+                font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+              }
+              p{
+                .c-blue{
+                  font-size: $h-f-size-ss; /* 字體大小，1rem = 16pt */
+                }
+              }
+            }
+          }
+        }
+      }
+      .h-btn {
+        justify-content: flex-start; /* 水平置上 */
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    label.label-title{
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    }
+    form{
+      padding:20px; /* 物件與邊界間距 */
+      &.cancel-form {
+        padding:5px 20px 20px 20px; /* 物件與邊界的間距，數值依序為上右下左 */
+      }
+    }
+  }
+}
+/* 送出表單 */
+.submit-text {
+  margin-top: 10px; /* 物件與上方物件的距離 */
+  padding:25px 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  border: #DCDCDC 1px solid; /* 邊框顏色與樣式 */
+  background-color: #fff; /* 背景顏色 */
+  p{
+    line-height: 1.5; /* 行高1.5倍 */
+    font-weight: bold; /* 粗體字 */
+    color: $h-color-darkgray; /* 字體顏色 */
+  }
+  @media all and (max-width: 576px) {
+    /* 送出表單 - 手機螢幕 */
+    padding: 10px 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  }
+}
+.text-note {
+  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  padding:12px 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  margin-bottom: 10px; /* 物件與下方物件的距離 */
+  background-color: #FFFEE7; /* 背景顏色 */
+  border: 1px solid #E2E3C1; /* 邊框顏色與樣式 */
+  p{
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    line-height: 1.5; /* 行高1.5倍 */
+  }
+  @media all and (max-width: 576px) {
+    /* 提示文字 - 手機螢幕 */
+    padding: 6px 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    p{
+      font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+    }
+  }
+}
+/* 提示文字 - 紅 */
+.bg-note-red {
+  border-color: #FFA0B0;
+  background-color: #FFF5F5;
+}
+/* 提示文字 - 綠 */
+.bg-note-green {
+  border-color: $h-color-green; /* 邊框顏色 */
+  background-color: #f5ffef; /* 背景顏色 */
+  i {
+    color: $h-color-green; /* 字體顏色 */
+  }
+}
+/* 彈跳視窗 */
+.h-white-popup {
+}
+/* 彈跳視窗 - 內容區塊 */
+.h-popup-container{
+  .h-text-wrap {
+    h3.main-title{
+      font-size: 1.4rem; /* 字體大小，1rem = 16pt */
+      margin-top:0; /* 物件與上方物件的距離 */
+      padding-top: 0; /* 物件與上方邊界間距 */
+    }
+  }
+}
+
+/* 煙酒提示 */
+.alcohol-warning-banner {
+  color: #333; /* 字體顏色 */
+  background-color: #fff; /* 背景顏色 */
+}
+
+// 預設值 到這 -----
+
+// 版塊開始 -----
+/* 關於我們 */
+.holkee-aboutus{
+  padding: 30px; /* 物件與邊界間距 */
+  background-color: #fff; /* 背景顏色 */
+  .h-mid-cont{
+    width:100%;  /* 物件最寬度 */
+    max-width: 1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    display: flex; /* 顯示方式 */
+    flex-wrap: wrap;/* 物件換行設定 */
+    gap: 30px; /* 物件間距 */
+  }
+  .h-photo-wrap{
+    margin: 0 auto;/* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    flex:100%; /* 物件寬度 */
+    img{
+      display: block; /* 顯示方式 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    }
+  }
+  .h-text-wrap{
+    .text{
+      text-align: left; /* 文字對齊方式 */
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    /* 關於我們 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界間距 */
+    .h-mid-cont {
+      gap:24px; /* 物件間距 */
+      flex-direction: column; /* 物件排列方式 */
+    }
+  }
+}
+/* 關於我們 - 單獨頁面 */
+.holkee-aboutus-single {
+  padding: 30px; /* 物件與邊界間距 */
+  .h-text-wrap{
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    max-width: 1320px; /* 定義物件最大寬度 */
+  }
+  .text-info {
+    padding: 20px 20px 40px 20px; /* 物件與邊界的間距，數值依序為上右下左 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    .text{
+      line-height: 1.5; /* 行高1.5倍 */
+    }
+    .h-btn{
+      padding-top: 40px; /* 物件與上方邊界間距 */
+    }
+  }
+  .h-mid-cont {
+    max-width: 1320px; /* 定義物件最大寬度 */
+    margin: 0 auto 40px auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    overflow: hidden; /* 溢出設定 */
+    background-color: #fff; /* 背景顏色 */
+    @include has-box-shadow;
+  }
+
+  .h-photo-wrap {
+    height: 500px; /* 物件高度 */
+    @include img-default-cover;
+  }
+
+  @media all and (max-width: 1200px) {
+    .h-photo-wrap {
+      /* 關於我們 - PC小螢幕 */
+      height: 300px; /* 物件高度 */
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-photo-wrap {
+      /* 關於我們 - iPad螢幕 */
+      height: 250px; /* 物件高度 */
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 關於我們 - iPad螢幕 - 小 */
+    padding:0 24px 24px 24px; /* 物件與邊界間距 */
+    .h-mid-cont {
+      .text-info {
+        .text{
+          font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        }
+      }
+    }
+    .h-photo-wrap {
+      height: 200px; /* 物件高度 */
+    }
+  }
+}
+
+/* 網格區塊 */
+.holkee-grid {
+  .h-mid-cont{
+    max-width: calc(100% - 100px); /* 定義物件最大寬度 */
+    border-radius: 150px; /* 物件圓角，如不需要圓角請設0 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    overflow: hidden; /* 溢出設定 */
+  }
+  .h-btn-banner {
+    min-height: 450px; /* 物件最小高度 */
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; /* 漸變設定 */
+    &:first-child {
+      background-image: url(../images/img_gird_01.png); /* 背景圖片位置 */
+    }
+
+    &:last-child {
+      background-image: url(../images/img_gird_02.png); /* 背景圖片位置 */
+    }
+  }
+  @media all and (max-width: 1200px) {
+    .h-btn-banner {
+      /* 網格區塊 - PC小螢幕 */
+      min-height: 350px; /* 物件最小高度 */
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-btn-banner {
+      /* 網格區塊 - iPad螢幕 */
+      min-height: 250px; /* 物件最小高度 */
+    }
+  }
+  @media all and (max-width: 768px) {
+    .h-btn-banner {
+      /* 網格區塊 - iPad螢幕 - 小 */
+      min-height: 200px; /* 物件最小高度 */
+    }
+  }
+}
+/* 行銷專區 */
+.holkee-promotion {
+  padding: 40px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  p.type, p.text{
+    text-align: center; /* 文字對齊方式 */
+  }
+  .h-mid-cont {
+    max-width: 1600px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    padding:0 20px;/* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    .h-photo-wrap{
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      background-image: url(../images/layout_0004/img_promotion.png);
+    }
+  }
+  @media all and (max-width: 400px) {
+    /* 行銷專區 - 其他小螢幕 */
+    padding: 20px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  }
+}
+
+/* 條款區塊 */
+.privacy-policy {
+  .policy-title {
+    font-weight: bold; /* 粗體字 */
+    font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+    padding: 5px 0 10px 0; /* 物件與邊界的間距，數值依序為上右下左 */
+  }
+}
+
+/* 聯絡我們 */
+.holkee-contactus{
+  padding:30px; /* 物件與邊界的間距 */
+  h4.sub-title{ /* 物件與邊界的間距 */
+    font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+    font-weight: bold; /* 粗體字 */
+  }
+  .privacy-policy{
+    margin:5px 0; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    border: 1px solid #ddd; /* 邊框顏色與樣式 */
+    background-color: #fff; /* 背景顏色 */
+    .text{
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      line-height: 1.5; /* 行高1.5倍 */
+    }
+  }
+  .h-mid-cont{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    display: flex; /* 顯示方式 */
+    flex-wrap: wrap; /* 物件換行設定 */
+    gap:30px; /* 物件間距 */
+  }
+  .form-style{
+    width: calc((100% / 2) - 30px + 30px / 2); /* 物件寬度 */
+  }
+  
+  .txn-checkbox{
+    margin-bottom: 15px; /* 物件與下方物件的距離 */
+    a {
+      color: $h-color-lightblue; /* 字體顏色 */
+    }
+  }
+  .company-info{
+    width: calc((100% / 2) - 30px + 30px / 2); /* 物件寬度 */
+    ul.list {
+      li {
+        /* 聯絡我們 - 公司訊息 */
+        padding-bottom: 25px;
+        i{
+          width:1rem; /* 物件寬度 */
+          top: 5px; /* 上方定位 */
+          color: $h-color-main; /* 字體顏色 */
+        }
+        p {
+          padding-left: 35px; /* 物件與左邊邊界間距 */
+          position: relative; /* 定位方式 */
+          line-height:1.5; /* 行高1.5倍 */
+          a {
+            color: $h-color-main; /* 字體顏色 */
+          }
+        }
+      } 
+    }
+  }
+  .google-map{
+    /* 聯絡我們 - 地圖 */
+    flex: 100%; /* 物件寬度 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    iframe{
+      height: 300px; /* 物件高度 */
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    /* 聯絡我們 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    h4.sub-title {
+      font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+    }
+    .h-mid-cont{
+      gap:24px; /* 物件間距 */
+    }
+    .form-style {
+      flex:100%; /* 物件寬度 */
+      padding-right: 0;
+    }
+    .company-info{
+      flex: 100%; /* 物件寬度 */
+    }
+  }
+  @media all and (max-width: 576px) {
+    form{
+      /* 聯絡我們 - 手機螢幕 */
+      padding: 0; /* 物件與邊界的間距 */
+    }
+    .google-map{
+      padding-top: 0px; /* 物件與上方邊界間距 */
+    }
+  }
+}
+
+/* 條款頁 */
+.holkee-policy{
+  padding:30px; /* 物件與邊界的間距 */
+  width:100%; /* 物件寬度 */
+  .h-text-wrap {
+    max-width: 1320px; /* 定義物件最大寬度 */
+    width:100%; /* 物件寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  .h-mid-cont{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    width:100%; /* 物件寬度 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    padding: 20px; /* 物件與邊界的間距 */
+    margin:0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    background-color: #fff; /* 背景顏色 */
+    @include has-box-shadow;
+  }
+  .privacy-policy{
+    width: 100%; /* 物件寬度 */
+    .text{
+      line-height: 1.5; /* 行高1.5倍 */
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 條款頁 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+  }
+  @media all and (max-width: 576px) {
+    .privacy-policy .text { 
+      /* 條款頁 - 手機螢幕 */
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    }
+  }
+}
+
+/* 最新消息 */
+.holkee-news{
+  padding:30px; /* 物件與邊界的間距 */
+  .h-text-wrap{
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    max-width:1320px; /* 定義物件最大寬度 */
+  }
+  .h-mid-cont{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    gap:30px; /* 物件間距 */
+    display: flex; /* 顯示方式 */
+    flex-wrap: wrap; /* 物件換行設定 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    .a-row{
+      display: flex; /* 顯示方式 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      word-break: break-all; /* 單字過長設定 */
+      width:100%; /* 物件寬度 */
+      background-color: #fff; /* 背景顏色 */
+      @include has-box-shadow;
+    }
+    .h-photo-wrap{
+      @include img-default-cover;
+      min-width: 250px; /* 定義物件最小寬度 */
+      height: 250px; /* 物件高度 */
+      display: block; /* 顯示方式 */
+      border-radius: $radius-s 0 0 $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    }
+    .text-info{
+      padding: 25px 30px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+      h4.sub-title{
+        font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+        font-weight: bold; /* 粗體字 */
+      }
+      .date{
+        margin-top: auto; /* 物件與上方物件的距離 */
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      }
+    }
+  }
+
+  @media all and (max-width: 992px) {
+    .h-mid-cont{
+      .h-photo-wrap{
+        /* 最新消息 - iPad螢幕 */
+        min-width: 200px; /* 定義物件最小寬度 */
+        height: 200px; /* 物件高度 */
+      }
+      .text-info{
+        padding: 15px 25px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+        h4.sub-title {
+          font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+        }
+        .text{
+          font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        }
+        .date{
+          font-size: $h-f-size-ss; /* 字體大小，1rem = 16pt */
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 最新消息 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-mid-cont {
+      gap:24px; /* 物件間距 */
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-mid-cont{
+      .h-photo-wrap{
+        /* 最新消息 - 手機螢幕 */
+        min-width: 150px; /* 定義物件最小寬度 */
+        height: 150px; /* 物件高度 */
+      }
+      .text-info{
+        padding: 10px 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+        h4.sub-title {
+          font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+          margin-bottom: 5px; /* 物件與下方物件的距離 */
+          line-height: 1.2; /* 行高1.2倍 */
+        }
+        .text{
+          font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+          line-height: 1.4; /* 行高1.4倍 */
+          -webkit-line-clamp: 3; /* 文字內容超過行數會出現刪節號 */
+        }
+      }
+    }
+  }
+}
+
+/* 我們的服務 */
+.holkee-services{
+  padding:30px; /* 物件與邊界的間距 */
+  width:100%; /* 物件寬度 */
+  .h-text-wrap{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    width:100%; /* 物件寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  .h-mid-cont{
+    max-width:1320px; /* 定義物件最大寬度 */
+    display: flex;/* 顯示方式 */
+    flex-wrap: wrap; /* 物件換行設定 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    gap:30px; /* 物件間距 */
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3); /* 物件寬度 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      position: relative;/* 定位方式 */
+      background-color: #fff;/* 背景顏色 */
+      @include has-box-shadow;
+    }
+    .h-photo-wrap{
+      @include img-default-cover;
+      width:100%; /* 物件寬度 */
+      height: 500px; /* 物件高度 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      position: relative;/* 定位方式 */
+      &::after{
+        content: ""; /* 虛物件內容 */
+        position: absolute;/* 定位方式 */
+        left: 0; /* 右邊定位 */
+        top: 0; /* 上方定位 */
+        width: 100%; /* 物件寬度 */
+        height: 100%; /* 物件高度 */
+      }
+    }
+    .text-info{
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      position: absolute;/* 定位方式 */
+      top: 0; /* 上方定位 */
+      height: 100%; /* 物件高度 */
+      width:100%; /* 物件寬度 */
+      padding: 25px 30px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+      display: flex; /* 顯示方式 */
+      flex-direction: column; /* 物件排列方式 */
+      justify-content: center; /* 水平置中 */
+      background-color: #0000006a;
+      h4.sub-title{
+        padding: 10px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+        text-align: center; /* 文字對齊方式 */
+        font-size: 1.4rem; /* 字體大小，1rem = 16pt */
+        font-weight: bold; /* 粗體字 */
+        -webkit-line-clamp: initial; /* 文字內容超過行數會出現刪節號 */
+        overflow: initial; /* 溢出設定 */
+        color: #fff; /* 字體顏色 */
+      }
+      .text {
+        margin:0;
+        color: #fff; /* 字體顏色 */
+      }
+      .date {
+        color: $h-color-gray; /* 字體顏色 */
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 我們的服務 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-text-wrap {
+      padding: 0 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    }
+    .h-mid-cont {
+      gap:24px; /* 物件間距 */
+      .a-row{
+        width: calc((100% / 2) - 24px + 24px / 2); /* 物件寬度 */
+        .text-info{
+          padding: 15px 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+          .sub-title{
+            font-size: $h-f-size-xl;/* 字體大小，1rem = 16pt */
+          }
+          .text{
+            font-size: $h-f-size-m;/* 字體大小，1rem = 16pt */
+          }
+        }
+      }
+      .h-photo-wrap {
+        height: 400px;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      /* 我們的服務 - 手機螢幕 */
+      padding: 0px;/* 物件與邊界的間距 */
+    }
+    .h-mid-cont {
+      .a-row{
+        flex:100%; /* 物件寬度 */
+        max-width:100%; /* 定義物件最大寬度 */
+        .text-info{
+          .sub-title{
+            font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* FB與IG貼文 */
+.holkee-fb-post, .holkee-ig-post {
+  padding:30px; /* 物件與邊界的間距 */
+  background-color: #fff; /* 背景顏色 */
+  .h-mid-cont{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    gap:30px; /* 物件間距 */
+    .a-row {
+      width: calc((100% / 3) - 30px + 30px / 3); /* 物件寬度 */
+    }
+  }
+  .h-text-wrap {
+    max-width:1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  @media all and (max-width: 992px) {
+    .h-mid-cont {
+      .a-row {
+        /* FB與IG貼文 - iPad螢幕 */
+        width: calc((100% / 2) - 30px + 30px / 2); /* 物件寬度 */
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* FB與IG貼文 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-mid-cont {
+      gap:24px; /* 物件間距 */
+      .a-row {
+        width: calc((100% / 2) - 24px + 24px / 2); /* 物件寬度 */
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      /* FB與IG貼文 - 手機螢幕 */
+      width: initial; /* 取消物件寬度 */
+    }
+    .h-mid-cont {
+      width: initial; /* 取消物件寬度 */
+      .a-row {
+        padding:0; /* 物件與邊界的間距 */
+      }
+    }
+  }
+}
+/* FB與IG gallery */
+.holkee-fb-gallery, .holkee-ig-gallery{
+  background-color: #fff; /* 背景顏色 */
+  padding:30px; /* 物件與邊界的間距 */
+  .h-text-wrap{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  .h-mid-cont{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    gap:15px; /* 物件間距 */
+    .a-photo{
+      width: calc((100% / 5) - 15px + 15px / 5); /* 物件寬度 */
+      img{
+        width: 100%; /* 物件寬度 */
+        border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    /* FB與IG gallery - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-mid-cont {
+      gap:5px; /* 物件間距 */
+      .a-photo {
+        width: calc((100% / 5) - 5px + 5px / 5); /* 物件寬度 */
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap{
+      /* FB與IG gallery - 手機螢幕 */
+      width: initial; /* 取消物件寬度 */
+    }
+  }
+}
+
+/* FB 影片 */
+.holkee-fb-video{
+  padding:30px; /* 物件與邊界的間距 */
+  .h-text-wrap{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  .h-mid-cont{
+    gap:30px; /* 物件間距 */
+    max-width:1320px; /* 定義物件最大寬度 */
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3); /* 物件寬度 */
+      iframe {
+        width: 100%; /* 物件寬度 */
+        height: 30vw; /* 物件高度 */
+        max-height: 500px; /* 定義物件最大高度 */
+      }
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-mid-cont {
+      .a-row {
+        /* FB 影片 - iPad螢幕 */
+        width: calc((100% / 2) - 30px + 30px / 2); /* 物件寬度 */
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* FB 影片 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-mid-cont {
+      gap:24px; /* 物件間距 */
+      .a-row {
+        flex: 100%; /* 物件寬度 */
+        max-width: initial; /* 取消物件最大寬度 */
+        iframe {
+          // height: 45vw;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      width: initial;
+    }
+    .h-mid-cont {
+      width: initial;
+    }
+  }
+}
+/* Youtube 影片 */
+.holkee-yt-video {
+  padding:30px;/* 物件與邊界的間距 */
+  background-color: #ece2e2; /* 背景顏色 */
+  .h-text-wrap{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  .h-mid-cont{
+    max-width: 1320px; /* 定義物件最大寬度 */
+    gap:30px; /* 物件間距 */
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3); /* 物件寬度 */
+      iframe{
+        width: 100%; /* 物件寬度 */
+        height: 260px; /* 物件高度 */
+      }
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    .h-mid-cont {
+      .a-row {
+        iframe{
+          /* Youtube 影片 - PC小螢幕 */
+          height: 250px; /* 物件高度 */
+        }
+      }
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-mid-cont {
+      .a-row {
+        /* Youtube 影片 - iPad螢幕 */
+        width: calc((100% / 2) - 30px + 30px / 2); /* 物件寬度 */
+        iframe{
+          height: 180px; /* 物件高度 */
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* Youtube 影片 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-text-wrap {
+      width: initial; /* 取消物件寬度 */
+    }
+    .h-mid-cont {
+      gap:24px; /* 物件間距 */
+      .a-row {
+        width: calc((100% / 2) - 24px + 24px / 2); /* 物件寬度 */
+        iframe{
+          height: 140px; /* 物件高度 */
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+  .h-mid-cont {
+      .a-row {
+        /* Youtube 影片 - 手機螢幕 */
+        width:100%; /* 物件寬度 */
+        iframe {
+          height: 180px; /* 物件高度 */
+        }
+      }
+    }
+  }
+}
+
+/* 商品分類選單 */
+.shop-menu {
+  ul {
+    li.selected{
+      text-decoration: underline; /* 文字裝飾 */
+    }
+    li:hover {
+      color: $h-color-darkgray; /* 字體顏色 */
+      text-decoration: underline; /* 文字裝飾 */
+    }
+
+    &.item-main li {
+      font-size: $h-f-size-x; /* 字體大小，1rem = 16pt */
+    }
+
+    &.item-subtitle {
+      padding-top: 10px;
+      border-top: 1px solid #dedede; /* 上方邊框顏色與樣式 */
+      li {
+        font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    ul {
+      &.item-main li {
+        /* 商品分類選單 - iPad螢幕 - 小 */
+        font-size: 1rem; /* 字體大小，1rem = 16pt */
+      }
+
+      &.item-subtitle li {
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      }
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    ul {
+      &.item-main li {
+        /* 商品分類選單 - 手機螢幕 */
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      }
+  
+      &.item-subtitle li {
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      }
+    }
+  }
+}
+/* 商品麵包屑 */
+.top-breadcrumb {
+  padding: 10px 0 20px 0; /* 物件與邊界的間距，數值依序為上右下左 */
+  font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  color: $h-color-gray; /* 字體顏色 */
+  a {
+    color: $h-color-gray; /* 字體顏色 */
+  }
+}
+
+/* 帳號設定麵包屑 */
+.manage-breadcrumb {
+  margin-top:20px; /* 物件與上方物件的距離 */
+  padding: 0 30px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  min-width: $min-w; /* 定義物件最小寬度 */
+  background-color: #ffffff78; /* 背景顏色 */
+  @include has-box-shadow-light;
+
+  .h-mid-cont {
+    padding: 15px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    max-width: 1320px; /* 定義物件最大寬度 */
+    display: flex; /* 顯示方式 */
+    flex-wrap: wrap; /* 物件換行設定 */
+    align-items: center; /* 垂直置中 */
+
+    a.home {
+      border-radius: $radius-s; /* 字體大小，1rem = 16pt */
+      color: $h-color-main; /* 字體顏色 */
+      border: 1px solid #DCDCDC; /* 邊框顏色與樣式 */
+
+      &:hover {
+        background-color: #f8f8f8; /* 背景顏色 */
+      }
+    }
+    .the-select {
+      select {
+        &:disabled {
+          background-color: #F2F2F2; /* 背景顏色 */
+
+          &:hover {
+            border-color: #DCDCDC; /* 邊框顏色 */
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    .mid-cont {
+      /* 帳號設定麵包屑 - iPad螢號 - 小 */
+      padding: 10px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    }
+  }
+}
+
+/* 國籍下拉選單 */
+ul.dropdown-list {
+  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  background-color: #fff; /* 背景顏色 */
+  li {
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    color: #333; /* 字體顏色 */
+    border-bottom: 1px solid #eaeaea; /* 邊框顏色與樣式 */
+  }
+  a {
+    padding: 15px 20px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    color: #333; /* 字體顏色 */
+    &:hover {
+      background-color: #eaeaea; /* 背景顏色 */
+    }
+  }
+  @media all and (max-width: 576px) {
+    li {
+      /* 國籍下拉選單 - 手機螢幕 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+    }
+  }
+}
+/* 國籍 */
+.country-item {
+  border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  border: #DCDCDC 1px solid; /* 邊框顏色與樣式 */
+  &:hover {
+    border-color: $h-color-gray; /* 邊框顏色 */
+  }
+  p {
+    font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+    height: 46px; /* 物件高度 */
+    padding-left: 20px; /* 物件與左邊邊界間距 */
+    line-height: 46px; /* 行高 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    text-indent: 0.01px; /* 文字縮排 */
+    color: #333; /* 字體顏色 */
+  }
+
+  .dropdown-list {
+    li {
+      a {
+        font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+        padding: 12px 20px 12px 60px; /* 物件與邊界的間距，數值依序為上右下左 */
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    /* 國籍 - 手機螢幕 */
+    font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+
+    p {
+      height: 40px; /* 物件高度 */
+      line-height: 40px; /* 行高 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+    }
+
+    .dropdown-list {
+      top: 40px; /* 上方定位 */
+      max-height: 30vh; /* 物件最大高度 */
+
+      li a {
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      }
+    }
+  }
+}
+/* 商品列表 */
+.holkee-shop{
+  padding:30px; /* 物件與邊界的間距 */
+  .h-text-wrap {
+    max-width:1320px; /* 定義物件最大寬度 */
+  }
+  .h-mid-cont {
+    max-width: 1320px; /* 定義物件最大寬度 */
+  }
+  .item {
+    width: 100%;
+    display: flex; /* 顯示方式 */
+    flex-wrap: wrap; /* 物件換行設定 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    gap:30px; /* 物件寬度 */
+    .a-row {
+      width: calc((100% / 3) - 30px + 30px / 3); /* 物件寬度 */
+      &:hover {
+        .h-photo-wrap {
+          /* 滑入效果 */
+            opacity: .9; /* 改變物件透明度，0為完全透明 */
+        }
+      }
+    }
+  }
+  .h-btn {
+    padding:20px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  }
+  .h-photo-wrap {
+    width: 100%; /* 物件寬度 */
+
+    img {
+      width: 100%; /* 物件寬度 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    }
+  }
+
+  // tools
+  .shop-tools {
+    .search .icon {
+      /* 商品列表 - 商品分類 */
+      color: $h-color-main;/* 字體顏色 */
+    }
+  }
+
+  .text-info {
+    padding-top: 15px;/* 物件與上方邊界間距 */
+    // min-height: 100px;
+
+    h4.sub-title {
+      font-weight: bold; /* 粗體字 */
+      text-align: center; /* 文字對齊方式 */
+      color: $h-color-darkgray; /* 文字顏色 */
+    }
+  }
+
+  .price {
+    text-align: center;  /* 文字對齊方式 */
+
+    .discount {
+      font-weight: bold; /* 粗體字 */
+      padding-right: 5px; /* 物件與右邊邊界間距 */
+      color: $h-color-red; /* 字體顏色 */
+    }
+
+    .original {
+      text-decoration: line-through; /* 文字裝飾 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      color: $h-color-gray; /* 字體顏色 */
+    }
+  }
+
+
+  @media all and (max-width: 992px) {
+    .h-mid-cont {
+      .item {
+        .a-row {
+          /* 商品列表 - iPad螢幕 */
+          width: calc((100% / 2) - 30px + 30px / 2); /* 物件寬度 */
+        }
+      }
+      
+    }
+    .text-info {
+      .price {
+        .original {
+          font-size: $h-f-size-xs; /* 字體大小，1rem = 16pt */
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    /* 商品列表 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .h-text-wrap {
+      margin-bottom:0; /* 物件與下方物件的距離 */
+      .shop-menu {
+        top:0; /* 上方定位 */
+      }
+      .top-breadcrumb {
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      }
+    }
+    .text-info {
+      padding-top: 10px; /* 物件與上方邊界間距 */
+      h4.sub-title {
+        font-size:$h-f-size-m; /* 字體大小，1rem = 16pt */
+      }
+      .price {
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        .original {
+          font-size: $h-f-size-ss; /* 字體大小，1rem = 16pt */
+          padding-top: 8px; /* 物件與上方邊界間距 */
+          display: block; /* 顯示方式 */
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    .text-info {
+      /* 商品資訊頁 - 手機螢幕 */
+      padding-top: 10px; /* 物件與上方邊界間距 */
+
+      h4.sub-title {
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      }
+
+      .price {
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+        .original {
+          font-size: $h-f-size-ss; /* 字體大小，1rem = 16pt */
+          padding-top: 8px; /* 物件與上方邊界間距 */
+          display: block; /* 顯示方式 */
+        }
+      }
+    }
+  }
+}
+
+/* 首頁大banner輪播 */
+.holkee-swiper {
+  width:calc(100% - 100px); /* 物件寬度 */
+  margin: 50px; /* 物件與其他物件的距離 */
+  max-width: 1200px; /* 定義物件最大寬度 */
+  .swiper-button-next{
+    top: initial; /* 上方定位:初始化 */
+    right: 20px; /* 右邊定位 */
+    bottom: 15px; /* 下方定位 */
+  }
+  .swiper-button-prev{
+    top:initial; /* 取消上方定位 */
+    left: initial; /* 取消左邊定位 */
+    right: 70px; /* 右邊定位 */
+    bottom: 15px; /* 下方定位 */
+  }
+  .swiper-pagination-bullet {
+    background-color: $h-color-main; /* 背景顏色 */
+  }
+  .swiper-button-next:after,  
+  .swiper-button-prev:after {
+    opacity: 1; /* 改變物件透明度，0為完全透明 */
+    font-size: $h-f-size-xxl; /* 字體大小，1rem = 16pt */
+    padding: 10px 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    color: #fff; /* 字體顏色 */
+    background-color: $h-color-darkgray; /* 背景顏色 */
+  }
+  :root {
+    --swiper-theme-color: $h-color-darkgray;
+  }
+  @media all and (max-width: 768px) {
+    /* 首頁大banner輪播 - iPad螢幕 - 小 */
+    width: calc(100% - 60px); /* 物件寬度 */
+    margin: 30px; /* 物件與其他物件的距離 */
+  }
+  @media all and (max-width: 576px) {
+    /* 首頁大banner輪播 - 手機螢幕 */
+    width: calc(100% - 40px); /* 物件寬度 */
+    margin:25px 20px; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    .swiper-button-next:after,  
+    .swiper-button-prev:after {
+      bottom: 20px; /* 下方定位 */
+      font-size: $h-f-size-x; /* 物件圓角，如不需要圓角請設0 */
+    }
+    .swiper-button-prev{
+      right: 65px; /* 右邊定位 */
+    }
+  }
+}
+
+/* 特色商品 */
+.holkee-products-swiper {
+  padding: 30px; /* 物件與邊界的間距 */
+  .swiper-products-cont {
+    max-width: 1320px; /* 定義物件最大寬度 */
+    a {
+      .text {
+        height: 100%; /* 物件高度 */
+      }
+      .price {
+        height: auto; /* 物件高度 */
+        border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+        
+        .original {
+          color: #ccc; /* 文字顏色 */
+        }
+      }
+    }
+  }
+  
+  img{
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1; /* 改變物件透明度，0為完全透明 */
+    font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+    padding: 8px 15px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    color: #fff; /* 文字顏色 */
+    background-color: $h-color-darkgray; /* 背景顏色 */
+  }
+  .swiper-products-cont .text {
+    color: $h-color-main; /* 文字顏色 */
+  }
+
+  .price {
+    .discount {
+      color: $h-color-red; /* 文字顏色 */
+    }
+    .original {
+      text-decoration: line-through;/* 文字裝飾 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      color: $h-color-gray; /* 文字顏色 */
+    }
+  }
+  .h-btn {
+    max-width:1320px; /* 定義物件最大寬度 */
+    margin: 0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+  @media all and (max-width: 768px) {
+    /* 特色商品 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .swiper-products-cont{
+      .text{
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        line-height: 1.25; /* 行高1.25倍 */
+      }
+      .price{
+        font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+        .original{
+          font-size: $h-f-size-ss; /* 字體大小，1rem = 16pt */
+          padding-top: 7px; /* 物件與上方邊界間距 */
+          display: block; /* 顯示方式 */
+        }
+      }
+    }
+  }
+}
+
+/* 商品圖片輪播 */
+.holkee-products-main-swiper{
+  .coverSwiperLarge {
+    a.btn-magnifier {
+      width: 45px; /* 物件寬度 */
+      height: 45px; /* 物件高度 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      font-size:20px; /* 字體大小 */
+      display: flex; /* 顯示方式 */
+      text-align: center; /* 文字對齊方式 */
+      align-items: center; /* 垂直置中 */
+      justify-content: center; /* 水平置中 */
+      border: 1px solid #DCDCDC; /* 邊框顏色與樣式 */
+      background-color: #FFF; /* 背景顏色 */
+      color: $h-color-main; /* 文字顏色 */
+
+      &:hover {
+        border-color: $h-color-main; /* 邊框顏色 */
+      }
+    }
+  }
+  .swiper-slide {
+    img{
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    }
+  }
+  .swiper-slide-thumb-active {
+    img {
+      border: 2px solid $h-color-main; /* 邊框顏色與樣式 */
+    }
+  }
+  .swiper-button-next{
+    right: 1px; /* 右邊定位 */
+    &:hover:after { /* 右邊定位 */
+      background-color: #333; /* 背景顏色 */
+    }
+  }
+  .swiper-button-prev {
+    left: 1px; /* 左邊定位 */
+    &:hover:after {
+      background-color: #333; /* 背景顏色 */
+    }
+  }
+  .swiper-pagination{
+    text-align: left ; /* 文字對齊方式 */
+    position: initial; /* 定位方式 */
+    padding: 5px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1; /* 改變物件透明度，0為完全透明 */
+    font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+    padding: 5px 7.5px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    color: #fff; /* 文字顏色 */
+    background-color: #33333384; /* 背景顏色 */
+  }
+}
+
+/* 商品資訊頁 */
+.holkee-product-info {
+  padding:30px; /* 物件與邊界的間距 */
+  .h-text-wrap {
+    max-width:1320px; /* 定義物件最大寬度 */
+    .shop-menu {
+      background:none; /* 不顯示背景 */
+      border:none; /* 不顯示物件邊框 */
+      .hide-more {
+        height:35px; /* 物件高度 */
+        overflow: hidden; /* 溢出設定 */
+      }
+    }
+  }
+  h4.sub-title{
+    font-weight: bold; /* 粗體字 */
+  }
+  .h-product-cont {
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    max-width: 1320px; /* 定義物件最大寬度 */
+    background-color: #fff; /* 背景顏色 */
+    @include has-box-shadow;
+    .text {
+      text-align: left; /* 文字對齊方式 */
+    }
+    .swiper-slide {
+      background:#f6f6f6; /* 背景顏色 */
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 商品資訊頁 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+  }
+  @media all and (max-width: 576px) {
+    h4.sub-title{
+      /* 商品資訊頁 - 手機螢幕 */
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      padding-top: 5px; /* 物件與上方邊界間距 */
+    }
+  }
+}
+/* 商品資訊頁 - 數量選擇按鈕 */
+.quantity-cont {
+  .select-quantity {
+    max-width: 200px; /* 定義物件最大寬度 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    border: 2px solid #dadada; /* 邊框顏色與樣式 */
+    input.qty-input {
+      height: 40px; /* 物件高度 */
+      line-height: 40px; /* 行高 */
+      font-size: 17px; /* 字體大小 */
+      border-radius:$radius-s; /* 物件圓角，如不需要圓角請設0 */
+    }
+    input.qty-input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    span {
+      width: 40px; /* 物件寬度 */
+      height: 39px; /* 物件高度 */
+      line-height: 39px; /* 行高 */
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      background-color: #fff; /* 背景顏色 */
+      &.plus {
+        border-radius: 0 4px 4px 0; /* 物件圓角，如不需要圓角請設0 */
+        border-left: 1px solid #dedede; /* 邊框顏色與樣式 */
+      }
+      &.minus {
+        border-radius: 4px 0 0 4px; /* 物件圓角，如不需要圓角請設0 */
+        border-right: 1px solid #dedede; /* 邊框顏色與樣式 */
+      }
+      &.plus:hover,
+      &.minus:hover {
+        /* 按鈕滑入效果 */
+        background-color: #f3f3f3; /* 背景顏色 */
+      }
+      &.minus-none {
+        color: #dadada; /* 文字顏色 */
+        &:hover {
+          /* 停用按鈕滑入效果 */
+          background-color: #fff; /* 背景顏色 */
+        }
+      }
+    }
+  }
+}
+/* 商品資訊頁 - 商品明細 */
+.h-product-cont {
+  max-width: 1600px;
+  .shop-spec {
+    color: $h-color-main; /* 文字顏色 */
+    a {
+      /* 商品資訊頁 - 商品規格 */
+      border-width: 2px; /* 物件邊框的寬度 */
+      border-style: solid; /* 物件邊框的樣式 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+      color: $h-color-main; /* 文字顏色 */
+      border-color: #DCDCDC; /* 邊框顏色 */
+      background-color: #fff; /* 背景顏色 */
+      &.selected {
+        /* 商品資訊頁 - 商品規格 - 已選擇 */
+        font-weight: bold; /* 粗體字 */
+        color: #7f1d1d; /* 文字顏色 */
+        border-color: #7f1d1d; /* 文字顏色 */
+      }
+      &:hover {
+        /* 商品資訊頁 - 商品規格 - 滑入效果 */
+        color: $h-color-main; /* 文字顏色 */
+        border-color: $h-color-main; /* 邊框顏色 */
+      }
+    }
+  }
+
+  .shop-status {
+    /* 商品資訊頁 - 商品狀態 */
+    max-width: 500px; /* 定義物件最大寬度 */
+    tr,
+    td {
+      color: $h-color-main; /* 文字顏色 */
+    }
+    .l-label {
+      width: 50%; /* 物件寬度 */
+    }
+  }
+  .price {
+    .discount {
+      /* 商品資訊頁 - 商品價格 */
+      font-weight: bold; /* 粗體字 */
+      padding-right: 5px; /* 物件與右邊邊界間距 */
+      color: $h-color-red; /* 文字顏色 */
+    }
+    .original {
+      text-decoration: line-through; /* 文字裝飾 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      color: $h-color-gray; /* 文字顏色 */
+    }
+  }
+  .discount-contents {
+    /* 商品資訊頁 - 折扣 */
+    padding: 0px 0px 0px 15px; /* 物件與邊界的間距，數值依序為上右下左 */
+    border-left: 3px solid #dadada; /* 邊框顏色與樣式 */
+    li{
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      color: $h-color-gray; /* 文字顏色 */
+      .l-label {
+        border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+        border: 2px solid #dadada; /* 邊框顏色與樣式 */
+      }
+      &.more{
+        padding-top: 10px; /* 物件與上方邊界間距 */
+        font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+        a{
+          border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+          background-color: #f4f4f4; /* 背景顏色 */
+          color: #6e6e6e; /* 文字顏色 */
+        }
+        span {
+          color: $h-color-blue ; /* 文字顏色 */
+        }
+      }
+    }
+  }
+  .stock {
+    /* 商品資訊頁 - 庫存數量 */
+    color: $h-color-gray; /* 文字顏色 */
+  }
+  a.btn-car {
+    /* 商品資訊頁 - 購物車按鈕 */
+    font-size: $h-f-size-xl; /* 字體大小，1rem = 16pt */
+    align-content: center; /* 內容垂直置中 */
+    align-items: center; /* 垂直置中 */
+    color: $h-color-main; /* 文字顏色 */
+    span.nb {
+      font-size: $h-f-size-ss;/* 字體大小，1rem = 16pt */
+      font-weight: 700; /* 粗體字 */
+      line-height: 1;/* 行高 */
+      color: #fff;/* 文字顏色 */
+      background-color: $h-color-red; /* 背景顏色 */
+    }
+  }
+  .privacy-policy{
+    /* 商品資訊頁 - 政策 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    margin:5px 0; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+    border: 1px solid #ddd; /* 邊框顏色與樣式 */
+    .text{
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      line-height: 1.5; /* 行高1.5倍 */
+    }
+  }
+  .txn-checkbox{
+    /* 商品資訊頁 - 政策同意區塊 */
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    a{
+      /* 商品資訊頁 - 政策同意區塊 - 連結 */
+      text-decoration: underline; /* 文字裝飾 */
+      color: $h-color-darkblue; /* 文字顏色 */
+      &:hover{
+        /* 商品資訊頁 - 政策同意區塊 - 連結滑入效果 */
+        text-decoration: none; /* 文字裝飾 */
+      }
+    }
+  }
+}
+/* 商品資訊頁 - 圖片放大彈跳視窗 */
+.h-magnifier-info {
+  .h-products-info {
+    .selected {
+      img {
+        /* 商品資訊頁 - 圖片放大彈跳視窗 - 已選擇效果 */
+        border: 2px solid $h-color-blue; /* 邊框顏色與樣式 */
+      }
+    }
+  }
+}
+
+/* 表格 */ 
+.form-table {
+  .a-row {
+    border-bottom: 1px solid #eaeaea; /* 下方邊框顏色與樣式 */
+
+    &:hover {
+      /* 表格 - 表格列滑入效果 */ 
+      background-color: #f7f7f7; /* 背景顏色 */
+    }
+    .quantity-cont {
+      .select-quantity {
+        /* 表格 - 數量 */ 
+        border: 2px solid #dadada; /* 邊框顏色與樣式 */
+      }
+    }
+  }
+  .bg-title {
+    /* 表格 - 表頭 */ 
+    color: #fff; /* 文字顏色 */
+    background-color: $h-color-main; /* 背景顏色 */
+
+    p {
+      color: #fff; /* 文字顏色 */
+    }
+
+    &:hover {
+      /* 表格 - 表頭滑入效果 */ 
+      background-color: $h-color-main; /* 背景顏色 */
+    }
+  }
+}
+
+/* 購物車頁面 */ 
+.holkee-shoppingcart {
+  padding:30px; /* 物件與邊界的間距 */
+  .h-text-wrap {
+    max-width:1320px; /* 定義物件最大寬度 */
+  }
+  .h-mid-cont {
+    max-width: 1320px; /* 定義物件最大寬度 */
+    background-color: #fff; /* 背景顏色 */
+    @include has-box-shadow;
+    .detail-hide {
+      overflow:hidden; /* 溢出設定 */
+      height: 300px; /* 物件高度 */
+      position:relative; /* 定位方式 */
+      &::before {
+        content: ""; /* 虛物件內容 */
+        color:#333; /* 文字顏色 */
+        /* 背景 - 線性漸層 */
+        background:linear-gradient(transparent 20%, #fff 70%);
+        height:200px; /* 物件高度 */
+        width: 100%; /* 物件寬度 */
+        display: block; /* 顯示方式 */
+        bottom:0; /* 下方定位 */
+        z-index: 1; /* 顯示順序，數值愈大愈上層 */
+        position:absolute; /* 定位方式 */
+      }
+    }
+  }
+  h5.sub-title {
+    a.f-ss {
+      color: $h-color-darkblue; /* 文字顏色 */
+    }
+  }
+  .show-more {
+    border: 1px solid #eaeaea; /* 邊框顏色與樣式 */
+    color: $h-color-darkgray; /* 文字顏色 */
+    &:hover {
+      /* 滑入效果 */
+      background-color: #f7f7f7; /* 背景顏色 */
+    }
+  }
+
+  .h-photo-wrap {
+    width: 100%; /* 物件寬度 */
+    img {
+      width: 100%; /* 物件寬度 */
+      border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    }
+  }
+
+  .product-list {
+    .a-row {
+      .tools {
+        a.icon-delete {
+          /* 購物車頁面 - 商品表格 - 刪除按鈕 */ 
+          background-color: #fff; /* 背景顏色 */
+          border: 1px solid #DCDCDC; /* 邊框顏色與樣式 */
+          color: $h-color-blue; /* 文字顏色 */
+          &:hover {
+            /* 購物車頁面 - 商品表格 - 刪除按鈕滑入效果 */ 
+            border-color: $h-color-blue; /* 邊框顏色 */
+          }
+        }
+      }
+
+      .product-name {
+        .price {
+          /* 購物車頁面 - 商品表格 - 價格 */
+          color: #9E9E9E; /* 文字顏色 */
+        }
+        a {
+          color: $h-color-darkgray; /* 文字顏色 */
+        }
+      }
+    }
+
+    .bg-title {
+      .order-photo {
+        .h-control {
+          input:checked~.h-control__indicator {
+            border-color: #fff; /* 邊框顏色 */
+            background-color: #fff; /* 背景顏色 */
+            &::after {
+              border-color: #333; /* 邊框顏色 */
+            }
+          }
+        }
+      }
+    }
+    .off-out {
+      .off-text {
+        /* 購物車頁面 - 商品表格 - 無存貨顯示圖示 */
+        background-color: $h-color-gray; /* 背景顏色 */
+        color: #fff; /* 文字顏色 */
+      }
+    }
+  }
+  .orderinfo-form {
+    .txn-checkbox {
+      a {
+        color: $h-color-darkblue; /* 文字顏色 */
+      }
+    }
+    .line-dashed {
+      /* 購物車頁面 - 虛線 */
+      border-bottom: 1px dashed #f1f1f1; /* 邊框顏色與樣式 */
+    }
+    .fl {
+      .text-copy {
+        a {
+          /* 購物車頁面 - 復製優惠碼 */
+          color: $h-color-darkgray; /* 文字顏色 */
+        }
+      }
+    }
+    .total-amount {
+      /* 購物車頁面 - 總共額 */
+      border-top: 1px solid #dcdcdc; /* 上方邊框顏色與樣式 */
+      background-color: #F2F2F2; /* 背景顏色 */
+    }
+    .a-row {
+      line-height:1.5rem; /* 行高1.5倍 */
+      padding:1.5rem 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+      border-bottom: #ccc; /* 下方邊框的顏色 */
+      &.total-amount {
+        background:none; /* 不顯示背景 */
+        .text-info {
+          font-size: 1.5rem; /* 字體大小，1rem = 16pt */
+        }
+      }
+      i {
+        padding-right:.5rem; /* 物件與右邊邊界間距 */
+      }
+      textarea {
+        margin-top:1rem; /* 物件與上方物件的距離 */
+      }
+      .coupon {
+        input {
+          /* 購物車頁面 - 優惠券 */
+          margin-top:1rem; /* 物件與上方物件的距離 */
+        }
+      }
+      .label-title {
+        padding:0; /* 物件與邊界的間距 */
+      }
+      .text-info {
+        padding:0; /* 物件與邊界的間距 */
+        font-size: 1.2rem; /* 字體大小，1rem = 16pt */
+        .f-ss {
+          padding:0; /* 物件與邊界的間距 */
+          color:#999; /* 文字顏色 */
+        }
+      }
+      .shippingway-select {
+        /* 購物車頁面 - 運送方式 */
+        max-width: 100%; /* 定義物件最大寬度 */
+        display: flex; /* 顯示方式 */
+        flex-wrap: wrap; /* 物件換行設定 */
+        gap:15px; /* 物件間距 */
+        margin-top:1rem; /* 物件與上方物件的距離 */
+        label {
+          cursor: pointer; /* 改變滑鼠標示 */
+          border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+          width: calc((100% / 4) - 15px + 15px / 4); /* 物件寬度 */
+          display: flex; /* 顯示方式 */
+          align-items: center; /* 垂直置中 */
+          opacity: .4; /* 改變物件透明度，0為完全透明 */
+          padding: 1rem; /* 物件與邊界的間距 */
+          background:#f1f1f1; /* 背景顏色 */
+          filter:saturate(0%); /* 物件混色模式 */
+          transition:all .5s ease; /* 漸變設定 */
+          border:1px solid transparent; /* 物件邊框的樣式與顏色 */
+          input[type="radio"] {
+            height:1rem;
+            width:1rem;
+            transition:all ease 0.5s;
+            margin: 0 5px 0 0;
+            border:1px solid red;
+          }
+          .shippingcost {
+            margin-left:auto; /* 物件與左方物件的距離 */
+            color: #FF5539; /* 文字顏色 */
+          }
+          img {
+            width:2.5rem; /* 物件寬度 */
+            display: inline-block; /* 顯示方式 */
+          }
+        }
+        label:hover, label.selected {
+          opacity: 1; /* 改變物件透明度，0為完全透明 */
+          filter:saturate(100%); /* 物件混色模式 */
+          border:#666 1px solid; /* 物件邊框的樣式與顏色 */
+          background:white; /* 背景顏色 */
+          .shipping-radio {
+            span {
+              background:#333; /* 背景顏色 */
+            }
+          }
+        }
+      }
+    }
+  }
+  .orderinfo-result {
+    .top-title {
+      background-color: #F9F9F9; /* 背景顏色 */
+      border-bottom: 1px solid #E1E1E1; /* 邊框顏色與樣式 */
+    }
+  }
+  .purchase-form {
+    .line-dashed {
+      /* 訂購資訊 */
+      border-bottom:1px dashed #ccc;
+    }
+    
+    .sub-title {
+      border-bottom: #333 solid 1px; /* 物件邊框的樣式與顏色 */
+      margin-top: 1rem; /* 物件與上方物件的距離 */
+    }
+    .h-control__indicator {
+      top:21px; /* 上方定位 */
+    }
+    .h-control {
+      padding:20px 25px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    }
+    .a-row {
+      padding:1rem 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+      align-items: center; /* 垂直置中 */
+      display: flex; /* 顯示方式 */
+      justify-content: start; /* 水平靠左 */
+      &.total-amount {
+        border-top:#333 1px solid; /* 物件邊框的樣式與顏色 */
+        font-weight: bold; /* 粗體字 */
+        .text-info {
+          .h-c-red {
+            font-weight: bold; /* 粗體字 */
+            font-size: 1.5rem; /* 字體大小，1rem = 16pt */
+          }
+        }
+      }
+      .result-text p {
+        padding: 10px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+      }
+      div {
+        width:100%; /* 物件寬度 */
+      }
+      .label-title {
+        padding:0; /* 物件與邊界的間距 */
+        width:20%; /* 物件寬度 */
+        font-weight: inherit;/* 取消粗體字 */
+      }
+      .text-info {
+        text-align: right; /* 文字對齊方式 */
+        margin-left: auto; /* 物件與左邊物件的距離 */
+        font-size: 1.2rem; /* 字體大小，1rem = 16pt */
+      }
+      .f-ss {
+        color:#999; /* 文字顏色 */
+      }
+      
+      select, input {
+        background: #f6f6f6; /* 背景顏色 */
+        border: 1px solid transparent; /* 物件邊框的樣式與顏色 */
+        &:focus {
+          border:1px solid #333; /* 物件邊框的樣式與顏色 */
+        }
+      }
+      
+      .h-btn-primary-m, .h-btn-primary-line-m {
+        width:20%; /* 物件寬度 */
+        min-width: inherit; /* 物件最小寬度 */
+      }
+    }
+  }
+  @media all and (max-width: 992px) {
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          label {
+            /* 購物車頁面 - iPad螢幕 */
+            width: calc((100% / 3) - 15px + 15px / 3); /* 物件寬度 */
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .h-btn-primary-m, .h-btn-primary-line-m {
+          width:40%; /* 物件寬度 */
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 購物車頁面 - iPad螢幕 - 小 */
+    padding:24px; /* 物件與邊界的間距 */
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          gap:10px; /* 物件間距 */
+          label {
+            width: calc((100% / 2) - 10px + 10px / 2); /* 物件寬度 */
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .label-title {
+          width:30%; /* 物件寬度 */
+        }
+        .h-btn-primary-m, .h-btn-primary-line-m {
+          width:50%; /* 物件寬度 */
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          label {
+            /* 購物車頁面 - 手機螢幕 */
+            width: 100%; /* 物件寬度 */
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .label-title {
+          width:50%; /* 物件寬度 */
+        }
+      }
+    }
+  }
+}
+
+.member-cont {
+  form {
+    &.account {
+      @media all and (max-width: 576px) {
+        padding: 0; /* 物件與邊界的間距 */
+      }
+    }
+  }
+}
+/* 會員後台相關 */ 
+.cont-space {
+  padding: 30px 60px; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+
+  .text-note {
+    max-width: 400px; /* 定義物件最大寬度 */
+    margin:0 auto; /* 物件與其他物件的距離，第一個數值為上下，第二個數值為左右 */
+  }
+
+  @media all and (max-width: 576px) {
+    /* 會員後台相關 - 手機螢幕 */
+    padding: 30px; /* 物件與邊界的間距 */
+  }
+}
+
+/* 工具按鈕 */
+.tools {
+  a.icon {
+    width: 35px; /* 物件寬度 */
+    height: 35px; /* 物件高度 */
+    border-radius: $radius-s; /* 物件圓角，如不需要圓角請設0 */
+    margin: 2.5px; /* 物件與其他物件的距離 */
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    color: #222; /* 文字顏色 */
+    border: 1px solid #DCDCDC; /* 邊框顏色與樣式 */
+    &:hover {
+      background-color: #fff; /* 背景顏色 */
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    a.icon {
+      /* 工具按鈕 - 手機螢幕 */
+      width: 30px; /* 物件寬度 */
+      height: 30px; /* 物件高度 */
+      margin: 1.5px; /* 物件與其他物件的距離 */
+    }
+  }
+}
+
+/* 訂單總覽 */
+.orders-list {
+  .a-row {
+    .order-nb {
+      a {
+        color: $h-color-darkblue; /* 文字顏色 */
+      }
+      .h-control {
+        min-width: 20px; /* 定義物件最小寬度 */
+        margin-right: 10px; /* 物件與右邊物件的距離 */
+        padding-left: initial; /* 取消物件與左邊邊界間距 */
+      }
+      .h-control__indicator {
+        top: 5px; /* 上方定位 */
+      }
+    }
+  }
+  .bg-title {
+    .order-nb {
+      .h-control {
+        input:checked~.h-control__indicator {
+          /* 訂單總覽 - 表頭 - 勾選 */
+          border-color: #fff; /* 邊框顏色 */
+          background-color: #fff; /* 背景顏色 */
+          &::after {
+            border-color: #333; /* 邊框顏色 */
+          }
+        }
+      }
+    }
+  }
+}
+/* 常用收件訊息 */
+.shippinginfo-list {
+  .a-row {
+    p {
+      font-size: $h-f-size-l; /* 字體大小，1rem = 16pt */
+      line-height: 1.5; /* 行高1.5倍 */
+    }
+  }
+}
+
+/* 選項標籤 */
+.top-tab {
+  margin-bottom: 10px; /* 物件與下方物件的距離 */
+  border: 1px solid #DCDCDC; /* 邊框顏色與樣式 */
+
+  li {
+    border-right: 1px solid #DCDCDC; /* 邊框顏色與樣式 */
+    a {
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+      min-height: 46px; /* 物件最小高度 */
+      border-bottom: 3px solid #DCDCDC; /* 邊框顏色與樣式 */
+      color: $h-color-darkgray; /* 文字顏色 */
+      background-color: #F7F7F7; /* 背景顏色 */
+      &:hover {
+        color: $h-color-blue; /* 文字顏色 */
+      }
+    }
+    &.selected {
+      a {
+        /* 選項標籤 - 已選擇效果 */
+        background-color: #fff; /* 背景顏色 */
+        color: $h-color-blue; /* 文字顏色 */
+        border-color: $h-color-blue; /* 邊框顏色 */
+      }
+    }
+  }
+}
+/* 國籍選項 */
+.phone-country {
+  input {
+    padding-left: 90px; /* 物件與左邊邊界間距 */
+  }
+
+  .country-item {
+    width: 80px; /* 物件寬度 */
+    p {
+      line-height: 34px; /* 行高 */
+
+      span::before {
+        width: 10px; /* 物件寬度 */
+        right: 20px; /* 右邊定位 */
+      }
+    }
+
+    .dropdown-list {
+      /* 國籍選項 - 下拉選單 */
+      top: 42px; /* 上方定位 */
+      min-width: 80px; /* 定義物件最小寬度 */
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    input {
+      /* 國籍選項 - 手機螢幕 */
+      padding-left: 75px; /* 物件與左邊邊界間距 */
+    }
+
+    .country-item {
+      p {
+        line-height: 28px; /* 行高 */
+      }
+
+      .icon::after {
+        width: 25px; /* 物件寬度 */
+      }
+    }
+  }
+}
+/* 登入 */
+.login-cont {
+  padding-bottom: 20px; /* 物件與下方邊界間距 */
+
+  .a-row {
+    padding: 5px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+  }
+
+  .label-title {
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    line-height: 1.2; /* 行高1.2倍 */
+    padding: 20px 0 12px 0; /* 物件與邊界的間距，數值依序為上右下左 */
+  }
+
+  .text {
+    font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+    padding: 5px 0; /* 物件與邊界間距，第一個數值為上下間距，第二個數值為左右間距 */
+    a {
+      color: $h-color-blue; /* 文字顏色 */
+    }
+  }
+
+  .h-p-top {
+    padding-top: 20px; /* 物件與上方邊界間距 */
+  }
+
+  .social-btn {
+    .h-btn-primary-line-xl {
+      /* 登入 - 第三方登入按鈕 */
+      padding-left: 40px; /* 物件與左邊邊界間距 */
+      font-size: $h-f-size-m; /* 字體大小，1rem = 16pt */
+
+      &::before {
+        left: 15px; /* 左邊定位 */
+        top: calc(50% - 10px); /* 上方定位 */
+        width: 20px; /* 物件寬度 */
+        height: 20px; /* 物件高度 */
+      }
+    }
+  }
+
+  .h-both-btn {
+    .h-btn-primary-line-xl {
+      /* 登入 - 並排按鈕 */
+      font-size: $h-f-size-s; /* 字體大小，1rem = 16pt */
+      width: calc(50% - 5px); /* 物件寬度 */
+    }
+
+    a:nth-child(2) {
+      margin-bottom: 0; /* 物件與下方物件的距離 */
+    }
+  }
+}
+/* 其他區塊 */
+.other-website-face {
+  padding:50px 30px 30px 30px; /* 物件與邊界的間距，數值依序為上右下左 */
+  .h-mid-cont {
+    box-shadow: none; /* 陰影 - 鵝 */
+    background: transparent; /* 背景顏色 */
+    display: flex; /* 顯示方式 */
+    flex-direction: column; /* 物件排列方式 */
+    align-items: center; /* 垂直置中 */
+    max-width:1320px; /* 定義物件最大寬度 */
+    padding:0;
+    .img-closed {
+      position: relative; /* 定位方式 */
+      right: unset; /* 物件與右邊邊界間距 */
+      bottom:unset; /* 物件與下方邊界間距 */
+      max-width:100%; /* 定義物件最大寬度 */
+      width:auto; /* 物件寬度 */
+      img {
+        margin-top:2rem; /* 物件與上方物件的距離 */
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    /* 無背景顏色區塊 - iPad螢幕 - 小 */
+    padding:50px 24px 24px 24px; /* 物件與邊界的間距，數值依序為上右下左 */
+    .img-closed {
+      width:100%; /* 物件寬度 */
+      img {
+        width:100%; /* 物件寬度 */
+      }
+    }
+  }
+}
+/* 無背景顏色區塊 */
+.h-mid-cont-transparent {
+  max-width: 1320px; /* 定義物件最大寬度 */
+  width: calc(100% - 60px); /* 物件寬度 */
+  @media all and (max-width: 768px) {
+    /* 無背景顏色區塊 - iPad螢幕 - 小 */
+    width: calc(100% - 48px); /* 物件寬度 */
+  }
+}

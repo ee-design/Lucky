@@ -1,0 +1,2798 @@
+// radius
+$radius-s: 6px;
+
+// font size
+$h-f-size-xxl: 1.625rem; //26px
+$h-f-size-xl: 1.25rem; //20px
+$h-f-size-x: 1.125rem; //18px
+$h-f-size-l: 0.938rem; //15px
+$h-f-size-m: 0.875rem; //14px
+$h-f-size-s: 0.813rem; //13px
+$h-f-size-xs: 0.75rem; //12px
+$h-f-size-ss: 0.688rem; //11px
+
+$min-w:320px;
+
+$h-color-main: #00d646;
+
+// img
+@mixin img-default-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//btn style 實心
+@mixin h-btn-solid {
+  font-size: $h-f-size-l;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -7px;
+    left: 0px;
+    background-color: #fff;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  }
+  &:hover{
+    opacity: 1;
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+//btn style 框線
+@mixin h-btn-line {
+  font-size: $h-f-size-l;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -7px;
+    left: 0px;
+    background-color: #fff;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  }
+  &:hover{
+    opacity: 1;
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.h-btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+// 跟著小標下的說明描述
+// description
+.h-text-description{
+  font-size: $h-f-size-m;
+  line-height: 1.5;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+  }
+}
+// reminder
+.h-text-reminder{
+  font-size: $h-f-size-m;
+  line-height: 1.5;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+  }
+  @media all and (max-width: 450px) {
+    font-size: $h-f-size-xs;
+  }
+}
+
+
+// 按鈕-XL
+.h-btn-primary-xl {
+  @include h-btn-solid;
+  font-weight: bold;
+  height: 50px;
+  @media all and (max-width: 500px) {
+    height:45px;
+    font-size: $h-f-size-m;
+  }
+  @media all and (max-width: 450px) {
+    font-size: $h-f-size-s;
+    padding: 2.5px 5px;
+  }
+  .plus-add{
+    padding-left: 35px;
+    &::before{
+      content: "+";
+      width: 25px;
+      font-size:22px;
+      background-image: none;
+    }
+  }
+}
+.h-btn-primary-line-xl {
+  @include h-btn-line;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+  @media all and (max-width: 500px) {
+    height:45px;
+    font-size: $h-f-size-m;
+  }
+  @media all and (max-width: 450px) {
+    font-size: $h-f-size-s;
+  }
+}
+
+// 按鈕-l
+.h-btn-primary-l {
+  @include h-btn-solid;
+  font-size: $h-f-size-m;
+  font-weight: bold;
+  height: 46px;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+  }
+
+  @media all and (max-width: 450px) {
+    font-size: $h-f-size-xs;
+  }
+}
+// 按鈕-m
+.h-btn-primary-m {
+  @include h-btn-solid;
+  font-size: $h-f-size-s;
+  font-weight: bold;
+  height: 35px;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-xs;
+  }
+}
+
+.h-btn-primary-line-m {
+  @include h-btn-line;
+  font-size: $h-f-size-m;
+  font-weight: bold;
+  height: 35px;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-xs;
+  }
+}
+
+.h-btn-disabled{
+  &::after{
+    display: none;
+  }
+}
+article.text-terms {
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+  }
+}
+.h-the-select {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 15px;
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    background: url(../images/svg/arr_down_w.svg) center center no-repeat;
+    background-size: contain;
+    font-weight: 900;
+    pointer-events: none;
+  }
+
+  select {
+    width: 100%;
+    height: 46px;
+    font-size: $h-f-size-l;
+    border: #DCDCDC 1px solid;
+    line-height: 46px;
+    @media all and (max-width: 500px) {
+      font-size: $h-f-size-s;
+      line-height: 40px;
+      height: 40px;
+    }
+  }
+}
+
+input.default{
+  line-height: 44px;
+  @media all and (max-width: 500px) {
+    line-height: 40px;
+  }
+}
+input.default, 
+textarea.default {
+  height: 46px;
+  font-size: $h-f-size-l;
+  border-radius: 0;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+    height: 40px;
+  }
+}
+
+textarea.default {
+  line-height: 1.5;
+}
+
+
+// both btn
+.h-both-btn {
+  align-items: center;
+  padding:25px 0 15px 0;
+  a{
+    margin:2.5px 10px 2.5px 0;
+  }
+}
+
+// switch
+.switch-type {
+  .switchbutton {
+    height: 22px;
+    border-radius: 22px;
+    &:before {
+      content: "";
+      width: 42px;
+      height: 22px;
+      border-radius: 22px;
+    }
+    &:after {
+      left: 2px;
+      top: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 18px;
+    }
+  }
+}
+
+// 內容最大寬度
+@mixin max-box-width {
+  width: calc(100% - 40px);
+  max-width: 1090px;
+  min-width:$min-w;
+  @media all and (max-width: 500px) {
+    margin: 25px auto;
+  }
+}
+// shadow
+
+// 固定白底圓角
+@mixin bg-box-w{
+  border-radius: $radius-s;
+}
+
+
+// list
+.note-list{
+  font-size: $h-f-size-l;
+  line-height: 1.5;
+}
+
+// control
+.h-control {
+  min-width: 70px;
+  font-size:$h-f-size-m;
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+  }
+}
+
+.h-control__indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: $radius-s;
+}
+
+.h-control--radio {
+    .h-control__indicator {
+    &:after {
+      left: calc(50% - 2.5px);
+      top: calc(50% - 2.5px);
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.h-mid-content, 
+.h-mid-cont-transparent, 
+.other-website-face{
+  width: calc(100% - 290px);
+  margin-right: 270px ;
+  @media all and (max-width: 1200px) {
+    margin-right: 220px;
+    width: calc(100% - 245px);
+  }
+  @media all and (max-width: 768px) {
+    margin-right: 20px;
+    width: calc(100% - 40px);
+  }
+}
+.other-website-face {
+  .mg-closed {
+    position: initial;
+    margin: 0 auto;
+  }
+  @media all and (max-width: 700px) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.menu-btn {
+  margin-left: 0;
+  span {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    &::after {
+      width: 45px;
+      line-height: 45px;
+    }
+  }
+}
+
+.pushy {
+  width: 230px;
+  overflow: auto;
+  a {
+    font-size: $h-f-size-x;
+  }
+  ul{
+    &:first-child {
+      margin-top: 30px;
+    }
+    li a {
+      text-align: center;
+      // padding-left: 20px;
+    }
+  }
+}
+
+
+// pushy
+.pushy-submenu>ul {
+  font-size:$h-f-size-s;
+  .pushy-link {
+    font-size: $h-f-size-l;
+  }
+}
+
+.pushy-sublayout_0002button {
+  font-size: 1rem;
+}
+
+
+// header
+.holkee-header-wrap{
+  width:calc(100% - 30px);
+  max-width: 200px;
+  min-width: initial;
+  right: 40px;
+  position: fixed;
+  top: 40px;
+  z-index: 3;
+  // border-radius: $radius-s;
+  .logo{
+    margin-right: 0;
+  }
+  .h-mid-cont{
+    flex-direction: column;
+  }
+  .menu{
+    padding: 15px 0 5px 0;
+    width: 100%;
+    flex-direction: column;
+    li{
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      &::after{
+        content: "";
+        position: absolute;
+        width: 1%;
+        height: 1px;
+        background-color: #555;
+        display: block;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+      }
+      &:hover{
+        &::after {
+          transition: all .5s ease-out;
+          opacity: 1;
+          width: 100%;
+        }
+      }
+      p{
+        font-size: $h-f-size-l;
+      }
+    }
+  }
+  .h-header-tools {
+    margin-left: initial;
+    // margin-right: auto;
+    position: initial;
+    display: initial;
+    li{
+      a{
+        width: 45px;
+        height: 40px;
+        align-content: center;
+      }
+    }
+    .dropdown-layout_0002{
+      .sub-list {
+        border-radius: $radius-s;
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    top: 15px;
+    right: 15px;
+    max-width: 170px;
+  }
+  @media all and (max-width: 900px) {
+    ul.menu li{
+      padding: 10px 5px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    max-width: initial;
+    position: sticky;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    min-width: $min-w;
+    .h-mid-cont{
+      flex-direction: row;
+      justify-content:flex-end;
+      .logo{
+        margin-right: auto;
+      }
+    }
+    .h-header-tools{
+      margin-right: initial;
+      display: flex;
+    }
+  }
+  @media all and (max-width: 500px) {
+    p{
+      font-size: $h-f-size-s;
+    }
+  }
+  @media all and (max-width: 320px) {
+    min-width: initial;
+    .logo img{
+      max-width: 100px;
+    }
+  }
+}
+// holkee footer
+.holkee-footer-wrap {
+  padding: 30px 15px;
+  padding-right: 270px;
+  .h-mid-cont {
+    max-width: 1350px;
+    padding: 30px 15px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  ul.link,
+  ul.info {
+    li {
+      font-size: $h-f-size-m;
+    }
+  }
+
+  ul.follow-us {
+    li {
+      a {
+        font-size: $h-f-size-xl;
+      }
+    }
+  }
+
+  .styled-select select {
+    font-size: $h-f-size-m;
+  }
+
+  p.copyrights {
+    font-size: $h-f-size-ss;
+  }
+
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+  }
+  @media all and (max-width: 768px) {
+    padding:0 15px;
+  }
+  @media all and (max-width: 650px) {
+    .logo {
+      width: 80px;
+    }
+
+    ul.link, 
+    ul.info {
+      li {
+        font-size: $h-f-size-s;
+      }
+    }
+
+    ul.follow-us {
+      text-align: left;
+
+      li {
+        font-size: $h-f-size-l;
+        a {
+          font-size: $h-f-size-l;
+        }
+      }
+    }
+
+    .styled-select select {
+      font-size: $h-f-size-s;
+    }
+  }
+
+  @media all and (max-width: 550px) {
+    .h-mid-cont {
+      // padding: 30px 15px;
+    }
+
+    ul.link {
+      padding-bottom: 0;
+    }
+
+    ul.follow-us {
+      li {
+        font-size: $h-f-size-m;
+        a {
+          font-size: $h-f-size-m;
+        }
+      }
+    }
+
+    p.copyrights {
+      padding-top: 15px;
+      text-align: left;
+    }
+  }
+}
+
+// photo & text 
+.h-text-wrap{
+  h3.main-title{
+    font-weight: bold;
+    font-size: $h-f-size-xxl;
+    position: relative;
+    padding:30px 0 0 0;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .text{
+    line-height: 1.5;
+    text-align: center;
+    a{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .order-type{
+    border-radius: $radius-s;
+    padding: 5px 10px;
+    font-size: $h-f-size-s;
+    font-weight: initial;
+    margin:2px 10px;
+  }
+
+  
+  @media all and (max-width: 1200px) {
+    h3.main-title {
+      font-size: $h-f-size-xl;
+    }
+  }
+  @media all and (max-width: 900px) {
+    .h-btn{
+      margin-top: 20px;
+      position: initial;
+    }
+  }
+  @media all and (max-width: 700px) {
+    h3.main-title {
+      font-size: $h-f-size-xl;
+      margin-bottom: 10px;
+    }
+    .text, .note-list{
+      font-size: $h-f-size-m;
+    }
+  }
+  @media all and (max-width: 600px) {
+    h3.main-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+// form
+.form-style{
+  label.label-title{
+    font-weight: bold;
+  }
+  form{
+    h4.sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 45px 0 20px 0;
+    
+      &:first-child {
+        padding-top: 0;
+      }
+    
+      @media all and (max-width: 500px) {
+        font-size: $h-f-size-x;
+        padding-bottom: 10px;
+      }
+    }
+    &.account{
+      .a-row{
+        p.fl-r{
+          font-size: $h-f-size-m;
+          a{
+            padding: 10px;
+          }
+          &.text-pw{
+            font-size: $h-f-size-s;
+          }
+        }
+        p.source{
+          i{
+            padding-right: 18px;
+            font-size: $h-f-size-xl;
+          }
+        }
+      }
+      .h-btn{
+        padding-top: 30px;
+      }
+      @media all and (max-width: 500px) {
+        .a-row p.fl-r{
+          font-size: $h-f-size-s;
+        }
+      }
+    }
+    &.cancel-form{
+      max-width: 640px;
+      .default{
+        margin-bottom: 10px;
+      }
+      .h-both-btn{
+        padding: 0;
+      }
+    }
+    &.orderinfo-form{
+      padding: 20px;
+      .top-title{
+        // border-radius: $radius-s;
+        padding:10px 20px;
+        min-height: 55px;
+        h4{
+          font-size: $h-f-size-x;
+          font-weight: bold;
+        }
+        .type-tools{
+          p{
+            padding-right: 10px;
+            font-size: $h-f-size-m;
+          }
+          .the-select{
+            select{
+              // min-width: 125px;
+              font-size: $h-f-size-m;
+              height: 35px;
+              line-height: 35px;
+              padding-left: 15px;
+            }
+          }
+          .h-btn-primary-line-m{
+            min-width: initial;
+            padding: 0 15px;
+            font-weight: initial;
+            i{
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+      ul.a-row{
+        padding:15px 20px;
+        li{
+          .label-title{
+            font-weight: initial;
+            font-size: $h-f-size-l;
+          }
+          p.text{
+            padding: 15px 0;
+            font-size: $h-f-size-l;
+          }
+          .result-text{
+            .h-c-blue{
+              font-weight: bold;
+              color: #fff;
+            }
+            input{
+              height: 35px;
+              line-height: 35px;
+              max-width: 200px;
+            }
+          }
+          .result-products, .result-price{
+            flex: 75%;
+            li{
+              padding: 8px 0;
+              .photo{
+                width: 76px;
+                margin-right: 15px;
+                img{
+                  border-radius: $radius-s;
+                }
+              }
+              p{
+                font-size: $h-f-size-m;
+                line-height: 1.5;
+                &.info{
+                  max-width: calc(100% - 200px);
+                }
+                &.price{
+                  margin-left: auto;
+                  text-align: right;
+                }
+                .h-c-blue{
+                  font-size: $h-f-size-s;
+                }
+              }
+              
+            }
+
+          }
+          .result-products{
+            li{
+              &:last-child{
+                border: none;
+              }
+            }
+          }
+          .result-price{
+            div{
+              padding: 8px 0;
+              display: flex;
+            }
+          }
+          &.total-amount{
+            padding: 10px 0;
+            border-width: 1px 0 1px 0;
+            p{
+              text-align: right;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .both-btn{
+        padding-top: 0;
+      }
+      @media all and (max-width: 700px) {
+        .h-both-btn{
+          padding: 0 15px 25px 15px;
+        }
+      }
+      @media all and (max-width: 600px) {
+        .top-title{
+          h4{
+            font-size: $h-f-size-l;
+          }
+          .type-tools{
+            p, .the-select select{
+              font-size: $h-f-size-s;
+            }
+            
+          }
+        }
+        ul.a-row li{
+          .label-title{
+            font-size: $h-f-size-m;
+            padding: 10px 0;
+            line-height: 1.2;
+          }
+          p.text{
+            padding: 10px 0;
+            line-height: 1.2;
+            font-size: $h-f-size-m;
+          }
+          .result-products li{
+            align-items: self-start;
+            .info, .price{
+              font-size: $h-f-size-s;
+            }
+          }
+        }
+      }
+      @media all and (max-width: 500px) {
+        .top-title{
+          min-height: 50px;
+          padding: 5px 15px;
+        }
+        ul.a-row {
+          padding: 10px 15px 20px 15px;
+          li {
+            .result-products li {
+              .photo{
+                width: 50px;
+                margin-right: 10px;
+              }
+              p.info{
+                max-width: calc(100% - 160px);
+                font-size: $h-f-size-xs;
+              }
+              p{
+                .c-blue{
+                  font-size: $h-f-size-ss;
+                }
+              }
+            }
+          }
+        }
+      }
+      .h-btn {
+        justify-content: flex-start;
+      }
+    }
+  }
+  @media all and (max-width: 500px) {
+    label.label-title{
+      font-size: $h-f-size-m;
+    }
+    form{
+      padding:20px;
+      &.cancel-form {
+        padding:5px 20px 20px 20px;
+      }
+    }
+  }
+}
+// 送出表單的文字
+.submit-text {
+  margin-top: 10px;
+  padding:25px 20px;
+  p{
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  @media all and (max-width: 600px) {
+    padding: 10px 15px;
+    font-size: $h-f-size-m;
+  }
+}
+.text-note {
+  padding:12px 20px;
+  margin-bottom: 10px;
+  p{
+    font-size: $h-f-size-m;
+    line-height: 1.5;
+  }
+  @media all and (max-width: 500px) {
+    padding: 6px 15px;
+    p{
+      font-size: $h-f-size-xs;
+    }
+  }
+}
+// holkee popup - style
+.h-white-popup {
+}
+// h-popup-container
+.h-popup-container{
+  .h-text-wrap {
+    h3.main-title{
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// holkee 菸酒
+
+// 預設值 到這 -----
+
+// 版塊開始 -----
+// About us
+.holkee-aboutus{
+  padding: 15px;
+  padding-right: 250px;
+  .h-mid-cont{
+    padding: 0 15px;
+    max-width: 1350px;
+    margin: 0 auto;
+    // display: flex;
+  }
+  .h-photo-wrap{
+    // flex: 40%;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    overflow: hidden;
+    img{
+      text-align: center;
+      display: block;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      &:hover{
+        transform: scale(1.08, 1.08);
+        transition: all .5s ease-out;
+      }
+    }
+  }
+  .h-text-wrap{
+    flex: 60%;
+    padding: 20px 0;
+    .text{
+      text-align: left;
+    }
+  }
+ 
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+  }
+  @media all and (max-width: 768px) {
+    padding-right:15px;
+    .h-mid-cont {
+      // width: calc(100% - 10px);
+      flex-direction: column;
+    }
+  }
+  @media all and (max-width: 700px) {
+    padding: 20px 0;
+    .h-photo-wrap{
+      margin: 0 20px;
+    }// padding: 20px;
+    padding-right: 0px;
+  }
+}
+// About us - single page
+.holkee-aboutus-single {
+  padding-left: 15px;
+  margin-right: 270px;
+  .h-text-wrap{
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .text-info {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1600px;
+    .text{
+      line-height: 1.5;
+    }
+    .h-btn{
+      padding-top: 40px;
+    }
+  }
+  .h-mid-cont {
+    margin: 40px auto;
+    padding:  15px;
+    border-radius: $radius-s;
+    overflow: hidden;
+  }
+
+  .h-photo-wrap {
+    height: 500px;
+    @include img-default-cover;
+  }
+
+  @media all and (max-width: 1200px) {
+    margin-right: 205px;
+    .h-photo-wrap {
+      height: 300px;
+    }
+  }
+  @media all and (max-width: 1000px) {
+    .h-photo-wrap {
+      height: 250px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    margin-right: 15px;
+    .h-mid-cont {
+      margin-top: 20px;
+      .text-info {
+        .text{
+          font-size: $h-f-size-m;
+        }
+      }
+    }
+    .h-photo-wrap {
+      height: 200px;
+    }
+  }
+}
+
+// Grid
+.holkee-grid {
+  .h-mid-cont{
+    max-width: calc(100% - 100px);
+    border-radius: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .h-btn-banner {
+    min-height: 450px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    &:first-child {
+      background-image: url(../images/img_gird_01.png);
+    }
+
+    &:last-child {
+      background-image: url(../images/img_gird_02.png);
+    }
+  }
+  @media all and (max-width: 1200px) {
+    .h-btn-banner {
+      min-height: 350px;
+    }
+  }
+  @media all and (max-width: 1000px) {
+    .h-btn-banner {
+      min-height: 250px;
+    }
+  }
+  @media all and (max-width: 800px) {
+    .h-btn-banner {
+      min-height: 200px;
+    }
+  }
+  @media all and (max-width: 800px) {
+    .h-btn-banner {
+      min-height: 150px;
+    }
+  }
+}
+// promotion
+.holkee-promotion {
+  padding: 40px 0;
+  padding-right: 250px;
+  p.type, p.text{
+    text-align: center;
+  }
+  .h-mid-cont {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding:0 20px;
+    .h-photo-wrap{
+      border-radius: $radius-s;
+      background-image: url(../images/layout_0004/img_promotion.png);
+    }
+  }
+  @media all and (max-width: 1000px) {
+    padding-right: 200px;
+  }
+  @media all and (max-width: 700px) {
+    padding-right: 0px;
+  }
+  @media all and (max-width: 400px) {
+    padding: 20px 0;
+  }
+}
+
+// privacy policy
+.privacy-policy {
+  p{
+    font-size: $h-f-size-m;
+    line-height: 1.5;
+  }
+  .policy-title {
+    font-weight: bold;
+    font-size: $h-f-size-l;
+    padding: 5px 0 10px 0;
+    line-height: initial;
+  }
+}
+
+// Contact Us
+.holkee-contactus{
+  padding: 30px 15px;
+  margin: 0 auto;
+  padding-right: 270px;
+  h4.sub-title{
+    font-size: $h-f-size-x;
+    font-weight: bold;
+  }
+  .privacy-policy{
+    margin:5px 0;
+    .text{
+      font-size: $h-f-size-m;
+      line-height: 1.5;
+    }
+  }
+  .h-mid-cont{
+    max-width: 980px;
+    margin: 0 auto;
+    padding:0 15px;
+  }
+  .form-style{
+  }
+  
+  .txn-checkbox{
+    margin-bottom: 15px;
+  }
+  .company-info{
+    padding-top: 20px;
+    
+    ul.list {
+      li {
+        padding-bottom: 25px;
+        i{
+          width:1rem;
+          top: 5px;
+        }
+        p {
+          padding-left: 35px;
+          position: relative;
+          line-height:1.5;
+        }
+      } 
+    }
+  }
+  .google-map{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    iframe{
+      height: 300px;
+    }
+  }
+    
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-mid-cont{
+      max-width: 500px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:15px;
+    h4.sub-title {
+      font-size: $h-f-size-l;
+    }
+    .h-mid-cont{
+      padding: 0 10px;
+    }
+    .company-info{
+      padding: 20px 0 0 0;
+      ul.list li {
+        padding-bottom: 15px;
+        p{
+          font-size: $h-f-size-m;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    form{
+      padding: 0;
+    }
+    .google-map{
+      padding-top: 0px;
+    }
+  }
+}
+
+// policy
+.holkee-policy{
+  width: calc(100% - 30px);
+  max-width: 1600px;
+  padding-right: 265px;
+  .h-mid-cont{
+    // border-radius: $radius-s;
+    padding: 20px;
+  }
+  .privacy-policy{
+    width: 100%;
+    .text{
+      line-height: 1.5;
+    }
+  }
+  @media all and (max-width: 1000px) {
+    padding-right: 200px;
+  }
+  @media all and (max-width: 700px) {
+    padding-right: 0px;
+  }
+  @media all and (max-width: 600px) {
+    .privacy-policy .text { 
+      font-size: $h-f-size-m;
+    }
+  }
+}
+
+// news
+.holkee-news {
+  padding: 30px 15px;
+  padding-right: 270px;
+  max-width: initial;
+  .h-text-wrap {
+    max-width: 1350px;
+    // padding: 0 20px;
+  }
+
+  .h-mid-cont {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+    .a-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      &:hover{
+        .h-photo-wrap {
+          transform: scale(1.08, 1.08);
+          transition: all .5s ease-out;
+        }
+      }
+    }
+
+    .h-photo-wrap {
+      @include img-default-cover;
+      width: 35%;
+      height: 300px;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+
+    .text-info {
+      padding: 25px 40px;
+      flex: 65%;
+      max-width: 65%;
+      display: flex;
+      flex-direction: column;
+      h4.sub-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 35px;
+        letter-spacing: 4px;
+        position: relative;
+        padding: 20px 35px 0 25px;
+        text-align: center;
+        &::before{
+          position: absolute;
+          content: "“";
+          left: 0;
+          top: 0;
+          font-size: 2.2rem;
+        }
+        &::after{
+          position: absolute;
+          height: 30px;
+          content: "”";
+          right: 0;
+          bottom:-10px;
+          font-size: 2.2rem;
+        }
+      }
+      .text{
+        -webkit-line-clamp: 4;
+      }
+      .date {
+        text-align: right;
+        margin-top: auto;
+        font-size: $h-f-size-s;
+      }
+    }
+  }
+
+  @media all and (max-width: 1600px) {
+    .h-mid-cont {
+      max-width: 1200px;
+    }
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 210px;
+  }
+  @media all and (max-width: 1000px) {
+    .h-mid-cont {
+      .text-info {
+        padding: 15px 35px;
+        h4.sub-title {
+          font-size: $h-f-size-x;
+        }
+
+        .text {
+          font-size: $h-f-size-m;
+        }
+
+        .date {
+          font-size: $h-f-size-ss;
+        }
+      }
+    }
+  }
+  @media all and (max-width:768px) {
+    padding-right: 15px;
+    .h-text-wrap,
+    .h-mid-cont {
+      padding: 0 10px;
+    }
+  }
+  @media all and (max-width: 600px) {
+    padding: 20px 0;
+
+    .h-mid-cont {
+      .a-row {
+        margin-bottom: 20px;
+      }
+
+      .h-photo-wrap {
+        flex: 40%;
+        height: 180px;
+      }
+
+      .text-info {
+        padding: 10px 15px;
+        flex:60%;
+        max-width:60%;
+        h4.sub-title {
+          font-size: $h-f-size-m;
+          margin-bottom: 5px;
+          line-height: 1.2;
+        }
+
+        .text {
+          font-size: $h-f-size-s;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+// services
+.holkee-services{
+  padding: 30px 15px;
+  padding-right: 270px;
+  .h-text-wrap{
+    max-width: 1350px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    padding: 0 15px;
+    // width: calc(100% - 30px);
+    max-width: 1350px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    .a-row{
+      flex:calc(50% - 15px);
+      max-width: calc(50% - 15px);
+      position: relative;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      overflow: hidden;
+      &:hover{
+        .h-photo-wrap {
+          transform: scale(1.08, 1.08);
+          transition: all .5s ease-out;
+        }
+      }
+    }
+    .h-photo-wrap{
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      @include img-default-cover;
+      width:100%;
+      height: 500px;
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text-info{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      padding: 25px 30px;
+      // flex: calc( 100% - 250px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h4.sub-title{
+        padding: 10px 0;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        -webkit-line-clamp: initial;
+        overflow: initial;
+      }
+      .text{
+        text-align: center;
+      }
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+  }
+  @media all and (max-width: 768px) {
+    padding:20px 15px;
+    .h-text-wrap {
+    }
+    .h-mid-cont {
+      gap: 15px;
+      padding: 0 10px;
+      .a-row{
+        .text-info{
+          padding: 15px 20px;
+          .sub-title{
+            font-size: $h-f-size-l;
+          }
+          .text{
+            font-size: $h-f-size-m;
+          }
+        }
+      }
+      .h-photo-wrap {
+        height: 400px;
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    .h-text-wrap {
+      padding: 0px;
+    }
+    .h-mid-cont {
+      .a-row{
+        margin: 20px 0px;
+        flex:100%;
+        max-width:100%;
+        .text-info{
+          .sub-title{
+            font-size: $h-f-size-x;
+          }
+        }
+        .h-photo-wrap{
+          height: 350px;
+        }
+      }
+    }
+    
+  }
+  @media all and (max-width: 500px) {
+    .h-mid-cont {
+      .a-row{
+        margin: 10px 0px;
+        .h-photo-wrap{
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+// holkee tools
+.holkee-fb-post, .holkee-ig-post {
+  padding-left: 15px;
+  padding-right: 270px;
+  .h-mid-cont{
+    padding: 0 15px;
+    max-width: 1350px;
+    gap: 30px;
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3);
+    }
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-text-wrap{
+      padding: 0 15px;
+    }
+    .h-mid-cont{
+      gap:24px;
+      padding: 0 15px;
+      .a-row {
+        width: calc((100% / 2) - 24px + 24px / 2);
+      }
+    }
+  } 
+  @media all and (max-width: 768px) {
+    padding: 20px 10px;
+    .h-text-wrap{
+      padding: 0 10px;
+    }
+    .h-mid-cont{
+      padding: 0 10px;
+    }
+  }
+  @media all and (max-width: 600px) {
+    .h-mid-cont {
+      .a-row {
+        padding-bottom:0;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      width: initial;
+    }
+    .h-mid-cont {
+      width: initial;
+    }
+  }
+}
+.holkee-fb-gallery, .holkee-ig-gallery{
+  padding-left: 15px;
+  padding-right: 270px;
+  .h-text-wrap{
+    max-width: 1350px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    max-width: 1350px;
+    padding: 0 15px;
+    .a-photo{
+      flex: 20%;
+      max-width: 20%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-mid-cont{
+      .a-photo{
+        flex: 25%;
+        max-width: 25%;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding: 20px 15px;
+    .h-text-wrap{
+      padding: 0 10px;
+    }
+    .h-mid-cont {
+      padding: 0 10px;
+      .a-photo {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    .h-text-wrap{
+      width: initial;
+    }
+  }
+}
+
+.holkee-fb-video{
+  padding-left: 15px;
+  padding-right: 270px;
+  .h-text-wrap{
+    padding: 0 15px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    padding: 0 15px;
+    display: flex;
+    max-width: 1320px;
+    gap: 30px;
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3);
+      iframe {
+        width: 100%;
+        height: 30vw;
+        max-height: 500px;
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-mid-cont {
+      .a-row {
+        width: calc((100% / 2) - 30px + 30px / 2);
+        iframe {
+          height: 50vw;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding-right: 15px;
+    .h-mid-cont {
+      padding: 0 10px;
+      .a-row {
+        flex: 100%;
+        max-width: initial;
+        iframe {
+          // height: 45vw;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    .h-text-wrap {
+      width: initial;
+    }
+    .h-mid-cont {
+      width: initial;
+    }
+  }
+}
+.holkee-yt-video {
+  padding-left: 15px;
+  padding-right: 270px;
+  .h-text-wrap{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .h-mid-cont{
+    padding: 0 10px;
+    display: flex;
+    gap: 30px;
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3);
+      iframe{
+        width: 100%;
+        height: 260px;
+        padding:1rem;
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-text-wrap{
+      padding: 0;
+    }
+    .h-mid-cont{
+      padding: 0;
+      .a-row{
+        width: calc((100% / 2) - 30px + 30px / 2);
+        iframe{
+          height: 250px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 900px) {
+    .h-mid-cont {
+      .a-row {
+        iframe{
+          height: 180px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding-right: 15px;
+    .h-text-wrap {
+      padding: 0 10px;
+    }
+    .h-mid-cont {
+      padding: 0 10px;
+      gap: 24px;
+      .a-row {
+        width: calc((100% / 1) - 24px + 24px / 1);
+        iframe{
+          height: 260px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+  .h-mid-cont {
+      .a-row {
+      }
+    }
+  }
+}
+
+// shop top menu
+.shop-menu {
+  .hide-more {
+    height: 44px;
+    overflow: hidden;
+  }
+  ul {
+    &.item-main li {
+      font-size: $h-f-size-x;
+    }
+
+    &.item-subtitle {
+      padding-top: 10px;
+
+      li {
+        font-size: $h-f-size-l;
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    top: 80px;
+    left: 10px;
+    position: absolute;
+    background-color: #52596c;
+    width: calc(100% - 20px);
+    ul {
+      margin-bottom: 0;
+      padding: 6px 10px 10px 10px;
+      li{
+        padding-left: 5px;
+      }
+      &.item-main li {
+        font-size: 1rem;
+      }
+
+      &.item-subtitle li {
+        font-size: $h-f-size-m;
+      }
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    ul {
+      &.item-main li {
+        font-size: $h-f-size-m;
+      }
+
+      &.item-subtitle li {
+        font-size: $h-f-size-s;
+      }
+    }
+  }
+}
+// breadcrumb
+.top-breadcrumb {
+  padding: 10px 0 20px 0;
+  font-size: $h-f-size-m;
+}
+// manage readcrumb
+.manage-breadcrumb {
+  font-size: $h-f-size-m;
+  min-width: $min-w;
+  padding-right: 270px;
+  .h-mid-cont {
+    padding: 15px 0;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a.home {
+    }
+    .the-select {
+      position: relative;
+      &::after {
+        background: url(../images/svg/arr_down_w.svg)center center no-repeat;
+          background-size: contain;
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 200px;
+  }
+  @media all and (max-width: 700px) {
+    padding-right: 0;
+  }
+  @media all and (max-width: 650px) {
+    .mid-cont {
+      padding: 10px 0;
+    }
+  }
+}
+
+// 自刻 下拉選單
+.click-list {
+  p {
+    span {
+      &::before {
+        background: url(../images/svg/arr_down_w.svg) center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+ul.dropdown-list {
+  li {
+    font-size: $h-f-size-m;
+  }
+  a {
+    padding: 15px 20px;
+  }
+  @media all and (max-width: 500px) {
+    li {
+      font-size: $h-f-size-s;
+    }
+  }
+}
+// country
+.country-item {
+
+  p {
+    font-size: $h-f-size-l;
+    height: 46px;
+    padding-left: 20px;
+    line-height: 46px;
+    text-indent: 0.01px;
+  }
+
+  .dropdown-list {
+    li {
+      a {
+        font-size: $h-f-size-l;
+        padding: 12px 20px 12px 60px;
+      }
+    }
+  }
+  @media all and (max-width: 500px) {
+    font-size: $h-f-size-s;
+
+    p {
+      height: 40px;
+      line-height: 40px;
+      font-size: $h-f-size-s;
+    }
+
+    .dropdown-list {
+      top: 40px;
+      max-height: 30vh;
+
+      li a {
+        font-size: $h-f-size-s;
+      }
+    }
+  }
+}
+// shop
+.holkee-shop {
+  padding: 30px 15px;
+  padding-right: 270px;
+  .h-mid-cont {
+    // width: calc(100% - 40px);
+    max-width: 1350px;
+  }
+  .shop-tools{
+    padding: 10px 15px 25px 15px; 
+  }
+  .h-text-wrap{
+    padding: 0 15px;
+    max-width: 1350px;
+  }
+  .h-photo-wrap {
+    width: 100%;
+     img{
+      text-align: center;
+      display: block;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      &:hover{
+        transform: scale(1.05, 1.05);
+        transition: all .5s ease-out;
+      }
+    }
+  }
+  .item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  .a-row {
+    flex: calc(33.3333% - 20px);
+    max-width: calc(33.3333% - 20px);
+    // margin: 25px;
+    
+
+    &:hover {
+      .h-photo-wrap {
+        opacity: .9;
+      }
+    }
+  }
+
+  .text-info {
+    padding-top: 25px;
+    // min-height: 100px;
+
+    h4.sub-title {
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .price {
+    text-align: center;
+
+    .discount {
+      font-weight: bold;
+      padding-right: 5px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      font-size: $h-f-size-s;
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-text-wrap,
+    .h-mid-cont {
+      width: initial;
+    }
+  }
+  @media all and (max-width: 1000px) {
+    .h-mid-cont {
+      .a-row {
+        flex: calc(50% - 15px);
+        max-width: calc(50% - 15px);
+      }
+    }
+
+    .text-info {
+      .price {
+        .original {
+          font-size: $h-f-size-xs;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    padding-right: 20px;
+    .top-breadcrumb {
+      padding-top: 55px;
+      font-size: $h-f-size-s;
+    }
+    .h-text-wrap{
+      h3.main-title{
+        padding-bottom: 10px;
+      }
+    }
+    .text-info {
+      h4.sub-title {
+        font-size: $h-f-size-m;
+      }
+
+      .price {
+        font-size: $h-f-size-m;
+        .original {
+          font-size: $h-f-size-ss;
+          padding-top: 8px;
+          display: block;
+        }
+      }
+    }
+    .shop-tools{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .item{
+      padding: 0 10px;
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    padding: 35px 10px;
+    .text-info {
+      h4.sub-title {
+        font-size: $h-f-size-s;
+      }
+      .price {
+        font-size: $h-f-size-s;
+        .original {
+          font-size: $h-f-size-ss;
+          padding-top: 8px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// slides 輪播圖
+.holkee-swiper {
+  width: 100%;
+  .swiper-slide img {
+    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  }
+  .swiper-button-next{
+    top: initial;
+    left: 75px;
+    bottom: 25px;
+    z-index: 11;
+  }
+  .swiper-button-prev{
+    top:initial;
+    left: initial;
+    left: 30px;
+    bottom: 25px;
+    z-index: 11;
+  }
+  .swiper-pagination{
+    padding-left: 50px;
+    padding-right: 10px;
+    text-align: right;
+    bottom: 25px;
+  }
+  .swiper-button-next:after,  
+  .swiper-button-prev:after {
+    opacity: 1;
+    font-size: $h-f-size-xxl;
+    padding: 10px 15px;
+  }
+  @media all and (max-width: 700px) {
+    width: calc(100% - 60px);
+    margin: 30px;
+  }
+  @media all and (max-width: 500px) {
+    width: calc(100% - 40px);
+    margin:25px 20px;
+    .swiper-button-next:after,  
+    .swiper-button-prev:after {
+      bottom: 20px;
+      font-size: $h-f-size-x;
+    }
+    .swiper-button-prev{
+      bottom: 20px;
+      left: 20px;
+    }
+    .swiper-button-next{
+      bottom: 20px;
+      left: 65px;
+    }
+  }
+}
+
+// slides Featured products
+.holkee-products-swiper {
+  max-width: initial;
+  padding: 30px 270px 30px 15px;
+  img{
+    text-align: center;
+    display: block;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    &:hover{
+      transform: scale(1.08, 1.08);
+      transition: all .5s ease-out;
+    }
+  }
+  .h-text-wrap{
+    max-width: 1350px;
+    padding: 0 15px 0 15px;
+  }
+  .swiper-products-cont{
+    max-width: 1350px;
+    padding: 0 15px;
+    .text{
+      padding-top: 35px;
+    }
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1;
+    font-size: $h-f-size-xl;
+    padding: 10px 15px;
+  }
+  .price {
+    .discount {
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      font-size: $h-f-size-s;
+    }
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+  }
+  @media all and (max-width: 768px) {
+    padding: 20px 15px;
+    .h-text-wrap{
+      padding: 0 10px;
+    }
+    .swiper-products-cont{
+      padding: 0 10px;
+      .text{
+        font-size: $h-f-size-m;
+        line-height: 1.25;
+      }
+      .price{
+        font-size: $h-f-size-m;
+        .original{
+          font-size: $h-f-size-ss;
+          padding-top: 7px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// slides Products
+.holkee-products-main-swiper{
+  .coverSwiperLarge {
+    a.btn-magnifier {
+      width: 45px;
+      height: 45px;
+      font-size:20px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+    }
+  }
+  .swiper-slide {
+    img{
+    }
+  }
+  .swiper-slide-thumb-active {
+  }
+  .swiper-button-next{
+    right: 1px;
+  }
+  .swiper-button-prev {
+    left: 1px;
+  }
+  .swiper-pagination{
+    text-align: left ;
+    position: initial;
+    padding: 5px 0;
+    font-size: $h-f-size-m;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1;
+    font-size: $h-f-size-l;
+    padding: 5px 7.5px;
+    
+  }
+}
+
+// holkee product info
+.holkee-product-info {
+  padding-left: 15px;
+  padding-right: 270px;
+  .h-mid-cont {
+    // padding: 0 15px;
+  }
+  h4.sub-title{
+    font-weight: bold;
+  }
+
+  .form-style{
+    max-width: 600px;
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+  }
+  @media all and (max-width: 768px) {
+    padding-right: 15px;
+    .top-breadcrumb{
+      padding-top: 70px;
+    }
+  }
+  @media all and (max-width: 600px) {
+    h4.sub-title{
+      font-size: $h-f-size-m;
+      padding-top: 5px;
+    }
+  }
+}
+.quantity-cont {
+  .select-quantity {
+    max-width: 200px;
+    input.qty-input {
+      height: 40px;
+      line-height: 40px;
+      font-size: 17px;
+    }
+    span {
+      width: 40px;
+      height: 39px;
+      line-height: 39px;
+      font-size: $h-f-size-m;
+      &.plus {
+      }
+
+      &.minus {
+      }
+    }
+  }
+}
+// product
+.h-product-cont {
+  max-width: 1600px;
+  .h-p-out{
+    
+    .img-out{
+      position: initial;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+    .h-btn{
+      justify-content: center;
+    }
+  }
+  .shop-spec {
+    a {
+      border-width: 1px;
+      border-style: solid;
+
+      &.selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .shop-status {
+    max-width: 500px;
+
+    .l-label {
+      width: 50%;
+    }
+  }
+  .price {
+    .discount {
+      font-weight: bold;
+      padding-right: 5px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      font-size: $h-f-size-s;
+    }
+  }
+  
+  .h-products-info {
+    // padding-left: 0;
+    .h-btn{
+      // justify-content: center;
+    }
+    .h-text-wrap h3.main-title{
+      text-align: center;
+    }
+    // discount
+    .discount-contents {
+      li{
+        font-size: $h-f-size-m;
+        .l-label {
+          font-size: 0.75rem;
+        }
+        &.more{
+          padding-top: 10px;
+          a{
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  a.btn-car {
+    font-size: $h-f-size-xl;
+    align-content: center;
+    align-items: center;
+    span.nb {
+      font-size: $h-f-size-ss;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+  .privacy-policy{
+    margin:5px 0;
+    .text{
+      font-size: $h-f-size-m;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+  }
+  .txn-checkbox{
+    font-size: $h-f-size-m;
+    a{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+// 點選放大鏡之 popup 內容
+// 表格
+.form-table {
+}
+// shoppingcart
+.holkee-shoppingcart {
+  padding-left: 15px;
+  padding-right: 270px;
+  // background-color: #f8f8f8;
+  .h-mid-cont {
+
+  }
+  .h-photo-wrap {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-mid-cont {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding-right: 15px;
+  }
+
+
+  .orderinfo-form {
+    .a-row {
+      line-height:1.5rem;
+      padding:1.5rem 0;
+      border-bottom: #ccc;
+      &.total-amount {
+        background:none;
+        .text-info {
+          font-size: 1.5rem;
+        }
+      }
+      i {
+        padding-right:.5rem;
+      }
+      textarea {
+        margin-top:1rem;
+      }
+      
+      .coupon {
+        input {
+          margin-top:1rem;
+        }
+      }
+      .label-title {
+        padding:0;
+        // .number {
+        //   font-size: 3rem;
+        //   color: #f1f1f1;
+        //   font-style: italic;
+        //   font-family: Arial, Helvetica, sans-serif;
+        //   font-weight:bold;
+        //   margin-right:.5rem;
+        // }
+      }
+      .text-info {
+        padding:0;
+        font-size: 1.2rem;
+        .f-ss {
+          padding:0;
+          color:#999;
+        }
+      }
+      .shippingway-select {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap:15px;
+        margin-top:1rem;
+        label {
+          cursor: pointer;
+          border-radius: $radius-s;
+          width: calc((100% / 4) - 15px + 15px / 4);
+          display: flex;
+          align-items: center;
+          opacity: .4;
+          padding: 1rem;
+          background:#f1f1f1;
+          filter:saturate(0%);
+          transition:all .5s ease;
+          border:1px solid transparent;
+          input[type="radio"] {
+            height:1rem;
+            width:1rem;
+            transition:all ease 0.5s;
+            margin: 0 5px 0 0;
+            border:1px solid red;
+          }
+          .shippingcost {
+            margin-left:auto;
+            color: #FF5539;
+          }
+          img {
+            width:2.5rem;
+            display: inline-block;
+          }
+        }
+        label:hover, label.selected {
+          opacity: 1;
+          filter:saturate(100%);
+          border:#666 1px solid; 
+          background:white;
+          .shipping-radio {
+            span {
+              background:#333;
+            }
+          }
+        }
+      }
+    }
+  }
+  .purchase-form {
+    .line-dashed {
+      // border-bottom:1px dashed #ccc;
+    }
+    
+    .sub-title {
+      margin-top: 1rem;
+    }
+    .h-control__indicator {
+      top:21px;
+    }
+    .h-control {
+      padding:20px 25px;
+    }
+    .a-row {
+      padding:1rem 0;
+      align-items: center;
+      display: flex;
+      justify-content: start;
+      &.total-amount {
+        border-top:$h-color-main 1px solid;
+        font-weight: bold;
+        .text-info {
+          .h-c-red {
+            font-weight: bold;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .result-text p {
+        padding: 10px 0;
+        
+        &.h-c-blue{
+          color: #fff !important;
+        }
+      }
+      div {
+        width:100%;
+      }
+      .label-title {
+        padding:0;
+        width:20%;
+        font-weight: inherit;
+      }
+      .text-info {
+        text-align: right;
+        margin-left: auto;
+        font-size: 1.2rem;
+      }
+      .f-ss {
+        color:#999;
+      }
+      
+      select, input {
+        // background: #f6f6f6;
+        border: 1px solid transparent;
+        &:focus {
+          border:1px solid #333;
+        }
+      }
+      
+      .h-btn-primary-m, .h-btn-primary-line-m {
+        width:20%;
+        min-width: inherit;
+      }
+    }
+  }
+  @media all and (max-width: 992px) {
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          label {
+            width: calc((100% / 2) - 15px + 15px / 2);
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .h-btn-primary-m, .h-btn-primary-line-m {
+          width:40%;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          gap:10px;
+          label {
+            // width: calc((100% / 2) - 10px + 10px / 2);
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .label-title {
+          width:30%;
+        }
+        .h-btn-primary-m, .h-btn-primary-line-m {
+          width:50%;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          label {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .label-title {
+          width:50%;
+        }
+      }
+    }
+  }
+}
+
+// 會員後台相關
+.h-mm-width {
+  padding-left: 15px;
+  padding-right: 270px;
+  max-width: inherit;
+  width:100%;
+  .h-btn{
+    right: 270px;
+  }
+  @media all and (max-width: 1200px) {
+    padding-right: 205px;
+    .h-btn{
+      right: 200px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding-top: 20px;
+    padding-right: 15px;
+  }
+}
+
+.member-cont {
+  padding: 30px;
+  // padding-left: 270px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  form {
+    &.account {
+
+      @media all and (max-width: 500px) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.cont-space {
+  padding: 30px 60px;
+
+  .text-note {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media all and (max-width: 600px) {
+    padding: 30px;
+  }
+}
+
+// tools btn
+.tools {
+  a.icon {
+    width: 35px;
+    height: 35px;
+    margin: 2.5px;
+    font-size: $h-f-size-m;
+  }
+
+  @media all and (max-width: 700px) {
+    a.icon {
+      width: 30px;
+      height: 30px;
+      margin: 1.5px;
+    }
+  }
+}
+
+// orders
+.orders-list {
+  .a-row {
+    .order-nb {
+      .h-control {
+        min-width: 20px;
+        margin-right: 10px;
+        padding-left: initial;
+      }
+      .h-control__indicator {
+        top: 5px;
+      }
+    }
+  }
+}
+// invoice
+.shippinginfo-list {
+  .a-row {
+    p {
+      font-size: $h-f-size-l;
+      line-height: 1.5;
+    }
+  }
+}
+
+.top-tab {
+  margin-bottom: 10px;
+
+  li {
+    a {
+      font-size: $h-f-size-m;
+      min-height: 46px;
+    }
+  }
+}
+
+.phone-country {
+  input {
+    padding-left: 90px;
+  }
+
+  .country-item {
+    width: 80px;
+    p {
+      line-height: 34px;
+
+      span::before {
+        width: 10px;
+        right: 20px;
+      }
+    }
+
+    .dropdown-list {
+      top: 42px;
+      min-width: 80px;
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    input {
+      padding-left: 75px;
+    }
+
+    .country-item {
+      p {
+        line-height: 28px;
+      }
+
+      .icon::after {
+        width: 25px;
+      }
+    }
+  }
+}
+
+.login-cont {
+  padding-bottom: 20px;
+
+  .a-row {
+    padding: 5px 0;
+  }
+
+  .label-title {
+    font-size: $h-f-size-m;
+    line-height: 1.2;
+    padding: 20px 0 12px 0;
+  }
+
+  .text {
+    font-size: $h-f-size-m;
+    padding: 7px 0;
+  }
+
+  .h-p-top {
+    padding-top: 20px;
+    a:nth-child(1) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .social-btn {
+    .h-btn-primary-line-xl {
+      padding-left: 40px;
+      font-size: $h-f-size-m;
+      &::before {
+        left: 15px;
+        top: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  .h-both-btn {
+    .h-btn-primary-line-xl {
+      font-size: $h-f-size-s;
+      width: calc(50% - 5px);
+    }
+
+    a:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.other-website-face {
+  margin-top: 30px;
+  margin-left: 20px;
+  .img-closed {
+    position: initial;
+    margin: 20px auto;
+  }
+
+  @media all and (max-width: 768px) {
+    margin-right: 20px;
+    width: 100%;
+    max-width: calc(100% - 40px);
+  }
+}

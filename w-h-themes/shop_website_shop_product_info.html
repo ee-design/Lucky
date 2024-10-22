@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>holkee 購物網站 - 多頁式 - Shop - Product info</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" type="text/css" />
+
+    <!-- CSS main 為固定，style 為主題風格-->
+    <link rel="stylesheet" href="css/holkee_website_main.css" type="text/css" />
+    
+    <!-- header -->
+    <link rel="stylesheet" href="css/header_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/header_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0004.css" type="text/css" /> -->
+    
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/footer_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0004.css" type="text/css" /> -->
+    
+    <!-- 主題 layout -->
+    <link rel="stylesheet" href="css/layout_000001.css" type="text/css" />
+    
+    <!-- 配色 color -->
+    <link rel="stylesheet" href="css/color_0001.css" type="text/css" />
+
+    <!-- font family -->
+    <!-- 字型要放後面，因為有的自行預設行高跟別人不同，有調整間距 -->
+    <!-- <link rel="stylesheet" href="css/font_0001.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/font_0002.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/font_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0004.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0005.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0006.css" type="text/css" /> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Pushy CSS -->
+    <!-- shop_style_one -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+    <script type="text/javascript">
+        
+        $(function () {
+            // popup
+            $('.popup-link').magnificPopup({
+                removalDelay: 300,
+                mainClass: 'mfp-fade'
+            });
+
+            // 自刻的分類選單
+            $(".shop-menu .item-main i.the-arr").click(function () {
+                $(this).parent().next(".item-subtitle").stop(true, true).fadeToggle(0);
+                $(this).parent().toggleClass("arr-up");
+                $(this).parent().toggleClass("hide-more");
+                return false;
+            });
+
+            $(".dropdown-menu>a").click(function () {
+                $(this).next(".sub-list").stop(true, true).fadeToggle(0);
+                return false;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-right" data-focus="#first-link">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link">
+                    <a href="shop_website_home.html">Home</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="shop_website_shop.html">Shop</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_about.html">About Us</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_services.html">Services</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_news.html">News</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <!-- container 往左推-->
+    <div id="container">
+        
+        <!-- 菸酒警示語 -->
+        <div class="alcohol-warning-banner">
+            <img src="images/img_alcohol_warning.png" alt="alcohol warning">
+            <span class="text">
+                <!-- 禁止酒駕，飲酒過量有害健康 -->
+                過度の飲酒は健康に害を及ぼします
+                <!-- Excessive drinking is harmful to health -->
+            </span>
+        </div>
+
+        <!-- header -->
+        <header class="holkee-header-wrap">
+            <div class="h-mid-cont">
+                <div class="logo">
+                    <img src="images/logo_test.png" alt="alt 這需自動幫帶入網站標題 + logo">
+                </div>
+                <ul class="menu">
+                    <li>
+                        <p><a href="shop_website_home.html">Home</a></p>
+                    </li>
+                    <li>
+                        <p><a href="shop_website_shop.html">Shop</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_about.html">About Us</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_services.html">Services</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_news.html">News</a></p>
+                    </li>
+                    <li>
+                        <p><a href="website_contact.html">Contact Us</a></p>
+                    </li>
+                </ul>
+                <ul class="h-header-tools">
+                    <li class="dropdown-menu">
+                        <a><i class="fas fa-user"></i></a>
+                        <div class="sub-list">
+                            <ul>
+                                <li>
+                                    <a href="#">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="shop_website_shop_ShoppingCart.html" class="btn-car" title="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nb">5</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="menu-btn">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- shop -->
+        <div class="holkee-s-wrap holkee-shop holkee-product-info">
+            <div class="h-text-wrap">
+                <div class="shop-menu">
+                    
+                    <!-- 主分類 -->
+                    <!-- JS 應該可再優化 XD -->
+                    <!-- 覺得內頁應該不要預設展開 QQ -->
+                    <ul class="item-main hide-more">
+                        <i class="the-arr fas fa-angle-down" aria-hidden="true"></i>
+                        <li class="selected">Woman</li>
+                        <li>Big man</li>
+                        <li>Kids flowers</li>
+                        <li>Products AAA</li>
+                        <li>S Woman</li>
+                        <li>Man</li>
+                        <li>Kids monday</li>
+                        <li>ProductsB</li>
+                        <li>Sexy woman</li>
+                        <li>Sky Man</li>
+                        <li>Kids</li>
+                        <li>ProductsC</li>
+                    </ul>
+                    <!-- 次分類 -->
+                    <ul class="item-subtitle" style="display: none;">
+                        <li class="selected">#ALL</li>
+                        <li>/// new</li>
+                        <li>Kids</li>
+                        <li>dresses AAA</li>
+                        <li>blazers</li>
+                        <li>aaa</li>
+                        <li>Kids</li>
+                        <li>BBB</li>
+                        <li>dresses</li>
+                        <li>jackets</li>
+                        <li>blazers</li>
+                        <li>CCC</li>
+                    </ul>
+                </div>
+                <p class="top-breadcrumb"><a href="#">Shop all</a> / <a href="#">AAA</a> / Products aaa</p>
+            </div>
+            <div class="h-mid-cont h-product-cont">
+                <div class="h-products-photo">
+                    <!--  products photo slides -->
+                    <div class="holkee-products-main-swiper">
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper coverSwiperLarge">
+                            <a class="btn-magnifier popup-link" href="#popup-photos">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div thumbsSlider="" class="swiper coverSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="h-products-info">
+                    <div class="h-text-wrap">
+                        <h3 class="main-title">Product aaa</h3>
+                    </div>
+                    
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-inr"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-inr"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                    <!-- discount -->
+                    <ul class="discount-contents">
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 200 amount get 10 OFF storewide</span>
+                        </li>
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 300 amount get 20 OFF storewide</span>
+                        </li>
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 500 amount FREE shipping storewide</span>
+                        </li>
+                        <li class="more">
+                            Remaining <span>2</span> activities<a href="#">View all</a>
+                        </li>
+                    </ul>
+
+                    
+                    <p class="shop-label">Choose primary specification</p>
+                    <!-- 選完主規格，才出現副規格 -->
+                    <!-- 選中 + selected -->
+                    <div class="shop-spec">
+                        <a onclick="" value="">AAA</a>
+                        <a onclick="" value="" class="selected">BBB</a>
+                        <a onclick="" value="" class="cannotselected">CCC-asas</a>
+                        <a onclick="" value="">DDDDDDDD</a>
+                        <a onclick="" value="">dadjaioe</a>
+                    </div>
+
+                    <p class="shop-label">Choose sub specification</p>
+                    <div class="shop-spec">
+                        <a href="#">XL</a>
+                        <a onclick="" value="" class="selected">XXL</a>
+                    </div>
+
+                    <table class="shop-status" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <!-- 商品供應 -->
+                            <tr>
+                                <th class="l-label">Availability</th>
+                                <td>In stock</td>
+                            </tr>
+                            <!-- 商品狀況 -->
+                            <!-- <tr>
+                                <th class="l-label">Condition</th>
+                                <td>New</td>
+                            </tr> -->
+                            <!-- 交期 -->
+                            <!-- <tr>
+                                <th class="l-label">Delivery date description</th>
+                                <td>16516</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+
+                    
+                    <!-- 選擇數量與加入 -->
+                    <p class="shop-label">Please choose the quantity</p>
+                    <div class="quantity-cont">
+                        <div class="select-quantity" data-radium="true">
+                            <input name="quantity" type="number" class="qty-input" value="1">
+                            <div class="qty-adjust" data-radium="true">
+                                <span id="plus-one" class="plus">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                                <span id="minus-one" class="minus minus-none">
+                                    <i class="fa fa-minus"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="stock">90 pieces available</p>
+
+                    <div class="h-btn h-both-btn ">
+                        <a class="h-btn-primary-xl h-btn-bg-red" href="shop_website_shop_purchase.html">
+                            <span class="">Buy now</span>
+                        </a>
+                        <a class="h-btn-primary-xl popup-link" href="#popup-addcart">
+                            <span class="">Add to cart</span>
+                        </a>
+                        <a href="shop_website_shop_ShoppingCart.html" class="btn-car" title="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nb">5</span>
+                        </a>
+                    </div>
+
+                    <!-- 選擇數量與加入 -->
+                    <p class="shop-label">請選擇數量（這是看不能點的狀態）</p>
+                    <div class="quantity-cont">
+                        <div class="select-quantity" data-radium="true">
+                            <input name="quantity" type="number" class="qty-input" value="0" disabled>
+                            <div class="qty-adjust" data-radium="true">
+                                <span id="plus-one" class="plus minus-none">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                                <!-- 不能點 + minus-none -->
+                                <span id="minus-one" class="minus minus-none">
+                                    <i class="fa fa-minus"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="stock">還剩 0 件</p>
+                    
+                    <div class="h-btn h-both-btn">
+                        <a class="h-btn-primary-xl h-btn-disabled" href="#">
+                            <span class="">加入購物車</span>
+                        </a>
+                        <a class="h-btn-primary-xl h-btn-bg-red h-btn-disabled" href="shop_website_shop_purchase.html">
+                            <span class="">直接購買</span>
+                        </a>
+                        
+                        <a href="shop_website_shop_ShoppingCart.html" class="btn-car" title="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nb">5</span>
+                        </a>
+                    </div>
+                    <div class="h-btn h-btn-notify">
+                        <a class="h-btn-primary-xl h-btn-bg-darkblue popup-link" href="#popup-addcart-tellme">
+                            <span class="">貨到通知</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 這塊塞 html  -->
+                <div class="h-products-html">
+                    <img src="images/slider-02.png" width="100%">
+                    <p class="aaa" style="padding: 15px 0; white-space: pre-wrap; word-break: break-all; word-wrap: break-word;text-align: justify;">商品描述是解釋商品是甚麼以及為什麼值得顧客們購買的營銷元素。商品描述的目的是向顧客們提供有關商品功能和優勢等重要信息,以吸引他們購買該商品。
+                    
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+                    
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                    <div style="margin: 0 auto; padding: 25px 0; text-align: center;">
+                        <style>
+                            p.aaa{
+                                font-size: 15px;
+                                line-height: 1.5;
+
+                            }
+                            @media all and (max-width: 700px) {
+                                iframe.aaa{
+                                    height: 150px;
+                                }
+                                p.aaa{
+                                    font-size:13px;
+                                }
+                            }
+
+                        </style>
+                        <iframe class="aaa" style=" max-width: 560px; display: inline-block;" width="100%" height="315" src="https://www.youtube.com/embed/YAemjMwoK2U?si=44ED7wIiyM-Y7ov8"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="aaa" style="padding: 15px 0; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; text-align: justify;">商品描述是解釋商品是甚麼以及為什麼值得顧客們購買的營銷元素。商品描述的目的是向顧客們提供有關商品功能和優勢等重要信息,以吸引他們購買該商品。
+                    
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+                    
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 商品已加入購物車 -->
+    <section id="popup-addcart" class="h-white-popup mfp-hide h-popup-width-s">
+        <!-- product -->
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">商品已加入購物車</h3>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>繼續購物</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 非會員無法購買-->
+    <section id="popup-addcart-none" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">非會員無法購買</h3>
+                <p class="text">請先加入會員</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl popup-link" href="#">
+                    <span>加入會員</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>取消</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 加入補貨通知！-->
+    <section id="popup-addcart-tellme" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">加入補貨通知！</h3>
+                <p class="text">到貨時，我們將以電子郵件通知您！<br>
+                提醒您：本功能無法保證您的優先購買權及價格保留權</p>
+            </div>
+            <br>
+            <div class="a-row">
+                <!-- 錯誤 input + has-error -->
+                <input class="default has-error " type="text" placeholder="請輸入電子郵件" value="">
+                <!-- 出現錯誤訊息 -->
+                <p class="h-text-reminder h-c-red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    格式錯誤
+                </p>
+            </div>
+            <!-- 拋資料後的錯誤訊息 -->
+            <div class="text-note bg-note-red">
+                <p><span class="h-c-red">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </span>系統連線失敗，請稍後再試
+                </p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl popup-link" href="#">
+                    <span>確認</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>取消</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup 請問您還在嗎 ?-->
+    <section id="popup-addcart-hello" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">請問您還在嗎?</h3>
+                <p class="text">若要完成購物流程，請按確認</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl popup-link" href="#">
+                    <span>確認</span>
+                </a>
+            </div>
+        </div> 
+    </section>
+
+    
+    <!-- footer -->
+    <!-- 有出現警標語的頁面 footer 都要 + s-negative-space -->
+    <footer class="holkee-footer-wrap s-negative-space">
+        <div class="h-mid-cont">
+            <div class="logo">
+                <img src="images/logo_test.png" alt="品牌官網 | logo">
+            </div>
+            <ul class="link">
+                <li>
+                    <a href="#">服務條款</a>
+                </li>
+                <li>
+                    <a target="_blank" href="single_page_PrivacyPolicy.html">隱私權條款</a>
+                </li>
+                <!-- <li>
+                    <a href="">退換貨及退款須知</a>
+                </li>
+                <li>
+                    <a href="">付款及運送方式</a>
+                </li> -->
+            </ul>
+            <ul class="follow-us">
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyrights">Copyright© 2024 網站名稱 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 按下放大鏡出現 -->
+    <section id="popup-photos" class="h-white-popup mfp-hide h-popup-width-l">
+        <!-- product -->
+        <div class="h-popup-container h-product-cont h-magnifier-info">
+            <!-- product photo -->
+            <div class="h-products-photo">
+                <!--  products photo slides -->
+                <div class="holkee-products-main-swiper">
+                    <div class="swiper mySwiper" id="popup-coverSwiperLarge">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/img_0002.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0003.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0004.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0005.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0002.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0003.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0004.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0005.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0002.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img_0003.png" />
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="h-products-info">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">提醒：這邊無效果！！！送腕繩一對支援健身環 Switch 副廠 Joycon OLED 通用手把 搖桿 Joy Con 把手 joy-con</h3>
+                </div>
+                <div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide selected">
+                            <img src="images/img_0002.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0003.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0004.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0005.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0002.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0003.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0004.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0005.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0002.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img_0003.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    <!-- container END-->
+
+    <!-- Pushy JS -->
+    <script src="mobilemenu/pushy.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <!-- 圖片點選的效果，是參考這 -->
+    <!-- https://codesandbox.io/p/sandbox/dsg6qv?file=%2Findex.html%3A2%2C17 -->
+    <script>
+        var swiper = new Swiper(".coverSwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".coverSwiperLarge", {
+            loop: true,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+</body>
+
+</html>

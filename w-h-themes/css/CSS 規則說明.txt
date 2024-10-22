@@ -1,0 +1,191 @@
+holkee_website_main
+---- > 固定框架與樣式 ex. 下拉選單表單等
+
+holkee layout_000001~~~~ 序號
+---- > 現在的後台風格樣式，每一塊的底色文字顏色拆出來放這
+
+ =========================== 頁首*4  ===========================
+
+header_0001
+header_0002
+header_0003
+header_0004
+
+ =========================== 頁尾*4  ===========================
+
+footer_0001
+footer_0002
+footer_0003
+footer_0004
+
+ =========================== 字型*6  ===========================
+
+font_0001：思源黑體 （Noto Sans TC - Google）
+font_0002：思源宋體（Noto Serif TC - Google）
+font_0003：粉圓體（openhuninn - justfont）
+				說免費使用要去官網（https://justfont.com/huninn/）申請...-ˇ-
+font_0004：辰宇落雁體（ChenYuluoyan  - 網路找的免費字型）
+				 （ 需下載至伺服器 QQ 肥，且部分字型會跑 ）
+
+以下尚未轉檔完成： 缺 woff、ttf、eot
+	font_0005：源泉源體 （GenSenRounded-B）
+	font_0006：源雲明體 （GenWanMin-SB、GenWanMin-R）
+
+
+ =========================== 配色  ===========================
+
+color_0000__ 目前正在調整的
+color_0001 --- 預設後台黑（改成 0001 了）
+color_0002 --- 沉澱藍
+color_0003 --- 陶瓷網站顏色(灰)
+color_0004 --- 禮品網站配色(淺紫)
+這邊太多 待更新...
+
+
+ =========================== 主題 ===========================
+
+一頁式購物網站
+single_page_shop_website_0001.html
+		*layout_000001 --- 預設 後台黑⭐
+		*header_0001 
+		*footer_0001
+		*color：0001（黑-預設)  + 0002（沉澱藍）
+
+single_page_shop_website_0002.html（陶瓷 https://zh.wix.com/website-template/view/html/2010）
+		*layout_000002
+		*header_0003
+		*footer_0003
+		*color：0001（黑)  + 0002（沉澱藍）+ 0003（灰-預設）
+ 
+single_page_shop_website_003.html（禮品 https://zh.wix.com/website-template/view/html/3212）
+		*layout_000003
+		*header_0002 
+		*footer_0002
+		*color：0001（黑）  + 0004（淺紫-預設）
+
+single_page_shop_website_0004.html（服裝店 https://zh.wix.com/website-template/view/html/2068）
+		*layout_000004
+		*header_0002 
+		*footer_0001
+		*color：0001（黑） + 0005（白米-預設）
+
+一頁式品牌官網
+single_page_0001.html
+		*layout_000005 --- 預設 後台黑⭐
+		*header_0002
+		*footer_0002
+		*color：0001（黑-預設） + 0002（沉澱藍）
+
+single_page_0002.html（住宅裝潢 https://zh.wix.com/website-template/view/html/2333）
+		*layout_000006
+		*header_0001 
+		*footer_0001
+		*color：0006（米灰、咖啡-預設）+ 0001（黑）
+
+single_page_0001.html（設計師 https://zh.wix.com/website-template/view/html/1885）
+		*layout_000007
+		*header_0001
+		*footer_0001
+		*color：0007（淺藍-預設） + 0001（黑）
+
+			----- 
+
+			layout 07  這款主題跟 layout 15 同樣是左邊有  header 選單
+			2024/6/26 - 再調整會員後台的  padding..
+
+			.manage-breadcrumb（麵包屑）
+			padding-left : 200px
+			
+			.h-mm-width（會員後台的主標題）
+
+			.h-mid-content（像表單）
+			magin-left : 270px
+			w < 1200px : 200px
+
+			 .h-header-tools （會員後台的 header）
+			 w < 700px  top: 15px; left : 15px
+
+			.holkee-footer-wrap（footer 上下間距有調整）
+
+			2024/7/3 - 又捕一個漏掉的 .holkee-aboutus-single { 往左撐
+			
+
+single_page_0001.html（顧問公司 https://zh.wix.com/website-template/view/html/2958）
+		*layout_000008
+		*header_0004
+		*footer_0003
+		*color：0008（白紫-預設）
+
+
+多頁式品牌官網
+website_home_0001
+		*layout_000009 --- 預設後台黑⭐
+		*header_0001
+		*footer_0001
+		*color：0001（黑-預設）  + 0004（淺紫）
+
+website_home_0002（農場 https://zh.wix.com/website-template/view/html/2456）
+		*layout_000010
+		*header_0001 
+		*footer_0001
+		*color：0009（咖啡綠-預設）
+
+website_home_0003（科技公司 https://zh.wix.com/website-template/view/html/2871）
+		*layout_000011
+		*header_0003
+		*footer_0001
+		*color：0002（深邃藍-預設） + color：0007（淺藍）
+
+website_home_0004（SPA https://zh.wix.com/website-template/view/html/2975）
+		*layout_000012
+		*header_0003
+		*footer_0003
+		*color：0003（米色-預設） + color：0001（黑）
+
+
+
+多頁式購物網站
+shop_website_home_0001.html
+		*layout_000013 預設⭐
+		*header_0001 
+		*footer_0001
+		*color：0001（黑-預設）
+
+shop_website_home_0002.html（童裝 https://www.wix.com/website-template/view/html/2058）
+		*layout_000014 
+		*header_0002
+		*footer_0001
+		*color： 0004（淺紫-預設）+ 0001（黑） + 0010（米灰、粉、深黑）
+
+shop_website_home_0003.html（居家生活 https://zh.wix.com/website-template/view/html/2745）
+		*layout_000015
+		*header_0001 
+		*footer_0001
+		*color：0003（灰-預設）
+
+shop_website_home_0004.html （服飾 https://zh.wix.com/website-template/view/html/2242）
+		*layout_000016
+		*header_0001 
+		*footer_0001
+		*color：0001（黑色-預設） + 0003（米色）
+
+
+
+
+ =========================== 其他備註可忽略 ===========================
+
+
+
+----- 下載字型後如何使用：
+https://www.iware.com.tw/qa-508.html
+
+字型轉檔用
+１．https://convertio.co/zh/download/f940c9f988c9d4487e8a6e2e2e1e9d651b3bf8/
+２．https://anyconv.com/tw/ttf-zhuan-eot/（這個比較爛些）
+
+other 可用字型：
+源流明體
+https://github.com/ButTaiwan/genryu-font
+
+https://tw.eagle.cool/blog/post/top-site-to-download-free-font-personal-commercial
+https://www.businessgo.hsbc.com/en/article/businessfonts_free_download_chinese_english

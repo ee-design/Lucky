@@ -1,0 +1,1165 @@
+// color
+$h-color-main: #222;
+$h-color-gray: #888;
+$h-color-darkgray: #333;
+$h-color-red: #eb614b;
+$h-color-green: #72CA3F;
+$h-color-lightblue: #334fe3;
+$h-color-blue: #323b6b;
+$h-color-darkblue: #21253b;
+$h-color-yello: #FFBC00;
+
+
+//btn style 實心
+@mixin h-btn-solid {
+  background-color: #285a5b;
+  color: #fff;
+}
+
+//btn style 框線
+@mixin h-btn-line {
+  border: 1px #285a5b solid;
+  color: $h-color-main;
+}
+
+// 按鈕-XL
+.h-btn-primary-xl {
+  @include h-btn-solid;
+  border: 1px #285a5b solid;
+  .plus-add{
+    padding-left: 35px;
+    &::before{
+      color: #EAE1F5;
+    }
+  }
+}
+
+.h-btn-primary-line-xl {
+  @include h-btn-line;
+  border: 1px #285a5b solid;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+}
+
+// 按鈕-l
+.h-btn-primary-l {
+  @include h-btn-solid;
+  border: 1px $h-color-blue solid;
+}
+
+// 按鈕-m
+.h-btn-primary-m {
+  @include h-btn-solid;
+  border: 1px $h-color-blue solid;
+}
+
+.h-btn-bg-red {
+  background-color: $h-color-red;
+  border-color: $h-color-red;
+}
+
+.h-btn-bg-darkblue {
+  background-color: #3e5a81;
+  border-color: #3e5a81;
+}
+
+.h-btn-bg-white {
+  background-color: #285a5b;
+  border-color: #285a5b;
+  color: #fff;
+}
+
+.h-h-btn-line-white {
+  &:hover {
+    color: $h-color-blue;
+  }
+}
+
+.h-btn-primary-line-m {
+  @include h-btn-line;
+  border: 1px $h-color-blue solid;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+}
+
+.h-btn-disabled {
+  cursor: initial;
+  color: #fff;
+  background-color: #B1B1B1;
+  border-color: #B1B1B1;
+
+  &:hover {
+    background-color: #B1B1B1;
+    opacity: 1;
+  }
+}
+
+input.default,
+textarea.default {
+  border: #DCDCDC 1px solid;
+  color: #333;
+
+  &:focus {
+    border-color: $h-color-gray;
+    background-color: #fcfcfc;
+  }
+}
+
+input.has-error,
+textarea.has-error {
+  border: 1px $h-color-red solid;
+
+  &:hover,
+  &:focus {
+    border: 1px $h-color-red solid;
+  }
+}
+
+// switch
+.switch-type {
+  .switchbutton {
+    background-color: #eee;
+
+    &:before {
+      background-color: #fff;
+      border: 2px solid #eee;
+    }
+
+    &:after {
+      background-color: #fff;
+      box-shadow: 0px 1px 3px #bbb;
+    }
+  }
+
+  input {
+    &:checked~.switchbutton:before {
+      background-color: $h-color-yello;
+      border: 1px solid $h-color-yello;
+    }
+
+    &:checked~.switchbutton:before {
+      background-color: $h-color-yello;
+      border: 1px solid $h-color-yello;
+    }
+
+    &:disabled~.switchbutton:before {
+      background-color: #B1B1B1;
+      border: 1px solid #B1B1B1;
+    }
+  }
+}
+
+// 內容最大寬度
+
+// 陰影 shadow
+@mixin has-box-shadow {
+  box-shadow: rgba(rgba(0, 0, 0, 0.3), 0.16) 0px 3px 12px;
+}
+
+@mixin has-box-shadow-light {
+  box-shadow: rgba(rgba(226, 218, 218, 0.3), 0.35) 5px 5px 10px;
+}
+
+
+
+// 固定白底圓角
+@mixin bg-box-w {
+  background-color: #fff;
+  box-shadow: rgba(rgba(0, 0, 0, 0.3), 0.16) 0px 3px 12px;
+}
+
+// control
+.h-control {
+  color: #333;
+
+  input {
+    &:checked~.h-control__indicator {
+      background: #333;
+      border-color: #333;
+    }
+  }
+}
+
+.h-control__indicator {
+  border: 2px solid #cfcfcf;
+  background-color: #fff;
+}
+
+.h-control--checkbox .h-control__indicator:after {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+}
+
+.h-control--radio {
+  input {
+    &:checked~.h-control__indicator {
+      // background-color: #fff;
+    }
+
+    &:checked~.h-control__indicator:after {
+      background: #fff;
+    }
+
+    &:disabled~.h-control__indicator:after {
+      background-color: #333;
+    }
+
+    &:disabled:checked~.h-control__indicator:after {
+      background-color: #333;
+    }
+  }
+}
+
+.h-mid-content {
+  background:white;
+}
+
+.menu-btn {
+  span {
+    color: $h-color-darkgray;
+    &:hover{
+      color: #7f1d1d;
+    }
+  }
+  
+}
+
+.pushy {
+  background:#f1f1f1;
+  ul {
+    li {
+      &:hover, &.actived {
+        background:#285a5b;
+        a {
+          color:white;
+        }
+      }
+    }
+  }
+  a {
+    color: #285a5b;
+  }
+}
+
+// pushy
+
+.pushy-submenu button {
+  color: #fff;
+
+  &:hover {
+    color: #FFF;
+  }
+}
+
+
+// header
+.holkee-header-wrap {
+  background-color: #fff;
+  @include has-box-shadow-light;
+  .logo {
+    color: #333;
+  }
+  .menu {
+    li {
+      &:hover, &.actived {
+        background:#285a5b;
+        p {
+          a {
+            color: white;
+          }
+        }
+      }
+      p {
+        color: #fff;
+
+        a {
+          color: $h-color-darkgray;
+        }
+      }
+    }
+  }
+
+  .h-header-tools {
+    li {
+      a {
+        color: $h-color-darkgray;
+
+        &.btn-car {
+          span.nb {
+            background-color: $h-color-red;
+            color: #fff;
+          }
+        }
+
+        &:hover{
+        color: #7f1d1d;
+          i {
+            opacity: .9;
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      .sub-list {
+        border: 1px solid #dfdfdf;
+        background-color: #fff;
+        @include has-box-shadow;
+
+        ul li {
+          border-top: 1px solid #dfdfdf;
+
+          a {
+            color: $h-color-main;
+
+            &:hover {
+              background-color: #eaeaea;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// holkee footer
+.holkee-footer-wrap {
+  
+  // border-top: 1px #E1E1E1 solid;
+
+  ul.link,
+  ul.info {
+    li {
+      a {
+        color: #285a5b;
+      }
+    }
+  }
+
+  ul.follow-us {
+    li {
+      a {
+        color: #285a5b;
+        // border: 1px solid #ffffff83;
+        &:hover{
+          color: #7f1d1d;
+        }
+      }
+    }
+  }
+
+  p.copyrights {
+    color: #666;
+  }
+}
+
+// photo & text 
+.h-text-wrap {
+  h3.main-title {
+    color: #7f1d1d;
+    // &::after {
+    //   background-color: $h-color-yello;
+    // }
+  }
+
+  .text {
+    a {
+      color: $h-color-darkblue;
+    }
+  }
+
+  .order-type {
+    background-color: #fff;
+    border: 1px solid #DFDFDF;
+  }
+}
+
+// form
+.form-style {
+  label.label-title {
+    color: $h-color-main;
+  }
+
+  form {
+    &.account {
+      .a-row {
+        p.fl-r {
+          a {
+            color: $h-color-main;
+          }
+        }
+      }
+
+      input.user:disabled {
+        // background-color: #fff;
+        color: $h-color-main;
+      }
+    }
+
+    &.orderinfo-form {
+      .top-title {
+        background-color: #F9F9F9;
+        border-bottom: 1px solid #E1E1E1;
+
+        .type-tools {
+          .the-select {
+            select {
+              background-color: #fff;
+            }
+          }
+
+          .h-btn-primary-line-m {
+            background-color: #fff;
+            border-color: #DCDCDC;
+
+            &:hover {
+              border-color: $h-color-main;
+            }
+          }
+        }
+      }
+
+      .h-c-blue {
+        // color: $h-color-darkblue;
+      }
+
+      ul.a-row {
+        li {
+
+          .result-products {
+            li {
+              border-bottom: 1px solid #E1E1E1;
+            }
+          }
+
+          &.total-amount {
+            border: 1px solid #E1E1E1;
+            border-width: 1px 0 1px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 送出表單的文字
+.submit-text {
+  border: #DCDCDC 1px solid;
+  background-color: #fff;
+
+  p {
+    color: $h-color-darkgray;
+  }
+}
+
+.text-note {
+  background-color: #FFFEE7;
+  border: 1px solid #E2E3C1;
+}
+
+.bg-note-red {
+  border-color: #FFA0B0;
+  background-color: #FFF5F5;
+}
+.bg-note-green {
+  border-color: $h-color-green;
+  background-color: #f5ffef;
+  i {
+        color: $h-color-green;
+  }
+}
+// holkee popup - style
+// h-popup-container
+// holkee 菸酒
+.alcohol-warning-banner {
+  color: #333;
+  background-color: #fff;
+}
+
+// 預設值 到這 -----
+
+// 版塊開始 -----
+// About us
+.holkee-aboutus {
+  background-color: #fff;
+}
+
+// About us - single page
+.holkee-aboutus-single {
+  .h-mid-cont {
+    background-color: #fff;
+    
+  }
+}
+
+// Contact Us
+.holkee-contactus {
+  .privacy-policy {
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+
+  .txn-checkbox {
+    a {
+      color: $h-color-lightblue;
+    }
+  }
+
+  .company-info {
+    ul.list {
+      li {
+        i {
+          color: $h-color-main;
+        }
+
+        p {
+          a {
+            color: $h-color-main;
+          }
+        }
+      }
+    }
+  }
+}
+
+// policy
+.holkee-policy {
+  .h-mid-cont {
+    background-color: #fff;
+  }
+}
+
+// news
+.holkee-news {
+  .h-mid-cont {
+    .a-row {
+      background-color: #fff;
+      .text {
+        color:#666;
+      }
+      .date {
+        color:#ccc;
+        &::before {
+          color: $h-color-red;
+        }
+      }
+    }
+  }
+}
+
+// services
+.holkee-services {
+  .h-mid-cont {
+    .a-row {
+      background-color: #fff;
+
+    }
+    .text-info {
+      color:$h-color-darkblue;
+      .date {
+        color: $h-color-gray;
+      }
+      h4.sub-title{
+        
+      }
+      p.text{
+        
+      }
+    }
+  }
+}
+
+// holkee tools
+.holkee-fb-post,
+.holkee-ig-post {
+  background-color: #fff;
+}
+
+.holkee-fb-gallery,
+.holkee-ig-gallery {
+  background-color: #fff;
+}
+
+.holkee-fb-video {
+  background-color: #fff;
+}
+
+
+// shop top menu
+.shop-menu {
+  
+  ul {
+    li.selected{
+      
+    }
+    li:hover {
+      color: $h-color-darkgray;
+      text-decoration: underline;
+    }
+
+    &.item-subtitle {
+      border-top: 1px solid #dedede;
+    }
+  }
+
+  @media all and (max-width: 700px) {
+
+    ul {
+      &.item-subtitle {
+        border-color: #DCDCDC;
+      }
+    }
+  }
+}
+
+// breadcrumb
+.top-breadcrumb {
+  color: $h-color-gray;
+
+  a {
+    color: $h-color-gray;
+  }
+}
+
+// manage readcrumb
+.manage-breadcrumb {
+  background-color: #ffffff78;
+
+  .h-mid-cont {
+    a.home {
+      color: $h-color-main;
+      border: 1px solid #DCDCDC;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+    }
+
+    .the-select {
+      select {
+        &:disabled {
+          background-color: #F2F2F2;
+          &:hover {
+            border-color: #DCDCDC;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+ul.dropdown-list {
+  background-color: #fff;
+
+  li {
+    color: #333;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  a {
+    color: #333;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+}
+
+// country
+.country-item {
+  border: #DCDCDC 1px solid;
+
+  &:hover {
+    border-color: $h-color-gray;
+  }
+
+  p {
+    color: #333;
+  }
+}
+
+// shop
+.holkee-shop {
+
+  // tools
+  .shop-tools {
+    .search .icon {
+      color: $h-color-main;
+    }
+  }
+
+  .text-info {
+    .sub-title {
+      color: $h-color-darkgray;
+    }
+  }
+
+  .price {
+    .discount {
+      color: $h-color-red;
+    }
+
+    .original {
+      color: $h-color-gray;
+    }
+  }
+}
+
+// slides 輪播圖
+.holkee-swiper {
+  .swiper-pagination-bullet {
+    background-color: $h-color-main;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    color: #fff;
+    background-color: $h-color-darkgray;
+  }
+
+  :root {
+    --swiper-theme-color: $h-color-darkgray;
+  }
+}
+
+// products Featured products
+.holkee-products-swiper {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    color: #fff;
+    background-color: $h-color-darkgray;
+  }
+
+  .swiper-products-cont .text {
+    color: $h-color-main;
+  }
+
+  .price {
+    .discount {
+      color: $h-color-red;
+    }
+
+    .original {
+      color: $h-color-gray;
+    }
+  }
+}
+
+// slides Products
+.holkee-products-main-swiper {
+  .coverSwiperLarge {
+    a.btn-magnifier {
+      border: 1px solid #DCDCDC;
+      background-color: #FFF;
+      color: $h-color-main;
+
+      &:hover {
+        border-color: $h-color-main;
+      }
+    }
+  }
+
+  .swiper-slide-thumb-active {
+    img {
+      border: 2px solid $h-color-main;
+    }
+  }
+
+  .swiper-button-next {
+    &:hover:after {
+      background-color: #333;
+    }
+  }
+
+  .swiper-button-prev {
+    &:hover:after {
+      background-color: #333;
+    }
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    color: #fff;
+    background-color: #33333384;
+  }
+}
+
+// holkee product info
+.holkee-product-info {
+  .h-product-cont {
+    background-color: #fff;
+  }
+}
+
+.quantity-cont {
+  .select-quantity {
+    border: 2px solid #dadada;
+
+    input.qty-input {
+      // &:focus {
+      //   border-color: #562424;
+      // }
+    }
+
+    // input.qty-input[type=number]:focus {
+    //   border-color: #cac5c5;
+    // }
+
+    input.qty-input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    span {
+      background-color: #fff;
+
+      &.plus {
+        border-left: 1px solid #dedede;
+      }
+
+      &.minus {
+        border-right: 1px solid #dedede;
+      }
+
+      &.plus:hover,
+      &.minus:hover {
+        background-color: #f3f3f3;
+      }
+
+      &.minus-none {
+        color: #dadada;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// product
+.h-product-cont {
+  .shop-label {
+    color: $h-color-main;
+  }
+
+  .shop-spec {
+    a {
+      color: $h-color-main;
+      border-color: #DCDCDC;
+      background-color: #fff;
+
+      &.selected {
+        color: #7f1d1d;
+        border-color: #7f1d1d;
+      }
+
+      &:hover {
+        color: $h-color-main;
+        border-color: $h-color-main;
+      }
+    }
+  }
+
+  .shop-status {
+
+    tr,
+    td {
+      color: $h-color-main;
+    }
+  }
+
+  .price {
+    .discount {
+      color: $h-color-red;
+    }
+
+    .original {
+      color: $h-color-gray;
+    }
+  }
+
+  // discount
+  .discount-contents {
+    border-left: 3px solid #dadada;
+
+    li {
+      color: $h-color-gray;
+
+      .l-label {
+        border: 2px solid #dadada;
+      }
+
+      &.more {
+        a {
+          background-color: #f4f4f4;
+          color: #6e6e6e;
+        }
+
+        span {
+          color: $h-color-blue ;
+        }
+      }
+    }
+  }
+
+  .stock {
+    color: $h-color-gray;
+  }
+
+  a.btn-car {
+    color: $h-color-main;
+
+    span.nb {
+      color: #fff;
+      background-color: $h-color-red;
+    }
+  }
+
+  .privacy-policy {
+    border: 1px solid #ddd;
+  }
+
+  .txn-checkbox {
+    a {
+      color: $h-color-darkblue;
+    }
+  }
+}
+
+// 點選放大鏡之 popup 內容
+.h-magnifier-info {
+  .h-products-info {
+    .selected {
+      img {
+        border: 2px solid $h-color-blue;
+      }
+    }
+  }
+}
+
+// ----購物車開始
+// 表格
+.form-table {
+  .a-row {
+    border-bottom: 1px solid #eaeaea;
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+
+    .quantity-cont {
+      .select-quantity {
+        border: 2px solid #dadada;
+      }
+    }
+  }
+
+  .bg-title {
+    color: #fff;
+    background-color: $h-color-main;
+
+    p {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $h-color-main;
+    }
+  }
+}
+
+// shoppingcart
+.holkee-shoppingcart {
+  .h-mid-cont {
+    background-color: #fff;
+  }
+
+  h5.sub-title {
+    a.f-ss {
+      color: $h-color-darkblue;
+    }
+  }
+
+  .show-more {
+    border: 1px solid #eaeaea;
+    color: $h-color-darkgray;
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+
+  // product
+  .product-list {
+    .a-row {
+      .tools {
+        a.icon-delete {
+          background-color: #fff;
+          border: 1px solid #DCDCDC;
+          color: $h-color-blue;
+
+          &:hover {
+            border-color: $h-color-blue;
+          }
+        }
+      }
+
+      .product-name {
+        .price {
+          color: #9E9E9E;
+        }
+
+        a {
+          color: $h-color-darkgray;
+        }
+      }
+    }
+
+    .bg-title {
+      .order-photo {
+        .h-control {
+          input:checked~.h-control__indicator {
+            border-color: #fff;
+            background-color: #fff;
+
+            // background-color: #666;
+            // border-color: #666;
+            &::after {
+              border-color: #333;
+            }
+          }
+        }
+      }
+    }
+    .off-out {
+      .off-text {
+        background-color: $h-color-gray;
+        color: #fff;
+      }
+    }
+  }
+
+  .orderinfo-form {
+    .txn-checkbox {
+      a {
+        color: $h-color-darkblue;
+      }
+    }
+
+    .line-dashed {
+      border-bottom: 1px dashed #C3C3C3;
+    }
+
+    .fl {
+      .text-copy {
+        a {
+          color: $h-color-darkgray;
+        }
+      }
+    }
+
+    .total-amount {
+      border-top: 1px solid #dcdcdc;
+      background-color: #F2F2F2;
+    }
+  }
+
+  .orderinfo-result {
+    .top-title {
+      background-color: #F9F9F9;
+      border-bottom: 1px solid #E1E1E1;
+    }
+  }
+}
+
+// 會員後台相關
+
+// .cont-space
+
+// tools btn
+.tools {
+  a.icon {
+    border: 1px solid #DCDCDC;
+    color: #222;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+// orders
+.orders-list {
+  .a-row {
+    &:last-child {
+      border:none;
+    }
+    .order-nb {
+      a {
+        color: $h-color-lightblue;
+      }
+    }
+  }
+
+  .bg-title {
+    .order-nb {
+      .h-control {
+        input:checked~.h-control__indicator {
+          border-color: #fff;
+          background-color: #fff;
+
+          // background-color: #666;
+          // border-color: #666;
+          &::after {
+            border-color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.top-tab {
+  border: 1px solid #DCDCDC;
+
+  li {
+    border-right: 1px solid #DCDCDC;
+
+    a {
+      border-bottom: 3px solid #DCDCDC;
+      background-color: #fff;
+      color: $h-color-darkgray;
+      background-color: #F7F7F7;
+
+      &:hover {
+        color: $h-color-blue;
+        // border-color: $h-color-main;
+      }
+    }
+
+    &.selected {
+      a {
+        background-color: #fff;
+        color: $h-color-blue;
+        border-color: $h-color-blue;
+      }
+    }
+  }
+}
+
+.login-cont {
+  .label-title {}
+
+  .text {
+    a {
+      color: $h-color-blue;
+    }
+  }
+}
+
+// invoice

@@ -1,0 +1,23 @@
+.holkee-footer-wrap .h-mid-cont {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.holkee-footer-wrap .logo,
+.holkee-footer-wrap ul.info,
+.holkee-footer-wrap ul.link {
+  display: none;
+}
+.holkee-footer-wrap ul.follow-us {
+  margin-left: initial;
+  padding-top: initial;
+}
+.holkee-footer-wrap p.copyrights {
+  flex: initial;
+  margin-left: auto;
+}
+@media all and (max-width: 576px) {
+  .holkee-footer-wrap p.copyrights {
+    flex: 100%;
+    text-align: left;
+  }
+}/*# sourceMappingURL=footer_0003.css.map */

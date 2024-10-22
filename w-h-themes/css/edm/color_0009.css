@@ -1,0 +1,68 @@
+.edm--layout--wrapper {
+  background-color: #f4f4f4;
+}
+
+.email-box {
+  background-color: #fff;
+}
+
+table.order--list tr th,
+table.order--list tr td,
+h4,
+p {
+  color: #333;
+}
+table.order--list tr th,
+table.order--list tr td {
+  border:1px solid #f4f4f4;
+}
+table.order--list tr th.header {
+  color:#333;
+  background:#f4f4f4;
+}
+.t-red {
+    
+  color: #FF5539;
+}
+
+.t-blue {
+  color: #05a6a9;
+}
+
+.bg-line {
+  background-color: #f4f4f4;
+}
+
+
+.edm--title{
+    color: #05a6a9;
+}
+.edm--text a {
+  color: #05a6a9;
+}
+
+.edm--text a.mail-link {
+  color: #05a6a9;
+}
+
+.t-system .edm--text {
+  color: #666;
+}
+
+.t-system .edm--text a {
+  color: #05a6a9;
+}
+
+.edm--btn a {
+  color: #fff;
+  background-color: #285a5b;
+}
+
+.edm--btn-line a {
+  color: #285a5b;
+  border: 1px solid #285a5b;
+}
+
+.edm--line {
+  border-bottom: 1px solid #f4f4f4;
+}

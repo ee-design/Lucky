@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "GenSenRounded-B";
+  src: url("../css/font/GenSenRounded-B.woff") format("woff");
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+select,
+input,
+textarea {
+  font-family: "GenSenRounded-B", serif;
+  font-style: normal;
+}/*# sourceMappingURL=font_0005.css.map */

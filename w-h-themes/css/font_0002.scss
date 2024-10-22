@@ -1,0 +1,30 @@
+// 思源宋體（Noto Serif TC - Google）
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+select,
+input,
+textarea {
+    font-family: "Noto Serif TC", serif;
+    font-style: normal;
+    // font-weight: 200;
+    // font-weight: 300;
+    // font-weight: 400;
+    // font-weight: 500;
+    // font-weight: 600;
+    // font-weight: 700;
+    // font-weight: 900;
+}
+body{
+  font-size: 1rem;
+}

@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>holkee 購物網站 - 一頁式</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" type="text/css" />
+    
+    <!-- CSS main 為固定，style 為主題風格-->
+    <link rel="stylesheet" href="css/holkee_website_main.css" type="text/css" />
+
+    <!-- header -->
+    <!-- <link rel="stylesheet" href="css/header_0001.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/header_0002.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/header_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0004.css" type="text/css" /> -->
+    
+    <!-- footer -->
+    <!-- <link rel="stylesheet" href="css/footer_0001.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/footer_0002.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/footer_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0004.css" type="text/css" /> -->
+    
+    <!-- 主題 layout -->
+    <link rel="stylesheet" href="css/layout_000003.css" type="text/css" />
+    
+    <!-- 配色 color -->
+    <link rel="stylesheet" href="css/color_0004.css" type="text/css" />
+
+    <!-- font family -->
+    <!-- 字型要放後面，因為有的自行預設行高跟別人不同，有調整間距 -->
+    <!-- <link rel="stylesheet" href="css/font_0001.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/font_0002.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/font_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0004.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0005.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0006.css" type="text/css" /> -->
+    
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Pushy CSS -->
+    <!-- shop_style_one -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+
+    <script type="text/javascript">
+        
+        $(function () {
+            // popup
+            $('.popup-link').magnificPopup({
+                removalDelay: 300,
+                mainClass: 'mfp-fade'
+            });
+            // demo 看效果而已
+            $(".swiper-wrapper .swiper-slide").click(function () {
+                $(this).parent().parent().parent().parent().find(".alcohol-warning-banner").stop(true, true).fadeIn(0);
+                return false;
+            });
+            
+            $(".h-products-info .h-both-btn").click(function () {
+                $(this).next(".form-style").stop(true, true).fadeIn(0);
+                return false;
+            });
+
+            // 自刻的分類選單
+            $(".shop-menu .item-main i.the-arr").click(function () {
+                $(this).parent().next(".item-subtitle").stop(true, true).fadeToggle(0);
+                $(this).parent().toggleClass("arr-up");
+                $(this).parent().toggleClass("hide-more");
+                return false;
+            });
+
+            $(".dropdown-menu>a").click(function () {
+                $(this).next(".sub-list").stop(true, true).fadeToggle(0);
+                return false;
+            });
+
+            // 一頁式選單 點選後帶到該區塊
+            // scrollTop
+            $(function () {
+                $('.go01').click(function () { $('html,body').animate({ scrollTop: $('.goThe01').offset().top - 77 }, 800); });
+                $('.go02').click(function () { $('html,body').animate({ scrollTop: $('#goThe02').offset().top - 77 }, 800); });
+                $('.go03').click(function () { $('html,body').animate({ scrollTop: $('#goThe03').offset().top - 77 }, 800); });
+                $('.go04').click(function () { $('html,body').animate({ scrollTop: $('#goThe04').offset().top - 77 }, 800); });
+                $('.go05').click(function () { $('html,body').animate({ scrollTop: $('#goThe05').offset().top - 77 }, 800); });
+                $('.go06').click(function () { $('html,body').animate({ scrollTop: $('#goThe06').offset().top - 77 }, 800); });
+            });
+
+            // animate
+            $(function () {
+                new WOW().init();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-right" data-focus="#first-link">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link">
+                    <a class="go01">Main</a>
+                </li>
+                <li class="pushy-link">
+                    <a class="go02">Shop</a>
+                </li>
+                <li class="pushy-link">
+                    <a class="go03">About Us</a>
+                </li>
+                <li class="pushy-link">
+                    <a class="go04">Services</a>
+                </li>
+                <li class="pushy-link">
+                    <a class="go05">News</a>
+                </li>
+                <li class="pushy-link">
+                    <a class="go06">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <!-- container 往左推-->
+    <div id="container">
+    
+    <!-- 菸酒警示語 -->
+    <!-- 我測試用 所以先隱藏 -->
+    <div class="alcohol-warning-banner" style="display: none;">
+        <img src="images/img_alcohol_warning.png" alt="alcohol warning">
+        <span class="text">
+            <!-- 禁止酒駕，飲酒過量有害健康 -->
+            過度の飲酒は健康に害を及ぼします
+            <!-- Excessive drinking is harmful to health -->
+        </span>
+    </div>
+
+    <!-- header -->
+    <header class="holkee-header-wrap">
+        <div class="h-mid-cont">
+            <div class="logo">
+                <img src="images/logo_test.png" alt="alt 這需自動幫帶入網站標題 + logo">
+            </div>
+            <ul class="menu">
+                <li>
+                    <p><a class="go01">Main</a></p>
+                </li>
+                <li>
+                    <p><a class="go02">Shop</a></p>
+                </li>
+                <li>
+                    <p><a class="go03">About Us</a></p>
+                </li>
+                <li>
+                    <p><a class="go04">Services</a></p>
+                </li>
+                <li>
+                    <p><a class="go05">News</a></p>
+                </li>
+                <li>
+                    <p><a class="go06">Contact Us</a></p>
+                </li>
+            </ul>
+            <ul class="h-header-tools">
+                <li class="dropdown-menu">
+                    <a><i class="fas fa-user"></i></a>
+                    <div class="sub-list">
+                        <ul>
+                            <li>
+                                <a class="popup-link" href="#popup-login">登入</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="shop_website_shop_ShoppingCart.html"class="btn-car" title="View cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="nb">5</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="menu-btn">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 輪播圖slides : 大圖輪播圖 -->
+    <div class="holkee-swiper swiper mySwiper goThe01" id="swiperA">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide" href="#">
+                <img src="images/layout_000003/slider-01.png">
+            </a>
+            <div class="swiper-slide">
+                <img src="images/layout_000003/slider-02.png">
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- grid -->
+    <!-- <div class="holkee-s-wrap holkee-grid">
+        <div class="h-mid-cont">
+            <div class="h-btn-banner h-btn">
+                <a class="h-btn-primary-xl h-btn-bg-white" href="website_about.html">
+                    <span class="">About Us</span>
+                </a>
+            </div>
+            <div class="h-btn-banner h-btn">
+                <a class="h-btn-primary-xl h-btn-bg-white" href="website_contact.html">
+                    <span class="">Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- promotion -->
+    <div class="holkee-s-wrap holkee-promotion">
+        <div class="h-mid-cont">
+            <div class="h-photo-wrap"></div>
+            <div class="text-info">
+                <div class="h-text-wrap">
+                    <p class="type">Promotion</p>
+                    <h3 class="main-title">Storewide Sale</h3>
+                    <p class="text">Buy over NT$ 3000 amount get 10% OFF<br>
+                        (conditions are cumulatively calculated)</p>
+                </div>
+                <div class="h-btn">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span class="">Shop Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- slides : Billboard - Top 5  -->
+    <div class="holkee-products-swiper" id="goThe02">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Billboard - Top 5</h3>
+        </div>
+        <div class="swiper-products-cont swiper mySwiper" id="swiperC">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0001.png">
+                    <p class="text">Product title - 【LINE FRIENDS】BlenderBottle®Pro Tritan Product title AAAA</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>1,000,000-2,000,000</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0002.png">
+                    <p class="text">Product title - 【LINE FRIENDS】BlenderBottle®Pro Tritan</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>1,000,000-2,000,000</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>101,000,000-102,000,000</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#er">
+                    <img src="images/layout_000003/img_0003.png">
+                    <p class="text">最多三行 Product title - BBBB</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0004.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0005.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0006.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0007.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0008.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0009.png">
+                    <p class="text">Product title</p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0010.png">
+                    <p class="text">Product title</p>
+                </a>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev "></div>
+        </div>
+    </div>
+
+    <!-- slides : Featured Products  -->
+    <div class="holkee-products-swiper">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Featured Products</h3>
+        </div>
+        <div class="swiper-products-cont swiper mySwiper" id="swiperB">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0001.png">
+                     <p class="text">Melissa & Doug Top & Bake Wooden Pizza Counter Play Set (41 Pcs) Pizza Toy Wooden Play Food Set, Pretend Pizza Sets For Kids Ages 3+ - FSC-Certified Materials</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-warningbanner">
+                    <img src="images/layout_000003/img_0002.png">
+                     <p class="text">點我看 18禁 popup ，Product title - BBBB</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0003.png">
+                    <p class="text">Product title - 【LINE FRIENDS】BlenderBottle®Pro Tritan</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+               <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0004.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0005.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0006.png">
+                     <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0007.png">
+                     <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0008.png">
+                     <p class="text">Product title</p><p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0009.png">
+                     <p class="text">Product title</p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-product-info">
+                    <img src="images/layout_000003/img_0010.png">
+                     <p class="text">Product title</p>
+                </a>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev "></div>
+        </div>
+        <!-- <div class="h-btn">
+            <a class="h-btn-primary-xl" href="website_shop.html">
+                <span class="">View all Product</span>
+            </a>
+        </div> -->
+    </div>
+
+    <!-- shop -->
+    <div class="holkee-s-wrap holkee-shop">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Shop</h3>
+            <div class="shop-menu has-border-color">
+    
+                <!-- 主分類 -->
+                <!-- 預設展開 + arr-up -->
+                <!-- JS 應該可再優化 XD -->
+                <ul class="item-main arr-up">
+                    <i class="the-arr fas fa-angle-down" aria-hidden="true"></i>
+                    <li class="selected">Woman</li>
+                    <li>Big man</li>
+                    <li>Kids flowers</li>
+                    <li>Products AAA</li>
+                    <li>S Woman</li>
+                    <li>Man</li>
+                    <li>Kids monday</li>
+                    <li>ProductsB</li>
+                    <li>Sexy woman</li>
+                    <li>Sky Man</li>
+                    <li>Kids</li>
+                    <li>ProductsC</li>
+                </ul>
+                <!-- 次分類 -->
+                <ul class="item-subtitle">
+                    <li class="selected">#ALL</li>
+                    <li>/// new</li>
+                    <li>Kids</li>
+                    <li>dresses AAA</li>
+                    <li>blazers</li>
+                    <li>aaa</li>
+                    <li>Kids</li>
+                    <li>BBB</li>
+                    <li>dresses</li>
+                    <li>jackets</li>
+                    <li>blazers</li>
+                    <li>CCC</li>
+                </ul>
+            </div>
+        </div>
+        <div class="h-mid-cont shop-tools">
+            <div class="search">
+                <input class="default" type="text" placeholder="Search" value="">
+                <a class="icon" href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="h-the-select">
+                <select>
+                    <option value="1">Newest to Oldest</option>
+                    <option value="2">Oldest to Newest</option>
+                    <option value="3">Price: High to Low</option>
+                    <option value="4">Price: Low to High</option>
+                </select>
+            </div>
+        </div>
+        <div class="h-mid-cont">
+            <ul class="item">
+                <li class="a-row">
+                    <a class="popup-link" href="#popup-product-info"></a>
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0001.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Melissa & Doug Top & Bake Wooden Pizza Counter Play Set (41 Pcs) Pizza Toy
+                                Wooden Play Food Set, Pretend Pizza Sets For
+                                Kids Ages 3+ - FSC-Certified Materials</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-inr"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a class="popup-link" href="#popup-product-info"></a>
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0002.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">如果 Product title 很長最多是三行，超過點點點點點點</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-inr"></span>
+                                    160-220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-inr"></span>
+                                    15,359-30,999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a class="popup-link" href="#popup-product-info"></a>
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0003.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-jpy"></span>
+                                    11,600-22,220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-jpy"></span>
+                                    15,359-30,999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0004.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-twd"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0005.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-usd"></span>
+                                    160-220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-usd"></span>
+                                    15,359-30,999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0006.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-krw"></span>
+                                    160-220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-krw"></span>
+                                    15,359-30,999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0007.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-mop"></span>
+                                    160-220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-mop"></span>
+                                    15,359-30,999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0008.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">€ - eurProduct title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-eur"></span>
+                                    160-220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-eur"></span>
+                                    359-999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0009.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title Product title Product title Product title - AAAAA
+                            </h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-gbp"></span>
+                                    160-220
+                                </span>
+                                <span class="original">
+                                    <span class="h-price h-p-gbp"></span>
+                                    359-999
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="a-row">
+                    <a href="#">
+                        <div class="h-photo-wrap">
+                            <img src="images/layout_000003/img_0010.png">
+                        </div>
+                        <div class="text-info">
+                            <h4 class="sub-title">Product title</h4>
+                            <p class="price">
+                                <span class="discount">
+                                    <span class="h-price h-p-inr"></span>
+                                    160-220
+                                </span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- 顯示更多 -->
+            <div class="h-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span class="">顯示更多</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- aboutus -->
+    <div class="holkee-s-wrap holkee-aboutus" id="goThe03">
+        <div class="h-mid-cont">
+            <div class="h-photo-wrap">
+                <img src="images/layout_000003/img_about.png" alt="holkee 品牌官網 - 關於我們">
+            </div>
+            <div class="h-text-wrap">
+                <h3 class="main-title">About Us</h3>
+                <p class="text">房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。<br>
+<br>
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="holkee-s-wrap holkee-services" id="goThe04">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Our Services</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-row">
+                <div class="h-photo-wrap" style="background-image: url(images/layout_000003/service_01.png);">
+                </div>
+                <div class="text-info">
+                    <h4 class="sub-title">Services title - A</h4>
+                    <p class="text">建議每一塊字數都差不多~較為整齊XD
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+    
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                </div>
+            </div>
+            <div class="a-row">
+                <div class="h-photo-wrap" style="background-image: url(images/layout_000003/service_02.png);">
+                </div>
+                <div class="text-info">
+                    <h4 class="sub-title">Services title - B Services title - B</h4>
+                    <p class="text">房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+    
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                </div>
+            </div>
+            <div class="a-row">
+                <div class="h-photo-wrap" style="background-image: url(images/layout_000003/service_03.png);">
+                </div>
+                <div class="text-info">
+                    <h4 class="sub-title">Services title - B Services title - B</h4>
+                    <p class="text">
+                        房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+            
+                        已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- news -->
+    <div class="holkee-s-wrap holkee-news" id="goThe05">
+        <div class="h-text-wrap">
+            <h3 class="main-title">News</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-row">
+                <div class="h-photo-wrap" style="background-image: url(images/layout_000003/news_01.png);">
+                </div>
+                <div class="text-info">
+                    <h4 class="sub-title">News title News title News title News title News title News title News title News
+                        title News title News title News title News title - News title News title</h4>
+                    <p class="text">【贈送微電商網站 0成本功能一應俱全 】
+想打入網路市場，電商功能當然不能少！holkee白金方案贈送的微電商，有著金、物流串接、第三方支付、訂單滿額折扣、促銷看板、商品快速上下架…等完整的功能，訂單成交更不需抽成！讓中小企業主不用一踏入電商市場，就得忙著計算成本支出，把所有的收益，安安心心的全放入自己的口袋中，穩紮穩打、逐步擴大自己的電商規模！後疫情時代，抓住台灣網路商機爆量的起漲點，用最低的成本，在holkee打造小企業專屬的電商官網吧！
+    
+holkee FB粉絲團：https://www.facebook.com/holkeego
+holkee 官網：https://www.holkee.com/
+holkee白金方案(送微電商)：https://secure.holkee.com/plans</p>
+                    <p class="date">ON 2023-07-14</p>
+                </div>
+            </div>
+            <div class="a-row">
+                <div class="h-photo-wrap" style="background-image: url(images/layout_000003/news_02.png);">
+                </div>
+                <div class="text-info">
+                    <h4 class="sub-title">News title News title</h4>
+                    <p class="text">房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                    <p class="date">ON 2023-07-14</p>
+                </div>
+            </div>
+            <div class="a-row">
+                <div class="h-photo-wrap" style="background-image: url(images/layout_000003/news_03.png);">
+                </div>
+                <div class="text-info">
+                    <h4 class="sub-title">News title News title</h4>
+                    <p class="text">房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                    <p class="date">ON 2023-07-14</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- facebook post -->
+    <!-- 有 iframe 高度的問題無法 RWD -->
+    <!-- <div class="holkee-s-wrap holkee-fb-post">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Facebook post</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-row">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fposts%2Fpfbid03JNKAcjyyM3hETB8Zb29zR9VXazsw4gPGdyG5zdaGdRXpDjRJcWyMV5uYf1Rs5FKl&show_text=true&width=500&is_preview=true" width="500" height="559" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="a-row">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fposts%2Fpfbid0J582hnH2sTuZigJSfDEi5F2pjQtkrARnPMLAY7MgcoZWszT6RPsBE7PQAgy98ZCQl&show_text=true&width=500&is_preview=true" width="500" height="457" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="a-row">
+            <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fposts%2Fpfbid0zXPgsu17xuEXtZwHQ41Faw5TXL9pEBMjWXhdVHUpHiF9ZEHfR9YMLbDTKRJ7dVyul&show_text=true&width=500&is_preview=true"
+                width="500" height="715" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- Instagram post -->
+    <!-- <div class="holkee-s-wrap holkee-ig-post">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Instagram post</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-row">
+            <blockquote class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/C0l1QjDPSf5/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+                style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                <div style="padding:16px;"> <a
+                        href="https://www.instagram.com/p/C0l1QjDPSf5/?utm_source=ig_embed&amp;utm_campaign=loading"
+                        style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                        target="_blank">
+                        <div style=" display: flex; flex-direction: row; align-items: center;">
+                            <div
+                                style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                            </div>
+                            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                <div
+                                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                </div>
+                                <div
+                                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 19% 0;"></div>
+                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
+                                viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                                xmlns:xlink="https://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                        <g>
+                                            <path
+                                                d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg></div>
+                        <div style="padding-top: 8px;">
+                            <div
+                                style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                在 Instagram 查看這則貼文</div>
+                        </div>
+                        <div style="padding: 12.5% 0;"></div>
+                        <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                            <div>
+                                <div
+                                    style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                </div>
+                                <div
+                                    style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                </div>
+                                <div
+                                    style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                </div>
+                            </div>
+                            <div style="margin-left: 8px;">
+                                <div
+                                    style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                </div>
+                                <div
+                                    style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                </div>
+                            </div>
+                            <div style="margin-left: auto;">
+                                <div
+                                    style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                </div>
+                                <div
+                                    style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                </div>
+                                <div
+                                    style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                            <div
+                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                            </div>
+                            <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                            </div>
+                        </div>
+                    </a>
+                    <p
+                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                        <a href="https://www.instagram.com/p/C0l1QjDPSf5/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                            target="_blank">holkee 台灣官方帳號（@holkee_taiwan）分享的貼文</a></p>
+                </div>
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+            <div class="a-row">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/p/CpCgUViPTE8/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-version="14"
+                    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;"> <a
+                            href="https://www.instagram.com/p/CpCgUViPTE8/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                            target="_blank">
+                            <div style=" display: flex; flex-direction: row; align-items: center;">
+                                <div
+                                    style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                </div>
+                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                    </div>
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding: 19% 0;"></div>
+                            <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
+                                    viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                                    xmlns:xlink="https://www.w3.org/1999/xlink">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                            <g>
+                                                <path
+                                                    d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></div>
+                            <div style="padding-top: 8px;">
+                                <div
+                                    style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                    在 Instagram 查看這則貼文</div>
+                            </div>
+                            <div style="padding: 12.5% 0;"></div>
+                            <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                <div>
+                                    <div
+                                        style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                    </div>
+                                    <div
+                                        style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                    </div>
+                                    <div
+                                        style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                    </div>
+                                </div>
+                                <div style="margin-left: 8px;">
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                    </div>
+                                    <div
+                                        style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                    </div>
+                                </div>
+                                <div style="margin-left: auto;">
+                                    <div
+                                        style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                    </div>
+                                    <div
+                                        style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                    </div>
+                                    <div
+                                        style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                <div
+                                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                </div>
+                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                </div>
+                            </div>
+                        </a>
+                        <p
+                            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                            <a href="https://www.instagram.com/p/CpCgUViPTE8/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                target="_blank">holkee 台灣官方帳號（@holkee_taiwan）分享的貼文</a></p>
+                    </div>
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+            <div class="a-row">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/p/CowmHugvZRE/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-version="14"
+                    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;"> <a
+                            href="https://www.instagram.com/p/CowmHugvZRE/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                            target="_blank">
+                            <div style=" display: flex; flex-direction: row; align-items: center;">
+                                <div
+                                    style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                </div>
+                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                    </div>
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding: 19% 0;"></div>
+                            <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
+                                    viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                                    xmlns:xlink="https://www.w3.org/1999/xlink">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                            <g>
+                                                <path
+                                                    d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></div>
+                            <div style="padding-top: 8px;">
+                                <div
+                                    style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                    在 Instagram 查看這則貼文</div>
+                            </div>
+                            <div style="padding: 12.5% 0;"></div>
+                            <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                <div>
+                                    <div
+                                        style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                    </div>
+                                    <div
+                                        style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                    </div>
+                                    <div
+                                        style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                    </div>
+                                </div>
+                                <div style="margin-left: 8px;">
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                    </div>
+                                    <div
+                                        style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                    </div>
+                                </div>
+                                <div style="margin-left: auto;">
+                                    <div
+                                        style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                    </div>
+                                    <div
+                                        style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                    </div>
+                                    <div
+                                        style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                <div
+                                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                </div>
+                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                </div>
+                            </div>
+                        </a>
+                        <p
+                            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                            <a href="https://www.instagram.com/p/CowmHugvZRE/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                target="_blank">holkee 台灣官方帳號（@holkee_taiwan）分享的貼文</a></p>
+                    </div>
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+        </div>
+    </div> -->
+
+    
+
+    <!-- facebook video -->
+    <!-- FB 影片寬度高度，我都拔掉了!!!皆由 CSS端 控制 -->
+    <!-- 最多 6 則影片 -->
+    <!-- <div class="holkee-s-wrap holkee-fb-video" id="">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Facebook video</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-row">
+                <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fvideos%2F454543043770567%2F&show_text=false&width=476&t=0"
+                 style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <div class="a-row">
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fvideos%2F1487040822219534%2F&show_text=false&width=560&t=0"
+                    style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <div class="a-row">
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fvideos%2F800762858584094%2F&show_text=false&width=560&t=0"
+                      style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <div class="a-row">
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fvideos%2F785111043623772%2F&show_text=false&width=560&t=0"
+                     style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <div class="a-row">
+                <iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fvideos%2F1116839685992415%2F&show_text=false&width=560&t=0"
+               style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+            <div class="a-row">
+                <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FWeblisher%2Fvideos%2F429820899723983%2F&show_text=false&width=476&t=0"
+              style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- youtube video -->
+    <!-- YT 的影片寬度高度，我都拔掉了!!!皆由 CSS端 控制 -->
+    <!-- 最多 6 則影片 -->
+    <!-- <div class="holkee-s-wrap holkee-yt-video" id="">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Youtube video</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-row">
+                <iframe src="https://www.youtube.com/embed/9H9RgSlE9xw?si=BGaXh5ulvXKw25cA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="a-row">
+                <iframe src="https://www.youtube.com/embed/3xtSr5iIuTo?si=0458AZqcjEdYCA59" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="a-row">
+                <iframe src="https://www.youtube.com/embed/tqNJi3sLbK8?si=c37tiG8KDfZINicb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="a-row">
+                <iframe src="https://www.youtube.com/embed/9H9RgSlE9xw?si=BGaXh5ulvXKw25cA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="a-row">
+                <iframe src="https://www.youtube.com/embed/S9BQK6FVss0?si=tkd6uXCYPvaUDFCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="a-row">
+                <iframe src="https://www.youtube.com/embed/QWdAiRibwwE?si=SSJKm-xvgUvY3LAy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- facebook gallery -->
+    <div class="holkee-s-wrap holkee-fb-gallery">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Facebook gallery</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-photo">  
+                <img src="images/layout_000003/photo_001.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_002.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_003.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_004.png">
+            </div>
+            <div class="a-photo">  
+                <img src="images/layout_000003/photo_005.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_006.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_007.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_008.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_009.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_010.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_001.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_002.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_003.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_004.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_005.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_006.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_007.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_008.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_009.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_010.png">
+            </div>
+        </div>
+    </div>
+    <!-- Instagram gallery -->
+    <div class="holkee-s-wrap holkee-ig-gallery">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Instagram gallery</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_001.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_002.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_003.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_004.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_005.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_006.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_007.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_008.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_009.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_010.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_001.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_002.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_003.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_004.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_005.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_006.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_007.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_008.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_009.png">
+            </div>
+            <div class="a-photo">
+                <img src="images/layout_000003/photo_010.png">
+            </div>
+        </div>
+    </div>
+    
+    <!-- contactus -->
+    <div class="holkee-s-wrap holkee-contactus" id="goThe06">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Contact Us</h3>
+        </div>
+        <div class="h-mid-cont">
+            <div class="form-style">
+                <h4 class="sub-title">Please leave your message</h4>
+                <form>
+                    <div class="a-row">
+                        <input class="default user" type="text" placeholder="Your name" value="">
+                    </div>
+                    <div class="a-row">
+                        <input class="default" type="password" placeholder="Email" value="">
+                    </div>
+                    <div class="a-row">
+                        <!-- 錯誤 input + has-error -->
+                        <input class="default has-error " type="text" placeholder="Phone" value="">
+                        <!-- 出現錯誤訊息 -->
+                        <p class="h-text-reminder h-c-red">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            error
+                        </p>
+                    </div>
+                    <div class="a-row">
+                        <textarea class="default" placeholder="White your message"></textarea>
+                    </div>
+                    <div class="privacy-policy">
+                        <p class="policy-title">Privacy Policy</p>
+                        <p class="text">Welcome to the website of the holkee. In order to help you gain a better understanding of holkee privacy protection and information security policies, please read the following carefully so as to protect your rights when accessing holkee services and information.
+
+Welcome to the website of the holkee. In order to help you gain a better understanding of holkee privacy protection and information security policies, please read the following carefully so as to protect your rights when accessing holkee services and information.</p>
+                    </div>
+                    <!-- 收集個資，要提醒隱私權 -->
+                    <!-- 拉到底才能勾選，且勾選才能送出 -->
+                    <div class="txn-checkbox">
+                        <label class="h-control h-control--checkbox">
+                            I have read and agree to the <a href="single_page_PrivacyPolicy.html" target="_blank">Privacy
+                                Policy </a>of use.
+                            <input type="checkbox" disabled>
+                            <div class="h-control__indicator"></div>
+                        </label>
+                    </div>
+    
+                    <!-- 送出按鈕上方顯示「防詐騙提醒文字」 -->
+                    <div class="text-note">
+                        <p>提醒您，凡遇不明電話及疑似詐騙，請您務必提高警覺。</p>
+                    </div>
+                    <!-- 拋資料後的錯誤訊息 -->
+                    <div class="text-note bg-note-red">
+                        <p><span class="h-c-red">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>系統連線失敗，請稍後再試
+                        </p>
+                    </div>
+                    <div class="h-btn">
+                        <a class="h-btn-primary-xl h-btn-disabled" href="#">
+                            <span class="">Submit</span>
+                        </a>
+                    </div>
+                </form>
+    
+                <!-- 送出表單出現下方結果 -->
+                <div class="submit-text">
+                    <p>Thank You For You Message!</p>
+                </div>
+    
+            </div>
+            <div class="company-info">
+                <h4 class="sub-title">Company Information</h4>
+                <ul class="list">
+                    <li class="add">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>5F., No.63, Sec. 3, Nanjing E. Rd., Jhongshan Dirstrict, Taipei City 104, Taiwan</p>
+                    </li>
+                    <li class="photo">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>02-2502-1980</p>
+                    </li>
+                    <li class="time">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>09:00 AM - 06:00 PM</p>
+                    </li>
+                    <li class="mail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><a href="#">marketing@weblisher.com.tw</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="google-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14457.851622353317!2d121.538222!3d25.052295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdf952f1991%3A0xd36da118137745e!2z5aiB5pet5pW45pOa56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1711708904542!5m2!1szh-TW!2stw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- 有出現警標語的頁面 footer 都要 + s-negative-space -->
+    <footer class="holkee-footer-wrap">
+        <div class="h-mid-cont">
+            <div class="logo">
+                <img src="images/logo_test.png" alt="品牌官網 | logo">
+            </div>
+            <ul class="link">
+                <li>
+                    <a href="#">服務條款</a>
+                </li>
+                <li>
+                    <a target="_blank" href="single_page_PrivacyPolicy.html">隱私權條款</a>
+                </li>
+                <!-- <li>
+                    <a href="">退換貨及退款須知</a>
+                </li>
+                <li>
+                    <a href="">付款及運送方式</a>
+                </li> -->
+            </ul>
+            <ul class="follow-us">
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyrights">Copyright© 2024 網站名稱 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 點選商品出現 -->
+    <!-- 有 BUG >< 不能點選，且數字 1/10 沒出來 -->
+    <section id="popup-product-info" class="h-white-popup mfp-hide h-popup-width-m">
+        <!-- 有出現警標語的頁面 popup 要 + s-negative-space -->
+        <div class="h-popup-container s-negative-space">
+            <!-- product -->
+            <div class="h-product-cont">
+                <!-- product photo -->
+                <div class="h-products-photo">
+                    <!--  products photo slides -->
+                    <div class="holkee-products-main-swiper">
+                        <div class="swiper coverSwiperLarge" id="coverSwiperLarge">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div thumbsSlider="" class="swiper coverSwiper" id="coverSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            
+                <!-- product info -->
+                <div class="h-products-info">
+                    <div class="h-text-wrap">
+                        <h3 class="main-title">Product aaa</h3>
+                    </div>
+                
+                    <p class="price">
+                        <span class="discount"><span class="h-price h-p-twd"></span>160-220</span>
+                        <span class="original"><span class="h-price h-p-twd"></span>15,359-30,999</span>
+                    </p>
+                    <!-- discount -->
+                    <ul class="discount-contents">
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 200 amount get 10 OFF storewide</span>
+                        </li>
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 300 amount get 20 OFF storewide</span>
+                        </li>
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 500 amount FREE shipping storewide</span>
+                        </li>
+                        <li class="more">
+                            Remaining <span>2</span> activities<a href="#">View all</a>
+                        </li>
+                    </ul>
+                
+                
+                    <p class="shop-label">Choose primary specification</p>
+                    <!-- 選完主規格，才出現副規格 -->
+                    <!-- 選中 + selected -->
+                    <div class="shop-spec">
+                        <a href="#">AAA</a>
+                        <a class="selected" href="#">BBB</a>
+                        <a href="#">CCC-asas</a>
+                        <a href="#">DDDDDDDD</a>
+                        <a href="#">dadjaioe</a>
+                    </div>
+                
+                    <p class="shop-label">Choose sub specification</p>
+                    <div class="shop-spec">
+                        <a href="#">XL</a>
+                        <a class="selected" href="#">XXL</a>
+                    </div>
+                
+                    <table class="shop-status" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <th class="l-label">Availability</th>
+                                <td>In stock</td>
+                            </tr>
+                            <tr>
+                                <th class="l-label">Condition</th>
+                                <td>New</td>
+                            </tr>
+                            <tr>
+                                <th class="l-label">Delivery date description</th>
+                                <td>16516</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                
+                
+                    <p class="shop-label">Please choose the quantity</p>
+                    <div class="quantity-cont">
+                        <div class="select-quantity" data-radium="true">
+                            <input name="quantity" type="number" class="qty-input" value="1">
+                            <div class="qty-adjust" data-radium="true">
+                                <span id="plus-one" class="plus"><i class="fa fa-plus"></i></span>
+                                <span id="minus-one" class="minus minus_none"><i class="fa fa-minus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <p class="stock">90 pieces available</p>
+                
+                    <div class="h-btn h-both-btn ">
+                        <a class="h-btn-primary-xl popup-link" href="#popup-addcart">
+                            <span class="">Add to cart</span>
+                        </a>
+                        <a class="h-btn-primary-xl h-btn-bg-red" href="shop_website_shop_purchase.html">
+                            <span class="">Buy now</span>
+                        </a>
+                        <a class="btn-car" title="View cart" href="shop_website_shop_ShoppingCart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nb">5</span>
+                        </a>
+                    </div>
+                    <div class="h-btn h-both-btn">
+                        <a class="h-btn-primary-xl h-btn-disabled" href="#">
+                            <span class="">加入購物車</span>
+                        </a>
+                        <a class="h-btn-primary-xl h-btn-bg-red h-btn-disabled" href="shop_website_shop_purchase.html">
+                            <span class="">直接購買</span>
+                        </a>
+                    
+                        <a href="shop_website_shop_ShoppingCart.html" class="btn-car" title="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <!-- <span class="nb">5</span> -->
+                        </a>
+                    </div>
+                    <div class="h-btn h-btn-notify">
+                        <a class="h-btn-primary-xl h-btn-bg-darkblue popup-link" href="#popup-addcart-tellme">
+                            <span class="">貨到通知</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            
+                <!-- product 這塊塞 html 編輯器  -->
+                <div class="h-products-html">
+                    <img src="images/layout_000003/slider-02.png" width="100%">
+                    <p class="aaa"
+                        style="padding: 15px 0; white-space: pre-wrap; word-break: break-all; word-wrap: break-word;text-align: justify;">商品描述是解釋商品是甚麼以及為什麼值得顧客們購買的營銷元素。商品描述的目的是向顧客們提供有關商品功能和優勢等重要信息,以吸引他們購買該商品。
+
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+            
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                    <div style="margin: 0 auto; padding: 25px 0; text-align: center;">
+                        <style>
+                            p.aaa {
+                                font-size: 15px;
+                                line-height: 1.5;
+            
+                            }
+            
+                            @media all and (max-width: 700px) {
+                                iframe.aaa {
+                                    height: 150px;
+                                }
+            
+                                p.aaa {
+                                    font-size: 13px;
+                                }
+                            }
+                        </style>
+                        <iframe class="aaa" style=" max-width: 560px; display: inline-block;" width="100%" height="315"
+                            src="https://www.youtube.com/embed/YAemjMwoK2U?si=44ED7wIiyM-Y7ov8" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="aaa"
+                        style="padding: 15px 0; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; text-align: justify;">商品描述是解釋商品是甚麼以及為什麼值得顧客們購買的營銷元素。商品描述的目的是向顧客們提供有關商品功能和優勢等重要信息,以吸引他們購買該商品。
+            
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+            
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- popup Add to cart-->
+    <section id="popup-addcart" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">Add to cart</h3>
+                <!-- <p class="text">刪除後將無法恢復！</p> -->
+            </div>
+            <div class="btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>Continue</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>Shopping cart</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- alcohol warning banner -->
+    <section id="popup-warningbanner" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <div class="img-18prohibited">
+                    <img src="images/img_18prohibited.png">
+                </div>
+                <h3 class="main-title">本網站內含成人內容，僅限成人瀏覽</h3>
+                <!-- <p class="text">刪除後將無法恢復！</p> -->
+            </div>
+            <div class="btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>滿 18 歲進入</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>未滿 18 歲</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- popup login 登入-->
+    <section id="popup-login" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">登入</h3>
+                </div>
+                <div class="text-note">
+                    <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        帳號或密碼不正確，請再檢查一下</p>
+                </div>
+    
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="電子郵件或電話號碼" value="">
+                </div>
+                <div class="a-row">
+                    <!-- 錯誤 input + has-error -->
+                    <input class="default has-error" type="password" placeholder="密碼" value="">
+                </div>
+                <p class="text">
+                    <a class="" href="member_manage_forgetpassword_email.html">忘記密碼</a>
+                </p>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>登入</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl" href="#">
+                        <span>以訪客身分繼續操作</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn">
+                    <label class="label-title" for="">
+                        曾於帳號內自行連結社交平台，可選擇使用以下方法登入
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>使用 Google 繼續</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>使用 Facebook 繼續</span>
+                    </a>
+                </div>
+                <p class="text">還不是會員？
+                    <a class="text popup-link" href="#popup-register-mail">成為會員</a>
+                </p>
+            </form>
+            <!-- <div class="h-btn">
+                    <a class="h-btn-primary-line-xl" href="#">
+                        <span>取消</span>
+                    </a>
+                </div> -->
+        </div>
+    </section>
+    
+    <!-- popup register mail 註冊 -->
+    <section id="popup-register-mail" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <!-- <div class="text-note">
+                        <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            帳號或密碼不正確，請再檢查一下</p>
+                    </div> -->
+                <ul class="top-tab">
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="電子郵件" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="密碼" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="確認密碼" value="">
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>註冊</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    
+    <!-- popup register phone 註冊 -->
+    <!-- 1 -->
+    <section id="popup-register-phone" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <!-- <div class="text-note">
+                            <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                                帳號或密碼不正確，請再檢查一下</p>
+                        </div> -->
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <label class="label-title" for="">
+                        為確保是你本人，我們將會寄送一封「驗證簡訊」到你的手機。
+                    </label>
+                    <div class="phone-country">
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="">
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                            <ul class="dropdown-list" style="display: none;">
+                                <li><a class="icon icon_tw"></a></li>
+                                <li><a class="icon icon_my"></a></li>
+                                <li><a class="icon icon_ph"></a></li>
+                                <li><a class="icon icon_jp"></a></li>
+                                <li><a class="icon icon_hk"></a></li>
+    
+                                <li><a class="icon icon_mo"></a></li>
+                                <li><a class="icon icon_id"></a></li>
+                                <li><a class="icon icon_th"></a></li>
+                                <li><a class="icon icon_vn"></a></li>
+                                <li><a class="icon icon_sg"></a></li>
+    
+                                <li><a class="icon icon_kr"></a></li>
+                                <li><a class="icon icon_us"></a></li>
+                                <li><a class="icon icon_in"></a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+    
+                <!-- h-btn-disabled -->
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl popup-link" href="#popup-register-phone-2">
+                        <span>寄送驗證碼</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- 2 -->
+    <section id="popup-register-phone-2" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <div class="text-note">
+                    <p>
+                        <span class="h-c-green"><i class="fa-solid fa-circle-check"></i></span>已寄送驗證簡訊
+                    </p>
+                </div>
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <label class="label-title" for="">
+                        為確保是你本人，我們將會寄送一封「驗證簡訊」到你的手機。
+                    </label>
+                    <div class="phone-country">
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="0988 000 123">
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                            <ul class="dropdown-list" style="display: none;">
+                                <li><a class="icon icon_tw"></a></li>
+                                <li><a class="icon icon_my"></a></li>
+                                <li><a class="icon icon_ph"></a></li>
+                                <li><a class="icon icon_jp"></a></li>
+                                <li><a class="icon icon_hk"></a></li>
+    
+                                <li><a class="icon icon_mo"></a></li>
+                                <li><a class="icon icon_id"></a></li>
+                                <li><a class="icon icon_th"></a></li>
+                                <li><a class="icon icon_vn"></a></li>
+                                <li><a class="icon icon_sg"></a></li>
+    
+                                <li><a class="icon icon_kr"></a></li>
+                                <li><a class="icon icon_us"></a></li>
+                                <li><a class="icon icon_in"></a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="請輸入驗證碼" value="">
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+    
+    
+                <div class="h-p-top a-row">
+                    <!-- 倒數時間到前要 + h-btn-disabled 變灰色按鈕 -->
+                    <!-- <a class="h-btn-primary-xl h-btn-disabled" href="#">
+                            <span>重新寄送驗證碼(3:08)</span>
+                        </a> -->
+                    <a class="h-btn-primary-xl popup-link" href="#popup-register-phone-3">
+                        <span>重新寄送驗證碼</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- 3 -->
+    <!-- 手機驗證成功就不給選國旗 -->
+    <section id="popup-register-phone-3" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <div class="text-note">
+                    <p>
+                        <span class="h-c-green"><i class="fa-solid fa-circle-check"></i></span>手機驗證成功
+                    </p>
+                </div>
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <label class="label-title" for="">
+                        為確保是你本人，我們將會寄送一封「驗證簡訊」到你的手機。
+                    </label>
+                    <div class="phone-country">
+                        <!-- 手機驗證完成 + disabled -->
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="0988 000 123" disabled>
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="密碼" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="確認密碼" value="">
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+    
+    
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>註冊</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+
+
+    </div>
+    <!-- container END-->
+
+    <!-- Pushy JS -->
+    <script src="mobilemenu/pushy.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiperA = new Swiper("#swiperA", {
+            cssMode: true,
+            // autoplay: true,
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        var swiperB = new Swiper('#swiperB', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints:{
+                600:{
+                    slidesPerView:3,
+                    spaceBetween:25
+                },
+                800: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiperC = new Swiper('#swiperC', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints:{
+                600:{
+                    slidesPerView:3,
+                    spaceBetween:25
+                },
+                800: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper1 = new Swiper("#coverSwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper("#coverSwiperLarge", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+</body>
+
+</html>

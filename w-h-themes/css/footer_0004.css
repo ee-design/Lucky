@@ -1,0 +1,27 @@
+.holkee-footer-wrap .h-mid-cont {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.holkee-footer-wrap .logo, .holkee-footer-wrap ul.info {
+  display: none;
+}
+.holkee-footer-wrap p.copyrights {
+  text-align: right;
+}
+@media all and (max-width: 992px) {
+  .holkee-footer-wrap ul.follow-us {
+    text-align: left;
+  }
+  .holkee-footer-wrap p.copyrights {
+    padding-top: 10px;
+  }
+}
+@media all and (max-width: 768px) {
+  .holkee-footer-wrap ul.follow-us {
+    flex: 100%;
+    padding-top: 20px;
+  }
+  .holkee-footer-wrap p.copyrights {
+    text-align: left;
+  }
+}/*# sourceMappingURL=footer_0004.css.map */

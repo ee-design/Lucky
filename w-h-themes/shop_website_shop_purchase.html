@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>holkee 購物網站 - 多頁式 - Shop - 訂購資訊</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" type="text/css" />
+
+    <!-- CSS main 為固定，style 為主題風格-->
+    <link rel="stylesheet" href="css/holkee_website_main.css" type="text/css" />
+    
+    <!-- header -->
+    <link rel="stylesheet" href="css/header_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/header_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0004.css" type="text/css" /> -->
+    
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/footer_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0004.css" type="text/css" /> -->
+    
+    <!-- 主題 layout -->
+    <link rel="stylesheet" href="css/layout_000016.css" type="text/css" />
+    
+    <!-- 配色 color -->
+    <link rel="stylesheet" href="css/color_0003.css" type="text/css" />
+
+    <!-- font family -->
+    <!-- 字型要放後面，因為有的自行預設行高跟別人不同，有調整間距 -->
+    <link rel="stylesheet" href="css/font_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/font_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0004.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0005.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0006.css" type="text/css" /> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Pushy CSS -->
+    <!-- shop_style_one -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+    <script type="text/javascript">
+        
+        $(function () {
+            // popup
+            $('.popup-link').magnificPopup({
+                removalDelay: 300,
+                mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- container 往左推-->
+    <div id="container">
+
+        <!-- header -->
+        <header class="holkee-header-wrap">
+            <div class="h-mid-cont">
+                <div class="logo">
+                    <img src="images/logo_test.png" alt="alt 這需自動幫帶入網站標題 + logo">
+                </div>
+            </div>
+        </header>
+
+        <!-- shop -->
+        <div class="holkee-s-wrap holkee-shoppingcart">
+            <div class="h-text-wrap">
+                <h3 class="main-title">訂購資訊</h3>
+            </div>
+            <div class="h-mid-cont">
+                <div class="detail-hide">
+                    <form class="form-table product-list no-check">
+                        <h5 class="sub-title">商品資訊</h5>
+                        <div class="a-row bg-title">
+                            <div class="w4 order-photo">
+                                <p>商品名稱</p>
+                            </div>
+                            <div class="w1">
+                                <p>商品供應</p>
+                            </div>
+                            <div class="w1">
+                                <p>數量</p>
+                            </div>
+                            <div class="w1 s-price">
+                                <p>小計</p>
+                            </div>
+                        </div>
+                        <div class="a-row">
+                            <div class="w4 order-photo">
+                                <div class="photo">
+                                    <img src="images/img_0003.png" alt="">
+                                </div>
+                                <p class="product-name">
+                                    <a href="#" target="_blank">Product aaa | GILOBABY Robot Toys for Girls, Rechargeable Remote Control Robot Toy for Kids, Programmable RC Robots with
+                                    LED Eyes, Flexible Head & Arms, Dance Moves, Music, Birthday Gifts for Girls Ages 3+ Years
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="w1">
+                                <p>現貨</p>
+                            </div>
+                            <div class="w1">
+                                <!-- 這邊增加了手機才顯示的數量 -->
+                                <p><span class="mob-show">數量</span>1</p>
+                            </div>
+                            <div class="w1 s-price">
+                                <p>
+                                    <span class="h-price h-p-twd"></span>
+                                    440
+                                </p>
+                            </div>
+                        </div>
+                        <div class="a-row">
+                            <div class="w4 order-photo">
+                                <div class="photo">
+                                    <img src="images/img_0005.png" alt="">
+                                </div>
+                                <p class="product-name">
+                                    <a href="#" target="_blank">MIT 日常圓領側開岔短版上衣 | MIT 台灣製造</a>
+                                    <span>
+                                        <span class="h-price h-p-twd"></span>
+                                        440
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="w1">
+                                <p>現貨+預購</p>
+                            </div>
+                            <div class="w1">
+                                <p><span class="mob-show">數量</span>15000</p>
+                            </div>
+                            <div class="w1 s-price">
+                                <p>
+                                    <span class="h-price h-p-twd"></span>
+                                    120,000,000
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form class="form-style purchase-form">
+                        <div class="a-row fl line-dashed">
+                            <label class="label-title" for="">小計</label>
+                            <div class="text-info">
+                                <p class="h-c-red">
+                                    <span class="h-price h-p-twd"></span>
+                                    1,440
+                                </p>
+                            </div>
+                        </div>
+                        <div class="a-row fl line-dashed">
+                            <label class="label-title" for="">全館活動</label>
+                            <div class="text-info">
+                                <p>
+                                    -
+                                    <span class="h-price h-p-twd"></span>
+                                    50
+                                </p>
+                                <p class="f-ss h-c-blue">全館滿 500 金額，折抵 50 元</p>
+                            </div>
+                        </div>
+                        <div class="a-row fl line-dashed">
+                            <div class="coupon">
+                                <label class="label-title" for="">優惠券</label>
+                            </div>
+                            <div class="text-info">
+                                <p>
+                                    -
+                                    <span class="h-price h-p-twd"></span>
+                                    220
+                                </p>
+                                <p class="f-ss">周年慶滿500打九折</p>
+                            </div>
+                        </div>
+                        
+                        <div class="a-row fl line-dashed">
+                            <label class="label-title" for="">運費</label>
+                            <div class="text-info">
+                                <p>
+                                    <span class="h-price h-p-twd"></span>
+                                    60
+                                </p>
+                                <p class="f-ss">綠界 7-11 取貨付款</p>
+                            </div>
+                        </div>
+
+                        <div class="a-row">
+                            <label class="label-title" for="">備註</label>
+                            <div class="text-info">
+                                <span class="f-ss">管理員可代收 / 方便聯絡時間</span>
+                            </div>
+                        </div>
+
+                        <div class="a-row fl total-amount">
+                            <label class="label-title" for="">總金額</label>
+                            <div class="text-info">
+                                <p class="h-c-red">
+                                    <span class="h-price h-p-twd"></span>
+                                    1,440
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <a class="show-more" href="#">
+                    顯示全部
+                </a>
+                <form class="form-style purchase-form">
+
+                    <h5 class="sub-title">付款方式</h5>
+                    <div class="a-row">
+                        <label class="label-title" for="">請選擇您的付款方式</label>
+                        <div class="h-the-select">
+                            <select name="">
+                                <option value="" selected="">綠界信用卡</option>
+                                <option value="">現金</option>
+                                <option value="">綠界信用卡</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    <h5 class="sub-title">購買人資訊</h5>
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 真實姓名</label>
+                        <div>
+                            <input class="default w300" type="text" placeholder="" value="">
+                            <p class="h-text-reminder">務必正確輸入購買人姓名確保正確送達。</p>
+                        </div>
+                    </div>
+
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 聯絡信箱</label>
+                        <div>
+                            <input class="default" type="text" placeholder="" value="">
+                            <p class="h-text-reminder"><span class="h-c-red">此電子郵件將作為會員註冊帳號使用</span>，訂購完成後，您會收到訂單相關及帳號啟用通知信。</p>
+                        </div>
+                    </div>
+
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 聯絡電話</label>
+                        <div>
+                            <input class="default" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+
+                    <!-- 自訂欄位：最多可以新增 3 組 -->
+                    <!-- 可勾選 必填/非必填 -->
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 帳號後五碼</label>
+                        <div>
+                            <input class="default" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> LINE ID</label>
+                        <div>
+                            <input class="default" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <label class="label-title" for="">其他想說的話</label>
+                        <div>
+                            <input class="default" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+                    <!-- 自訂欄位 End -->
+
+                    <h5 class="sub-title">收件人資訊
+                        <a class="f-ss popup-link" href="#popup-add_Shippinginfo">選擇常用收件資訊</a>
+                    </h5>
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 取貨門市</label>
+                        <!-- 尚未選擇門市 -->
+                        <div>
+                            <a class="h-btn-primary-m" href="#">
+                                <span class="">選擇門市</span>
+                            </a>
+                            <div class="result-text">
+                                <p class="h-c-blue">新店門市</p>
+                            </div>
+
+                        <!-- 已選擇門市 -->
+                            <a class="h-btn-primary-line-m" href="#">
+                                <span class="">重新選擇</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="txn-checkbox">
+                        <label class="h-control h-control--checkbox">
+                            同購買人
+                            <input type="checkbox">
+                            <div class="h-control__indicator"></div>
+                        </label>
+                    </div>
+
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 收件人姓名</label>
+                        <div>
+                            <input class="default w300" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 手機號碼</label>
+                        <div>
+                            <input class="default w300" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <label class="label-title" for="">聯絡電話</label>
+                        <div>
+                            <input class="default" type="text" placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 國家</label>
+                        <div class="h-the-select">
+                            <select name="">
+                                <option value="" selected="">請選擇</option>
+                                <option value="">台灣</option>
+                                <option value="">日本</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 郵遞區號</label>
+                        <div>
+                            <input class="default w200" type="text" placeholder="郵遞區號" value="">
+                        </div>
+                    </div>
+                    <div class="a-row order-add">
+                        <label class="label-title" for=""><span class="h-c-red">*</span> 地址</label>
+                        <div>
+                            <input class="default" type="text" placeholder="Address Line 1" value="">
+                            <input class="default" type="text" placeholder="Address Line 2" value="">
+                        </div>
+                    </div>
+
+                    <div class="txn-checkbox">
+                        <label class="h-control h-control--checkbox">
+                            儲存這個收件資訊
+                            <input type="checkbox">
+                            <div class="h-control__indicator"></div>
+                        </label>
+                    </div>
+                    <div class="a-row fl total-amount">
+                        <label class="label-title" for="">總金額</label>
+                        <div class="text-info">
+                            <p class="h-c-red">
+                                <span class="h-price h-p-twd"></span>
+                                1,440
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="txn-checkbox">
+                        <label class="h-control h-control--checkbox">
+                            我已詳閱並同意賣家的 <a href="#" target="_blank">退換貨及退款須知</a>、<a href="#" target="_blank">付款及運送方式</a>、<a href="#"
+                                target="_blank">服務條款</a>、<a href="#" target="_blank">隱私權政策</a>。
+                            <input type="checkbox">
+                            <div class="h-control__indicator"></div>
+                        </label>
+                    </div>
+
+                    <!-- 拋資料後的錯誤訊息 -->
+                    <div class="text-note bg-note-red">
+                        <p><span class="h-c-red">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            會員帳號已存在，請登入會員或使用其他聯絡信箱購買
+                            <!-- 系統連線失敗，請稍後再試 -->
+                        </p>
+                    </div>
+                    
+                    <div class="h-btn h-both-btn">
+                        <a class="h-btn-primary-xl" href="#">
+                            <span class="">確認訂購</span>
+                        </a>
+                        <a class="h-btn-primary-line-xl" href="shop_website_shop_ShoppingCart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                </form>
+
+                
+            </div>
+        </div>
+    
+
+
+    <!-- 常用收件資訊 -->
+    <section id="popup-add_Shippinginfo" class="h-white-popup mfp-hide h-popup-width-l">
+        <!-- product -->
+        <div class="h-popup-container h-customer-list">
+            <div class="h-products-info">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">選擇常用收件資訊</h3>
+                </div>
+            </div>
+            <form class="form-table">
+                <div class="a-row bg-title">
+                    <div class="w1">
+                        <p>姓名</p>
+                    </div>
+                    <div class="w1">
+                        <p>手機號碼</p>
+                    </div>
+                    <div class="w2">
+                        <p>地址</p>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <div class="w1">
+                        <div class="txn-radio">
+                            <div class="h-txn-radio">
+                                <label class="h-control h-control--radio">Eikiy Chang
+                                    <input type="radio" name="radio2">
+                                    <div class="h-control__indicator"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <p>0988-000123</p>
+                    </div>
+                    <div class="w2">
+                        <p>888 地球地瓜村節瓜巷弄</p>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <div class="w1">
+                        <div class="h-txn-radio">
+                            <label class="h-control h-control--radio">Kafka Shiue
+                                <input type="radio" name="radio2">
+                                <div class="h-control__indicator"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <p>0988-000123</p>
+                    </div>
+                    <div class="w2">
+                        <p>3.14 月球哈密瓜村之日本島櫻花巷</p>
+                    </div>
+                </div>
+            </form>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span class="">確認</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span class="">取消</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    </div>
+    <!-- container END-->
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.holkee-footer-wrap {
+  .h-mid-cont {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .logo,
+  ul.info,
+  ul.link {
+    display: none;
+  }
+  ul.follow-us {
+    margin-left: initial;
+    padding-top: initial;
+  }
+  p.copyrights {
+    flex: initial;
+    margin-left: auto;
+  }
+  @media all and (max-width: 576px) {
+    p.copyrights {
+      flex: 100%;
+      text-align: left;
+    }
+  }
+}

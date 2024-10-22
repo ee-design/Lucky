@@ -1,0 +1,2489 @@
+// radius
+$radius-s: 4px;
+$radius-l: .55rem;
+
+// font size
+$h-f-size-xxl: 1.625rem; //26px
+$h-f-size-xl: 1.25rem; //20px
+$h-f-size-x: 1.125rem; //18px
+$h-f-size-l: 0.938rem; //15px
+$h-f-size-m: 0.875rem; //14px
+$h-f-size-s: 0.813rem; //13px
+$h-f-size-xs: 0.75rem; //12px
+$h-f-size-ss: 0.688rem; //11px
+
+$min-w:320px;
+
+
+// 突出陰影
+@mixin embossed-xl {
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+  border: #d1d9e6 .0625rem solid;
+}
+@mixin embossed-regular {
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  border: #d1d9e6 .0625rem solid;
+}
+@mixin debossed-regular {
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+  border: #d1d9e6 .0625rem solid;
+}
+// img
+@mixin img-default-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//btn style 實心
+@mixin h-btn-solid {
+  font-size: $h-f-size-l;
+  border-radius: $radius-s;
+}
+
+//btn style 框線
+@mixin h-btn-line {
+  font-size: $h-f-size-l;
+  border-radius: $radius-s;
+}
+
+// 跟著小標下的說明描述
+// description
+.h-text-description{
+  font-size: $h-f-size-m;
+  line-height: 1.5;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+  }
+}
+// reminder
+.h-text-reminder{
+  font-size: $h-f-size-m;
+  line-height: 1.5;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+  }
+}
+
+
+// 按鈕-XL
+.h-btn-primary-xl {
+  @include h-btn-solid;
+  font-weight: bold;
+  height: 50px;
+  @media all and (max-width: 576px) {
+    height:45px;
+    font-size: $h-f-size-m;
+    min-width: 148px;
+  }
+}
+.h-btn-primary-line-xl {
+  @include h-btn-line;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+  @media all and (max-width: 576px) {
+    height:45px;
+    font-size: $h-f-size-m;
+    min-width: 148px;
+  }
+}
+
+// 按鈕-l
+.h-btn-primary-l {
+  @include h-btn-solid;
+  font-size: $h-f-size-m;
+  font-weight: bold;
+  height: 46px;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+  }
+}
+// 按鈕-m
+.h-btn-primary-m {
+  @include h-btn-solid;
+  font-size: $h-f-size-s;
+  font-weight: bold;
+  height: 35px;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-xs;
+  }
+}
+
+.h-btn-primary-line-m {
+  @include h-btn-line;
+  font-size: $h-f-size-m;
+  font-weight: bold;
+  height: 35px;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-xs;
+  }
+}
+
+article.text-terms {
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+  }
+}
+.h-the-select {
+  border-radius: $radius-l;
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 15px;
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    background: url(../images/svg/arr_down_k.svg) center center no-repeat;
+    background-size: contain;
+    font-weight: 900;
+    pointer-events: none;
+  }
+
+  select {
+    width: 100%;
+    height: 46px;
+    font-size: $h-f-size-m;
+    border-radius: $radius-l;
+    line-height: 46px;
+    background: #e6e7ee;
+    @include embossed-regular;
+    
+    @media all and (max-width: 576px) {
+      font-size: $h-f-size-s;
+      line-height: 40px;
+      height: 40px;
+    }
+  }
+}
+
+input.default{
+  line-height: 44px;
+  @media all and (max-width: 576px) {
+    line-height: 40px;
+  }
+}
+
+input.default, 
+textarea.default {
+  @include debossed-regular;
+  background:transparent;
+  height: 46px;
+  font-size: $h-f-size-l;
+  border-radius: $radius-l;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+    height: 40px;
+  }
+}
+
+textarea.default {
+  line-height: 1.5;
+}
+
+
+// both btn
+.h-both-btn {
+  align-items: center;
+  padding:25px 0 15px 0;
+  a{
+    margin:2.5px 10px 2.5px 0;
+  }
+}
+
+// switch
+.switch-type {
+  .switchbutton {
+    height: 22px;
+    border-radius: 22px;
+    &:before {
+      content: "";
+      width: 42px;
+      height: 22px;
+      border-radius: 22px;
+    }
+    &:after {
+      left: 2px;
+      top: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 18px;
+    }
+  }
+}
+
+// 內容最大寬度
+@mixin max-box-width {
+  width: calc(100% - 40px);
+  max-width: 1090px;
+  min-width:$min-w;
+  @media all and (max-width: 576px) {
+    margin: 25px auto;
+  }
+}
+// shadow
+
+// 固定白底圓角
+@mixin bg-box-w{
+  border-radius: $radius-s;
+}
+
+
+// list
+.note-list{
+  font-size: $h-f-size-l;
+  line-height: 1.5;
+}
+
+// control
+.h-control {
+  min-width: 70px;
+  font-size:$h-f-size-m;
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+  }
+}
+
+.h-control__indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: $radius-s;
+}
+
+.h-control--radio {
+    .h-control__indicator {
+    &:after {
+      left: calc(50% - 2.5px);
+      top: calc(50% - 2.5px);
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.h-mid-content.form-style {
+  @include embossed-xl;
+  margin: 30px auto 30px auto;
+  max-width:1320px;
+  width: calc(100% - 60px);
+  @media all and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+.h-mid-cont-transparent {
+  max-width:1320px;
+  width: calc(100% - 60px);
+  @media all and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+
+.menu-btn {
+  span {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    &::after {
+      width: 45px;
+      line-height: 45px;
+    }
+  }
+}
+
+.pushy {
+  a {
+    font-size: $h-f-size-x;
+  }
+  ul{
+    &:first-child {
+      margin-top: 30px;
+    }
+    li a {
+      padding-left: 20px;
+    }
+  }
+}
+
+
+// pushy
+.pushy-submenu>ul {
+  font-size:$h-f-size-s;
+  li.pushy-link {
+    font-size: $h-f-size-l;
+  }
+}
+
+
+.pushy-submenu button {
+  font-size: 1rem;
+}
+
+
+// header
+.holkee-header-wrap{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  .menu{
+    li {
+      padding:0;
+      margin:0 5px 0 0;
+      p{
+        font-size: $h-f-size-l;
+
+        a {
+          border-radius: $radius-s;
+          padding:10px 20px;
+          display:block;
+        }
+      }
+    }
+  }
+  .h-header-tools {
+    li{
+      a{
+        width: 40px;
+        height: 40px;
+        align-content: center;
+      }
+    }
+    .dropdown-menu {
+      .sub-list {
+        border-radius: $radius-s;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    p{
+      font-size: $h-f-size-s;
+    }
+  }
+}
+// holkee footer
+.holkee-footer-wrap {
+  padding:30px;
+  padding-bottom:0;
+  .h-mid-cont {
+    max-width: 1320px;
+  }
+
+  .logo {
+    width: 110px;
+    color: #7332c1;
+  }
+
+  ul.link,
+  ul.info {
+    li {
+      font-size: $h-f-size-m;
+    }
+  }
+
+  ul.follow-us {
+    li {
+      a {
+        font-size: $h-f-size-xl;
+      }
+    }
+  }
+
+  .styled-select select {
+    font-size: $h-f-size-m;
+  }
+
+  p.copyrights {
+    font-size: $h-f-size-ss;
+  }
+
+
+  @media all and (max-width: 576px) {
+    .h-mid-cont {
+      padding:24px 0;
+    }
+    .logo {
+      width: 80px;
+    }
+
+    ul.link, 
+    ul.info {
+      padding-bottom: 0;
+      li {
+        font-size: $h-f-size-s;
+      }
+    }
+
+    ul.follow-us {
+      // text-align: left;
+
+      li {
+        font-size: $h-f-size-l;
+        a {
+          font-size: $h-f-size-l;
+        }
+      }
+    }
+    p.copyrights {
+      padding-top: 15px;
+      // text-align: left;
+    }
+
+    .styled-select select {
+      font-size: $h-f-size-s;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    padding-bottom:0;
+  }
+}
+
+// photo & text 
+.h-text-wrap{
+  h3.main-title{
+    max-width:1320px;
+    font-weight: bold;
+    font-size: $h-f-size-xxl;
+    position: relative;
+    padding:30px 0;
+    margin:0 auto 30px auto;
+    line-height: 1.25;
+    &::after{
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+    }
+  }
+  .text{
+    line-height: 1.5;
+    font-size: $h-f-size-m;
+    a{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .order-type{
+    border-radius: $radius-s;
+    padding: 5px 10px;
+    font-size: $h-f-size-s;
+    font-weight: initial;
+    margin:2px 10px;
+  }
+  @media all and (max-width: 1400px) {
+    h3.main-title {
+      font-size: $h-f-size-xl;
+    }
+  }
+  @media all and (max-width: 1200px) {
+    h3.main-title {
+      font-size: $h-f-size-xl;
+    }
+  }
+  @media all and (max-width: 768px) {
+    h3.main-title {
+      padding-top: 0px;
+      font-size: $h-f-size-xl;
+    }
+    .text, .note-list{
+      font-size: $h-f-size-m;
+    }
+  }
+  @media all and (max-width: 576px) {
+    h3.main-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+// form
+.form-style{
+  border-radius: $radius-l;
+  label.label-title{
+    font-weight: bold;
+  }
+  form{
+    h4.sub-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 45px 0 20px 0;
+    
+      &:first-child {
+        padding-top: 0;
+      }
+    
+      @media all and (max-width: 576px) {
+        font-size: $h-f-size-x;
+        padding-bottom: 10px;
+      }
+    }
+    &.account{
+      .a-row{
+        p.fl-r{
+          font-size: $h-f-size-m;
+          a{
+            padding: 10px;
+          }
+          &.text-pw{
+            font-size: $h-f-size-s;
+          }
+        }
+        p.source{
+          i{
+            padding-right: 18px;
+            font-size: $h-f-size-xl;
+          }
+        }
+      }
+      .h-btn{
+        padding-top: 30px;
+      }
+      @media all and (max-width: 576px) {
+        .a-row p.fl-r{
+          font-size: $h-f-size-s;
+        }
+      }
+    }
+    &.cancel-form{
+      .default{
+        margin-bottom: 10px;
+      }
+      .h-both-btn{
+        padding: 0;
+      }
+    }
+    &.orderinfo-form{
+      padding: 30px;
+      .top-title{
+        border-radius: $radius-s;
+        padding:10px 20px;
+        min-height: 55px;
+        h4{
+          font-size: $h-f-size-x;
+          font-weight: bold;
+        }
+        .type-tools{
+          p{
+            padding-right: 10px;
+            font-size: $h-f-size-m;
+          }
+          .the-select{
+            select{
+              // min-width: 125px;
+              font-size: $h-f-size-m;
+              height: 35px;
+              line-height: 35px;
+              padding-left: 15px;
+            }
+          }
+          .h-btn-primary-line-m{
+            min-width: initial;
+            padding: 0 15px;
+            font-weight: initial;
+            i{
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+      ul.a-row{
+        padding:15px 20px;
+        li{
+          .label-title{
+            font-weight: initial;
+            font-size: $h-f-size-l;
+          }
+          p.text{
+            padding: 15px 0;
+            font-size: $h-f-size-l;
+          }
+          .result-text{
+            .h-c-blue{
+              font-weight: bold;
+            }
+            input{
+              height: 35px;
+              line-height: 35px;
+              max-width: 200px;
+            }
+          }
+          .result-products, .result-price{
+            flex: 75%;
+            li{
+              padding: 8px 0;
+              .photo{
+                width: 76px;
+                margin-right: 15px;
+                img{
+                  border-radius: $radius-s;
+                }
+              }
+              p{
+                font-size: $h-f-size-m;
+                line-height: 1.5;
+                &.info{
+                  max-width: calc(100% - 200px);
+                }
+                &.price{
+                  margin-left: auto;
+                  text-align: right;
+                }
+                .h-c-blue{
+                  font-size: $h-f-size-s;
+                }
+              }
+              
+            }
+
+          }
+          .result-products{
+            li{
+              &:last-child{
+                border: none;
+              }
+            }
+          }
+          .result-price{
+            div{
+              padding: 8px 0;
+              display: flex;
+            }
+          }
+          &.total-amount{
+            padding: 10px 0;
+            border-width: 1px 0 1px 0;
+            p{
+              text-align: right;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .both-btn{
+        padding-top: 0;
+      }
+      @media all and (max-width: 768px) {
+        .h-both-btn{
+          padding: 0 15px 25px 15px;
+        }
+      }
+      @media all and (max-width: 576px) {
+        .top-title{
+          h4{
+            font-size: $h-f-size-l;
+          }
+          .type-tools{
+            p, .the-select select{
+              font-size: $h-f-size-s;
+            }
+            
+          }
+        }
+        ul.a-row li{
+          .label-title{
+            font-size: $h-f-size-m;
+            padding: 12px 0;
+          }
+          p.text{
+            padding: 12px 0;
+            font-size: $h-f-size-m;
+          }
+          .result-products li{
+            align-items: self-start;
+            .info, .price{
+              font-size: $h-f-size-s;
+            }
+          }
+        }
+      }
+      @media all and (max-width: 576px) {
+        .top-title{
+          min-height: 50px;
+          padding: 5px 15px;
+        }
+        ul.a-row {
+          padding: 10px 15px 20px 15px;
+          li {
+            .result-products li {
+              .photo{
+                width: 50px;
+                margin-right: 10px;
+              }
+              p.info{
+                max-width: calc(100% - 160px);
+                font-size: $h-f-size-xs;
+              }
+              p{
+                .c-blue{
+                  font-size: $h-f-size-ss;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    label.label-title{
+      font-size: $h-f-size-m;
+    }
+    form{
+      padding:20px;
+      &.cancel-form {
+        padding:5px 20px 20px 20px;
+      }
+    }
+  }
+}
+// 送出表單的文字
+.submit-text {
+  margin-top: 10px;
+  padding:25px 20px;
+  border-radius: $radius-l;
+  @include embossed-regular;
+  p{
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  @media all and (max-width: 576px) {
+    padding: 10px 15px;
+    font-size: $h-f-size-m;
+  }
+}
+.text-note {
+  border-radius: $radius-l;
+  padding:12px 20px;
+  margin-bottom: 10px;
+  @include debossed-regular;
+  p{
+    font-size: $h-f-size-m;
+    line-height: 1.5;
+  }
+  @media all and (max-width: 576px) {
+    padding: 6px 15px;
+    p{
+      font-size: $h-f-size-xs;
+    }
+  }
+}
+// holkee popup - style
+.h-white-popup {
+  border-radius: $radius-l;
+}
+// h-popup-container
+.h-popup-container{
+  .h-text-wrap {
+    h3.main-title{
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// holkee 菸酒
+
+// 預設值 到這 -----
+
+// 版塊開始 -----
+// About us
+.holkee-aboutus{
+  padding:30px;
+  .h-mid-cont{
+    max-width:1320px;
+    padding:0;
+    margin: 0 auto;
+    display: flex;
+    border-radius: $radius-l;
+    @include embossed-xl;
+  }
+  .h-photo-wrap{
+    flex: 40%;
+    padding-right: 20px;
+    
+    img {
+      border-radius: $radius-l 0 0 $radius-l;
+      display: block;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+  .h-text-wrap{
+    flex: 60%;
+    padding: 20px;
+  }
+  @media all and (max-width: 992px) {
+    
+  }
+  @media all and (max-width: 768px) {
+    padding: 24px;
+    .h-mid-cont {
+      flex-direction: column;
+    }
+    .h-photo-wrap {
+      padding-right: 0;
+      img {
+        border-radius: $radius-l $radius-l 0 0;
+      }
+    }
+  }
+}
+// About us - single page
+.holkee-aboutus-single {
+  padding:30px;
+  .h-text-wrap{
+    margin: 0 auto;
+    max-width: 1320px;
+  }
+  .text-info {
+    padding: 20px 20px 40px 20px;
+    margin: 0 auto;
+    .text{
+      line-height: 1.5;
+    }
+    .h-btn{
+      padding-top: 40px;
+    }
+  }
+  .h-mid-cont {
+    width:100%;
+    max-width:1320px;
+    margin: 40px auto;
+    border-radius: $radius-l;
+    @include embossed-xl;
+  }
+
+  .h-photo-wrap {
+    height: 500px;
+    border-radius: $radius-l $radius-l 0 0;
+    @include img-default-cover;
+  }
+
+  @media all and (max-width: 992px) {
+    .h-photo-wrap {
+      height: 300px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .h-mid-cont {
+      .text-info {
+        .text{
+          font-size: $h-f-size-m;
+        }
+      }
+    }
+    .h-photo-wrap {
+      height: 200px;
+    }
+  }
+}
+
+// Grid
+.holkee-grid {
+  .h-btn-banner {
+    min-height: 450px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    &:first-child {
+      background-image: url(../images/img_gird_01.png);
+    }
+
+    &:last-child {
+      background-image: url(../images/img_gird_02.png);
+    }
+  }
+  @media all and (max-width: 1200px) {
+    .h-btn-banner {
+      min-height: 350px;
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-btn-banner {
+      min-height: 250px;
+    }
+  }
+  @media all and (max-width: 768px) {
+    .h-btn-banner {
+      min-height: 200px;
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-btn-banner {
+      min-height: 150px;
+    }
+  }
+}
+// promotion
+.holkee-promotion {
+  padding: 40px 0;
+  .h-mid-cont {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding:0 20px;
+    .h-photo-wrap{
+      background-image: url(../images/img_promotion.png);
+    }
+  }
+  @media all and (max-width: 576px) {
+    padding: 20px 0;
+  }
+}
+
+// privacy policy
+.privacy-policy {
+  .policy-title {
+    font-weight: bold;
+    font-size: $h-f-size-l;
+    padding: 5px 0 10px 0;
+  }
+}
+
+// Contact Us
+.holkee-contactus{
+  padding:30px;
+  h4.sub-title{
+    font-size: $h-f-size-x;
+    font-weight: bold;
+  }
+  .privacy-policy{
+    border-radius: $radius-l;
+    margin:5px 0;
+    font-size: $h-f-size-m;
+    @include debossed-regular;
+    &::-webkit-scrollbar {
+      width:2px;
+    }
+    .text{
+      font-size: $h-f-size-m;
+      line-height: 1.5;
+    }
+  }
+  .h-mid-cont{
+    max-width:1320px;
+    margin:0 auto;
+    column-count: 2;
+    column-gap: 2rem;
+  }
+  .form-style{
+    flex:calc(40% - 30px);
+
+    break-inside: avoid;
+  }
+  
+  .txn-checkbox{
+    margin-bottom: 15px;
+  }
+  .company-info{
+
+    ul.list {
+      padding: 1rem;
+      border-radius: $radius-l;
+      margin-top:5px;
+      @include debossed-regular;
+      li {
+        padding-bottom: 25px;
+        i{
+          width:1rem;
+          top: 5px;
+        }
+        p {
+          padding-left: 35px;
+          position: relative;
+          line-height:1.5;
+        }
+      } 
+    }
+  }
+  .google-map{
+    padding:1rem;
+    margin-top:2rem;
+    border-radius: $radius-l;
+    @include embossed-xl;
+    iframe{
+      padding:1rem;
+      height: 260px;
+      display: block;
+      border-radius:$radius-l;
+      @include debossed-regular;
+    }
+  }
+    
+  @media all and (max-width: 992px) {
+
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .h-mid-cont {
+      column-count: 1;
+    }
+    h4.sub-title {
+      font-size: $h-f-size-l;
+    }
+    .company-info {
+      margin-top: 2rem;
+    }
+
+  }
+  @media all and (max-width: 576px) {
+    width: initial;
+    form{
+      padding: 0;
+    }
+    .google-map{
+      margin-top:24px;
+    }
+  }
+}
+
+// policy
+.holkee-policy{
+  padding:30px;
+  width:100%;
+  .h-mid-cont{
+    max-width: 1320px;
+    margin:0 auto;
+    border-radius: $radius-l;
+    padding: 2rem;
+    @include debossed-regular;
+  }
+  .privacy-policy{
+    width: 100%;
+    .text{
+      line-height: 1.5;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+  }
+  @media all and (max-width: 576px) {
+    .privacy-policy .text { 
+      font-size: $h-f-size-m;
+    }
+  }
+}
+
+// news
+.holkee-news{
+  padding:30px;
+  .h-mid-cont{
+    max-width: 1320px;
+    margin: 0 auto;
+    .a-row{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom:30px;
+      border-radius: $radius-l;
+      @include embossed-xl;
+    }
+    .h-photo-wrap{
+      @include img-default-cover;
+      width: 250px;
+      height: 250px;
+      border-radius: $radius-l 0 0 $radius-l;
+    }
+    .text-info{
+      padding: 25px 30px;
+      flex: calc( 100% - 250px);
+      display: flex;
+      flex-direction: column;
+      h4.sub-title{
+        font-size: $h-f-size-x;
+        font-weight: bold;
+      }
+      .text {
+        font-size:$h-f-size-m;
+      }
+      .date{
+        margin-top: auto;
+        font-size: $h-f-size-xs;
+      }
+    }
+  }
+
+  @media all and (max-width: 992px) {
+    .h-mid-cont{
+      .h-photo-wrap{
+        width: 200px;
+        height: 200px;
+      }
+      .text-info{
+        padding: 15px 25px;
+        flex: calc(100% - 200px);
+        h4.sub-title {
+          font-size: $h-f-size-x;
+        }
+        .text{
+          font-size: $h-f-size-m;
+        }
+        .date{
+          font-size: $h-f-size-ss;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) { 
+    padding:24px;
+    .h-mid-cont{
+      .a-row{
+        margin-bottom:24px;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-mid-cont{
+      .a-row{
+        margin:25px 0;
+      }
+      .h-photo-wrap{
+        width: 125px;
+        height: 150px;
+      }
+      .text-info{
+        padding: 10px 15px;
+        flex: calc(100% - 125px);
+        h4.sub-title {
+          font-size: $h-f-size-m;
+          margin-bottom: 5px;
+          line-height: 1.2;
+        }
+        .text{
+          font-size: $h-f-size-s;
+          line-height: 1.4;
+          -webkit-line-clamp: 3;
+        }
+      }
+    }
+  }
+}
+
+// services
+.holkee-services{
+  padding:30px;
+  .h-text-wrap{
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    max-width: 1320px;
+    width:100%;
+    margin: 0 auto;
+    gap:30px;
+    display: flex;
+    flex-wrap: wrap;
+    .a-row{
+      break-inside: avoid;
+      width: calc((100% / 4) - 30px + 30px / 4);
+      border-radius: $radius-l;
+      @include embossed-xl;
+    }
+    .h-photo-wrap{
+      @include img-default-cover;
+      width:100%;
+      height: 300px;
+      border-radius: $radius-l $radius-l 0 0;
+    }
+    .text-info{
+      padding: 1rem;
+      flex: calc( 100% - 250px);
+      display: flex;
+      flex-direction: column;
+      h4.sub-title{
+        font-size: $h-f-size-x;
+        font-weight: bold;
+      }
+      .text {
+        font-size:$h-f-size-m;
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    .h-mid-cont {
+      .a-row {
+        width: calc((100% / 3) - 30px + 30px / 3);
+        .h-photo-wrap {
+          height:250px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-mid-cont {
+      .a-row {
+        .h-photo-wrap {
+          height:180px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .h-mid-cont {
+      gap:24px;
+      .a-row{
+        width: calc((100% / 2) - 24px + 24px / 2);
+        .text-info{
+          .sub-title{
+            font-size: $h-f-size-l;
+          }
+          .text{
+            font-size: $h-f-size-m;
+          }
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      padding: 0px;
+    }
+    .h-mid-cont {
+      .a-row{
+        flex:100%;
+        max-width:100%;
+        .text-info{
+          .sub-title{
+            font-size: $h-f-size-x;
+          }
+        }
+      }
+    }
+  }
+}
+
+// holkee tools
+.holkee-fb-post, .holkee-ig-post {
+  padding:30px;
+  .h-mid-cont{
+    max-width: 1320px;
+    gap:30px;
+    .a-row {
+      width: calc((100% / 3) - 30px + 30px / 3);
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .h-mid-cont{
+      gap:24px;
+      .a-row {
+        width: calc((100% / 3) - 24px + 24px / 3);
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    .h-mid-cont {
+      .a-row {
+        padding-bottom:0;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      width: initial;
+    }
+    .h-mid-cont {
+      width: initial;
+    }
+  }
+}
+.holkee-fb-gallery, .holkee-ig-gallery{
+  padding:30px;
+  .h-text-wrap{
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    max-width: 1320px;
+    display: block;
+    column-count: 5;
+    column-gap: 15px;
+    .a-photo{
+      break-inside: avoid;
+      margin-bottom:15px;
+      img{
+        width: 100%;
+        display: block;
+        border-radius: $radius-s;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    .h-mid-cont {
+      column-gap: 5px;
+      .a-photo {
+        margin-bottom:5px;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap{
+      width: initial;
+    }
+  }
+}
+.holkee-fb-video{
+  padding:30px;
+  .h-text-wrap{
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    gap:30px;
+    display: flex;
+    max-width: 1320px;
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3);
+      iframe {
+        width: 100%;
+        height: 30vw;
+        max-height: 500px;
+      }
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    .h-mid-cont {
+      .a-row {
+        width: calc((100% / 2) - 30px + 30px / 2);
+        iframe {
+          height: 50vw;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .h-mid-cont {
+      gap:24px;
+      .a-row {
+        flex: 100%;
+        max-width: initial;
+        iframe {
+          // height: 45vw;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      width: initial;
+    }
+    .h-mid-cont {
+      width: initial;
+    }
+  }
+}
+.holkee-yt-video {
+  padding:30px;
+  .h-text-wrap{
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  .h-mid-cont{
+    max-width: 1320px;
+    gap:30px;
+    .a-row{
+      width: calc((100% / 3) - 30px + 30px / 3);
+      iframe{
+        width: 100%;
+        height: 260px;
+        padding:1rem;
+        border-radius: $radius-l;
+        @include embossed-xl;
+      }
+    }
+  }
+
+  @media all and (max-width: 1200px) {
+    .h-mid-cont {
+      .a-row {
+        width: calc((100% / 2) - 30px + 30px / 2);
+        iframe{
+          height: 250px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .h-mid-cont {
+      gap:24px;
+      .a-row {
+        width: calc((100% / 2) - 24px + 24px / 2);
+        iframe{
+          height: 180px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .h-text-wrap {
+      width: initial;
+    }
+    .h-mid-cont {
+      width: initial;
+      .a-row {
+        width: calc((100% / 1) - 24px + 24px / 1);
+        iframe{
+          height: 260px;
+        }
+      }
+    }
+  }
+}
+
+// shop top menu
+.shop-menu {
+  overflow: hidden;
+  top:0;
+  ul.hide-more {
+    height:2rem;
+  }
+  ul {
+    &.item-main {
+      padding-top:.35rem;
+    }
+
+    &.item-main li {
+      display: inline-block;
+      transition: all ease 0.3s;
+      margin: 0 .8rem .8rem 0;
+      text-align: center;
+      vertical-align: middle;
+      padding: .3rem .95rem;
+      font-size: .8rem;
+      border-radius: $radius-l;
+      @include embossed-regular;
+
+      &:hover, &.selected {
+        @include debossed-regular;
+      }
+    }
+
+    &.item-subtitle {
+      padding-top: 1rem;
+
+      li {
+        @include debossed-regular;
+        display: inline-block;
+        padding: .3rem .85rem;
+        font-size: .7rem;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: $radius-l;
+        margin: 0 .5rem .5rem 0;
+        transition: all ease 0.3s;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    border-radius: $radius-s;
+  }
+  @media all and (max-width: 700px) {
+    top:0;
+    border-radius: $radius-s;
+  
+  }
+}
+// breadcrumb
+.top-breadcrumb {
+  padding: 10px 0 20px 0;
+  font-size: $h-f-size-m;
+}
+// manage readcrumb
+.manage-breadcrumb {
+  font-size: $h-f-size-m;
+  min-width: $min-w;
+  .h-mid-cont {
+    width: calc(100% - 60px);
+    padding: 15px 0;
+    max-width: 1320px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a.home {
+      border-radius: $radius-s;
+    }
+  }
+  @media all and (max-width: 768px) {
+    .h-mid-cont {
+      width: calc(100% - 48px);
+    }
+  }
+}
+
+// 自刻 下拉選單
+ul.dropdown-list {
+  border-radius: $radius-s;
+  li {
+    font-size: $h-f-size-m;
+  }
+  a {
+    padding: 15px 20px;
+  }
+  @media all and (max-width: 576px) {
+    li {
+      font-size: $h-f-size-s;
+    }
+  }
+}
+// country
+.country-item {
+  border-radius: $radius-l;
+  @include embossed-regular;
+  p {
+    font-size: $h-f-size-l;
+    height: 46px;
+    padding-left: 20px;
+    line-height: 46px;
+    border-radius: $radius-s;
+    text-indent: 0.01px;
+  }
+
+  .dropdown-list {
+    li {
+      a {
+        font-size: $h-f-size-l;
+        padding: 12px 20px 12px 60px;
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    font-size: $h-f-size-s;
+
+    p {
+      height: 40px;
+      line-height: 40px;
+      font-size: $h-f-size-s;
+    }
+
+    .dropdown-list {
+      top: 40px;
+      max-height: 30vh;
+
+      li a {
+        font-size: $h-f-size-s;
+      }
+    }
+  }
+}
+// shop
+.holkee-shop{
+  padding:30px;
+  .shop-menu {
+    max-width:1320px;
+    margin: 0 auto;
+  }
+
+  .h-mid-cont{
+    max-width:1320px;
+  }
+  .item {
+    padding:10px 0;
+    transition:all ease 0.5s;
+    width: 100%;
+    column-count: 5;
+    column-gap: 30px;
+    .a-row {
+      .h-photo-wrap {
+        img {
+          aspect-ratio:auto;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    .item {
+      column-count: 4;
+    }
+  }
+  @media all and (max-width: 992px) {
+    .shop-tools {
+      padding:10px 0;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .item {
+      column-count: 3;
+      column-gap: 24px;
+    }
+  }
+  @media all and (max-width: 700px) {
+    .h-text-wrap {
+      margin-bottom:0;
+    }
+  }
+  @media all and (max-width: 576px) {
+    .item {
+      column-count: 2;
+    }
+  }
+  .h-photo-wrap {
+    @include debossed-regular;
+    width: 100%;
+    padding:1rem;
+    border-radius: $radius-l;
+
+    img {
+      width: 100%;
+      border-radius: $radius-l;
+    }
+    
+  }
+  .a-row {
+    break-inside: avoid;
+    margin-bottom: 30px;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.3s;
+    border-radius: $radius-l;
+    @include embossed-xl;
+
+    &:hover{
+      transform: scale(102%);
+      
+    }
+  }
+
+  .text-info {
+    margin-top:1rem;
+    h4.sub-title {
+      margin:0;
+    }
+  }
+  .price {
+    margin-top:1rem;
+    .discount {
+      padding-right: 5px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      font-size: $h-f-size-s;
+    }
+  }
+  @media all and (max-width: 992px) {
+    .h-mid-cont{
+      .item {
+        .a-row{
+
+        }
+      }
+    }
+    .text-info {
+      .price {
+        .original {
+          font-size: $h-f-size-xs;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    .h-mid-cont{
+      .a-row{
+        margin-bottom:24px;
+      }
+    }
+    .top-breadcrumb{
+      font-size: $h-f-size-s;
+    }
+    .text-info {
+      h4.sub-title {
+        font-size:$h-f-size-m;
+      }
+
+      .price {
+        font-size: $h-f-size-m;
+        .original {
+          font-size: $h-f-size-ss;
+          padding-top: 8px;
+          display: block;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .text-info {
+      h4.sub-title {
+        font-size:$h-f-size-s;
+      }
+
+      .price {
+        font-size: $h-f-size-s;
+        .original {
+          font-size: $h-f-size-ss;
+          padding-top: 8px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// slides 輪播圖
+.holkee-swiper {
+  width: 100%;
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1;
+    font-size: $h-f-size-xxl;
+    padding: 10px 15px;
+    border-radius: $radius-s;
+  }
+}
+
+// slides Featured products
+.holkee-products-swiper {
+  padding:30px 15px;
+  .h-btn {
+    padding: 30px 15px;
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  .h-text-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1350px;
+  }
+  .swiper-products-cont {
+    max-width:1350px;
+    padding: 15px;
+  }
+  .swiper-slide {
+    @include embossed-xl;
+    border-radius: $radius-l;
+    display: flex;
+    height:auto;
+    flex-direction: column;
+    padding: 1rem;
+    img {
+      border-radius: $radius-l;
+      display: block;
+      @include embossed-regular;
+      transition: all ease 0.2s;
+      aspect-ratio: 1/1;
+    }
+    .text {
+      padding:1rem 1rem 0 1rem;
+      margin-bottom:1rem;
+      height:100%;
+    }
+    .price {
+      padding:1rem;
+    }
+    &:hover {
+      opacity: 1;
+      img {
+        @include debossed-regular;
+        padding:1rem;
+      }
+    }
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1;
+    font-size: $h-f-size-xl;
+    padding: 8px 15px;
+    border-radius: $radius-s;
+  }
+  .price {
+    .discount {
+      padding-right: 5px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      font-size: $h-f-size-s;
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px 14px;
+    .h-btn {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .h-text-wrap {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .swiper-products-cont{
+      padding-left: 10px;
+      padding-right: 10px;
+      .text{
+        font-size: $h-f-size-m;
+        line-height: 1.25;
+      }
+      .price{
+        font-size: $h-f-size-m;
+        .original{
+          font-size: $h-f-size-ss;
+          padding-top: 7px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// slides Products
+.holkee-products-main-swiper{
+  .coverSwiperLarge {
+    a.btn-magnifier {
+      width: 45px;
+      height: 45px;
+      border-radius: $radius-l;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      bottom: 0.9rem;
+      right:0.9rem;
+      transition:all ease-out 0.1s;
+      border: #d1d9e6 .0625rem solid;
+      &:hover {
+        font-size:20px;
+      }
+    }
+  }
+  .swiper-slide {
+    img{
+      border-radius: $radius-l;
+      padding:1rem;
+      @include debossed-regular;
+    }
+  }
+  .swiper-slide-thumb-active {
+  }
+  .swiper-button-next{
+    right: 1px;
+  }
+  .swiper-button-prev {
+    left: 1px;
+  }
+  .swiper-pagination{
+    text-align: left ;
+    position: initial;
+    padding: 5px 0;
+    font-size: $h-f-size-m;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    opacity: 1;
+    font-size: $h-f-size-l;
+    padding: 5px 7.5px;
+    border-radius: $radius-s;
+    
+  }
+}
+
+// holkee product info
+.holkee-product-info {
+  padding:30px;
+  h4.sub-title{
+    font-weight: bold;
+  }
+  .h-text-wrap {
+    max-width: 1320px;
+  }
+  .h-product-cont {
+    @include embossed-xl;
+    border-radius: $radius-l;
+    max-width: 1320px;
+  }
+
+
+  @media all and (max-width: 768px) {
+    padding:24px;
+  }
+  @media all and (max-width: 576px) {
+
+
+  }
+}
+.quantity-cont {
+  .select-quantity {
+    max-width: 200px;
+    border-radius: $radius-s;
+    input.qty-input {
+      height: 40px;
+      line-height: 40px;
+      font-size: 17px;
+      border-radius:$radius-s;
+    }
+    span {
+      width: 40px;
+      height: 39px;
+      line-height: 39px;
+      font-size: $h-f-size-m;
+      &.plus {
+        border-radius: 0 4px 4px 0;
+      }
+
+      &.minus {
+        border-radius: 4px 0 0 4px
+      }
+    }
+  }
+}
+// product
+.h-product-cont {
+  max-width: 1600px;
+
+  .shop-spec {
+    a {
+      border-width: 2px;
+      border-style: solid;
+      border-radius: $radius-s;
+
+      &.selected {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .shop-status {
+    max-width: 500px;
+
+    .l-label {
+      width: 50%;
+    }
+  }
+  .price {
+    .discount {
+      font-weight: bold;
+      padding-right: 5px;
+    }
+
+    .original {
+      text-decoration: line-through;
+      font-size: $h-f-size-s;
+    }
+  }
+  // discount
+  .discount-contents {
+    padding: 0px 0px 0px 15px;
+    li{
+      font-size: $h-f-size-m;
+      .l-label {
+        border-radius: $radius-s;
+      }
+      &.more{
+        padding-top: 10px;
+        font-size: $h-f-size-s;
+        a{
+          border-radius: $radius-s;
+        }
+      }
+    }
+  }
+  a.btn-car {
+    font-size: $h-f-size-xl;
+    align-content: center;
+    align-items: center;
+    span.nb {
+      font-size: $h-f-size-ss;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+  .privacy-policy{
+    border-radius: $radius-s;
+    margin:5px 0;
+    .text{
+      font-size: $h-f-size-m;
+      line-height: 1.5;
+    }
+  }
+  .txn-checkbox{
+    font-size: $h-f-size-m;
+    a{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+// 點選放大鏡之 popup 內容
+
+// shoppingcart
+.holkee-shoppingcart {
+  padding:30px;
+  .h-text-wrap {
+    max-width:1320px;
+  }
+  .h-mid-cont {
+    @include embossed-xl;
+    border-radius: $radius-l;
+    max-width: 1320px;
+    .detail-hide {
+      overflow:hidden;
+      height: 300px;
+      position:relative;
+      &::before {
+        content: "";
+        color:#333;
+        background:linear-gradient(transparent 20%, #e6e7ee 70%);
+        height:200px;
+        width: 100%;
+        display: block;
+        bottom:0;
+        z-index: 1;
+        position:absolute;
+      }
+    }
+  }
+
+  .h-photo-wrap {
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: $radius-s;
+    }
+
+  }
+  
+  .orderinfo-form {
+    .a-row {
+      line-height:1.5rem;
+      padding:1.5rem 0;
+      border-bottom: #ccc;
+      &.total-amount {
+        background:none;
+        border-top:#d1d9e6 1px solid;
+        .text-info {
+          font-size: 1.5rem;
+        }
+      }
+      i {
+        padding-right:.5rem;
+      }
+      textarea {
+        margin-top:1rem;
+      }
+      
+      .coupon {
+        input {
+          margin-top:1rem;
+        }
+      }
+      .label-title {
+        padding:0;
+        // .number {
+        //   font-size: 3rem;
+        //   color: #f1f1f1;
+        //   font-style: italic;
+        //   font-family: Arial, Helvetica, sans-serif;
+        //   font-weight:bold;
+        //   margin-right:.5rem;
+        // }
+      }
+      .text-info {
+        padding:0;
+        font-size: 1.2rem;
+        .f-ss {
+          padding:0;
+          color:#999;
+        }
+      }
+      .shippingway-select {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap:15px;
+        margin-top:1rem;
+        label {
+          cursor: pointer;
+          border-radius: $radius-s;
+          width: calc((100% / 4) - 15px + 15px / 4);
+          display: flex;
+          align-items: center;
+          opacity: .4;
+          padding: 1rem;
+          background:white;
+          filter:saturate(0%);
+          transition:all .5s ease;
+          border:1px solid transparent;
+          input[type="radio"] {
+            height:1rem;
+            width:1rem;
+            transition:all ease 0.5s;
+            margin: 0 5px 0 0;
+            border:1px solid red;
+          }
+          .shippingcost {
+            margin-left:auto;
+            color: #FF5539;
+          }
+          img {
+            width:2.5rem;
+            display: inline-block;
+          }
+        }
+        label:hover, label.selected {
+          opacity: 1;
+          filter:saturate(100%);
+          border:#666 1px solid; 
+          background:white;
+          .shipping-radio {
+            span {
+              background:#333;
+            }
+          }
+        }
+      }
+    }
+  }
+  .purchase-form {
+    .line-dashed {
+      border-bottom:1px dashed #ccc;
+    }
+    
+    .sub-title {
+      border-bottom: #d1d9e6 solid 1px;
+      margin-top: 1rem;
+    }
+    .h-control__indicator {
+      top:21px;
+    }
+    .h-control {
+      padding:20px 25px;
+    }
+    .a-row {
+      padding:1rem 0;
+      align-items: center;
+      display: flex;
+      justify-content: start;
+      &.total-amount {
+        border-top:#d1d9e6 1px solid;
+        font-weight: bold;
+        .text-info {
+          .h-c-red {
+            font-weight: bold;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .result-text p {
+        padding: 10px 0;
+      }
+      div {
+        width:100%;
+      }
+      .label-title {
+        padding:0;
+        width:20%;
+        font-weight: inherit;
+      }
+      .text-info {
+        text-align: right;
+        margin-left: auto;
+        font-size: 1.2rem;
+      }
+      .f-ss {
+        color:#999;
+      }
+      .h-btn-primary-m, .h-btn-primary-line-m {
+        width:20%;
+        min-width: inherit;
+      }
+    }
+  }
+  @media all and (max-width: 992px) {
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          label {
+            width: calc((100% / 3) - 15px + 15px / 3);
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .h-btn-primary-m, .h-btn-primary-line-m {
+          width:40%;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding:24px;
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          gap:10px;
+          label {
+            width: calc((100% / 2) - 10px + 10px / 2);
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .label-title {
+          width:30%;
+        }
+        .h-btn-primary-m, .h-btn-primary-line-m {
+          width:50%;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 576px) {
+    .orderinfo-form {
+      .a-row {
+        .shippingway-select {
+          label {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .purchase-form {
+      .a-row {
+        .label-title {
+          width:50%;
+        }
+      }
+    }
+  }
+}
+
+// 會員後台相關
+.h-mm-width {
+  
+  max-width: 1320px;
+  width: calc(100% - 60px);
+  @media all and (max-width: 768px) {
+    padding-top: 20px;
+    width: calc(100% - 48px);
+  }
+}
+
+.member-cont {
+  max-width: 1320px;
+  width: calc(100% - 60px);
+  border-radius: $radius-l;
+  @include embossed-xl;
+  padding: 20px;
+  @media all and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+
+  form {
+    &.account {
+      padding: 30px;
+      @media all and (max-width: 576px) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.cont-space {
+  border-radius: $radius-l;
+  @include embossed-xl;
+  max-width:1320px;
+  width: calc(100% - 60px);
+  padding: 30px 60px;
+
+  .text-note {
+    max-width: 400px;
+  }
+
+  @media all and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+
+// tools btn
+.tools {
+  a.icon {
+    width: 35px;
+    height: 35px;
+    border-radius: $radius-s;
+    margin: 2.5px;
+    font-size: $h-f-size-m;
+  }
+
+  @media all and (max-width: 768px) {
+    a.icon {
+      width: 30px;
+      height: 30px;
+      margin: 1.5px;
+    }
+  }
+}
+
+// orders
+.orders-list {
+  border-radius: $radius-l;
+  @include embossed-xl;
+  width: calc(100% - 60px);
+  max-width:1320px;
+  .a-row {
+    .order-nb {
+      .h-control {
+        min-width: 20px;
+        margin-right: 10px;
+        padding-left: initial;
+      }
+      .h-control__indicator {
+        top: 5px;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+// invoice
+.shippinginfo-list {
+  border-radius: $radius-l;
+  @include embossed-xl;
+  max-width:1320px;
+  width: calc(100% - 60px);
+  .a-row {
+    p {
+      font-size: $h-f-size-l;
+      line-height: 1.5;
+    }
+  }
+  @media all and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+
+.top-tab {
+  border-radius: $radius-s $radius-s 0 0;
+  margin-bottom: 10px;
+
+  li {
+    a {
+      font-size: $h-f-size-m;
+      min-height: 46px;
+    }
+  }
+}
+
+.phone-country {
+  input {
+    padding-left: 90px;
+  }
+
+  .country-item {
+    width: 80px;
+    box-shadow: none;
+    p {
+      line-height: 34px;
+
+      span::before {
+        width: 10px;
+        right: 20px;
+      }
+    }
+
+    .dropdown-list {
+      top: 42px;
+      min-width: 80px;
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    input {
+      padding-left: 75px;
+    }
+
+    .country-item {
+      p {
+        line-height: 28px;
+      }
+
+      .icon::after {
+        width: 25px;
+      }
+    }
+  }
+}
+
+.login-cont {
+  padding-bottom: 20px;
+
+  .a-row {
+    padding: 5px 0;
+  }
+
+  .label-title {
+    font-size: $h-f-size-m;
+    line-height: 1.2;
+    padding: 20px 0 12px 0;
+  }
+
+  .text {
+    font-size: $h-f-size-m;
+    padding: 5px 0;
+  }
+
+  .h-p-top {
+    padding-top: 20px;
+  }
+
+  .social-btn {
+    .h-btn-primary-line-xl {
+      padding-left: 40px;
+      font-size: $h-f-size-m;
+
+      &::before {
+        left: 15px;
+        top: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .h-both-btn {
+    .h-btn-primary-line-xl {
+      font-size: $h-f-size-s;
+      width: calc(50% - 5px);
+    }
+
+    a:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+.h-product-cont {
+  .privacy-policy {
+    @include debossed-regular;
+    background:transparent;
+    border-radius: $radius-l;
+    &::-webkit-scrollbar {
+      width:1px;
+    }
+  }
+} 
+
+.other-website-face {
+  padding:30px;
+  .h-mid-cont {
+    width:100%;
+    max-width:1320px;
+    background:transparent;
+    border-radius: $radius-l;
+    @include embossed-xl;
+  }
+  @media all and (max-width: 768px) {
+
+  }  
+}

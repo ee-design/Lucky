@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>holkee 品牌官網 - 多頁式</title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" type="text/css" />
+    
+    <!-- CSS main 為固定，style 為主題風格-->
+    <link rel="stylesheet" href="css/holkee_website_main.css" type="text/css" />
+    
+    <!-- header -->
+    <link rel="stylesheet" href="css/header_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/header_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/header_0004.css" type="text/css" /> -->
+    
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer_0001.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/footer_0002.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/footer_0004.css" type="text/css" /> -->
+    
+    <!-- 主題 layout -->
+    <link rel="stylesheet" href="css/layout_000001.css" type="text/css" />
+    
+    <!-- 配色 color -->
+    <link rel="stylesheet" href="css/color_0001.css" type="text/css" />
+
+    <!-- font family -->
+    <!-- 字型要放後面，因為有的自行預設行高跟別人不同，有調整間距 -->
+    <!-- <link rel="stylesheet" href="css/font_0001.css" type="text/css" /> -->
+    <link rel="stylesheet" href="css/font_0002.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/font_0003.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0004.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0005.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="css/font_0006.css" type="text/css" /> -->
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Pushy CSS -->
+    <!-- shop_style_one -->
+    <link rel="stylesheet" href="mobilemenu/pushy.css">
+
+    <script type="text/javascript">
+        
+        $(function () {
+            // popup
+            $('.popup-link').magnificPopup({
+                removalDelay: 300,
+                mainClass: 'mfp-fade'
+            });
+
+            $(".dropdown-menu>a").click(function () {
+                $(this).next(".sub-list").stop(true, true).fadeToggle(0);
+                return false;
+            });
+
+            $(".h-products-info .h-both-btn").click(function () {
+                $(this).next(".form-style").stop(true, true).fadeIn(0);
+                return false;
+            });
+            
+            $(function () {
+                $(".click-list p").click(function () {
+                    $(this).next(".dropdown-list").stop(true, true).fadeToggle(0);
+                    return false;
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-right" data-focus="#first-link">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link">
+                    <a href="shop_website_home.html">Home</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="shop_website_shop.html">Shop</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_about.html">About Us</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_services.html">Services</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_news.html">News</a>
+                </li>
+                <li class="pushy-link">
+                    <a href="website_contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <!-- container 往左推-->
+    <div id="container">
+    
+    <!-- header -->
+    <header class="holkee-header-wrap">
+        <div class="h-mid-cont">
+            <div class="logo">
+                <img src="images/logo_test.png" alt="alt 這需自動幫帶入網站標題 + logo">
+            </div>
+            <ul class="menu">
+                <li>
+                    <p><a href="shop_website_home.html">Home</a></p>
+                </li>
+                <li>
+                    <p><a href="shop_website_shop.html">Shop</a></p>
+                </li>
+                <li>
+                    <p><a href="website_about.html">About Us</a></p>
+                </li>
+                <li>
+                    <p><a href="website_services.html">Services</a></p>
+                </li>
+                <li>
+                    <p><a href="website_news.html">News</a></p>
+                </li>
+                <li>
+                    <p><a href="website_contact.html">Contact Us</a></p>
+                </li>
+            </ul>
+            <ul class="h-header-tools">
+                <li class="dropdown-menu">
+                    <a><i class="fas fa-user"></i></a>
+                    <div class="sub-list">
+                        <ul>
+                            <!-- 登入前顯示 -->
+                            <li>
+                                <a class="popup-link" href="#popup-login">登入</a>
+                            </li>
+                            <!-- 登入後顯示 -->
+                            <li>
+                                <a href="#">我的帳戶</a>
+                            </li>
+                            <li>
+                                <a href="#">查看訂單</a>
+                            </li>
+                            <li>
+                                <a href="#">登出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="shop_website_shop_ShoppingCart.html"class="btn-car" title="View cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="nb">5</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="menu-btn">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 輪播圖slides : 大圖輪播圖 -->
+    <div class="holkee-swiper swiper mySwiper" id="swiperA">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide" href="#">
+                <img src="images/slider-01.png">
+            </a>
+            <div class="swiper-slide">
+                <img src="images/slider-02.png">
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- aboutus -->
+    <div class="holkee-s-wrap holkee-grid">
+        <div class="h-mid-cont">
+            <div class="h-btn-banner h-btn">
+                <a class="h-btn-primary-xl h-btn-bg-white" href="website_about.html">
+                    <span class="">About Us</span>
+                </a>
+            </div>
+            <div class="h-btn-banner h-btn">
+                <a class="h-btn-primary-xl h-btn-bg-white" href="website_contact.html">
+                    <span class="">Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="holkee-s-wrap holkee-promotion">
+        <div class="h-mid-cont">
+            <p>promotion<br>(內容待議)</p>
+        </div>
+    </div>
+    
+    <!-- slides : Billboard - Top 5  -->
+    <div class="holkee-products-swiper">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Billboard - Top 5</h3>
+        </div>
+        <div class="swiper-products-cont swiper mySwiper" id="swiperC">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0002.png">
+                    <p class="text">Product title - 【LINE FRIENDS】BlenderBottle®Pro Tritan Product title AAAA</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            1,000,000-2,000,000
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0004.png">
+                    <p class="text">Product title - 【LINE FRIENDS】BlenderBottle®Pro Tritan</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            1,000,000-2,000,000
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-twd"></span>
+                            101,000,000-102,000,000
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0003.png">
+                    <p class="text">最多三行 Product title - BBBB</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            160-220
+                        </span>
+                    </p>
+                </a>
+                
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0005.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-twd"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0002.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-twd"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0003.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-twd"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0004.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            160-220
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0005.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-twd"></span>
+                            160-220
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0002.png">
+                    <p class="text">Product title</p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0003.png">
+                    <p class="text">Product title</p>
+                </a>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev "></div>
+        </div>
+    </div>
+
+    <!-- slides : Featured Products  -->
+    <div class="holkee-products-swiper">
+        <div class="h-text-wrap">
+            <h3 class="main-title">Featured Products</h3>
+        </div>
+        <div class="swiper-products-cont swiper mySwiper" id="swiperB">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0002.png">
+                     <p class="text">Melissa & Doug Top & Bake Wooden Pizza Counter Play Set (41 Pcs) Pizza Toy Wooden Play Food Set, Pretend Pizza Sets For Kids Ages 3+ - FSC-Certified Materials</p>
+                    <p class="price">
+                        <span class="discount">
+                            <!-- 美元 -->
+                            <span class="h-price h-p-usd"></span>
+                            27.00
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide popup-link" href="#popup-warningbanner">
+                    <img src="images/img_0003.png">
+                     <p class="text">點我看 18禁 popup ，Product title - BBBB</p>
+                    <p class="price">
+                        <span class="discount">
+                            <!-- 日文 -->
+                            <span class="h-price h-p-jpy"></span>
+                            1600-2200
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0004.png">
+                    <p class="text">Product title - 【LINE FRIENDS】BlenderBottle®Pro Tritan</p>
+                    <p class="price">
+                        <span class="discount">
+                            <!-- 韓文 -->
+                            <span class="h-price h-p-krw"></span>
+                            6,980
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-krw"></span>
+                            8,980
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0005.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-inr"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-inr"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0002.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-eur"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-eur"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0003.png">
+                     <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-gbp"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-gbp"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0004.png">
+                     <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-php"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-php"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0005.png">
+                     <p class="text">Product title</p>
+                     <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-myr"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-myr"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0002.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-thb"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-thb"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+                <a class="swiper-slide" href="shop_website_shop_product_info.html">
+                    <img src="images/img_0003.png">
+                    <p class="text">Product title</p>
+                    <p class="price">
+                        <span class="discount">
+                            <span class="h-price h-p-mmk"></span>
+                            160-220
+                        </span>
+                        <span class="original">
+                            <span class="h-price h-p-mmk"></span>
+                            15,359-30,999
+                        </span>
+                    </p>
+                </a>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev "></div>
+        </div>
+        <div class="h-btn">
+            <a class="h-btn-primary-xl" href="website_shop.html">
+                <span class="">View all Product</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="holkee-footer-wrap">
+        <div class="h-mid-cont">
+            <div class="logo">
+                <img src="images/logo_test.png" alt="品牌官網 | logo">
+            </div>
+            <ul class="link">
+                <li>
+                    <a href="#">服務條款</a>
+                </li>
+                <li>
+                    <a target="_blank" href="single_page_PrivacyPolicy.html">隱私權條款</a>
+                </li>
+                <!-- <li>
+                    <a href="">退換貨及退款須知</a>
+                </li>
+                <li>
+                    <a href="">付款及運送方式</a>
+                </li> -->
+            </ul>
+            <ul class="follow-us">
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyrights">Copyright© 2024 網站名稱 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- popup login 登入-->
+    <section id="popup-login" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">登入</h3>
+                </div>
+                <div class="text-note">
+                    <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        帳號或密碼不正確，請再檢查一下</p>
+                </div>
+            
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="電子郵件或電話號碼" value="">
+                </div>
+                <div class="a-row">
+                    <!-- 錯誤 input + has-error -->
+                    <input class="default has-error" type="password" placeholder="密碼" value="">
+                </div>
+                <p class="text">
+                    <a class="" href="member_manage_forgetpassword_email.html">忘記密碼</a>
+                </p>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>登入</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl" href="#">
+                        <span>以訪客身分繼續操作</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn">
+                    <label class="label-title" for="">
+                        曾於帳號內自行連結社交平台，可選擇使用以下方法登入
+                    </label>
+                    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>使用 Google 繼續</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>使用 Facebook 繼續</span>
+                    </a>
+                </div>
+                <p class="text">還不是會員？
+                    <a class="text popup-link" href="#popup-register-mail">成為會員</a>
+                </p>
+            </form>
+            <!-- <div class="h-btn">
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>取消</span>
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- popup register mail 註冊 -->
+    <section id="popup-register-mail" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <!-- <div class="text-note">
+                    <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        帳號或密碼不正確，請再檢查一下</p>
+                </div> -->
+                <ul class="top-tab">
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="電子郵件" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="密碼" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="確認密碼" value="">
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>註冊</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    
+    <!-- popup register phone 註冊 -->
+    <!-- 1 -->
+    <section id="popup-register-phone" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <!-- <div class="text-note">
+                        <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            帳號或密碼不正確，請再檢查一下</p>
+                    </div> -->
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <label class="label-title" for="">
+                        為確保是你本人，我們將會寄送一封「驗證簡訊」到你的手機。
+                    </label>
+                    <div class="phone-country">
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="">
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                            <ul class="dropdown-list" style="display: none;">
+                                <li><a class="icon icon_tw"></a></li>
+                                <li><a class="icon icon_my"></a></li>
+                                <li><a class="icon icon_ph"></a></li>
+                                <li><a class="icon icon_jp"></a></li>
+                                <li><a class="icon icon_hk"></a></li>
+
+                                <li><a class="icon icon_mo"></a></li>
+                                <li><a class="icon icon_id"></a></li>
+                                <li><a class="icon icon_th"></a></li>
+                                <li><a class="icon icon_vn"></a></li>   
+                                <li><a class="icon icon_sg"></a></li>
+
+                                <li><a class="icon icon_kr"></a></li>
+                                <li><a class="icon icon_us"></a></li>
+                                <li><a class="icon icon_in"></a></li>
+                                                       
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+
+                <!-- h-btn-disabled -->
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl popup-link" href="#popup-register-phone-2">
+                        <span>寄送驗證碼</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- 2 -->
+    <section id="popup-register-phone-2" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <div class="text-note">
+                    <p>
+                        <span class="h-c-green"><i class="fa-solid fa-circle-check"></i></span>已寄送驗證簡訊
+                    </p>
+                </div>
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <label class="label-title" for="">
+                        為確保是你本人，我們將會寄送一封「驗證簡訊」到你的手機。
+                    </label>
+                    <div class="phone-country">
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="0988 000 123">
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                            <ul class="dropdown-list" style="display: none;">
+                                <li><a class="icon icon_tw"></a></li>
+                                <li><a class="icon icon_my"></a></li>
+                                <li><a class="icon icon_ph"></a></li>
+                                <li><a class="icon icon_jp"></a></li>
+                                <li><a class="icon icon_hk"></a></li>
+    
+                                <li><a class="icon icon_mo"></a></li>
+                                <li><a class="icon icon_id"></a></li>
+                                <li><a class="icon icon_th"></a></li>
+                                <li><a class="icon icon_vn"></a></li>
+                                <li><a class="icon icon_sg"></a></li>
+    
+                                <li><a class="icon icon_kr"></a></li>
+                                <li><a class="icon icon_us"></a></li>
+                                <li><a class="icon icon_in"></a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <input class="default" type="password" placeholder="請輸入驗證碼" value="">
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+    
+                
+                <div class="h-p-top a-row">
+                    <!-- 倒數時間到前要 + h-btn-disabled 變灰色按鈕 -->
+                    <!-- <a class="h-btn-primary-xl h-btn-disabled" href="#">
+                        <span>重新寄送驗證碼(3:08)</span>
+                    </a> -->
+                    <a class="h-btn-primary-xl popup-link" href="#popup-register-phone-3">
+                        <span>重新寄送驗證碼</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- 3 -->
+    <!-- 手機驗證成功就不給選國旗 -->
+    <section id="popup-register-phone-3" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">成為會員</h3>
+                </div>
+                <div class="text-note">
+                    <p>
+                        <span class="h-c-green"><i class="fa-solid fa-circle-check"></i></span>手機驗證成功
+                    </p>
+                </div>
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-mail">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-register-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <label class="label-title" for="">
+                        為確保是你本人，我們將會寄送一封「驗證簡訊」到你的手機。
+                    </label>
+                    <div class="phone-country">
+                        <!-- 手機驗證完成 + disabled -->
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="0988 000 123" disabled>
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="密碼" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="確認密碼" value="">
+                </div>
+                <p class="text">
+                    註冊即表示您同意賣家的 <a target="_blank" href="website_terms.html">會員條款</a>
+                </p>
+    
+    
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>註冊</span>
+                    </a>
+                </div>
+                <div class="a-row social-btn h-both-btn">
+                    <label class="label-title" for="">
+                        或是使用社群帳號快速註冊
+                    </label>
+    
+                    <a class="h-btn-primary-line-xl icon-google" href="#">
+                        <span>Google</span>
+                    </a>
+                    <a class="h-btn-primary-line-xl icon-facebook" href="#">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已經有帳號？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- 忘記密碼 -->
+    <!-- email -->
+    <section id="popup-forgetpassword-email" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">忘記密碼</h3>
+                </div>
+                <div class="text-note">
+                    <p>
+                        <span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>找不到此信箱
+                    </p>
+                </div>
+                <ul class="top-tab">
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-forgetpassword-email">電子郵件註冊</a>
+                    </li>
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-forgetpassword-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <input class="default has-error" type="text" placeholder="電子郵件" value="eiki@gmail.com">
+                </div>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl" href="#">
+                        <span>送出</span>
+                    </a>
+                </div>
+                <p class="text">
+                    已想起密碼了？
+                    <a class="text popup-link" href="#popup-login">馬上登入</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <!-- phone -->
+    <!-- 1 -->
+    <section id="popup-forgetpassword-phone" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">忘記密碼</h3>
+                </div>
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-forgetpassword-email">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-forgetpassword-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <div class="phone-country">
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="0988 000 123">
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                            <ul class="dropdown-list" style="display: none;">
+                                <li><a class="icon icon_tw"></a></li>
+                                <li><a class="icon icon_my"></a></li>
+                                <li><a class="icon icon_ph"></a></li>
+                                <li><a class="icon icon_jp"></a></li>
+                                <li><a class="icon icon_hk"></a></li>
+                
+                                <li><a class="icon icon_mo"></a></li>
+                                <li><a class="icon icon_id"></a></li>
+                                <li><a class="icon icon_th"></a></li>
+                                <li><a class="icon icon_vn"></a></li>
+                                <li><a class="icon icon_sg"></a></li>
+                
+                                <li><a class="icon icon_kr"></a></li>
+                                <li><a class="icon icon_us"></a></li>
+                                <li><a class="icon icon_in"></a></li>
+                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl popup-link" href="#popup-forgetpassword-phone-2">
+                        <span>寄送驗證碼</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- 2 -->
+    <section id="popup-forgetpassword-phone-2" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <form class="login-cont">
+                <div class="h-text-wrap">
+                    <h3 class="main-title">忘記密碼</h3>
+                </div>
+                <div class="text-note">
+                    <p>
+                        <span class="h-c-green"><i class="fa-solid fa-circle-check"></i></span>已寄送驗證簡訊
+                    </p>
+                </div>
+                <ul class="top-tab">
+                    <li>
+                        <a class="btn-primary-line-xl popup-link" href="#popup-forgetpassword-email">電子郵件註冊</a>
+                    </li>
+                    <li class="selected">
+                        <a class="btn-primary-line-xl popup-link" href="#popup-forgetpassword-phone">手機號碼註冊</a>
+                    </li>
+                </ul>
+                <div class="a-row">
+                    <div class="phone-country">
+                        <input class="default" type="text" placeholder="請輸入手機號碼" value="0988 000 123">
+                        <div class="click-list country-item">
+                            <p class="item-name">
+                                <!-- 選擇國旗 + icon_tw -->
+                                <span class="icon icon_tw"></span>
+                            </p>
+                            <ul class="dropdown-list" style="display: none;">
+                                <li><a class="icon icon_tw"></a></li>
+                                <li><a class="icon icon_my"></a></li>
+                                <li><a class="icon icon_ph"></a></li>
+                                <li><a class="icon icon_jp"></a></li>
+                                <li><a class="icon icon_hk"></a></li>
+    
+                                <li><a class="icon icon_mo"></a></li>
+                                <li><a class="icon icon_id"></a></li>
+                                <li><a class="icon icon_th"></a></li>
+                                <li><a class="icon icon_vn"></a></li>
+                                <li><a class="icon icon_sg"></a></li>
+    
+                                <li><a class="icon icon_kr"></a></li>
+                                <li><a class="icon icon_us"></a></li>
+                                <li><a class="icon icon_in"></a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="請輸入驗證碼" value="">
+                </div>
+                <div class="h-p-top a-row">
+                    <a class="h-btn-primary-xl popup-link" href="#popup-forgetpassword-done">
+                        <span>送出</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 忘記密碼 - done -->
+    <section id="popup-forgetpassword-done" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">已發送</h3>
+                <p class="text">密碼重置連結已發送！</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>確認</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 驗證連結已發送 -->
+    <section id="popup-register-verify" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">驗證連結已發送</h3>
+                <p class="text">請至信箱 eikiycahng@weblisher.com.tw<br>
+                請確認後點擊完成註冊。<br>
+                若信箱無誤卻無法找到驗證信件，請點擊重新發送。</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <!-- <a class="h-btn-primary-xl " href="#">
+                    <span>重新發送</span>
+                </a> -->
+                <!-- h-btn-disabled -->
+                <!-- 倒數時不能點 -->
+                <a class="h-btn-primary-xl h-btn-disabled" href="#">
+                    <span>(3:08)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="popup-register-verify" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">驗證連結已發送</h3>
+                <div class="text-note">
+                    <p><span class="h-c-red"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        該信箱已達驗證信重新發送上限!</p>
+                </div>
+                <p class="text">請至信箱 eikiycahng@weblisher.com.tw<br>
+                    請確認後點擊完成註冊。<br>
+                    若信箱無誤卻無法找到驗證信件，請點擊重新發送。</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>確認</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 註冊完成 -->
+    <section id="popup-register-done" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">註冊完成</h3>
+                <p class="text">歡迎加入【艸部首 Caobushou】</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>現在登入</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 註冊失敗 -->
+    <section id="popup-register-none" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">註冊失敗</h3>
+                <p class="text">請重新註冊</p>
+            </div>
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>前往註冊</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 重設密碼 -->
+    <section id="popup-passwordreset" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">重設密碼</h3>
+            </div>
+            <form class="login-cont">
+                <div class="a-row">
+                    <p class="text">eikiychang@weblisher.com.tw</p>
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="密碼" value="">
+                </div>
+                <div class="a-row">
+                    <input class="default" type="text" placeholder="確認密碼" value="">
+                </div>
+            </form>
+            
+            <div class="h-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>設定密碼</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="popup-passwordreset" class="h-white-popup h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">重設密碼</h3>
+                <p class="text">密碼重新設定完成，請以新密碼登入。</p>
+            </div>
+    
+            <div class="h-btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>現在登入</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 點選商品出現 -->
+    <!-- 有 BUG >< 不能點選，且數字 1/10 沒出來 -->
+    <section id="popup-product-info" class="h-white-popup mfp-hide h-popup-width-m">
+        <div class="h-popup-container">
+            <!-- product -->
+            <div class="h-product-cont">
+                <!-- product photo -->
+                <div class="h-products-photo">
+                    <!--  products photo slides -->
+                    <div class="holkee-products-main-swiper">
+                        <div class="swiper coverSwiperLarge" id="coverSwiperLarge">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div thumbsSlider="" class="swiper coverSwiper" id="coverSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0004.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0005.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0002.png" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/img_0003.png" />
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            
+                <!-- product info -->
+                <div class="h-products-info">
+                    <div class="h-text-wrap">
+                        <h3 class="main-title">Product aaa</h3>
+                    </div>
+                
+                    <p class="price">
+                        <span class="discount">NT$160-220</span>
+                        <span class="original">NT$15,359-30,999</span>
+                    </p>
+                    <!-- discount -->
+                    <ul class="discount-contents">
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 200 amount get 10 OFF storewide</span>
+                        </li>
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 300 amount get 20 OFF storewide</span>
+                        </li>
+                        <li>
+                            <span class="l-label">Storewide</span>
+                            <span>Buy over 500 amount FREE shipping storewide</span>
+                        </li>
+                        <li class="more">
+                            Remaining <span>2</span> activities<a href="#">View all</a>
+                        </li>
+                    </ul>
+                
+                
+                    <p class="shop-label">Choose primary specification</p>
+                    <!-- 選完主規格，才出現副規格 -->
+                    <!-- 選中 + selected -->
+                    <div class="shop-spec">
+                        <a href="#">AAA</a>
+                        <a class="selected" href="#">BBB</a>
+                        <a href="#">CCC-asas</a>
+                        <a href="#">DDDDDDDD</a>
+                        <a href="#">dadjaioe</a>
+                    </div>
+                
+                    <p class="shop-label">Choose sub specification</p>
+                    <div class="shop-spec">
+                        <a href="#">XL</a>
+                        <a class="selected" href="#">XXL</a>
+                    </div>
+                
+                    <table class="shop-status" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <th class="l-label">Availability</th>
+                                <td>In stock</td>
+                            </tr>
+                            <tr>
+                                <th class="l-label">Condition</th>
+                                <td>New</td>
+                            </tr>
+                            <tr>
+                                <th class="l-label">Delivery date description</th>
+                                <td>16516</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                
+                
+                    <p class="shop-label">Please choose the quantity</p>
+                    <div class="quantity-cont">
+                        <div class="select-quantity" data-radium="true">
+                            <input name="quantity" type="number" class="qty-input" value="1">
+                            <div class="qty-adjust" data-radium="true">
+                                <span id="plus-one" class="plus"><i class="fa fa-plus"></i></span>
+                                <span id="minus-one" class="minus minus_none"><i class="fa fa-minus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <p class="stock">90 pieces available</p>
+                
+                    <div class="h-btn h-both-btn ">
+                        <a class="h-btn-primary-xl popup-link" href="#popup-addcart">
+                            <span class="">Add to cart</span>
+                        </a>
+                        <a class="h-btn-primary-xl h-btn-bg-red" href="#">
+                            <span class="">Buy now</span>
+                        </a>
+                        <a href="#" class="btn-car popup-link" title="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="nb">5</span>
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- product 這塊塞 html 編輯器  -->
+                <div class="h-products-html">
+                    <img src="images/slider-02.png" width="100%">
+                    <p class="aaa"
+                        style="padding: 15px 0; white-space: pre-wrap; word-break: break-all; word-wrap: break-word;text-align: justify;">商品描述是解釋商品是甚麼以及為什麼值得顧客們購買的營銷元素。商品描述的目的是向顧客們提供有關商品功能和優勢等重要信息,以吸引他們購買該商品。
+            
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+            
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                    <div style="margin: 0 auto; padding: 25px 0; text-align: center;">
+                        <style>
+                            p.aaa {
+                                font-size: 15px;
+                                line-height: 1.5;
+            
+                            }
+            
+                            @media all and (max-width: 700px) {
+                                iframe.aaa {
+                                    height: 150px;
+                                }
+            
+                                p.aaa {
+                                    font-size: 13px;
+                                }
+                            }
+                        </style>
+                        <iframe class="aaa" style=" max-width: 560px; display: inline-block;" width="100%" height="315"
+                            src="https://www.youtube.com/embed/YAemjMwoK2U?si=44ED7wIiyM-Y7ov8" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="aaa"
+                        style="padding: 15px 0; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; text-align: justify;">商品描述是解釋商品是甚麼以及為什麼值得顧客們購買的營銷元素。商品描述的目的是向顧客們提供有關商品功能和優勢等重要信息,以吸引他們購買該商品。
+            
+房記直且辦緊色樓。腦長著也頭觀，中展什教古健的像別古參作有下。很呢下命們兩到什色量安美也的特講四流市臺們東麼、間以地作土事體灣海傳們童。國結高交可；多苦具說元神當福什……然業風人商我你我學定來馬現？連而歡公情展的研……正間認裝國意主一員可克可我工一因定教與領人，館巴的為聯新師月，舉人腦個！爭字同容。使的少多灣前令傳，臺法城都無片亮態邊事山得外作車少、輕常我動負動，乎加國。
+            
+已人世事藝少當力想之企，些動即山緊開：差音先。還面製都連新己任河童遊讀就，物視只制話待心的。個進師回頭死非你經長天任微生速著官縣花著在。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- popup Add to cart-->
+    <section id="popup-addcart" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <h3 class="main-title">Add to cart</h3>
+                <!-- <p class="text">刪除後將無法恢復！</p> -->
+            </div>
+            <div class="btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>Continue</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>Shopping cart</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- alcohol warning banner -->
+    <section id="popup-warningbanner" class="h-white-popup mfp-hide h-popup-width-s">
+        <div class="h-popup-container">
+            <div class="h-text-wrap">
+                <div class="img-18prohibited">
+                    <img src="images/img_18prohibited.png">
+                </div>
+                <h3 class="main-title">本網站內含成人內容，僅限成人瀏覽</h3>
+                <!-- <p class="text">刪除後將無法恢復！</p> -->
+            </div>
+            <div class="btn h-both-btn">
+                <a class="h-btn-primary-xl" href="#">
+                    <span>滿 18 歲進入</span>
+                </a>
+                <a class="h-btn-primary-line-xl" href="#">
+                    <span>未滿 18 歲</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    </div>
+    <!-- container END-->
+
+    <!-- Pushy JS -->
+    <script src="mobilemenu/pushy.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiperA = new Swiper("#swiperA", {
+            cssMode: true,
+            // autoplay: true,
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        var swiperB = new Swiper('#swiperB', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints:{
+                600:{
+                    slidesPerView:3,
+                    spaceBetween:25
+                },
+                800: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiperC = new Swiper('#swiperC', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints:{
+                600:{
+                    slidesPerView:3,
+                    spaceBetween:25
+                },
+                800: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper1 = new Swiper("#coverSwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper("#coverSwiperLarge", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
