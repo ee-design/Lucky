@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TTPush後台經營數據</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <main class="TTPush-chart-container">
+        <section class="a-row">
+            <!-- 會員數據 -->
+            <div class="card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-a"><span></span>會員數據</h4>
+                    <p class="sub-t">會員總數：120,000人</p>
+                </div>
+                <div class="data-cont fl c3">
+                    <div class="w1">
+                        <div class="a-chart" style="max-height: 180px;">
+                            <p class="chart-icon chart-icon-a"><span>性別比</span></p>
+                            <canvas id="ChartGender"></canvas>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <div class="a-chart" style="max-height: 180px;">
+                            <p class="chart-icon chart-icon-b"><span>縣市比</span></p>
+                            <canvas id="ChartCity"></canvas>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <div class="a-chart" style="max-height: 180px;">
+                            <p class="chart-icon"><span>年齡層比</span></p>
+                            <canvas id="ChartAge"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">
+                        <p class="t-text t-center">鄉鎮縣市比</p>
+                        <div class="a-chart">
+                            <canvas id="ChartCounty"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 特店數據 -->
+            <div class="card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-b">特店數據</h4>
+                    <p class="sub-t">特店總數：600家</p>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">
+                        <div class="a-chart" style="max-width: 250px; max-height: 250px;">
+                            <p class="chart-icon chart-icon-c"><span>業態類別比</span></p>
+                            <canvas id="ChartIndustry"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">
+                        <p class="t-text t-center">鄉鎮縣市比</p>
+                        <div class="a-chart">
+                            <canvas id="ChartCounty2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a-row">
+            <!-- 消費力 -->
+            <div class="card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-c">消費力</h4>
+                    <p class="sub-t">特店請款總金額：99,999,999元</p>
+                </div>
+                <div class="data-cont fl" style="align-items: flex-start;">
+
+                    <div class="w3">
+                        <p class="t-text t-center">每月特店請款金額</p>
+                        <div class="a-chart">
+                            <canvas id="ChartRequestPayment"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="w2 w-max50 fl" style="flex-wrap: wrap;">
+                        <div class="w1">   
+                            <p class="t-text t-center">本期金幣配發狀態</p>
+                            <div class="a-chart" style="max-width: 220px;">
+                                <p class="chart-icon chart-icon-d"><span>本期金幣總數<br>93,410,985枚</span></p>
+                                <canvas id="ChartIssue"></canvas>
+                            </div>
+                        </div>
+                        <div class="w1"> 
+                            <p class="t-text t-center">單位金幣發放狀態</p>
+                            <div class="a-chart" style="max-width: 220px;">
+                                <p class="chart-icon chart-icon-d"><span>單位金幣總數：<br>70,000枚</span></p>
+                                <canvas id="ChartDepartment"></canvas>
+                            </div>
+                        </div>
+                        <div  class="w100">
+                            <p class="text">截至2023/09/10 23:59</p>
+                        </div>
+                    </div>
+
+                    <div class="w1">
+                        <div class="a-chart" style="max-width: 220px;">
+                            <p class="chart-icon chart-icon-e"><span>支付類別比</span></p>
+                            <canvas id="ChartPaymentCategory"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="a-row">
+            <div class="card w3">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-d">永續力</h4>
+                </div>
+                <div class="the-select">
+                    <select>
+                        <option value="1">訊息推播</option>
+                        <option value="2">廢電池回收</option>
+                        <option value="3">環保平台</option>
+                        <option value="4">健康計步</option>
+                    </select>
+                </div>
+                <div class="data-cont">
+                    <div class="a-chart" style="">
+                        <p class="t-text t-center">每月訊息推播則數</p>
+                        <div class="a-chart">
+                            <canvas id="ChartMessage"></canvas>
+                        </div>
+                        <div  class="w100">
+                            <p class="text">訊息推播總則數：5,000則</p>
+                        </div>
+                    </div>
+                    
+                    <div class="a-chart" style="">
+                        <p class="t-text t-center">每月訊息推播減碳量</p>
+                        <div class="a-chart">
+                            <canvas id="ChartMessage2"></canvas>
+                        </div>
+                        <div  class="w100">
+                            <p class="text">訊息推播總減碳量：50,000kg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card w2">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-e">健康力</h4>
+                </div>
+                <div class="the-select">
+                    <select>
+                        <option value="1">健康計步</option>
+                        <option value="2">健康獎勵平台-inbody</option>
+                    </select>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">   
+                        <div class="a-chart" style="max-width: 250px;">
+                            <p class="chart-icon chart-icon-f"><span>健康計步年齡比</span></p>
+                            <canvas id="ChartPedometerAge"></canvas>
+                        </div>
+                    </div>
+                    <div class="w1">   
+                        <div class="a-chart" style="max-width: 250px;">
+                            <p class="chart-icon chart-icon-g"><span>健康計步年齡比</span></p>
+                            <canvas id="ChartPedometerGender"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-cont">
+                    <div class="a-chart" style="">
+                        <p class="t-text t-center">每月健康計步消耗熱量</p>
+                        <div class="a-chart">
+                            <canvas id="ChartMessage3"></canvas>
+                        </div>
+                        <div  class="w100">
+                            <p class="text">健康計步消耗總熱量：50,000kcal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+
+    <!-- 鄉鎮縣市比 -->
+    <script>
+        const ctx = document.getElementById('ChartCounty');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['臺東市', '卑南鄉', '太麻里鄉', '大武鄉', '達仁鄉', '金峰鄉', '延平鄉', '鹿野鄉', '關山鎮', '池上鄉', '海端鄉', '東河鄉', '成功鎮', '長濱鄉', '綠島鄉', '蘭嶼鄉'],
+            datasets: [{
+              label: '鄉鎮縣市比',
+              data: [65, 13, 6, 6, 3, 2, 2, 14, 10, 14, 2, 9 , 11, 2, 9, 2],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+
+    <!-- 鄉鎮縣市比2 -->
+    <script>
+        const ctx2 = document.getElementById('ChartCounty2');
+        new Chart(ctx2, {
+          type: 'bar',
+          data: {
+            labels: ['臺東市', '卑南鄉', '太麻里鄉', '大武鄉', '達仁鄉', '金峰鄉', '延平鄉', '鹿野鄉', '關山鎮', '池上鄉', '海端鄉', '東河鄉', '成功鎮', '長濱鄉', '綠島鄉', '蘭嶼鄉'],
+            datasets: [{
+              label: '鄉鎮縣市比',
+              data: [65, 13, 6, 6, 3, 2, 2, 14, 10, 14, 2, 9 , 11, 2, 9, 2],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+
+    <!-- 每月訊息推播則數 -->
+    <script>
+        const Message = document.getElementById('ChartMessage');
+        new Chart(Message, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月訊息推播則數',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+    <!-- 每月訊息推播減碳量 -->
+    <script>
+        const Message2 = document.getElementById('ChartMessage2');
+        new Chart(Message2, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月訊息推播減碳量',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+    <!-- 每月健康計步消耗熱量 -->
+    <script>
+        const Message3 = document.getElementById('ChartMessage3');
+        new Chart(Message3, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月訊息推播減碳量',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+
+    <!-- 健康計步年齡比 -->
+    <script>
+        const PedometerAge = document.getElementById('ChartPedometerAge');
+        const PedometerAgeData = {
+            datasets: [{
+                label: '健康計步年齡比',
+                data: [35, 35, 35, 5, 119, 12, 33],
+                backgroundColor: [
+                'rgb(171, 215, 243)',
+                'rgb(150, 193, 224)',
+                'rgb(129, 170, 205)',
+                'rgb(108, 148, 186)',
+                'rgb(86, 125, 168)',
+                'rgb(65, 103, 149)',
+                'rgb(39, 75, 126)',
+                // 'rgb(23, 58, 111)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const PedometerAgeConfig = {
+            type: 'doughnut',
+            data: PedometerAgeData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartPedometerAge = new Chart(PedometerAge, PedometerAgeConfig);
+    </script>
+    <!-- 健康計步性別比 -->
+    <script>
+        const PedometerGender = document.getElementById('ChartPedometerGender');
+        const PedometerGenderData = {
+            datasets: [{
+                label: '健康計步年齡比',
+                data: [750, 250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const PedometerGenderConfig = {
+            type: 'doughnut',
+            data: PedometerGenderData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartPedometerGender = new Chart(PedometerGender, PedometerGenderConfig);
+    </script>
+
+
+    <!-- 性別比 -->
+    <script>
+        const Gender = document.getElementById('ChartGender');
+        const GenderData = {
+            // labels: [
+            //     '女生',
+            //     '男生'
+            // ],
+            datasets: [{
+                label: '性別比',
+                data: [750, 250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const GenderConfig = {
+            type: 'doughnut',
+            data: GenderData,
+            options: {
+                responsive: true, // 設定圖表為響應式，根據螢幕視窗變化而變化
+                maintainAspectRatio: false,// 保持圖表原有比例
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartGender = new Chart(Gender, GenderConfig);
+    </script>
+
+    <!-- 縣市比 -->
+    <script>
+        const City = document.getElementById('ChartCity');
+        const CityrData = {
+            // labels: [
+            //     '臺東',
+            //     '非臺東'
+            // ],
+            datasets: [{
+                label: '縣市比',
+                data: [2750, 450],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const CityConfig = {
+            type: 'doughnut',
+            data: CityrData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartCity = new Chart(City, CityConfig);
+    </script>
+
+    <!-- 年齡層比 -->
+    <script>
+        const Age = document.getElementById('ChartAge');
+        const AgeData = {
+            // labels: [
+            //     '≤15',
+            //     '15-24',
+            //     '25-34',
+            //     '35-44',
+            //     '45-54',
+            //     '55-64',
+            //     '≥65'
+            // ],
+            datasets: [{
+                label: '年齡層比',
+                data: [30, 30, 60, 45, 45, 98, 15],
+                backgroundColor: [
+                'rgb(82, 125, 168)',
+                'rgb(129, 170, 205)',
+                'rgb(150, 193, 224)',
+                'rgb(155, 198, 228)',
+                'rgb(171, 215, 243)',
+                'rgb(39, 75, 126)',
+                'rgb(65, 103, 149)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const AgeConfig = {
+            type: 'doughnut',
+            data: AgeData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartAge = new Chart(Age, AgeConfig);
+    </script>
+
+    <!-- 業態類別比 -->
+    <script>
+        const Industry = document.getElementById('ChartIndustry');
+        const IndustryData = {
+            // labels: [
+            //     '農特產',
+            //     '零售業',
+            //     '手工藝',
+            //     '文化創意',
+            //     '服務業',
+            //     '餐飲業',
+            //     '旅宿業',
+            //     '停車場'
+            // ],
+            datasets: [{
+                label: '年齡層比',
+                data: [30, 30, 60, 45, 45, 98, 15, 16],
+                backgroundColor: [
+                'rgb(171, 215, 243)',
+                'rgb(150, 193, 224)',
+                'rgb(129, 170, 205)',
+                'rgb(108, 148, 186)',
+                'rgb(86, 125, 168)',
+                'rgb(65, 103, 149)',
+                'rgb(39, 75, 126)',
+                'rgb(23, 58, 111)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const IndustryConfig = {
+            type: 'doughnut',
+            data: IndustryData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartIndustry = new Chart(Industry, IndustryConfig);
+    </script>
+
+    <!-- 每月特店請款金額 -->
+    <script>
+        const RequestPayment = document.getElementById('ChartRequestPayment');
+
+        new Chart(RequestPayment, {
+            data: {
+                labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+                datasets: [
+                    {
+                    type: 'line',
+                    label: '2023',
+                    fill: false,
+                    data: [330510 , 140510, 200510,240510, 290510, 500510,520510, 100510, 220510, 700510, 220510, 420510 ],
+                    backgroundColor: 'rgb(171, 215, 243)',
+                    borderColor:'rgb(171, 215, 243)',
+
+                },{
+                    type: 'line',
+                    label: '2024',
+                    fill: false,
+                    data: [430510 , 240510, 260510,340510, 390510, 650510,620510, 1100510, 420510, 1100510, 420510,120510 ],
+                    backgroundColor: 'rgb(39, 75, 126)',
+                    borderColor: 'rgb(39, 75, 126)',
+                    tension: 0.1,
+                }]
+            }
+        });
+    </script>
+
+    <!-- 本期金幣配發狀態 -->
+    <script>
+        const Issue = document.getElementById('ChartIssue');
+        const IssueData = {
+            datasets: [{
+                label: '本期金幣配發狀態',
+                data: [750, 250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const IssueConfig = {
+            type: 'doughnut',
+            data: IssueData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartIssue = new Chart(Issue, IssueConfig);
+    </script>
+
+    <!-- 單位金幣發放狀態 -->
+    <script>
+        const Department = document.getElementById('ChartDepartment');
+        const DepartmentData = {
+            datasets: [{
+                label: '本期金幣配發狀態',
+                data: [750, 2250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const DepartmentConfig = {
+            type: 'doughnut',
+            data: DepartmentData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartDepartment = new Chart(Department, DepartmentConfig);
+    </script>
+
+    <!-- 支付類別比 -->
+    <script>
+        const PaymentCategory = document.getElementById('ChartPaymentCategory');
+        const PaymentCategoryData = {
+            // labels: [
+            //     'Line Pay',
+            //     '其他',
+            //     '現金',
+            //     '第三方',
+            //     '信用卡',
+            //     'Google Pay',
+            //     'Apple Pay',
+            //     '臺東金幣'
+            // ],
+            datasets: [{
+                label: '支付類別比',
+                data: [30, 30, 60, 45, 45, 98, 15, 14],
+                backgroundColor: [
+                'rgb(171, 215, 243)',
+                'rgb(150, 193, 224)',
+                'rgb(129, 170, 205)',
+                'rgb(108, 148, 186)',
+                'rgb(86, 125, 168)',
+                'rgb(65, 103, 149)',
+                'rgb(39, 75, 126)',
+                'rgb(23, 58, 111)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const PaymentCategoryConfig = {
+            type: 'doughnut',
+            data: PaymentCategoryData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartPaymentCategory = new Chart(PaymentCategory, PaymentCategoryConfig);
+    </script>
+</body>
+</html>
