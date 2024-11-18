@@ -238,7 +238,8 @@ body {
   border-radius: 0 14px 0 0;
 }
 .TTPush-chart-container .card .data-cont {
-  padding-top: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 .TTPush-chart-container .card .main-t {
   flex: 50%;
@@ -291,22 +292,18 @@ body {
 }
 .TTPush-chart-container .card .fl {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
 }
 .TTPush-chart-container .w1 {
   flex: 1;
-  padding: 10px;
   text-align: center;
 }
 .TTPush-chart-container .w2 {
   flex: 2;
-  padding: 10px;
 }
 .TTPush-chart-container .w3 {
   flex: 1.5;
-  padding: 10px;
 }
 .TTPush-chart-container .w-max50 {
   max-width: 50%;
@@ -321,7 +318,7 @@ body {
   font-size: 13px;
 }
 .TTPush-chart-container .a-chart {
-  max-width: 500px;
+  max-width: 700px;
   margin: 10px auto;
   position: relative;
   text-align: center;
@@ -329,7 +326,7 @@ body {
 .TTPush-chart-container .a-chart .chart-icon {
   position: absolute;
   width: 100%;
-  top: calc(50% - 8px);
+  bottom: calc(50% - 28px);
   pointer-events: none;
 }
 .TTPush-chart-container .a-chart .chart-icon span {
@@ -352,7 +349,7 @@ body {
   display: block;
 }
 .TTPush-chart-container .a-chart .chart-icon-a {
-  top: calc(50% - 20px);
+  bottom: calc(50% - 37px);
 }
 .TTPush-chart-container .a-chart .chart-icon-a span {
   margin-top: 30px;
@@ -362,7 +359,7 @@ body {
   background-size: contain;
 }
 .TTPush-chart-container .a-chart .chart-icon-b {
-  top: calc(50% - 20px);
+  bottom: calc(50% - 37px);
 }
 .TTPush-chart-container .a-chart .chart-icon-b span {
   margin-top: 30px;
@@ -374,7 +371,7 @@ body {
   background-size: contain;
 }
 .TTPush-chart-container .a-chart .chart-icon-c {
-  top: calc(50% - 27px);
+  bottom: 30%;
 }
 .TTPush-chart-container .a-chart .chart-icon-c span {
   margin-top: 35px;
@@ -386,7 +383,7 @@ body {
   background-size: contain;
 }
 .TTPush-chart-container .a-chart .chart-icon-d {
-  top: calc(50% - 27px);
+  bottom: calc(50% - 37px);
 }
 .TTPush-chart-container .a-chart .chart-icon-d span {
   margin-top: 30px;
@@ -400,7 +397,7 @@ body {
   background-size: contain;
 }
 .TTPush-chart-container .a-chart .chart-icon-e {
-  top: calc(50% - 27px);
+  bottom: 30%;
 }
 .TTPush-chart-container .a-chart .chart-icon-e span {
   margin-top: 40px;
@@ -414,7 +411,7 @@ body {
   background-size: contain;
 }
 .TTPush-chart-container .a-chart .chart-icon-f {
-  top: calc(50% - 27px);
+  bottom: calc(50% - 47px);
 }
 .TTPush-chart-container .a-chart .chart-icon-f span {
   margin-top: 40px;
@@ -428,7 +425,7 @@ body {
   background-size: contain;
 }
 .TTPush-chart-container .a-chart .chart-icon-g {
-  top: calc(50% - 27px);
+  bottom: calc(50% - 47px);
 }
 .TTPush-chart-container .a-chart .chart-icon-g span {
   margin-top: 40px;
@@ -440,9 +437,6 @@ body {
   height: 35px;
   background: url(../images/chart_icon_walk.svg) center center no-repeat;
   background-size: contain;
-}
-.TTPush-chart-container .c3 .a-chart {
-  max-width: 180px;
 }
 .TTPush-chart-container .t-text {
   background-color: #173A6F;
@@ -519,5 +513,68 @@ body {
     padding: 0 30px 0 15px;
     line-height: 40px;
     height: 40px;
+  }
+}
+.TTPush-chart-container .member-card {
+  max-width: 50%;
+}
+.TTPush-chart-container .member-card .fl {
+  flex-wrap: wrap;
+}
+.TTPush-chart-container .member-card .data-cont:first-child {
+  background-color: #333;
+}
+.TTPush-chart-container .member-card .data-cont:first-child .w1 .a-chart {
+  max-width: 260px;
+}
+.TTPush-chart-container .store-card {
+  max-width: 50%;
+}
+.TTPush-chart-container .consuming-card .w2 .a-chart {
+  max-width: 220px;
+}
+.TTPush-chart-container .consuming-card .w2:last-child .a-chart {
+  max-width: 500px;
+}
+.TTPush-chart-container .health-card .data-cont .w1 .a-chart {
+  max-width: 400px;
+}
+@media all and (max-width: 1200px) {
+  .TTPush-chart-container .a-row {
+    flex-wrap: wrap;
+  }
+  .TTPush-chart-container .member-card, .TTPush-chart-container .store-card {
+    flex: 100%;
+    max-width: initial;
+    width: 100%;
+  }
+  .TTPush-chart-container .consuming-card .w3, .TTPush-chart-container .consuming-card .w2 {
+    flex: 100%;
+    text-align: center;
+    max-width: initial;
+  }
+  .TTPush-chart-container .sustainability-card {
+    flex: 100%;
+  }
+}
+@media all and (max-width: 987px) {
+  .TTPush-chart-container .health-card .data-cont .w1 .a-chart {
+    max-width: 300px;
+  }
+}
+@media all and (max-width: 860px) {
+  .TTPush-chart-container .health-card .data-cont .w1 {
+    flex: 100%;
+  }
+  .TTPush-chart-container .health-card .data-cont .w1 .a-chart {
+    max-width: 500px;
+  }
+}
+@media all and (max-width: 500px) {
+  .TTPush-chart-container {
+    padding: 15px;
+  }
+  .TTPush-chart-container .card .data-cont {
+    padding: 6px;
   }
 }/*# sourceMappingURL=style.css.map */

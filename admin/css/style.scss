@@ -45,8 +45,8 @@ body{
       
     }
     .data-cont{
-      padding-top: 10px;
-      
+      padding: 10px;
+      flex-wrap: wrap;
     }
     .main-t{
       flex: 50%;
@@ -99,23 +99,20 @@ body{
     }
     .fl{
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
     }
   }
   .w1{
     flex: 1;
-    padding: 10px;
     text-align: center;
   }
   .w2{
     flex: 2;
-    padding: 10px;
   }
   .w3{
     flex: 1.5;
-    padding: 10px;
   }
   .w-max50{
     max-width: 50%;
@@ -130,14 +127,14 @@ body{
     }
   }
   .a-chart{
-    max-width: 500px;
+    max-width: 700px;
     margin:  10px auto;
     position: relative;
     text-align: center;
     .chart-icon{
       position: absolute;
       width: 100%;
-      top: calc(50% - 8px);
+      bottom: calc(50% - 28px);
       // padding-top: 30px;
       pointer-events: none;
       span{
@@ -161,7 +158,7 @@ body{
       }
     }
     .chart-icon-a{
-      top: calc(50% - 20px);
+      bottom: calc(50% - 37px);
       span{
         margin-top: 30px;
         &::after{
@@ -171,7 +168,7 @@ body{
       }
     }
     .chart-icon-b{
-      top: calc(50% - 20px);
+      bottom: calc(50% - 37px);
       span{
         margin-top: 30px;
         &::after{
@@ -183,7 +180,7 @@ body{
       }
     }
     .chart-icon-c{
-      top: calc(50% - 27px);
+      bottom: calc(50% - 20%);
       span{
         margin-top: 35px;
         &::after{
@@ -195,7 +192,7 @@ body{
       }
     }
     .chart-icon-d{
-      top: calc(50% - 27px);
+      bottom: calc(50% - 37px);
       span{
         margin-top: 30px;
         background-color:initial;
@@ -209,7 +206,7 @@ body{
       }
     }
     .chart-icon-e{
-      top: calc(50% - 27px);
+      bottom: calc(50% - 20%);
       span{
         margin-top: 40px;
         &::after{
@@ -223,7 +220,7 @@ body{
       }
     }
     .chart-icon-f{
-      top: calc(50% - 27px);
+      bottom: calc(50% - 47px);
       span{
         margin-top: 40px;
         &::after{
@@ -237,7 +234,7 @@ body{
       }
     }
     .chart-icon-g{
-      top: calc(50% - 27px);
+      bottom: calc(50% - 47px);
       span{
         margin-top: 40px;
         &::after{
@@ -251,11 +248,7 @@ body{
       }
     }
   }
-  .c3{
-    .a-chart{
-      max-width: 180px;
-    }
-  }
+  
   .t-text {
     background-color: #173A6F;
     border-radius: 20px;
@@ -335,6 +328,85 @@ body{
     }
   }
   
-  @media all and (max-width: 700px) {
+  // 控制圖表寬度
+  // 會員數據
+  .member-card{
+    max-width: 50%;
+    .fl{
+      flex-wrap: wrap;
+    }
+    .data-cont:first-child{
+      background-color: #333;
+      .w1 .a-chart{
+        max-width: 260px;
+      }
+    }
+  }
+  // 特店數據
+  .store-card{
+    max-width: 50%;
+  }
+  // 消費力
+  .consuming-card{
+    .w2 .a-chart{
+      max-width: 220px;
+    }
+    .w2:last-child{
+      .a-chart{
+        max-width: 500px;
+      }
+    }
+  }
+  // 健康力
+  .sustainability-card{
+
+  }
+  .health-card{
+    .data-cont .w1 .a-chart{
+      max-width: 400px;
+    }
+  }
+  @media all and (max-width: 1200px) {
+    .a-row{
+      flex-wrap: wrap;
+    }
+    .member-card, .store-card{
+      flex: 100%;
+      max-width: initial;
+      width: 100%;
+    }
+    .consuming-card{
+      .w3, .w2{
+        flex: 100%;
+        text-align: center;
+        max-width: initial;
+      }
+    }
+    .sustainability-card{
+      flex: 100%;
+    }
+  }
+  @media all and (max-width: 987px) {
+    .health-card{
+      .data-cont .w1 .a-chart{
+        max-width: 300px;
+      }
+    }
+  }
+  @media all and (max-width: 860px) {
+    .health-card{
+      .data-cont .w1{
+        flex: 100%;
+        .a-chart{
+          max-width: 500px;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 500px) {
+    padding: 15px;
+    .card .data-cont{
+      padding: 6px;
+    }
   }
 }

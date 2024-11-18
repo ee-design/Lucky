@@ -16,26 +16,26 @@
     <main class="TTPush-chart-container">
         <section class="a-row">
             <!-- 會員數據 -->
-            <div class="card">
+            <div class="card member-card">
                 <div class="top-title">
                     <h4 class="main-t icon-t-a"><span></span>會員數據</h4>
                     <p class="sub-t">會員總數：120,000人</p>
                 </div>
-                <div class="data-cont fl c3">
+                <div class="data-cont fl">
                     <div class="w1">
-                        <div class="a-chart" style="max-height: 180px;">
+                        <div class="a-chart">
                             <p class="chart-icon chart-icon-a"><span>性別比</span></p>
                             <canvas id="ChartGender"></canvas>
                         </div>
                     </div>
                     <div class="w1">
-                        <div class="a-chart" style="max-height: 180px;">
+                        <div class="a-chart">
                             <p class="chart-icon chart-icon-b"><span>縣市比</span></p>
                             <canvas id="ChartCity"></canvas>
                         </div>
                     </div>
                     <div class="w1">
-                        <div class="a-chart" style="max-height: 180px;">
+                        <div class="a-chart">
                             <p class="chart-icon"><span>年齡層比</span></p>
                             <canvas id="ChartAge"></canvas>
                         </div>
@@ -51,14 +51,14 @@
                 </div>
             </div>
             <!-- 特店數據 -->
-            <div class="card">
+            <div class="card store-card">
                 <div class="top-title">
                     <h4 class="main-t icon-t-b">特店數據</h4>
                     <p class="sub-t">特店總數：600家</p>
                 </div>
                 <div class="data-cont fl">
                     <div class="w1">
-                        <div class="a-chart" style="max-width: 250px; max-height: 250px;">
+                        <div class="a-chart" style="max-width: ; max-height: ;">
                             <p class="chart-icon chart-icon-c"><span>業態類別比</span></p>
                             <canvas id="ChartIndustry"></canvas>
                         </div>
@@ -77,7 +77,7 @@
 
         <section class="a-row">
             <!-- 消費力 -->
-            <div class="card">
+            <div class="card consuming-card">
                 <div class="top-title">
                     <h4 class="main-t icon-t-c">消費力</h4>
                     <p class="sub-t">特店請款總金額：99,999,999元</p>
@@ -94,14 +94,14 @@
                     <div class="w2 w-max50 fl" style="flex-wrap: wrap;">
                         <div class="w1">   
                             <p class="t-text t-center">本期金幣配發狀態</p>
-                            <div class="a-chart" style="max-width: 220px;">
+                            <div class="a-chart">
                                 <p class="chart-icon chart-icon-d"><span>本期金幣總數<br>93,410,985枚</span></p>
                                 <canvas id="ChartIssue"></canvas>
                             </div>
                         </div>
                         <div class="w1"> 
                             <p class="t-text t-center">單位金幣發放狀態</p>
-                            <div class="a-chart" style="max-width: 220px;">
+                            <div class="a-chart">
                                 <p class="chart-icon chart-icon-d"><span>單位金幣總數：<br>70,000枚</span></p>
                                 <canvas id="ChartDepartment"></canvas>
                             </div>
@@ -111,8 +111,8 @@
                         </div>
                     </div>
 
-                    <div class="w1">
-                        <div class="a-chart" style="max-width: 220px;">
+                    <div class="w2">
+                        <div class="a-chart" style="max-width: ;">
                             <p class="chart-icon chart-icon-e"><span>支付類別比</span></p>
                             <canvas id="ChartPaymentCategory"></canvas>
                         </div>
@@ -121,7 +121,8 @@
             </div>
         </section>
         <section class="a-row">
-            <div class="card w3">
+            <!-- 永續力 -->
+            <div class="card sustainability-card w3">
                 <div class="top-title">
                     <h4 class="main-t icon-t-d">永續力</h4>
                 </div>
@@ -155,7 +156,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card w2">
+            <!-- 健康力 -->
+            <div class="card health-card w2">
                 <div class="top-title">
                     <h4 class="main-t icon-t-e">健康力</h4>
                 </div>
@@ -167,20 +169,20 @@
                 </div>
                 <div class="data-cont fl">
                     <div class="w1">   
-                        <div class="a-chart" style="max-width: 250px;">
+                        <div class="a-chart">
                             <p class="chart-icon chart-icon-f"><span>健康計步年齡比</span></p>
                             <canvas id="ChartPedometerAge"></canvas>
                         </div>
                     </div>
                     <div class="w1">   
-                        <div class="a-chart" style="max-width: 250px;">
+                        <div class="a-chart">
                             <p class="chart-icon chart-icon-g"><span>健康計步年齡比</span></p>
                             <canvas id="ChartPedometerGender"></canvas>
                         </div>
                     </div>
                 </div>
                 <div class="data-cont">
-                    <div class="a-chart" style="">
+                    <div class="a-chart">
                         <p class="t-text t-center">每月健康計步消耗熱量</p>
                         <div class="a-chart">
                             <canvas id="ChartMessage3"></canvas>
@@ -320,6 +322,15 @@
     <script>
         const PedometerAge = document.getElementById('ChartPedometerAge');
         const PedometerAgeData = {
+            labels: [
+                 '<15',
+                 '15-24',
+                 '25-34',
+                 '35-44',
+                 '45-54',
+                 '55-64',
+                 '≥65'
+             ],
             datasets: [{
                 label: '健康計步年齡比',
                 data: [35, 35, 35, 5, 119, 12, 33],
@@ -356,7 +367,11 @@
     <script>
         const PedometerGender = document.getElementById('ChartPedometerGender');
         const PedometerGenderData = {
-            datasets: [{
+            labels: [
+                 '女生',
+                 '男生'
+             ],
+             datasets: [{
                 label: '健康計步年齡比',
                 data: [750, 250],
                 backgroundColor: [
@@ -388,10 +403,10 @@
     <script>
         const Gender = document.getElementById('ChartGender');
         const GenderData = {
-            // labels: [
-            //     '女生',
-            //     '男生'
-            // ],
+            labels: [
+                '女生',
+                '男生'
+            ],
             datasets: [{
                 label: '性別比',
                 data: [750, 250],
@@ -424,10 +439,10 @@
     <script>
         const City = document.getElementById('ChartCity');
         const CityrData = {
-            // labels: [
-            //     '臺東',
-            //     '非臺東'
-            // ],
+            labels: [
+                '臺東',
+                '非臺東'
+            ],
             datasets: [{
                 label: '縣市比',
                 data: [2750, 450],
@@ -460,15 +475,15 @@
     <script>
         const Age = document.getElementById('ChartAge');
         const AgeData = {
-            // labels: [
-            //     '≤15',
-            //     '15-24',
-            //     '25-34',
-            //     '35-44',
-            //     '45-54',
-            //     '55-64',
-            //     '≥65'
-            // ],
+            labels: [
+                '≤15',
+                '15-24',
+                '25-34',
+                '35-44',
+                '45-54',
+                '55-64',
+                '≥65'
+            ],
             datasets: [{
                 label: '年齡層比',
                 data: [30, 30, 60, 45, 45, 98, 15],
@@ -506,16 +521,16 @@
     <script>
         const Industry = document.getElementById('ChartIndustry');
         const IndustryData = {
-            // labels: [
-            //     '農特產',
-            //     '零售業',
-            //     '手工藝',
-            //     '文化創意',
-            //     '服務業',
-            //     '餐飲業',
-            //     '旅宿業',
-            //     '停車場'
-            // ],
+            labels: [
+                '農特產',
+                '零售業',
+                '手工藝',
+                '文化創意',
+                '服務業',
+                '餐飲業',
+                '旅宿業',
+                '停車場'
+            ],
             datasets: [{
                 label: '年齡層比',
                 data: [30, 30, 60, 45, 45, 98, 15, 16],
@@ -645,16 +660,16 @@
     <script>
         const PaymentCategory = document.getElementById('ChartPaymentCategory');
         const PaymentCategoryData = {
-            // labels: [
-            //     'Line Pay',
-            //     '其他',
-            //     '現金',
-            //     '第三方',
-            //     '信用卡',
-            //     'Google Pay',
-            //     'Apple Pay',
-            //     '臺東金幣'
-            // ],
+            labels: [
+                'Line Pay',
+                '其他',
+                '現金',
+                '第三方',
+                '信用卡',
+                'Google Pay',
+                'Apple Pay',
+                '臺東金幣'
+            ],
             datasets: [{
                 label: '支付類別比',
                 data: [30, 30, 60, 45, 45, 98, 15, 14],
