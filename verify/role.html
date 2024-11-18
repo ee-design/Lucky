@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TTID 身份別選擇</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- animate -->
+    <script src="js/wow.js"></script>
+     <script>
+        $(function () {
+            new WOW().init();
+        });
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header class="TTID-header">
+        <div class="logo"></div>
+        <h2 class="main-title">TTID身份別選擇</h2>
+        <a class="arr" href="#"></a>
+    </header>
+    <main class="TTID-container">
+        <!-- tools -->
+        <section class="top-tools">
+            <div class="defaul-field the-select">
+                <select>
+                    <option>單位類別</option>
+                    <option value="1">單位類別AAAA</option>
+                    <option value="2">BBBB</option>
+                </select>
+            </div>
+            <div class="defaul-field search">
+                <input class="default" type="text" placeholder="Search" value="">
+                <a class="icon" href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </section>
+        <section class="note-cont">
+            <p class="text">可透過單位類別或關鍵字搜尋身份類別，於左側勾選確認，經審核通過即可依身份類別收到相關推播訊息。</p>
+        </section>
+
+        <!-- 常用類別： -->
+        <section class="role-radio">
+            <label class="radio-title" for="">常用類別：</label>
+            <label class="control control--radio">
+                <input type="radio" value="1" name="role-select">
+                <div class="control__indicator"></div>
+                孕婦、婦女
+            </label>
+            <label class="control control--radio">
+                <input type="radio" value="2" name="role-select">
+                <div class="control__indicator"></div>
+                敬老、長照
+            </label>
+            <label class="control control--radio">
+                <input type="radio" value="3" name="role-select">
+                <div class="control__indicator"></div>
+                癌症篩檢
+            </label>
+            <!-- 選到 label + class:  radio-select -->
+            <label class="control control--radio radio-select">
+                <input type="radio" value="4" name="role-select" checked="">
+                <div class="control__indicator"></div>
+                特店老闆
+            </label>
+            <label class="control control--radio">
+                <input type="radio" value="5" name="role-select">
+                <div class="control__indicator"></div>
+                原住民
+            </label>
+            <label class="control control--radio">
+                <input type="radio" value="6" name="role-select">
+                <div class="control__indicator"></div>  
+                身心障礙
+            </label>
+            <label class="control control--radio">
+                <input type="radio" value="7" name="role-select">
+                <div class="control__indicator"></div>
+                乳癌篩檢
+            </label>
+        </section>
+
+        <section class="role-policy">
+            <div class="txn-checkbox">
+                <label class="control control--checkbox">
+                    我已確認並同意身份認證
+                    <input type="checkbox" checked>
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+        </section>
+        <section class="btn btn-fl">
+            <button type="submit" class="bg-c-gray">
+                <span class="text">重新選取</span>
+            </button>
+            <button type="submit" onclick="popDone()">
+                <span class="text">確認</span>
+            </button>
+        </section>
+        <section class="btn btn-fl">
+            <button type="submit" class="bg-c-gray">
+                <span class="text">重新選取</span>
+            </button>
+            <button type="submit" onclick="popCheck()">
+                <span class="text">確認(請勾選同意)</span>
+            </button>
+        </section>
+    </main>
+
+    <!-- Popup done -->
+    <section id="pop__done" class="pop"  onclick="popClose(this)">
+        <div class="pop__body">
+            <a onclick="popClose(this)" class="pop__close"></a>
+            <div class="reply-cont">
+                <div class="img">
+                    <img src="images/circle_check_green.svg">
+                </div>
+                <p class="text">TTID身份已送出<br>
+                    待審核通過即可使用</p>
+            </div>
+            <div class="btn">  
+                <button type="submit">
+                    <span class="text">OK</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Check -->
+    <section id="pop__Check" class="pop"  onclick="popClose(this)">
+        <div class="pop__body">
+            <a onclick="popCheck(this)" class="pop__close"></a>
+            <div class="reply-cont">
+                <div class="img">
+                    <img src="images/circle_semicolon.svg">
+                </div>
+                <p class="text">請勾選同意使用者條款</p>
+            </div>
+            <div class="btn">  
+                <button type="submit">
+                    <span class="text">再試一次</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Script -->
+    <script src="js/popup.js"></script>
+
+</body>
+</html>

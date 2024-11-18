@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TTID 驗證完成</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="TTID-header">
+        <div class="logo"></div>
+        <h2 class="main-title">TTID驗證</h2>
+        <a class="arr" href="#"></a>
+    </header>
+    <!-- main -->
+    <main class="TTID-container">
+        <section class="reply-cont">
+            <div class="img">
+                <img src="images/circle_check_green.svg">
+            </div>
+            <p class="text c-pink">已完成身份驗證</p>
+        </section>
+        <form class="verify-cont">
+            <fieldset class="a-row">
+                <label for="ID">身分證字號</label>
+                <div class="defaul-field">
+                    <input id="ID" type="text" placeholder="身分證10碼" value="V123456789" maxlength="10" disabled>
+                </div>
+            </fieldset>
+            <fieldset class="a-row">
+                <label for="Birthday">生日</label>
+                <div class="defaul-field">
+                    <input id="Birthday" type="date" placeholder="" value="" disabled>
+                </div>
+            </fieldset>
+            <fieldset class="a-row">
+                <label for="TelecomProvider">電信商</label>
+                <div class="defaul-field the-select">
+                    <select disabled>
+                        <option value="1">電信A</option>
+                        <option value="2" selected>電信B</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="a-row">
+                <label for="PhoneNumber">手機號碼</label>
+                <div class="defaul-field">
+                    <input id="PhoneNumber" type="text" placeholder="手機號碼10碼" value="0912345678" maxlength="10"  maxlength="10" disabled>
+                </div>
+            </fieldset>
+        </form>
+        <section class="note-cont">
+            <p class="text t-center c-pink">＊驗證完成！此ID不得重複驗證，以免影響權益</p>
+        </section>
+        
+        <section class="btn">  
+            <button type="submit">
+                <span class="text">我的TTID身份</span>
+            </button>
+        </section>
+    </main>
+
+</body>
+</html>

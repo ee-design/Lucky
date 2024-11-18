@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TTID 驗證輸入畫面</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- animate -->
+    <script src="js/wow.js"></script>
+     <script>
+        $(function () {
+            new WOW().init();
+        });
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header class="TTID-header">
+        <div class="logo"></div>
+        <h2 class="main-title">TTID驗證</h2>
+        <a class="arr" href="#"></a>
+    </header>
+    <!-- main -->
+    <main class="TTID-container">
+        <form class="verify-cont">
+            <fieldset class="a-row">
+                <label for="ID">身分證字號</label>
+                <div class="defaul-field">
+                    <input id="ID" type="text" placeholder="身分證10碼" value="" maxlength="10">
+                    <p class="text c-red">＊輸入有誤</p>
+                </div>
+            </fieldset>
+            <fieldset class="a-row">
+                <label for="Birthday">生日</label>
+                <div class="defaul-field">
+                    <input id="Birthday" type="date" placeholder="" value="2024-11-08">
+                </div>
+            </fieldset>
+            <fieldset class="a-row">
+                <label for="TelecomProvider">電信商</label>
+                <div class="defaul-field the-select">
+                    <select>
+                        <option value="1">電信A</option>
+                        <option value="2">電信B</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="a-row">
+                <label for="PhoneNumber">手機號碼</label>
+                <div class="defaul-field">
+                    <input id="PhoneNumber" type="text" placeholder="手機號碼10碼" value="0912345678" maxlength="10"  maxlength="10">
+                </div>
+            </fieldset>
+        </form>
+        <section class="note-cont">
+            <p class="text c-pink">認證過程中請關閉WiFi，請務必確認網路連線為4G或5G行動網路。</p>
+            <p class="text">行動電話認證限本國籍人士使用，本人申辦之月租型門號及個人行動網路(3G/4G)，如您使用預付卡、公司門號或非本人申辦門號，將無法成功驗證。</p>
+        </section>
+            
+        <section class="policy-cont">
+            <p class="policy-title">使用者同意條款</p>
+            <p class="text">臺灣網路認證股份有限公司（以下簡稱本公司）所提供的利用行動電話號碼辦理身分驗證服務（以下簡稱本服務）是透過電信公司（中華電信股份有限公司、台灣大哥大股份有限公司、遠傳電信股份有限公司）進行本服務，當您點選同意或使用本服務後，即表示您同意並遵守以下條款：
+
+壹、本服務依功能不同可區分為下列情形：
+一、 行動身分識別（以下簡稱服務一）係指由您發動查詢以確認您為進行交易所提供之行動電話號碼（下稱門號）及身分證字號資料是否屬實之交易。
+二、 裝置確認（以下簡稱服務二）係指由您發動確認您為進行交易所使用之門號是否為您所使用。
+三、 門號資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務
+
+壹、本服務依功能不同可區分為下列情形：
+一、 行動身分識別（以下簡稱服務一）係指由您發動查詢以確認您為進行交易所提供之行動電話號碼（下稱門號）及身分證字號資料是否屬實之交易。
+二、 裝置確認（以下簡稱服務二）係指由您發動確認您為進行交易所使用之門號是否為您所使用。
+三、 門號資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務資料核實（以下簡稱服務三）係指由您同意的服務</p>
+            <div class="txn-checkbox">
+                <label class="control control--checkbox">
+                    我已閱讀並同意使用者條款
+                    <input type="checkbox">
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+        </section>
+
+        <!-- 拉到底才能勾選，且勾選才能送出 --> 
+        <section class="btn">  
+            <button type="submit" disabled>
+                <span class="text">執行身份驗證</span>
+            </button>
+        </section>
+        <section class="btn">  
+            <button type="submit" onclick="popDone()">
+                <span class="text">執行身份驗證-OK</span>
+            </button>
+        </section>
+        <section class="btn">  
+            <button type="submit" onclick="popError()">
+                <span class="text">執行身份驗證-失敗-再試一次</span>
+            </button>
+        </section>
+        <section class="btn">  
+            <button type="submit" onclick="popErrorWifi()">
+                <span class="text">執行身份驗證-網路-再試一次</span>
+            </button>
+        </section>
+    </main>
+
+    <!-- Popup done -->
+    <section id="pop__done" class="pop"  onclick="popClose(this)">
+        <div class="pop__body">
+            <a onclick="popClose(this)" class="pop__close"></a>
+            <div class="reply-cont">
+                <div class="img">
+                    <img src="images/circle_check_green.svg">
+                </div>
+                <p class="text">TTID驗證成功</p>
+            </div>
+            <div class="btn">  
+                <button type="submit">
+                    <span class="text">OK</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Popup Error -->
+    <section id="pop__Error" class="pop"  onclick="popClose(this)">
+        <div class="pop__body">
+            <a onclick="popClose(this)" class="pop__close"></a>
+            <div class="reply-cont">
+                <div class="img">
+                    <img src="images/circle_error_red.svg">
+                </div>
+                <p class="text">驗證失敗<br>
+                    請務必確認身分證字號及生日正確</p>
+            </div>
+            <div class="btn">  
+                <button type="submit">
+                    <span class="text">再試一次</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Error wifi -->
+    <section id="pop__ErrorWifi" class="pop"  onclick="popClose(this)">
+        <div class="pop__body">
+            <a onclick="popClose(this)" class="pop__close"></a>
+            <div class="reply-cont">
+                <div class="img">
+                    <img src="images/circle_semicolon.svg">
+                </div>
+                <p class="text">請確認您關閉WiFi<br>
+                    且已開啟個人行動網路！</p>
+            </div>
+            <div class="btn">  
+                <button type="submit">
+                    <span class="text">再試一次</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Script -->
+    <script src="js/popup.js"></script>
+</body>
+</html>
