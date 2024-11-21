@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TTPush後台經營數據</title>
+    <title>TTPush後台經營數據 - 最高權限版</title>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="#" />
     <link rel="manifest" href="images/site.webmanifest">
@@ -15,6 +15,8 @@
 <body>
     <main class="TTPush-chart-container">
         <section class="a-row">
+            <!-- 會員數據 -->
+            <!-- 會員數據 -->
             <!-- 會員數據 -->
             <div class="card member-card">
                 <div class="top-title">
@@ -51,6 +53,8 @@
                 </div>
             </div>
             <!-- 特店數據 -->
+            <!-- 特店數據 -->
+            <!-- 特店數據 -->
             <div class="card store-card">
                 <div class="top-title">
                     <h4 class="main-t icon-t-b">特店數據</h4>
@@ -58,7 +62,7 @@
                 </div>
                 <div class="data-cont fl">
                     <div class="w1">
-                        <div class="a-chart" style="max-width: ; max-height: ;">
+                        <div class="a-chart">
                             <p class="chart-icon chart-icon-c"><span>業態類別比</span></p>
                             <canvas id="ChartIndustry"></canvas>
                         </div>
@@ -76,6 +80,8 @@
         </section>
 
         <section class="a-row">
+            <!-- 消費力 -->
+            <!-- 消費力 -->
             <!-- 消費力 -->
             <div class="card consuming-card">
                 <div class="top-title">
@@ -112,7 +118,7 @@
                     </div>
 
                     <div class="w2">
-                        <div class="a-chart" style="max-width: ;">
+                        <div class="a-chart">
                             <p class="chart-icon chart-icon-e"><span>支付類別比</span></p>
                             <canvas id="ChartPaymentCategory"></canvas>
                         </div>
@@ -121,6 +127,8 @@
             </div>
         </section>
         <section class="a-row">
+            <!-- 永續力 -->
+            <!-- 永續力 -->
             <!-- 永續力 -->
             <div class="card sustainability-card w3">
                 <div class="top-title">
@@ -134,6 +142,7 @@
                         <option value="4">健康計步</option>
                     </select>
                 </div>
+                <!-- 訊息推播 -->
                 <div class="data-cont">
                     <div class="a-chart" style="">
                         <p class="t-text t-center">每月訊息推播則數</p>
@@ -154,8 +163,62 @@
                             <p class="text">訊息推播總減碳量：50,000kg</p>
                         </div>
                     </div>
+
+                    <!-- 廢電池回收 -->
+                    <div class="data-cont">
+                        <div class="a-chart">
+                            <p class="t-text t-center">每月廢電池回收量</p>
+                            <div class="a-chart">
+                                <canvas id="ChartWasteBatteries"></canvas>
+                            </div>
+                            <div  class="w100">
+                                <p class="text">廢電池回收總量：50,000kg</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 環保平台 -->
+                    <div class="data-cont">
+                        <div class="a-chart">
+                            <p class="t-text t-center">每月環保杯使用人次</p>
+                            <div class="a-chart">
+                                <canvas id="ChartReusableCup"></canvas>
+                            </div>
+                            <div  class="w100">
+                                <p class="text">環保杯使用總人次：500人次</p>
+                                <p class="text">環保杯總減碳量：5,000 kg</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 健康計步 -->
+                    <div class="data-cont">
+                        <div class="a-chart">
+                            <p class="t-text t-center">每月健康計步參與人次</p>
+                            <div class="a-chart">
+                                <canvas id="ChartPedometerPeople"></canvas>
+                            </div>
+                            <div  class="w100">
+                                <p class="text">健康計步參與總人次：10,000人次</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-cont">
+                        <div class="a-chart">
+                            <p class="t-text t-center">每月健康計步減碳量</p>
+                            <div class="a-chart">
+                                <canvas id="ChartPedometerECCR"></canvas>
+                            </div>
+                            <div  class="w100">
+                                <p class="text">健康計步總減碳量：50,000kg</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- 健康力 -->
+            <!-- 健康力 -->
             <!-- 健康力 -->
             <div class="card health-card w2">
                 <div class="top-title">
@@ -167,6 +230,8 @@
                         <option value="2">健康獎勵平台-inbody</option>
                     </select>
                 </div>
+
+                <!-- 健康計步 -->
                 <div class="data-cont fl">
                     <div class="w1">   
                         <div class="a-chart">
@@ -190,6 +255,25 @@
                         <div  class="w100">
                             <p class="text">健康計步消耗總熱量：50,000kcal</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- 健康獎勵平台-inbody -->
+                <div class="data-cont fl">
+                    <div class="w1">   
+                        <div class="a-chart">
+                            <p class="chart-icon chart-icon-h"><span>inbody年齡比</span></p>
+                            <canvas id="ChartInbodyAge"></canvas>
+                        </div>
+                    </div>
+                    <div class="w1">   
+                        <div class="a-chart">
+                            <p class="chart-icon chart-icon-h"><span>inbody性別比</span></p>
+                            <canvas id="ChartInbodyGender"></canvas>
+                        </div>
+                    </div>
+                    <div  class="w100">
+                        <p class="text">總參與人次：50,000人次</p>
                     </div>
                 </div>
             </div>
@@ -294,6 +378,99 @@
           }
         });
     </script>
+    <!-- 每月廢電池回收量 -->
+    <script>
+        const WasteBatteries = document.getElementById('ChartWasteBatteries');
+        new Chart(WasteBatteries, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月廢電池回收量',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+    <!-- 每月環保杯使用人次 -->
+    <script>
+        const ReusableCup = document.getElementById('ChartReusableCup');
+        new Chart(ReusableCup, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月環保杯使用人次',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+    <!-- 每月健康計步參與人次 -->
+    <script>
+        const PedometerPeople = document.getElementById('ChartPedometerPeople');
+        new Chart(PedometerPeople, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月健康計步參與人次',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+    <!-- 每月健康計步減碳量 -->
+    <script>
+        const PedometerECCR = document.getElementById('ChartPedometerECCR');
+        new Chart(PedometerECCR, {
+          type: 'bar',
+          data: {
+            labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
+            datasets: [{
+              label: '每月健康計步減碳量',
+              data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+
     <!-- 每月健康計步消耗熱量 -->
     <script>
         const Message3 = document.getElementById('ChartMessage3');
@@ -302,7 +479,7 @@
           data: {
             labels: ['1月', '2月', '3月','4月','5月','6月','7月', '8月', '9月','10月','11月','12月',],
             datasets: [{
-              label: '每月訊息推播減碳量',
+              label: '每月健康計步消耗熱量',
               data: [168, 129, 145, 108, 193, 168, 129, 145, 108, 193, 108, 129],
               backgroundColor: 'rgb(23, 58, 111)',
               borderWidth: 1
@@ -396,6 +573,87 @@
             }
         };
         const ChartPedometerGender = new Chart(PedometerGender, PedometerGenderConfig);
+    </script>
+
+
+    <!-- inbody年齡比 -->
+    <script>
+        const InbodyAge = document.getElementById('ChartInbodyAge');
+        const InbodyAgeData = {
+            labels: [
+                 '<15',
+                 '15-24',
+                 '25-34',
+                 '35-44',
+                 '45-54',
+                 '55-64',
+                 '≥65'
+             ],
+            datasets: [{
+                label: 'inbody年齡比',
+                data: [35, 35, 35, 5, 119, 12, 33],
+                backgroundColor: [
+                'rgb(171, 215, 243)',
+                'rgb(150, 193, 224)',
+                'rgb(129, 170, 205)',
+                'rgb(108, 148, 186)',
+                'rgb(86, 125, 168)',
+                'rgb(65, 103, 149)',
+                'rgb(39, 75, 126)',
+                // 'rgb(23, 58, 111)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const InbodyAgeConfig = {
+            type: 'doughnut',
+            data: InbodyAgeData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const InbodyAgeAge = new Chart(InbodyAge, InbodyAgeConfig);
+    </script>
+    <!-- inbody性別比 -->
+    <script>
+        const InbodyGender = document.getElementById('ChartInbodyGender');
+        const InbodyGenderData = {
+            labels: [
+                 '女生',
+                 '男生'
+             ],
+             datasets: [{
+                label: 'inbody性別比',
+                data: [750, 250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const InbodyGenderConfig = {
+            type: 'doughnut',
+            data: InbodyGenderData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartInbodyGender = new Chart(InbodyGender, InbodyGenderConfig);
     </script>
 
 

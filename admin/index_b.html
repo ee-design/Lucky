@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TTPush後台經營數據 - 各局處版</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <main class="TTPush-chart-container">
+        <section class="a-row">
+            <!-- 會員數據 -->
+            <!-- 會員數據 -->
+            <!-- 會員數據 -->
+            <div class="card member-card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-a"><span></span>會員數據</h4>
+                    <p class="sub-t">會員總數：120,000人</p>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">
+                        <div class="a-chart">
+                            <p class="chart-icon chart-icon-a"><span>性別比</span></p>
+                            <canvas id="ChartGender"></canvas>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <div class="a-chart">
+                            <p class="chart-icon chart-icon-b"><span>縣市比</span></p>
+                            <canvas id="ChartCity"></canvas>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <div class="a-chart">
+                            <p class="chart-icon"><span>年齡層比</span></p>
+                            <canvas id="ChartAge"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">
+                        <p class="t-text t-center">鄉鎮縣市比</p>
+                        <div class="a-chart">
+                            <canvas id="ChartCounty"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 活動數據 -->
+            <!-- 活動數據 -->
+            <!-- 活動數據 -->
+            <div class="card event-card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-f">活動數據</h4>
+                    <p class="sub-t">已辦理場次：10場</p>
+                </div>
+                <div class="data-cont fl">
+                    <div class="w1">
+                        <div class="a-chart">
+                            <p class="chart-icon chart-icon-i"><span>線上、下比</span></p>
+                            <canvas id="ChartEvent"></canvas>
+                        </div>
+                        <div  class="w100">
+                            <p class="text">線上：8場 /  線下：2場</p>
+                        </div>
+                    </div>
+                    <div class="w1">
+                        <div class="a-chart">
+                            <p class="chart-icon chart-icon-i"><span>線上、下參與人次</span></p>
+                            <canvas id="ChartEventPeople"></canvas>
+                        </div>
+                        <div  class="w100">
+                            <p class="text">參與總人次：1,000人次</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a-row">
+            <!-- 總活動參與率 -->
+            <!-- 總活動參與率 -->
+            <!-- 總活動參與率 -->
+            <div class="card gender-age-card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-g">總活動參與率</h4>
+                </div>
+                <div class="data-cont" style="align-items: flex-start;">
+
+                    <div class="w3">
+                        <p class="t-text t-center">活動參與性別及年齡比</p>
+                        <div class="a-chart">
+                            <canvas id="ChartGenderAge"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 執行率 -->
+            <!-- 執行率 -->
+            <!-- 執行率 -->
+            <div class="card execution-card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-h">執行率</h4>
+                    <p div class="sub-t">金幣發放總數：50萬枚</p>
+                </div>
+                <div class="the-select">
+                    <select>
+                        <option value="1">114/09/03金幣活動</option>
+                        <option value="2">114/09/04金幣活動</option>
+                    </select>
+                </div>
+                <div class="the-search">
+                    <input type="text" placeholder="輸入活動名稱" value="">
+                    <button type="submit" class="btn-icon"></button>
+                </div>
+                <div class="data-cont" style="align-items: flex-start;">
+                    <div class="a-chart">
+                        <p class="chart-text">
+                            <span class="f-big">75%</span>
+                            <br>
+                            <span>已發放75萬枚<br>
+                            剩餘25萬枚</span></p>
+                        <canvas id="ChartIssueExecution"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- 金幣使用狀態 -->
+            <!-- 金幣使用狀態 -->
+            <!-- 金幣使用狀態 -->
+            <div class="card rayout-ratio-card">
+                <div class="top-title">
+                    <h4 class="main-t icon-t-c">金幣使用狀態</h4>
+                    <p div class="sub-t">金幣總數：500萬枚</p>
+                </div>
+                <div class="data-cont" style="align-items: flex-start;">
+                    <div class="a-chart">
+                        <p class="chart-text">
+                            <span class="f-big">75%</span>
+                            <br>
+                            <span class="bg-c-blue">金幣發放率</span>
+                            <br>
+                            <span>已發放75萬枚<br>
+                            剩餘25萬枚</span></p>
+                        <canvas id="ChartPayoutRatio"></canvas>
+                    </div>
+                    <div  class="w100">
+                        <p class="text">截至2023/09/10 23:59</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+
+    
+    <!-- 會員數據 -->
+    <!-- 會員數據 -->
+    <!-- 會員數據 -->
+     
+    <!-- 性別比 -->
+    <script>
+        const Gender = document.getElementById('ChartGender');
+        const GenderData = {
+            labels: [
+                '女生',
+                '男生'
+            ],
+            datasets: [{
+                label: '性別比',
+                data: [750, 250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const GenderConfig = {
+            type: 'doughnut',
+            data: GenderData,
+            options: {
+                responsive: true, // 設定圖表為響應式，根據螢幕視窗變化而變化
+                maintainAspectRatio: false,// 保持圖表原有比例
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartGender = new Chart(Gender, GenderConfig);
+    </script>
+
+    <!-- 縣市比 -->
+    <script>
+        const City = document.getElementById('ChartCity');
+        const CityrData = {
+            labels: [
+                '臺東',
+                '非臺東'
+            ],
+            datasets: [{
+                label: '縣市比',
+                data: [2750, 450],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const CityConfig = {
+            type: 'doughnut',
+            data: CityrData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartCity = new Chart(City, CityConfig);
+    </script>
+
+    <!-- 年齡層比 -->
+    <script>
+        const Age = document.getElementById('ChartAge');
+        const AgeData = {
+            labels: [
+                '≤15',
+                '15-24',
+                '25-34',
+                '35-44',
+                '45-54',
+                '55-64',
+                '≥65'
+            ],
+            datasets: [{
+                label: '年齡層比',
+                data: [30, 30, 60, 45, 45, 98, 15],
+                backgroundColor: [
+                'rgb(82, 125, 168)',
+                'rgb(129, 170, 205)',
+                'rgb(150, 193, 224)',
+                'rgb(155, 198, 228)',
+                'rgb(171, 215, 243)',
+                'rgb(39, 75, 126)',
+                'rgb(65, 103, 149)',
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const AgeConfig = {
+            type: 'doughnut',
+            data: AgeData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartAge = new Chart(Age, AgeConfig);
+    </script>
+
+    <!-- 鄉鎮縣市比 -->
+    <script>
+        const ctx = document.getElementById('ChartCounty');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['臺東市', '卑南鄉', '太麻里鄉', '大武鄉', '達仁鄉', '金峰鄉', '延平鄉', '鹿野鄉', '關山鎮', '池上鄉', '海端鄉', '東河鄉', '成功鎮', '長濱鄉', '綠島鄉', '蘭嶼鄉'],
+            datasets: [{
+              label: '鄉鎮縣市比',
+              data: [65, 13, 6, 6, 3, 2, 2, 14, 10, 14, 2, 9 , 11, 2, 9, 2],
+              backgroundColor: 'rgb(23, 58, 111)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+
+    <!-- 活動數據 -->
+    <!-- 活動數據 -->
+    <!-- 活動數據 -->
+     
+    <!-- 線上、下比 -->
+    <script>
+        const Event = document.getElementById('ChartEvent');
+        const EventData = {
+            labels: [
+                '線上',
+                '線下'
+            ],
+            datasets: [{
+                label: '線上、下比',
+                data: [2750, 450],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const EventConfig = {
+            type: 'doughnut',
+            data: EventData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartEvent = new Chart(Event, EventConfig);
+    </script>
+    <!-- 線上、下參與人次 -->
+    <script>
+        const EventPeople = document.getElementById('ChartEventPeople');
+        const EventPeopleData = {
+            labels: [
+                '線上',
+                '線下'
+            ],
+            datasets: [{
+                label: '線上、下參與人次',
+                data: [800, 200],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const EventPeopleConfig = {
+            type: 'doughnut',
+            data: EventPeopleData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartEventPeople = new Chart(EventPeople, EventPeopleConfig);
+    </script>
+
+
+    <!-- 總活動參與率 -->
+    <!-- 總活動參與率 -->
+    <!-- 總活動參與率 -->
+    <!-- 活動參與性別及年齡比 -->
+    <script>
+        const GenderAge = document.getElementById('ChartGenderAge');
+
+        new Chart(GenderAge, {
+            data: {
+                labels: ['≤15', '15-24', '25-34','35-44','45-54','55-65','≥65'],
+                datasets: [
+                    {
+                    type: 'line',
+                    label: '女性',
+                    fill: false,
+                    data: [30 , 20, 40, 102, 30, 22,22 ],
+                    backgroundColor: 'rgb(171, 215, 243)',
+                    borderColor:'rgb(171, 215, 243)',
+
+                },{
+                    type: 'line',
+                    label: '男性',
+                    fill: false,
+                    data: [23 , 36, 48, 68, 87, 43, 33 ],
+                    backgroundColor: 'rgb(39, 75, 126)',
+                    borderColor: 'rgb(39, 75, 126)',
+                    tension: 0.1,
+                }]
+            }
+        });
+    </script>
+
+    <!-- 執行率 -->
+    <!-- 執行率 -->
+    <!-- 執行率 -->
+    <script>
+        const IssueExecution = document.getElementById('ChartIssueExecution');
+        const IssueExecutionData = {
+            datasets: [{
+                label: '114/09/03金幣活動',
+                data: [750, 250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const IssueExecutionConfig = {
+            type: 'doughnut',
+            data: IssueExecutionData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartIssueExecution = new Chart(IssueExecution, IssueExecutionConfig);
+    </script>
+
+    <!-- 金幣使用狀態 -->
+    <!-- 金幣使用狀態 -->
+    <!-- 金幣使用狀態 -->
+    <script>
+        const PayoutRatio = document.getElementById('ChartPayoutRatio');
+        const PayoutRatioData = {
+            datasets: [{
+                label: '金幣發放率',
+                data: [750, 2250],
+                backgroundColor: [
+                'rgb(23, 58, 111)',
+                'rgb(171, 215, 243)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const PayoutRatioConfig = {
+            type: 'doughnut',
+            data: PayoutRatioData,
+            options: {
+                responsive: true, 
+                scales: {
+                yAxes: [{
+                    ticks: {
+                    beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        };
+        const ChartPayoutRatio = new Chart(PayoutRatio, PayoutRatioConfig);
+    </script>
+
+</body>
+</html>

@@ -85,6 +85,16 @@ body{
     .icon-t-e::before{
       background-image: url(../images/icon_e.svg);
     }
+    .icon-t-f::before{
+      background-image: url(../images/icon_f.svg);
+    }
+    .icon-t-g::before{
+      background-image: url(../images/icon_g.svg);
+    }
+    .icon-t-h::before{
+      width: 25px;
+      background-image: url(../images/icon_h.svg);
+    }
     .sub-t{
       position: absolute;
       top: 0;
@@ -124,6 +134,7 @@ body{
     p{
       color: #173A6F;
       font-size: 13px;
+      line-height: 1.5;
     }
   }
   .a-chart{
@@ -247,6 +258,62 @@ body{
         }
       }
     }
+    .chart-icon-h{
+      bottom: calc(50% - 47px);
+      span{
+        margin-top: 48px;
+        &::after{
+          top:-48px;
+          left: calc(50% - 20px);
+          width: 40px;
+          height: 40px;
+          background: url(../images/chart_icon_inbody.svg) center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .chart-icon-i{
+      bottom: calc(50% - 37px);
+      span{
+        margin-top: 45px;
+        &::after{
+          top:-37px;
+          left: calc(50% - 14px);
+          width: 28px;
+          height: 27px;
+          background: url(../images/chart_icon_bubbles.svg) center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .chart-text{
+      position: absolute;
+      width: 100%;
+      bottom: calc(50% - 46px);
+      pointer-events: none;
+      color: #173A6F;
+      font-size: 13px;
+      span{
+        padding: 0px 10px;
+        line-height: 1.2;
+        display: inline-block;
+        &.f-big{
+          font-size: 30px;
+          font-weight: bold;
+          padding-bottom: 5px;
+        }
+        &.bg-c-blue{
+          background-color: #173A6F;
+          color: #fff;
+          border-radius: 10px;
+          display: inline-block;
+          padding: 3px 10px;
+          line-height: 1.2;
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
   
   .t-text {
@@ -264,7 +331,7 @@ body{
   }
 
   .the-select {
-    max-width: 180px;
+    max-width: 200px;
     position: relative;
     display: block;
     height: 38px;
@@ -273,7 +340,7 @@ body{
     border-radius: 50px;
     line-height: 38px;
     text-align: center;
-    margin: 20px auto;
+    margin: 15px auto;
     &::after {
       content: "";
       position: absolute;
@@ -327,7 +394,44 @@ body{
       }
     }
   }
-  
+
+  .the-search{
+    max-width: 200px;
+    position: relative;
+    display: block;
+    font-size: 14px;
+    border: #173A6F 1px solid;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    input{
+      width: 100%;
+      color: #173A6F;
+      height: 38px;
+      line-height: 38px;
+      border-radius: 50px;
+      padding: 0 15px;
+      &::placeholder{
+        color: #9BC6E4;
+      }
+      &:focus{
+        background-color: #f0f7ff;
+      }
+    }
+    .btn-icon{
+      position: absolute;
+      right: 2px;
+      top: calc(50% - 16.5px);
+      width: 33px;
+      height: 33px;
+      background: url(../images/btn_icon_search.svg) center center no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      &:hover{
+        opacity: .9;
+      }
+    }
+  }
   // 控制圖表寬度
   // 會員數據
   .member-card{
@@ -366,11 +470,21 @@ body{
       max-width: 400px;
     }
   }
+  // 活動數據
+  .event-card{
+    max-width: 50%;
+  }
+  .execution-card, .rayout-ratio-card{
+    .a-chart{
+      width: 90%;
+      max-width: 350px;
+    }
+  }
   @media all and (max-width: 1200px) {
     .a-row{
       flex-wrap: wrap;
     }
-    .member-card, .store-card{
+    .member-card, .store-card, .event-card, .execution-card, .rayout-ratio-card{
       flex: 100%;
       max-width: initial;
       width: 100%;
