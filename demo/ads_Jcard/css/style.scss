@@ -292,7 +292,7 @@ $radius-xl: 55px;
       &.icon {
         transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
         position: relative;
-        padding-right: 50px;
+        padding-right: 80px;
         &::after{
           content: "";
           position: absolute;
@@ -325,6 +325,7 @@ $radius-xl: 55px;
       padding: 12px 10px;
       span {
         font-size: 22px;
+        padding-right: 65px;
       }
       &:hover{
         .icon {
@@ -841,7 +842,7 @@ $radius-xl: 55px;
           background-size: contain;
         }
         .c-red{
-          padding: 10px 0;
+          padding: 10px;
           min-height: 104px;
         }
       }
@@ -868,6 +869,9 @@ $radius-xl: 55px;
           }
           .top-title{
             min-height: 140px;
+          }
+          .c-red{
+            min-height:initial;
           }
         }
         
@@ -1012,10 +1016,12 @@ $radius-xl: 55px;
       gap: 35px;
     }
     .a-card{
-      flex-direction: column;
-      flex: 1;
+      flex: 33%;
       .card-w{
         position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
        .subtitle{
         position: absolute;
         left: -11px;
@@ -1050,7 +1056,7 @@ $radius-xl: 55px;
             &.f-ss{
               font-size: 16px;
               font-weight: 500;
-              min-height: 220px;
+              // min-height: 220px;
               padding: 30px 0 20px 0;
             }
           }
@@ -1058,10 +1064,12 @@ $radius-xl: 55px;
         .btns{
           display: flex;
           gap: 10px;
-          padding-bottom:35px;
+          padding:10px 10px 20px 10px;
+          min-height: 100px;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
+          margin-top: auto;
           .btn-s{
             padding: 0;
             width: initial;
@@ -1086,8 +1094,10 @@ $radius-xl: 55px;
       }
       .cards{
         flex-wrap: wrap;
-        flex-direction: column;
         .card-w{
+          .btns{
+            min-height: initial;
+          }
           .gift-text{
             p.f-ss{
               min-height: initial;
@@ -1095,6 +1105,12 @@ $radius-xl: 55px;
             }
           }
         }
+      }
+    }
+    @media (max-width:599px) {
+      .cards{
+        flex-direction: column;
+        flex-wrap: nowrap;
       }
     }
   }  
@@ -1121,7 +1137,7 @@ $radius-xl: 55px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
     }
     .a-card{
       flex: 0 0 30%;
@@ -1129,6 +1145,9 @@ $radius-xl: 55px;
       justify-content: center;
       align-items: center;
       .card-w{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
        .subtitle{
         width: 80%;
         margin: 0 auto;
@@ -1162,7 +1181,6 @@ $radius-xl: 55px;
             &.f-ss{
               font-size: 15px;
               font-weight: 500;
-              min-height: 275px;
               padding:10px 0;
             }
           }
@@ -1170,10 +1188,10 @@ $radius-xl: 55px;
         .btns{
           display: flex;
           gap: 10px;
-          padding-bottom:35px;
+          padding:25px 10px;
           justify-content: center;
           align-items: center;
-          flex-wrap: wrap;
+          margin-top: auto;
           .btn-s{
             padding: 0;
             width: initial;
@@ -1189,17 +1207,13 @@ $radius-xl: 55px;
       .big-title .img-box{
         width: 25%;
         right: 0;
-        // top: -72px;
       }
       .cards{
-        gap: 20px;
-        // flex-wrap: wrap;
+        gap: 25px;
         align-items: initial;
-        flex-direction: column-reverse;
+        // flex-direction: column-reverse;
         .a-card{
-          flex: 1;
-          justify-content: initial;
-          align-items: initial;
+          flex: 33%;
           .card-w{
             .gift-text p.f-ss{
               min-height: initial;
@@ -1208,7 +1222,11 @@ $radius-xl: 55px;
         }
       }
     }
-    @media (max-width:590px){
+    @media (max-width:599px) {
+      .cards{
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
       .a-card .card-w .gift-text p{
         line-height: 1.5;
       }
