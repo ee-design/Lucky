@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <meta name='description' content="" />
+    <meta name='keywords' content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="#" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+
+        $(function () {
+            $('.top-label li').click(function () {
+                $(this).parents().find('li').removeClass('on');
+                $(this).addClass("on");
+                return false;
+            });
+
+            $('#tab01').click(function () {
+                $(this).parents().parents().next('.video-cont').find('.a-video').hide();
+                $(this).parents().parents().next('.video-cont').find('.show1').show();
+                return false;
+            });
+            $('#tab02').click(function () {
+                $(this).parents().parents().next('.video-cont').find('.a-video').hide();
+                $(this).parents().parents().next('.video-cont').find('.show2').show();
+                return false;
+            });
+            $('#tab03').click(function () {
+                $(this).parents().parents().next('.video-cont').find('.a-video').hide();
+                $(this).parents().parents().next('.video-cont').find('.show3').show();
+                return false;
+            });
+            $('#tab-all').click(function () {
+                $(this).parents().parents().next('.video-cont').find('.a-video').show();
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-cont">
+        <section class="middle-cont">
+            <div class="logo">
+                <img src="images/logo_gtb.svg" alt="">
+            </div>
+        </section>
+    </header>
+
+    <!-- main -->
+    <main class="event-cont">
+        <section class="middle-cont">
+            <!-- bn -->
+            <div class="main-cover">
+                <img src="images/bn_cover.png" alt="">
+            </div>
+
+            <!-- title -->
+            <div class="top-title">
+                <h1 class="main-title"><span>共享空間故事牆</span></h1>
+                <h2 class="subtitle">這裡<span class="c-blue">不只是共享空間</span>，更是<span class="c-blue">夢想與創意的聚落</span>。<br>
+                    每支影片都是一段正在發酵的夢想，<span class="mob">每個品牌都在用自己的方式改寫日常。<br></span>
+                    滑一滑、看一看，<span class="mob">你會發現：原來創業可以這麼酷、這麼有故事。<br></span>
+                    <br>
+                    <span class="bb">準備好了嗎？<span class="mob">讓我們從這裡開始，遇見下一個讓世界亮起來的品牌。</span></span></h2>
+            </div>
+
+            <!-- label -->
+            <nav class="top-label">
+                <ul>
+                    <li class="on" id="tab-all">All</li>
+                    <li id="tab01">食物</li>
+                    <li id="tab02">伴手禮</li>
+                    <li id="tab03">AAA</li>
+                </ul>
+            </nav>
+
+            <!-- videos -->
+            <div class="video-cont">
+                <div class="a-video show1">
+                    <div class="bg-title">
+                        <p>久保田烘焙坊</p>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nT0_N_oZMR4?si=TqMJE6-3mj9EGDI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="text-info">
+                        <p>人氣商家，販售知名的「咬人貓麵包」</p>
+                        <a class="link" href="#">
+                            <img src="images/arr.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="a-video show2">
+                    <div class="bg-title">
+                        <p>久保田烘焙坊</p>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nT0_N_oZMR4?si=TqMJE6-3mj9EGDI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="text-info">
+                        <p>人氣商家，販售知名的「咬人貓麵包」人氣商家，販售知名的「咬人貓麵包」人氣商家，販售知名的「咬人貓麵包」</p>
+                        <a class="link" href="#">
+                            <img src="images/arr.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="a-video show3">
+                    <div class="bg-title">
+                        <p>久保田烘焙坊</p>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nT0_N_oZMR4?si=TqMJE6-3mj9EGDI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="text-info">
+                        <p>人氣商家，販售知名的「咬人貓麵包」</p>
+                        <a class="link" href="#">
+                            <img src="images/arr.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="a-video show2">
+                    <div class="bg-title">
+                        <p>久保田烘焙坊</p>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nT0_N_oZMR4?si=TqMJE6-3mj9EGDI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="text-info">
+                        <p>人氣商家，販售知名的「咬人貓麵包」</p>
+                        <a class="link" href="#">
+                            <img src="images/arr.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="a-video show2">
+                    <div class="bg-title">
+                        <p>久保田烘焙坊</p>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nT0_N_oZMR4?si=TqMJE6-3mj9EGDI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="text-info">
+                        <p>人氣商家，販售知名的「咬人貓麵包」</p>
+                        <a class="link" href="#">
+                            <img src="images/arr.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-cont">
+        <section class="middle-cont">
+            <h4 class="comp">錨點影音 5G+AIGC移動片場</h4>
+            <div class="organizer">
+                <p>主辦單位</p>
+                <div class="logos">
+                    <img src="images/logo-a.png" alt="">
+                </div>
+            </div>
+            <div class="organizer">
+                <p>執行單位</p>
+                <div class="logos">
+                    <img src="images/logo_iii_dark.svg" alt="">
+                </div>
+            </div>
+            <div class="organizer">
+                <p></p>
+                <div class="logos">
+                    <img src="images/logo_cisa.png" alt="">
+                </div>
+            </div>
+            <p class="ad">廣告</p>
+        </section>
+    </footer>
+
+</body>
+
+</html>
