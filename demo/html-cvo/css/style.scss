@@ -208,7 +208,8 @@ body{
               width: 26px;
               background-image: url(../images/iconset.svg);
               background-repeat: no-repeat;
-              background-size: auto 100%;
+              // background-size: auto 100%;
+              background-size: cover;
             }
             .icon-15:before {
               height: 28px;
